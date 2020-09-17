@@ -1,10 +1,10 @@
-# Graph_Drawing_Program
+# Hotel Room Booking Manager
 
 > ## ***1. Description***
 
-> **a. Users:** Students, teachers and scientist.
+> **a. Users:** Hotel employees, .
 
-> **b. Object:** This programs helps users to calculate value of function and draw 2D mathematic graph.
+> **b. Object:** This program helps users to manage.
 
 > **c. Features:**
 
