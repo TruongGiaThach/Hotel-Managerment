@@ -1,10 +1,10 @@
-# Hotel Room Booking Manager
+# Hotel Room Booking App
 
 > ## ***1. Description***
 
-> **a. Users:** Hotel employees, .
+> **a. Users:** Hotel employees, customers.
 
-> **b. Object:** This program helps users to manage.
+> **b. Object:** This program helps employees collect and manage the bookings' data and helps the customers make a booking.
 
 > **c. Features:**
 
@@ -14,7 +14,7 @@
 
 > **Designer:** Nguyễn Tấn TIến.
 
-> **Developer:** Nguyễn Văn Dũng
+> **:** Nguyễn Văn Dũng
 
 > ## ***3. Instructor information***
 
