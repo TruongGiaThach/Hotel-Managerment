@@ -14,7 +14,7 @@
 
 > **Designer:** Nguyễn Tấn TIến.
 
-> **Code:** Nguyễn Văn Dũng
+> **Coder:** Nguyễn Văn Dũng
 
 > ## ***3. Instructor information***
 
