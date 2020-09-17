@@ -18,4 +18,4 @@
 
 > ## ***3. Instructor information***
 
-> Nguyễn Tấn Toàn
+> MA. Nguyễn Tấn Toàn
