@@ -4,7 +4,8 @@
 
 > **a. Users:** Hotel employees, customers.
 
-> **b. Object:** This program helps employees collect and manage the bookings' data and helps the customers make a booking.
+> **b. Object:** This program helps employees collect and manage the bookings' data, 
+  and it also helps the customers make a booking.
 
 > **c. Features:**
 
