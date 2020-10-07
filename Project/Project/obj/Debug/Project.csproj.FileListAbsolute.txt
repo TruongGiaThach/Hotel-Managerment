@@ -39,3 +39,5 @@ D:\GitHub\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\GitHub\Project\Project\obj\Debug\Project.csproj.CopyComplete
 D:\GitHub\Project\Project\obj\Debug\Project.exe
 D:\GitHub\Project\Project\obj\Debug\Project.pdb
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ManagerForm.resources
