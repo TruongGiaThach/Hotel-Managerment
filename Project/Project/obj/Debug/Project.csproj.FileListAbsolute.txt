@@ -43,3 +43,4 @@ C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\bin\Debug\Com
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ManagerForm.resources
 D:\GitHub\Project\Project\obj\Debug\Project.SignUp.resources
 D:\GitHub\Project\Project\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\GitHub\Project\Project\obj\Debug\Project.BookingForm.resources
