@@ -31,22 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.splitContainerMenuDataview = new System.Windows.Forms.SplitContainer();
-            this.MenuPanel_2 = new System.Windows.Forms.FlowLayoutPanel();
             this.gradientPanelMenu = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.label_menu = new System.Windows.Forms.Label();
             this.ButtonRoom = new System.Windows.Forms.Button();
             this.ButtonAccounts = new System.Windows.Forms.Button();
             this.gradientPanel2 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.Account_Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Account_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.account_PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accout_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AccountDataView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Accout_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.account_PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Account_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Account_Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuPanel_2 = new System.Windows.Forms.FlowLayoutPanel();
             this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.ButtonDelete = new System.Windows.Forms.Button();
-            this.ButtonEdit = new System.Windows.Forms.Button();
             this.groupBox_ACTION = new System.Windows.Forms.GroupBox();
+            this.ButtonDelete = new System.Windows.Forms.Button();
             this.ButtonView = new System.Windows.Forms.Button();
+            this.ButtonEdit = new System.Windows.Forms.Button();
             this.ButtonAddAccount = new System.Windows.Forms.Button();
             this.AddRoom = new System.Windows.Forms.Button();
             this.group_notification = new System.Windows.Forms.GroupBox();
@@ -57,30 +58,29 @@
             this.ButtonSendText = new System.Windows.Forms.Button();
             this.ButtonSendEmail = new System.Windows.Forms.Button();
             this.ButtonCall = new System.Windows.Forms.Button();
-            this.PictureAccout = new System.Windows.Forms.PictureBox();
-            this.linkAccountName = new System.Windows.Forms.LinkLabel();
             this.group_account = new System.Windows.Forms.GroupBox();
             this.labelTypeAccount = new System.Windows.Forms.Label();
-            this.label_menu = new System.Windows.Forms.Label();
+            this.linkAccountName = new System.Windows.Forms.LinkLabel();
+            this.PictureAccout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMenuDataview)).BeginInit();
             this.splitContainerMenuDataview.Panel1.SuspendLayout();
             this.splitContainerMenuDataview.Panel2.SuspendLayout();
             this.splitContainerMenuDataview.SuspendLayout();
-            this.MenuPanel_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelMenu)).BeginInit();
             this.gradientPanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).BeginInit();
             this.gradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountDataView)).BeginInit();
+            this.MenuPanel_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).BeginInit();
             this.gradientPanel3.SuspendLayout();
             this.groupBox_ACTION.SuspendLayout();
             this.group_notification.SuspendLayout();
             this.group_comunicate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureAccout)).BeginInit();
             this.group_account.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAccout)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -89,16 +89,16 @@
             this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.ForwardDiagonal, System.Drawing.Color.Gray, System.Drawing.Color.Black);
             this.gradientPanel1.Controls.Add(this.splitContainerMenuDataview);
             this.gradientPanel1.Controls.Add(this.MenuPanel_2);
-            this.gradientPanel1.Location = new System.Drawing.Point(1, 2);
+            this.gradientPanel1.Location = new System.Drawing.Point(2, 0);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1521, 709);
+            this.gradientPanel1.Size = new System.Drawing.Size(1527, 716);
             this.gradientPanel1.TabIndex = 0;
             // 
             // splitContainerMenuDataview
             // 
             this.splitContainerMenuDataview.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.splitContainerMenuDataview.Location = new System.Drawing.Point(-3, 145);
+            this.splitContainerMenuDataview.Location = new System.Drawing.Point(0, 175);
             this.splitContainerMenuDataview.Name = "splitContainerMenuDataview";
             // 
             // splitContainerMenuDataview.Panel1
@@ -113,23 +113,9 @@
             this.splitContainerMenuDataview.Panel2.Controls.Add(this.gradientPanel2);
             this.splitContainerMenuDataview.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainerMenuDataview.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainerMenuDataview.Size = new System.Drawing.Size(1521, 586);
+            this.splitContainerMenuDataview.Size = new System.Drawing.Size(1521, 560);
             this.splitContainerMenuDataview.SplitterDistance = 237;
             this.splitContainerMenuDataview.TabIndex = 6;
-            // 
-            // MenuPanel_2
-            // 
-            this.MenuPanel_2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MenuPanel_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.MenuPanel_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.MenuPanel_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MenuPanel_2.Controls.Add(this.gradientPanel3);
-            this.MenuPanel_2.Location = new System.Drawing.Point(-3, -29);
-            this.MenuPanel_2.Name = "MenuPanel_2";
-            this.MenuPanel_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MenuPanel_2.Size = new System.Drawing.Size(1522, 166);
-            this.MenuPanel_2.TabIndex = 5;
-            this.MenuPanel_2.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_2_Paint);
             // 
             // gradientPanelMenu
             // 
@@ -140,8 +126,21 @@
             this.gradientPanelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanelMenu.Location = new System.Drawing.Point(0, 0);
             this.gradientPanelMenu.Name = "gradientPanelMenu";
-            this.gradientPanelMenu.Size = new System.Drawing.Size(237, 586);
+            this.gradientPanelMenu.Size = new System.Drawing.Size(237, 560);
             this.gradientPanelMenu.TabIndex = 0;
+            // 
+            // label_menu
+            // 
+            this.label_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(157)))), ((int)(((byte)(156)))));
+            this.label_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_menu.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_menu.Location = new System.Drawing.Point(0, 0);
+            this.label_menu.Name = "label_menu";
+            this.label_menu.Size = new System.Drawing.Size(233, 46);
+            this.label_menu.TabIndex = 5;
+            this.label_menu.Text = "Menu";
+            this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonRoom
             // 
@@ -172,43 +171,8 @@
             this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(1280, 586);
+            this.gradientPanel2.Size = new System.Drawing.Size(1280, 560);
             this.gradientPanel2.TabIndex = 0;
-            // 
-            // Account_Password
-            // 
-            this.Account_Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Account_Password.HeaderText = "Password";
-            this.Account_Password.MinimumWidth = 8;
-            this.Account_Password.Name = "Account_Password";
-            // 
-            // Account
-            // 
-            this.Account.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Account.HeaderText = "Account";
-            this.Account.MinimumWidth = 8;
-            this.Account.Name = "Account";
-            // 
-            // Account_Email
-            // 
-            this.Account_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Account_Email.HeaderText = "Email";
-            this.Account_Email.MinimumWidth = 8;
-            this.Account_Email.Name = "Account_Email";
-            // 
-            // account_PhoneNumber
-            // 
-            this.account_PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.account_PhoneNumber.HeaderText = "Phone Number";
-            this.account_PhoneNumber.MinimumWidth = 8;
-            this.account_PhoneNumber.Name = "account_PhoneNumber";
-            // 
-            // Accout_Name
-            // 
-            this.Accout_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Accout_Name.HeaderText = "Name";
-            this.Accout_Name.MinimumWidth = 8;
-            this.Accout_Name.Name = "Accout_Name";
             // 
             // AccountDataView
             // 
@@ -226,6 +190,55 @@
             this.AccountDataView.Size = new System.Drawing.Size(1233, 543);
             this.AccountDataView.TabIndex = 1;
             // 
+            // Accout_Name
+            // 
+            this.Accout_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Accout_Name.HeaderText = "Name";
+            this.Accout_Name.MinimumWidth = 8;
+            this.Accout_Name.Name = "Accout_Name";
+            // 
+            // account_PhoneNumber
+            // 
+            this.account_PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.account_PhoneNumber.HeaderText = "Phone Number";
+            this.account_PhoneNumber.MinimumWidth = 8;
+            this.account_PhoneNumber.Name = "account_PhoneNumber";
+            // 
+            // Account_Email
+            // 
+            this.Account_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Account_Email.HeaderText = "Email";
+            this.Account_Email.MinimumWidth = 8;
+            this.Account_Email.Name = "Account_Email";
+            // 
+            // Account
+            // 
+            this.Account.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Account.HeaderText = "Account";
+            this.Account.MinimumWidth = 8;
+            this.Account.Name = "Account";
+            // 
+            // Account_Password
+            // 
+            this.Account_Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Account_Password.HeaderText = "Password";
+            this.Account_Password.MinimumWidth = 8;
+            this.Account_Password.Name = "Account_Password";
+            // 
+            // MenuPanel_2
+            // 
+            this.MenuPanel_2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MenuPanel_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MenuPanel_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+            this.MenuPanel_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MenuPanel_2.Controls.Add(this.gradientPanel3);
+            this.MenuPanel_2.Location = new System.Drawing.Point(-2, -2);
+            this.MenuPanel_2.Name = "MenuPanel_2";
+            this.MenuPanel_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MenuPanel_2.Size = new System.Drawing.Size(1524, 171);
+            this.MenuPanel_2.TabIndex = 5;
+            this.MenuPanel_2.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_2_Paint);
+            // 
             // gradientPanel3
             // 
             this.gradientPanel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.Aquamarine, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165))))));
@@ -235,28 +248,8 @@
             this.gradientPanel3.Controls.Add(this.group_account);
             this.gradientPanel3.Location = new System.Drawing.Point(3, 3);
             this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(1518, 166);
+            this.gradientPanel3.Size = new System.Drawing.Size(1518, 171);
             this.gradientPanel3.TabIndex = 0;
-            // 
-            // ButtonDelete
-            // 
-            this.ButtonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonDelete.Location = new System.Drawing.Point(128, 108);
-            this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(84, 34);
-            this.ButtonDelete.TabIndex = 1;
-            this.ButtonDelete.Text = "Delete";
-            this.ButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // ButtonEdit
-            // 
-            this.ButtonEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonEdit.Location = new System.Drawing.Point(128, 66);
-            this.ButtonEdit.Name = "ButtonEdit";
-            this.ButtonEdit.Size = new System.Drawing.Size(84, 34);
-            this.ButtonEdit.TabIndex = 1;
-            this.ButtonEdit.Text = "Edit";
-            this.ButtonEdit.UseVisualStyleBackColor = true;
             // 
             // groupBox_ACTION
             // 
@@ -276,6 +269,16 @@
             this.groupBox_ACTION.TabStop = false;
             this.groupBox_ACTION.Text = "ACTION";
             // 
+            // ButtonDelete
+            // 
+            this.ButtonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.ButtonDelete.Location = new System.Drawing.Point(128, 108);
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.Size = new System.Drawing.Size(84, 34);
+            this.ButtonDelete.TabIndex = 1;
+            this.ButtonDelete.Text = "Delete";
+            this.ButtonDelete.UseVisualStyleBackColor = true;
+            // 
             // ButtonView
             // 
             this.ButtonView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
@@ -285,6 +288,16 @@
             this.ButtonView.TabIndex = 1;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = true;
+            // 
+            // ButtonEdit
+            // 
+            this.ButtonEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.ButtonEdit.Location = new System.Drawing.Point(128, 66);
+            this.ButtonEdit.Name = "ButtonEdit";
+            this.ButtonEdit.Size = new System.Drawing.Size(84, 34);
+            this.ButtonEdit.TabIndex = 1;
+            this.ButtonEdit.Text = "Edit";
+            this.ButtonEdit.UseVisualStyleBackColor = true;
             // 
             // ButtonAddAccount
             // 
@@ -399,29 +412,6 @@
             this.ButtonCall.Text = "CALL";
             this.ButtonCall.UseVisualStyleBackColor = true;
             // 
-            // PictureAccout
-            // 
-            this.PictureAccout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.PictureAccout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureAccout.Image = ((System.Drawing.Image)(resources.GetObject("PictureAccout.Image")));
-            this.PictureAccout.Location = new System.Drawing.Point(16, 31);
-            this.PictureAccout.Name = "PictureAccout";
-            this.PictureAccout.Size = new System.Drawing.Size(72, 70);
-            this.PictureAccout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureAccout.TabIndex = 0;
-            this.PictureAccout.TabStop = false;
-            // 
-            // linkAccountName
-            // 
-            this.linkAccountName.ActiveLinkColor = System.Drawing.Color.LimeGreen;
-            this.linkAccountName.AutoSize = true;
-            this.linkAccountName.Location = new System.Drawing.Point(98, 66);
-            this.linkAccountName.Name = "linkAccountName";
-            this.linkAccountName.Size = new System.Drawing.Size(126, 20);
-            this.linkAccountName.TabIndex = 1;
-            this.linkAccountName.TabStop = true;
-            this.linkAccountName.Text = "Account Name";
-            // 
             // group_account
             // 
             this.group_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
@@ -448,18 +438,28 @@
             this.labelTypeAccount.TabIndex = 2;
             this.labelTypeAccount.Text = "ADMIN";
             // 
-            // label_menu
+            // linkAccountName
             // 
-            this.label_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(157)))), ((int)(((byte)(156)))));
-            this.label_menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_menu.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_menu.Location = new System.Drawing.Point(0, 0);
-            this.label_menu.Name = "label_menu";
-            this.label_menu.Size = new System.Drawing.Size(233, 46);
-            this.label_menu.TabIndex = 5;
-            this.label_menu.Text = "Menu";
-            this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkAccountName.ActiveLinkColor = System.Drawing.Color.LimeGreen;
+            this.linkAccountName.AutoSize = true;
+            this.linkAccountName.Location = new System.Drawing.Point(98, 66);
+            this.linkAccountName.Name = "linkAccountName";
+            this.linkAccountName.Size = new System.Drawing.Size(126, 20);
+            this.linkAccountName.TabIndex = 1;
+            this.linkAccountName.TabStop = true;
+            this.linkAccountName.Text = "Account Name";
+            // 
+            // PictureAccout
+            // 
+            this.PictureAccout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.PictureAccout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureAccout.Image = ((System.Drawing.Image)(resources.GetObject("PictureAccout.Image")));
+            this.PictureAccout.Location = new System.Drawing.Point(16, 31);
+            this.PictureAccout.Name = "PictureAccout";
+            this.PictureAccout.Size = new System.Drawing.Size(72, 70);
+            this.PictureAccout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureAccout.TabIndex = 0;
+            this.PictureAccout.TabStop = false;
             // 
             // ManagerForm
             // 
@@ -468,7 +468,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(80)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(1527, 718);
+            this.ClientSize = new System.Drawing.Size(1529, 720);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ManagerForm";
@@ -482,20 +482,20 @@
             this.splitContainerMenuDataview.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMenuDataview)).EndInit();
             this.splitContainerMenuDataview.ResumeLayout(false);
-            this.MenuPanel_2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelMenu)).EndInit();
             this.gradientPanelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel2)).EndInit();
             this.gradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AccountDataView)).EndInit();
+            this.MenuPanel_2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).EndInit();
             this.gradientPanel3.ResumeLayout(false);
             this.groupBox_ACTION.ResumeLayout(false);
             this.group_notification.ResumeLayout(false);
             this.group_comunicate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureAccout)).EndInit();
             this.group_account.ResumeLayout(false);
             this.group_account.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAccout)).EndInit();
             this.ResumeLayout(false);
 
         }
