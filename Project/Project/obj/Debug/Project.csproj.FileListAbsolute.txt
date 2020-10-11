@@ -42,3 +42,4 @@ D:\GitHub\Project\Project\obj\Debug\Project.pdb
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ManagerForm.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.SignUp.resources
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ResetPassword.resources
