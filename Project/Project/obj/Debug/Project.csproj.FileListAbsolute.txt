@@ -47,3 +47,4 @@ D:\GitHub\Project\Project\obj\Debug\Project.BookingForm.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.BookingForm.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ResetPassword.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.SignUp.resources
+D:\GitHub\Project\Project\obj\Debug\Project.ResetPassword.resources
