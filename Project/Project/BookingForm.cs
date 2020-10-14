@@ -13,10 +13,14 @@ namespace Project
 {
     public partial class BookingForm : Form
     {
-        public BookingForm()
+        private LoginForm loginForm;
+        private TaiKhoan currentUser;
+        public BookingForm(LoginForm form, TaiKhoan user)
         {
             InitializeComponent();
             InitalizePreviewPanel();
+            this.loginForm = form;
+            this.currentUser = user;
         }
 
         #region Rooms Preview Control
@@ -67,5 +71,16 @@ namespace Project
         }
 
         #endregion
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lostCancelButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.loginForm.Show();
+        }
     }
 }

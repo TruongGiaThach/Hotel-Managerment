@@ -36,3 +36,9 @@ create table PHONG
 	TRANGTHAI char(20),
 	GIAPHONG money
 )
+create procedure us_Login
+(@user varchar(40), @pass varchar(40))
+as
+begin
+	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
+end

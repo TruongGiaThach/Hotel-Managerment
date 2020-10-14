@@ -15,10 +15,11 @@ namespace Project
 {
     public partial class LoginForm : Form
     {
+        private TaiKhoan currentUser;
         public LoginForm()
         {
             InitializeComponent();
-        
+            this.currentUser = new TaiKhoan();
         }
 
         private void ribbonForm1_Click(object sender, EventArgs e)
@@ -36,9 +37,11 @@ namespace Project
 
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e) //dat phong
         {
-
+            this.Hide();
+            BookingForm bookingForm = new BookingForm(this,this.currentUser);
+            bookingForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,10 +58,28 @@ namespace Project
         {
 
         }
-
-        private void materialButton2_Click_1(object sender, EventArgs e)
+        private bool login(string user, string pass)
         {
-
+            return DSTaiKhoan.Instance.dangNhap(user, pass) ;
+        }
+        private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap admin
+        {
+            string user;
+            string pass;
+            try
+            {
+                user = this.UserTextBox.Text;
+                pass = this.PasswordTextBox.Text;
+                if (login(user, pass))
+                {
+                    this.Hide();
+                    ManagerForm managerForm = new ManagerForm(this, this.currentUser);
+                    managerForm.Show();
+                }
+                else throw new Exception("Sai tài khoản hoặc mật khẩu...");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Access denied!!"); }
+            
         }
 
         private void materialDivider1_Click(object sender, EventArgs e)
