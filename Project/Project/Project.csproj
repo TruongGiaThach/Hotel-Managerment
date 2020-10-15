@@ -82,9 +82,13 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataHelper.cs" />
-    <Compile Include="DSTaiKhoan.cs" />
-    <Compile Include="KhachHang.cs" />
+    <Compile Include="dataComu\DataHelper.cs" />
+    <Compile Include="dataComu\DSDangKi.cs" />
+    <Compile Include="dataComu\DSKhachHang.cs" />
+    <Compile Include="dataComu\DSPhong.cs" />
+    <Compile Include="dataComu\DSTaiKhoan.cs" />
+    <Compile Include="object\DangKi.cs" />
+    <Compile Include="object\KhachHang.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +101,7 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="object\Phong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPassword.cs">
@@ -111,7 +116,7 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaiKhoan.cs" />
+    <Compile Include="object\TaiKhoan.cs" />
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,5 +155,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,6 @@ namespace Project
 
         private void B_Load(object sender, EventArgs e)
         {
-
         }
 
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -60,6 +59,11 @@ namespace Project
         }
         private bool login(string user, string pass)
         {
+            if (string.IsNullOrWhiteSpace(user) ||
+               string.IsNullOrWhiteSpace(pass))
+            {
+                throw new Exception("Please Fill All The Fields");
+            }
             return DSTaiKhoan.Instance.dangNhap(user, pass) ;
         }
         private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap admin
@@ -72,13 +76,17 @@ namespace Project
                 pass = this.PasswordTextBox.Text;
                 if (login(user, pass))
                 {
-                    this.Hide();
-                    ManagerForm managerForm = new ManagerForm(this, this.currentUser);
-                    managerForm.Show();
+                    timerToLogin.Start();
+                    this.loadingGif.Visible = true;
                 }
-                else throw new Exception("Sai tài khoản hoặc mật khẩu...");
+                else throw new Exception("The username or password is incorrect...");
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Access denied!!"); }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Access denied!!");
+                UserTextBox.Text = string.Empty;
+                PasswordTextBox.Text = string.Empty;
+            }
             
         }
 
@@ -100,6 +108,14 @@ namespace Project
         private void materialDivider1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerToLogin_Tick(object sender, EventArgs e)
+        {
+            timerToLogin.Stop();
+            ManagerForm managerForm = new ManagerForm(this, this.currentUser);
+            this.Hide();
+            managerForm.Show();
         }
     }
 }

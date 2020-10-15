@@ -22,14 +22,8 @@ namespace Project
         }
         public string PhanQuyen
         {
-            get
-            {
-                return this.phanQuyen;
-            }
-            set
-            {
-                this.phanQuyen = value;
-            }
+            get { return this.phanQuyen; }
+            set { this.phanQuyen = value;}
         }
         public string ID
         {

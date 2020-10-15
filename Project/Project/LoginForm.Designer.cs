@@ -31,9 +31,11 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.bookingButton = new MaterialSkin.Controls.MaterialButton();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.loadingGif = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,8 +46,10 @@ namespace Project
             this.PasswordTextBox = new ReaLTaiizor.Controls.MoonTextBox();
             this.loginAsAdmin = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.timerToLogin = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +61,7 @@ namespace Project
             this.bookingButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.bookingButton.BackColor = System.Drawing.Color.Transparent;
             this.bookingButton.Depth = 0;
-            this.bookingButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bookingButton.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.bookingButton.DrawShadows = true;
             this.bookingButton.Font = new System.Drawing.Font("Microsoft Himalaya", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookingButton.HighEmphasis = true;
@@ -85,6 +89,7 @@ namespace Project
             System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(222)))), ((int)(((byte)(222))))),
             System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(213)))), ((int)(((byte)(245)))))});
             this.gradientPanel1.Border3DStyle = System.Windows.Forms.Border3DStyle.Adjust;
+            this.gradientPanel1.Controls.Add(this.loadingGif);
             this.gradientPanel1.Controls.Add(this.pictureBox3);
             this.gradientPanel1.Controls.Add(this.pictureBox2);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
@@ -103,6 +108,16 @@ namespace Project
             this.gradientPanel1.Size = new System.Drawing.Size(1001, 582);
             this.gradientPanel1.TabIndex = 3;
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
+            // 
+            // loadingGif
+            // 
+            this.loadingGif.Image = ((System.Drawing.Image)(resources.GetObject("loadingGif.Image")));
+            this.loadingGif.Location = new System.Drawing.Point(-2, 514);
+            this.loadingGif.Name = "loadingGif";
+            this.loadingGif.Size = new System.Drawing.Size(69, 66);
+            this.loadingGif.TabIndex = 18;
+            this.loadingGif.TabStop = false;
+            this.loadingGif.Visible = false;
             // 
             // pictureBox3
             // 
@@ -211,7 +226,7 @@ namespace Project
             this.PasswordTextBox.Location = new System.Drawing.Point(168, 186);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.PasswordChar = '•';
             this.PasswordTextBox.Size = new System.Drawing.Size(256, 40);
             this.PasswordTextBox.TabIndex = 4;
             // 
@@ -249,6 +264,11 @@ namespace Project
             this.materialDivider1.Text = "materialDivider1";
             this.materialDivider1.Click += new System.EventHandler(this.materialDivider1_Click_1);
             // 
+            // timerToLogin
+            // 
+            this.timerToLogin.Interval = 5000;
+            this.timerToLogin.Tick += new System.EventHandler(this.timerToLogin_Tick);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,6 +285,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -285,6 +306,8 @@ namespace Project
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Timer timerToLogin;
+        private System.Windows.Forms.PictureBox loadingGif;
     }
 }
 
