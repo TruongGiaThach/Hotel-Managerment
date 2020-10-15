@@ -78,3 +78,5 @@ D:\project\Hotel-Room-Booking-App\Project\Project\bin\Debug\Syncfusion.Shared.Ba
 D:\project\Hotel-Room-Booking-App\Project\Project\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 D:\project\Hotel-Room-Booking-App\Project\Project\bin\Debug\Syncfusion.Shared.Base.xml
 D:\project\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csproj.CopyComplete
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.Home.resources
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.TrangChu_MDIc.resources
