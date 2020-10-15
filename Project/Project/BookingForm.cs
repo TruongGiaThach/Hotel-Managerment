@@ -23,10 +23,16 @@ namespace Project
             this.currentUser = user;
         }
 
+        private void BookingForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+            MinIndex = 0;
+            MoveIndex = 0;
+            MaxIndex = this.flowLayoutPanelPicturePreview.Width / 128;
+        }
+
         #region Rooms Preview Control
-        private int MinIndex = 0;
-        private int MoveIndex = 0;
-        private int MaxIndex = 3;
+
         private void buttonMoveLeft_Click(object sender, EventArgs e)
         {
             if (MoveIndex == MinIndex && MinIndex != 0)
@@ -82,5 +88,8 @@ namespace Project
             this.Close();
             this.loginForm.Show();
         }
+
+
+
     }
 }

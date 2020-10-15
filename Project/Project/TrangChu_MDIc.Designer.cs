@@ -34,13 +34,17 @@
             this.CommonImage = new System.Windows.Forms.ImageList(this.components);
             this.timerPictureSlide = new System.Windows.Forms.Timer(this.components);
             this.imageSlideList = new Syncfusion.Windows.Forms.Tools.ImageListAdv(this.components);
+            this.pictureBox_notice = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PanelTheme)).BeginInit();
+            this.PanelTheme.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_notice)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelTheme
             // 
             this.PanelTheme.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(218))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225))))));
             this.PanelTheme.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PanelTheme.Controls.Add(this.pictureBox_notice);
             this.PanelTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelTheme.Location = new System.Drawing.Point(0, 0);
             this.PanelTheme.Name = "PanelTheme";
@@ -71,16 +75,32 @@
             ((System.Drawing.Image)(resources.GetObject("imageSlideList.Images3"))),
             ((System.Drawing.Image)(resources.GetObject("imageSlideList.Images4")))});
             // 
+            // pictureBox_notice
+            // 
+            this.pictureBox_notice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_notice.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_notice.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_notice.Image")));
+            this.pictureBox_notice.Location = new System.Drawing.Point(452, 28);
+            this.pictureBox_notice.Name = "pictureBox_notice";
+            this.pictureBox_notice.Size = new System.Drawing.Size(579, 547);
+            this.pictureBox_notice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_notice.TabIndex = 0;
+            this.pictureBox_notice.TabStop = false;
+            // 
             // TrangChu_MDIc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1451, 749);
             this.Controls.Add(this.PanelTheme);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrangChu_MDIc";
             this.Text = "TrangChu_MDIc";
+            this.Load += new System.EventHandler(this.TrangChu_MDIc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PanelTheme)).EndInit();
+            this.PanelTheme.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_notice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,5 +123,6 @@
         private System.Windows.Forms.Timer timerPictureSlide;
         private Syncfusion.Windows.Forms.Tools.ImageListAdv imageSlideList;
         private System.Windows.Forms.ImageList CommonImage;
+        private System.Windows.Forms.PictureBox pictureBox_notice;
     }
 }

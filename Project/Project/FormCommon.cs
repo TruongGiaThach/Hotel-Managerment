@@ -16,5 +16,10 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void FormCommon_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }
