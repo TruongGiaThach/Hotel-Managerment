@@ -48,6 +48,7 @@ C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Pro
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ResetPassword.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.SignUp.resources
 D:\GitHub\Project\Project\obj\Debug\Project.ResetPassword.resources
+<<<<<<< HEAD
 D:\GitHub\Project\Project\obj\Debug\Project.Home.resources
 D:\GitHub\Project\Project\obj\Debug\Project.TrangChu_MDIc.resources
 D:\project\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
@@ -80,3 +81,5 @@ D:\project\Hotel-Room-Booking-App\Project\Project\bin\Debug\Syncfusion.Shared.Ba
 D:\project\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.Home.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.TrangChu_MDIc.resources
+=======
+>>>>>>> parent of 659c13b... Merge branch 'Form' of https://github.com/TruongGiaThach/Hotel-Room-Booking-App into Form
