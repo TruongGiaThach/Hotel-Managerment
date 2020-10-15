@@ -16,5 +16,16 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void button_Sign_up_Click(object sender, EventArgs e)
+        {
+            this.gradientPanel4.Show();
+        }
+
+
+        private void button_NextPage_Click(object sender, EventArgs e)
+        {
+            this.gradientPanel4.Hide();
+        }
     }
 }

@@ -11,9 +11,7 @@ namespace Project
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private int MinIndex;
-        private int MoveIndex;
-        private int MaxIndex;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -45,21 +43,23 @@ namespace Project
             this.gradientPanelPictureShow = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.buttonMoveLeft = new System.Windows.Forms.Button();
-            this.Images = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.materialButtonReserver = new MaterialSkin.Controls.MaterialButton();
-            this.labelReservation = new System.Windows.Forms.Label();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
-            this.labelHoTen = new System.Windows.Forms.Label();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
-            this.labelSDT = new System.Windows.Forms.Label();
             this.comboBoxRoomType = new System.Windows.Forms.ComboBox();
-            this.labelTo = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.labelFrom = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.labelLoaiPhong = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.labelEmail = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelReservation = new System.Windows.Forms.Label();
+            this.Images = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel_FormTheme)).BeginInit();
             this.gradientPanel_FormTheme.SuspendLayout();
             this.panel_Right.SuspendLayout();
@@ -67,35 +67,24 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelPictureShow)).BeginInit();
             this.gradientPanelPictureShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel_FormTheme
             // 
-            this.gradientPanel_FormTheme.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.BackwardDiagonal, new System.Drawing.Color[] {
+            this.gradientPanel_FormTheme.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.ForwardDiagonal, new System.Drawing.Color[] {
             System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(76)))), ((int)(((byte)(233))))),
-            System.Drawing.Color.Aquamarine,
-            System.Drawing.Color.Lime});
+            System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(151)))), ((int)(((byte)(240))))),
+            System.Drawing.Color.Aquamarine});
             this.gradientPanel_FormTheme.Border3DStyle = System.Windows.Forms.Border3DStyle.Raised;
-            this.gradientPanel_FormTheme.Controls.Add(this.materialButtonReserver);
             this.gradientPanel_FormTheme.Controls.Add(this.panel_Right);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelReservation);
-            this.gradientPanel_FormTheme.Controls.Add(this.dateTimePickerTo);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelEmail);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelHoTen);
-            this.gradientPanel_FormTheme.Controls.Add(this.textBoxName);
-            this.gradientPanel_FormTheme.Controls.Add(this.dateTimePickerFrom);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelLoaiPhong);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelSDT);
-            this.gradientPanel_FormTheme.Controls.Add(this.textBoxPhoneNumber);
-            this.gradientPanel_FormTheme.Controls.Add(this.comboBoxRoomType);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelFrom);
-            this.gradientPanel_FormTheme.Controls.Add(this.labelTo);
-            this.gradientPanel_FormTheme.Controls.Add(this.textBoxEmail);
+            this.gradientPanel_FormTheme.Controls.Add(this.panel1);
             this.gradientPanel_FormTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel_FormTheme.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel_FormTheme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradientPanel_FormTheme.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanel_FormTheme.Name = "gradientPanel_FormTheme";
-            this.gradientPanel_FormTheme.Size = new System.Drawing.Size(1335, 591);
+            this.gradientPanel_FormTheme.Size = new System.Drawing.Size(1001, 480);
             this.gradientPanel_FormTheme.TabIndex = 0;
             // 
             // panel_Right
@@ -103,9 +92,10 @@ namespace Project
             this.panel_Right.BackColor = System.Drawing.Color.Transparent;
             this.panel_Right.Controls.Add(this.panel_PicturePreview);
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Right.Location = new System.Drawing.Point(526, 0);
+            this.panel_Right.Location = new System.Drawing.Point(393, 0);
+            this.panel_Right.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Right.Name = "panel_Right";
-            this.panel_Right.Size = new System.Drawing.Size(805, 587);
+            this.panel_Right.Size = new System.Drawing.Size(604, 476);
             this.panel_Right.TabIndex = 2;
             // 
             // panel_PicturePreview
@@ -117,20 +107,20 @@ namespace Project
             this.panel_PicturePreview.Controls.Add(this.buttonMoveRight);
             this.panel_PicturePreview.Controls.Add(this.gradientPanelPictureShow);
             this.panel_PicturePreview.Controls.Add(this.buttonMoveLeft);
-            this.panel_PicturePreview.Location = new System.Drawing.Point(3, 2);
-            this.panel_PicturePreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_PicturePreview.Location = new System.Drawing.Point(2, 2);
+            this.panel_PicturePreview.Margin = new System.Windows.Forms.Padding(2);
             this.panel_PicturePreview.Name = "panel_PicturePreview";
-            this.panel_PicturePreview.Size = new System.Drawing.Size(798, 587);
+            this.panel_PicturePreview.Size = new System.Drawing.Size(598, 477);
             this.panel_PicturePreview.TabIndex = 1;
             // 
             // flowLayoutPanelPicturePreview
             // 
             this.flowLayoutPanelPicturePreview.BackColor = System.Drawing.Color.DimGray;
-            this.flowLayoutPanelPicturePreview.Location = new System.Drawing.Point(36, 468);
-            this.flowLayoutPanelPicturePreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanelPicturePreview.MaximumSize = new System.Drawing.Size(721, 111);
+            this.flowLayoutPanelPicturePreview.Location = new System.Drawing.Point(27, 380);
+            this.flowLayoutPanelPicturePreview.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelPicturePreview.MaximumSize = new System.Drawing.Size(541, 90);
             this.flowLayoutPanelPicturePreview.Name = "flowLayoutPanelPicturePreview";
-            this.flowLayoutPanelPicturePreview.Size = new System.Drawing.Size(721, 111);
+            this.flowLayoutPanelPicturePreview.Size = new System.Drawing.Size(541, 90);
             this.flowLayoutPanelPicturePreview.TabIndex = 7;
             this.flowLayoutPanelPicturePreview.WrapContents = false;
             // 
@@ -142,14 +132,13 @@ namespace Project
             this.buttonMoveRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoveRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMoveRight.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonMoveRight.Location = new System.Drawing.Point(754, 468);
-            this.buttonMoveRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMoveRight.Location = new System.Drawing.Point(566, 380);
+            this.buttonMoveRight.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoveRight.Name = "buttonMoveRight";
-            this.buttonMoveRight.Size = new System.Drawing.Size(36, 112);
+            this.buttonMoveRight.Size = new System.Drawing.Size(27, 91);
             this.buttonMoveRight.TabIndex = 6;
             this.buttonMoveRight.Text = ">";
             this.buttonMoveRight.UseVisualStyleBackColor = false;
-            this.buttonMoveRight.Click += new System.EventHandler(this.buttonMoveRight_Click);
             // 
             // gradientPanelPictureShow
             // 
@@ -157,10 +146,10 @@ namespace Project
             this.gradientPanelPictureShow.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.LightGray, System.Drawing.Color.DimGray);
             this.gradientPanelPictureShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gradientPanelPictureShow.Controls.Add(this.pictureBoxShow);
-            this.gradientPanelPictureShow.Location = new System.Drawing.Point(3, 2);
-            this.gradientPanelPictureShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradientPanelPictureShow.Location = new System.Drawing.Point(2, 2);
+            this.gradientPanelPictureShow.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanelPictureShow.Name = "gradientPanelPictureShow";
-            this.gradientPanelPictureShow.Size = new System.Drawing.Size(789, 462);
+            this.gradientPanelPictureShow.Size = new System.Drawing.Size(592, 375);
             this.gradientPanelPictureShow.TabIndex = 5;
             // 
             // pictureBoxShow
@@ -168,9 +157,9 @@ namespace Project
             this.pictureBoxShow.BackColor = System.Drawing.Color.DarkGray;
             this.pictureBoxShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxShow.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxShow.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(789, 462);
+            this.pictureBoxShow.Size = new System.Drawing.Size(592, 375);
             this.pictureBoxShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxShow.TabIndex = 0;
             this.pictureBoxShow.TabStop = false;
@@ -183,14 +172,237 @@ namespace Project
             this.buttonMoveLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoveLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMoveLeft.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonMoveLeft.Location = new System.Drawing.Point(3, 468);
-            this.buttonMoveLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMoveLeft.Location = new System.Drawing.Point(2, 380);
+            this.buttonMoveLeft.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoveLeft.Name = "buttonMoveLeft";
-            this.buttonMoveLeft.Size = new System.Drawing.Size(36, 112);
+            this.buttonMoveLeft.Size = new System.Drawing.Size(27, 91);
             this.buttonMoveLeft.TabIndex = 4;
             this.buttonMoveLeft.Text = "<";
             this.buttonMoveLeft.UseVisualStyleBackColor = false;
-            this.buttonMoveLeft.Click += new System.EventHandler(this.buttonMoveLeft_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(997, 476);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.materialButtonReserver);
+            this.panel2.Controls.Add(this.dateTimePickerTo);
+            this.panel2.Controls.Add(this.dateTimePickerFrom);
+            this.panel2.Controls.Add(this.comboBoxRoomType);
+            this.panel2.Controls.Add(this.textBoxEmail);
+            this.panel2.Controls.Add(this.textBoxPhoneNumber);
+            this.panel2.Controls.Add(this.textBoxName);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelReservation);
+            this.panel2.Location = new System.Drawing.Point(7, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(382, 403);
+            this.panel2.TabIndex = 0;
+            // 
+            // materialButtonReserver
+            // 
+            this.materialButtonReserver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialButtonReserver.AutoEllipsis = true;
+            this.materialButtonReserver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButtonReserver.Depth = 0;
+            this.materialButtonReserver.DrawShadows = true;
+            this.materialButtonReserver.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButtonReserver.HighEmphasis = true;
+            this.materialButtonReserver.Icon = null;
+            this.materialButtonReserver.Location = new System.Drawing.Point(133, 335);
+            this.materialButtonReserver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.materialButtonReserver.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButtonReserver.Name = "materialButtonReserver";
+            this.materialButtonReserver.Size = new System.Drawing.Size(95, 36);
+            this.materialButtonReserver.TabIndex = 63;
+            this.materialButtonReserver.Text = "Xác nhận";
+            this.materialButtonReserver.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonReserver.UseAccentColor = false;
+            this.materialButtonReserver.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePickerTo
+            // 
+            this.dateTimePickerTo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerTo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerTo.Location = new System.Drawing.Point(243, 259);
+            this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerTo.Name = "dateTimePickerTo";
+            this.dateTimePickerTo.Size = new System.Drawing.Size(132, 23);
+            this.dateTimePickerTo.TabIndex = 62;
+            // 
+            // dateTimePickerFrom
+            // 
+            this.dateTimePickerFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerFrom.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(62, 261);
+            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(134, 23);
+            this.dateTimePickerFrom.TabIndex = 61;
+            // 
+            // comboBoxRoomType
+            // 
+            this.comboBoxRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxRoomType.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRoomType.FormattingEnabled = true;
+            this.comboBoxRoomType.Location = new System.Drawing.Point(147, 202);
+            this.comboBoxRoomType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxRoomType.Name = "comboBoxRoomType";
+            this.comboBoxRoomType.Size = new System.Drawing.Size(233, 23);
+            this.comboBoxRoomType.TabIndex = 60;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEmail.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(147, 168);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(233, 16);
+            this.textBoxEmail.TabIndex = 59;
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(147, 124);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(233, 16);
+            this.textBoxPhoneNumber.TabIndex = 58;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Location = new System.Drawing.Point(147, 87);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(233, 16);
+            this.textBoxName.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(9, 163);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 21);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(9, 200);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 21);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Room Type";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 263);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 21);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "From";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(211, 261);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 21);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "To";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Phone Number";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Họ và Tên";
+            // 
+            // labelReservation
+            // 
+            this.labelReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelReservation.AutoSize = true;
+            this.labelReservation.BackColor = System.Drawing.Color.Transparent;
+            this.labelReservation.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReservation.ForeColor = System.Drawing.Color.White;
+            this.labelReservation.Location = new System.Drawing.Point(101, 24);
+            this.labelReservation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelReservation.Name = "labelReservation";
+            this.labelReservation.Size = new System.Drawing.Size(178, 31);
+            this.labelReservation.TabIndex = 57;
+            this.labelReservation.Text = "ĐẶT PHÒNG";
             // 
             // Images
             // 
@@ -207,205 +419,30 @@ namespace Project
             this.Images.Images.SetKeyName(8, "Room9.jpg");
             this.Images.Images.SetKeyName(9, "Room10.jpg");
             // 
-            // materialButtonReserver
-            // 
-            this.materialButtonReserver.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialButtonReserver.AutoEllipsis = true;
-            this.materialButtonReserver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButtonReserver.Depth = 0;
-            this.materialButtonReserver.DrawShadows = true;
-            this.materialButtonReserver.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButtonReserver.HighEmphasis = true;
-            this.materialButtonReserver.Icon = null;
-            this.materialButtonReserver.Location = new System.Drawing.Point(216, 331);
-            this.materialButtonReserver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.materialButtonReserver.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButtonReserver.Name = "materialButtonReserver";
-            this.materialButtonReserver.Size = new System.Drawing.Size(95, 36);
-            this.materialButtonReserver.TabIndex = 91;
-            this.materialButtonReserver.Text = "Xác nhận";
-            this.materialButtonReserver.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButtonReserver.UseAccentColor = false;
-            this.materialButtonReserver.UseVisualStyleBackColor = false;
-            // 
-            // labelReservation
-            // 
-            this.labelReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelReservation.AutoSize = true;
-            this.labelReservation.BackColor = System.Drawing.Color.Transparent;
-            this.labelReservation.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReservation.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelReservation.Location = new System.Drawing.Point(142, 21);
-            this.labelReservation.Name = "labelReservation";
-            this.labelReservation.Size = new System.Drawing.Size(221, 38);
-            this.labelReservation.TabIndex = 85;
-            this.labelReservation.Text = "ĐẶT PHÒNG";
-            // 
-            // dateTimePickerTo
-            // 
-            this.dateTimePickerTo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePickerTo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(311, 238);
-            this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(174, 27);
-            this.dateTimePickerTo.TabIndex = 90;
-            // 
-            // labelHoTen
-            // 
-            this.labelHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelHoTen.AutoSize = true;
-            this.labelHoTen.BackColor = System.Drawing.Color.Transparent;
-            this.labelHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoTen.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelHoTen.Location = new System.Drawing.Point(12, 85);
-            this.labelHoTen.Name = "labelHoTen";
-            this.labelHoTen.Size = new System.Drawing.Size(93, 22);
-            this.labelHoTen.TabIndex = 84;
-            this.labelHoTen.Text = "Họ và Tên";
-            // 
-            // dateTimePickerFrom
-            // 
-            this.dateTimePickerFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePickerFrom.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(83, 238);
-            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(178, 27);
-            this.dateTimePickerFrom.TabIndex = 89;
-            // 
-            // labelSDT
-            // 
-            this.labelSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelSDT.AutoSize = true;
-            this.labelSDT.BackColor = System.Drawing.Color.Transparent;
-            this.labelSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSDT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelSDT.Location = new System.Drawing.Point(12, 120);
-            this.labelSDT.Name = "labelSDT";
-            this.labelSDT.Size = new System.Drawing.Size(126, 22);
-            this.labelSDT.TabIndex = 83;
-            this.labelSDT.Text = "Phone Number";
-            // 
-            // comboBoxRoomType
-            // 
-            this.comboBoxRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxRoomType.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxRoomType.FormattingEnabled = true;
-            this.comboBoxRoomType.Location = new System.Drawing.Point(190, 192);
-            this.comboBoxRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxRoomType.Name = "comboBoxRoomType";
-            this.comboBoxRoomType.Size = new System.Drawing.Size(309, 27);
-            this.comboBoxRoomType.TabIndex = 88;
-            // 
-            // labelTo
-            // 
-            this.labelTo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTo.AutoSize = true;
-            this.labelTo.BackColor = System.Drawing.Color.Transparent;
-            this.labelTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelTo.Location = new System.Drawing.Point(266, 237);
-            this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(31, 22);
-            this.labelTo.TabIndex = 82;
-            this.labelTo.Text = "To";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxEmail.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(190, 155);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(309, 27);
-            this.textBoxEmail.TabIndex = 87;
-            // 
-            // labelFrom
-            // 
-            this.labelFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelFrom.AutoSize = true;
-            this.labelFrom.BackColor = System.Drawing.Color.Transparent;
-            this.labelFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFrom.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelFrom.Location = new System.Drawing.Point(12, 237);
-            this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(52, 22);
-            this.labelFrom.TabIndex = 81;
-            this.labelFrom.Text = "From";
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(190, 115);
-            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(309, 27);
-            this.textBoxPhoneNumber.TabIndex = 86;
-            // 
-            // labelLoaiPhong
-            // 
-            this.labelLoaiPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelLoaiPhong.AutoSize = true;
-            this.labelLoaiPhong.BackColor = System.Drawing.Color.Transparent;
-            this.labelLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiPhong.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelLoaiPhong.Location = new System.Drawing.Point(12, 198);
-            this.labelLoaiPhong.Name = "labelLoaiPhong";
-            this.labelLoaiPhong.Size = new System.Drawing.Size(98, 22);
-            this.labelLoaiPhong.TabIndex = 80;
-            this.labelLoaiPhong.Text = "Loại phòng";
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(190, 79);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(309, 27);
-            this.textBoxName.TabIndex = 78;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelEmail.Location = new System.Drawing.Point(12, 160);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(57, 22);
-            this.labelEmail.TabIndex = 79;
-            this.labelEmail.Text = "Email";
-            // 
             // BookingForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1335, 591);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1001, 480);
             this.Controls.Add(this.gradientPanel_FormTheme);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BookingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "BookingForm";
-            this.Load += new System.EventHandler(this.BookingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel_FormTheme)).EndInit();
             this.gradientPanel_FormTheme.ResumeLayout(false);
-            this.gradientPanel_FormTheme.PerformLayout();
             this.panel_Right.ResumeLayout(false);
             this.panel_Right.PerformLayout();
             this.panel_PicturePreview.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelPictureShow)).EndInit();
             this.gradientPanelPictureShow.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -434,7 +471,7 @@ namespace Project
                     pictureBoxShow.Image = System.Drawing.Image.FromFile(".\\Images\\" + PicturePath);
                 };
             }
-            for (int i = 0; i < (flowLayoutPanelPicturePreview.Width / 128) && i < Images.Images.Count; ++i)
+            for (int i = 0; i < 4 && i < Images.Images.Count; ++i)
             {
                 flowLayoutPanelPicturePreview.Controls.Add(ROOMS[i]);
             }
@@ -445,6 +482,7 @@ namespace Project
 
         private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanel_FormTheme;
         private ImageList Images;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Right;
         private System.Windows.Forms.Panel panel_PicturePreview;
         private FlowLayoutPanel flowLayoutPanelPicturePreview;
@@ -452,19 +490,20 @@ namespace Project
         private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanelPictureShow;
         private PictureBox pictureBoxShow;
         private System.Windows.Forms.Button buttonMoveLeft;
+        private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialButton materialButtonReserver;
-        private Label labelReservation;
         private DateTimePicker dateTimePickerTo;
-        private Label labelEmail;
-        private Label labelHoTen;
-        private TextBox textBoxName;
         private DateTimePicker dateTimePickerFrom;
-        private Label labelLoaiPhong;
-        private Label labelSDT;
-        private TextBox textBoxPhoneNumber;
         private ComboBox comboBoxRoomType;
-        private Label labelFrom;
-        private Label labelTo;
         private TextBox textBoxEmail;
+        private TextBox textBoxPhoneNumber;
+        private TextBox textBoxName;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label labelReservation;
     }
 }
