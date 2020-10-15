@@ -87,6 +87,12 @@
     <Compile Include="dataComu\DSKhachHang.cs" />
     <Compile Include="dataComu\DSPhong.cs" />
     <Compile Include="dataComu\DSTaiKhoan.cs" />
+    <Compile Include="FormCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommon.Designer.cs">
+      <DependentUpon>FormCommon.cs</DependentUpon>
+    </Compile>
     <Compile Include="object\DangKi.cs" />
     <Compile Include="object\KhachHang.cs" />
     <Compile Include="LoginForm.cs">
@@ -119,6 +125,9 @@
     <Compile Include="object\TaiKhoan.cs" />
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommon.resx">
+      <DependentUpon>FormCommon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
