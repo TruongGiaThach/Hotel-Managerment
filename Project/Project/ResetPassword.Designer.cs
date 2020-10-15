@@ -56,7 +56,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.ForwardDiagonal, System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(204))))), System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(0)))), ((int)(((byte)(255))))));
+            this.gradientPanel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.ForwardDiagonal, new System.Drawing.Color[] {
+            System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(0)))), ((int)(((byte)(255))))),
+            System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(151)))), ((int)(((byte)(240))))),
+            System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))))});
             this.gradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gradientPanel1.Controls.Add(this.autoLabel3);
             this.gradientPanel1.Controls.Add(this.Button_SendCode);
@@ -111,7 +114,7 @@
             // 
             // textbox_enterCode
             // 
-            this.textbox_enterCode.BeforeTouchSize = new System.Drawing.Size(335, 22);
+            this.textbox_enterCode.BeforeTouchSize = new System.Drawing.Size(134, 20);
             this.textbox_enterCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_enterCode.Location = new System.Drawing.Point(530, 215);
             this.textbox_enterCode.Name = "textbox_enterCode";
@@ -141,7 +144,7 @@
             // 
             // textbox_cofirmPassword
             // 
-            this.textbox_cofirmPassword.BeforeTouchSize = new System.Drawing.Size(335, 22);
+            this.textbox_cofirmPassword.BeforeTouchSize = new System.Drawing.Size(134, 20);
             this.textbox_cofirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_cofirmPassword.Location = new System.Drawing.Point(381, 323);
             this.textbox_cofirmPassword.Name = "textbox_cofirmPassword";
@@ -150,7 +153,7 @@
             // 
             // textbox_NewPassword
             // 
-            this.textbox_NewPassword.BeforeTouchSize = new System.Drawing.Size(335, 22);
+            this.textbox_NewPassword.BeforeTouchSize = new System.Drawing.Size(134, 20);
             this.textbox_NewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_NewPassword.Location = new System.Drawing.Point(381, 269);
             this.textbox_NewPassword.Name = "textbox_NewPassword";
@@ -181,7 +184,7 @@
             // 
             // textbox_EmailOrPhone
             // 
-            this.textbox_EmailOrPhone.BeforeTouchSize = new System.Drawing.Size(335, 22);
+            this.textbox_EmailOrPhone.BeforeTouchSize = new System.Drawing.Size(134, 20);
             this.textbox_EmailOrPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_EmailOrPhone.Location = new System.Drawing.Point(378, 126);
             this.textbox_EmailOrPhone.Name = "textbox_EmailOrPhone";
