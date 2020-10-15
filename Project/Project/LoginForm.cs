@@ -15,10 +15,11 @@ namespace Project
 {
     public partial class LoginForm : Form
     {
+        private TaiKhoan currentUser;
         public LoginForm()
         {
             InitializeComponent();
-        
+            this.currentUser = new TaiKhoan();
         }
 
         private void ribbonForm1_Click(object sender, EventArgs e)
@@ -28,7 +29,6 @@ namespace Project
 
         private void B_Load(object sender, EventArgs e)
         {
-
         }
 
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -36,9 +36,11 @@ namespace Project
 
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e) //dat phong
         {
-
+            this.Hide();
+            BookingForm bookingForm = new BookingForm(this,this.currentUser);
+            bookingForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,10 +57,37 @@ namespace Project
         {
 
         }
-
-        private void materialButton2_Click_1(object sender, EventArgs e)
+        private bool login(string user, string pass)
         {
-
+            if (string.IsNullOrWhiteSpace(user) ||
+               string.IsNullOrWhiteSpace(pass))
+            {
+                throw new Exception("Please Fill All The Fields");
+            }
+            return DSTaiKhoan.Instance.dangNhap(user, pass) ;
+        }
+        private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap admin
+        {
+            string user;
+            string pass;
+            try
+            {
+                user = this.UserTextBox.Text;
+                pass = this.PasswordTextBox.Text;
+                if (login(user, pass))
+                {
+                    timerToLogin.Start();
+                    this.loadingGif.Visible = true;
+                }
+                else throw new Exception("The username or password is incorrect...");
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Access denied!!");
+                UserTextBox.Text = string.Empty;
+                PasswordTextBox.Text = string.Empty;
+            }
+            
         }
 
         private void materialDivider1_Click(object sender, EventArgs e)
@@ -79,6 +108,14 @@ namespace Project
         private void materialDivider1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerToLogin_Tick(object sender, EventArgs e)
+        {
+            timerToLogin.Stop();
+            ManagerForm managerForm = new ManagerForm(this, this.currentUser);
+            this.Hide();
+            managerForm.Show();
         }
     }
 }
