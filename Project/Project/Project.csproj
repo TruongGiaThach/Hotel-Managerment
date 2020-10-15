@@ -87,11 +87,11 @@
     <Compile Include="dataComu\DSKhachHang.cs" />
     <Compile Include="dataComu\DSPhong.cs" />
     <Compile Include="dataComu\DSTaiKhoan.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="FormCommon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="FormCommon.Designer.cs">
+      <DependentUpon>FormCommon.cs</DependentUpon>
     </Compile>
     <Compile Include="object\DangKi.cs" />
     <Compile Include="object\KhachHang.cs" />
@@ -123,17 +123,11 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="object\TaiKhoan.cs" />
-    <Compile Include="TrangChu_MDIc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TrangChu_MDIc.designer.cs">
-      <DependentUpon>TrangChu_MDIc.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="FormCommon.resx">
+      <DependentUpon>FormCommon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -155,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrangChu_MDIc.resx">
-      <DependentUpon>TrangChu_MDIc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
