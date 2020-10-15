@@ -44,57 +44,9 @@ C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Pro
 D:\GitHub\Project\Project\obj\Debug\Project.SignUp.resources
 D:\GitHub\Project\Project\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\GitHub\Project\Project\obj\Debug\Project.BookingForm.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Project.exe.config
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Project.exe
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Project.pdb
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\MaterialSkin.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\MetroFramework.Design.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\MetroFramework.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\ReaLTaiizor.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Syncfusion.Licensing.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Syncfusion.Shared.Base.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Syncfusion.Shared.Base.xml
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.BookingForm.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.LoginForm.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.ManagerForm.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.Properties.Resources.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.ResetPassword.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.SignUp.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.csproj.CopyComplete
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.exe
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.pdb
-C:\Users\Admin\Documents\GitHub\Project\Project\obj\Debug\Project.ManagerRoom.resources
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\AutocompleteMenu-ScintillaNET.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Core.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\EasyScintilla.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Global Utilities.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Docking.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Extended Toolkit.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Navigator.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Outlook Grid.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Ribbon.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Toolkit.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Wizard.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Workspace.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\MetroSet UI.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Microsoft.WindowsAPICodePack.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\NaviSuite.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\ScintillaNET.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Task Dialogs.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Toolkit Resources.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Toolkit Settings.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\WinFormAnimation.dll
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Core.xml
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Global Utilities.xml
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Extended Toolkit.xml
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Krypton Outlook Grid.xml
-C:\Users\Admin\Documents\GitHub\Project\Project\bin\Debug\Toolkit Settings.xml
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.BookingForm.resources
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.ResetPassword.resources
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.SignUp.resources
+D:\GitHub\Project\Project\obj\Debug\Project.ResetPassword.resources
+D:\GitHub\Project\Project\obj\Debug\Project.Home.resources
+D:\GitHub\Project\Project\obj\Debug\Project.TrangChu_MDIc.resources
