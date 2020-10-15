@@ -14,15 +14,20 @@ namespace Project
 {
     public partial class ManagerForm : Form
     {
-
-        public ManagerForm()
+        private LoginForm loginForm;
+        private TaiKhoan currentUser;
+        public ManagerForm(LoginForm form, TaiKhoan user)
         {
             InitializeComponent();
-
+            this.loginForm = form;
+            this.currentUser = user;
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-
+            string sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
+                "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
+                "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI ";
+            this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
         }
 
         private void Manager_Form_SizeChanged(object sender, EventArgs e)
@@ -116,6 +121,16 @@ namespace Project
         }
 
         private void linkAccountName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkAccountName_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void AccountDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
