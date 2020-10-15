@@ -1,4 +1,6 @@
-﻿namespace Project
+﻿using System.Windows.Forms;
+
+namespace Project
 {
     partial class Home
     {
@@ -6,6 +8,8 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private BookingForm BK_MdiChild;
+        private TrangChu_MDIc TC_MdiChild;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -35,7 +39,7 @@
             this.ButtonThongTin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ButtonDanhGia = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ButtonPhong = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.ButtonDichVu = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.ButtonDatPhong = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ButtonTrangChu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panel_Top = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             this.Panel_Top_Right = new Syncfusion.Windows.Forms.Tools.GradientPanel();
@@ -96,7 +100,7 @@
             this.Panel_SubTop_3.Controls.Add(this.ButtonThongTin);
             this.Panel_SubTop_3.Controls.Add(this.ButtonDanhGia);
             this.Panel_SubTop_3.Controls.Add(this.ButtonPhong);
-            this.Panel_SubTop_3.Controls.Add(this.ButtonDichVu);
+            this.Panel_SubTop_3.Controls.Add(this.ButtonDatPhong);
             this.Panel_SubTop_3.Controls.Add(this.ButtonTrangChu);
             this.Panel_SubTop_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_SubTop_3.Location = new System.Drawing.Point(0, 0);
@@ -182,32 +186,32 @@
             this.ButtonPhong.TabIndex = 2;
             this.ButtonPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ButtonDichVu
+            // ButtonDatPhong
             // 
-            this.ButtonDichVu.ActiveBorderThickness = 1;
-            this.ButtonDichVu.ActiveCornerRadius = 20;
-            this.ButtonDichVu.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.ButtonDichVu.ActiveForecolor = System.Drawing.Color.White;
-            this.ButtonDichVu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(193)))));
-            this.ButtonDichVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ButtonDichVu.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonDichVu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDichVu.BackgroundImage")));
-            this.ButtonDichVu.ButtonText = "Dịch Vụ";
-            this.ButtonDichVu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonDichVu.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDichVu.ForeColor = System.Drawing.Color.SeaGreen;
-            this.ButtonDichVu.IdleBorderThickness = 1;
-            this.ButtonDichVu.IdleCornerRadius = 20;
-            this.ButtonDichVu.IdleFillColor = System.Drawing.Color.White;
-            this.ButtonDichVu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.ButtonDichVu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(193)))));
-            this.ButtonDichVu.Location = new System.Drawing.Point(304, 0);
-            this.ButtonDichVu.Margin = new System.Windows.Forms.Padding(5);
-            this.ButtonDichVu.Name = "ButtonDichVu";
-            this.ButtonDichVu.Size = new System.Drawing.Size(211, 72);
-            this.ButtonDichVu.TabIndex = 3;
-            this.ButtonDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButtonDichVu.Click += new System.EventHandler(this.ButtonDichVu_Click);
+            this.ButtonDatPhong.ActiveBorderThickness = 1;
+            this.ButtonDatPhong.ActiveCornerRadius = 20;
+            this.ButtonDatPhong.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.ButtonDatPhong.ActiveForecolor = System.Drawing.Color.White;
+            this.ButtonDatPhong.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(193)))));
+            this.ButtonDatPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ButtonDatPhong.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonDatPhong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDatPhong.BackgroundImage")));
+            this.ButtonDatPhong.ButtonText = "Đặt Phòng";
+            this.ButtonDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonDatPhong.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonDatPhong.ForeColor = System.Drawing.Color.SeaGreen;
+            this.ButtonDatPhong.IdleBorderThickness = 1;
+            this.ButtonDatPhong.IdleCornerRadius = 20;
+            this.ButtonDatPhong.IdleFillColor = System.Drawing.Color.White;
+            this.ButtonDatPhong.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.ButtonDatPhong.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(193)))));
+            this.ButtonDatPhong.Location = new System.Drawing.Point(304, 0);
+            this.ButtonDatPhong.Margin = new System.Windows.Forms.Padding(5);
+            this.ButtonDatPhong.Name = "ButtonDatPhong";
+            this.ButtonDatPhong.Size = new System.Drawing.Size(211, 72);
+            this.ButtonDatPhong.TabIndex = 3;
+            this.ButtonDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtonDatPhong.Click += new System.EventHandler(this.ButtonDatPhong_Click);
             // 
             // ButtonTrangChu
             // 
@@ -288,6 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1422, 780);
             this.Controls.Add(this.gradientPanelTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -312,6 +317,21 @@
 
         #endregion
 
+        #region MDI Child Create
+
+        public void InitalizeMdiChild()
+        {
+            //booking
+            BK_MdiChild = new BookingForm(loginForm, currentUser);
+            BK_MdiChild.MdiParent = this;
+            BK_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            //trang chu
+            TC_MdiChild = new TrangChu_MDIc();
+            TC_MdiChild.MdiParent = this;
+            TC_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+        }
+
+        #endregion
 
 
         private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanelTheme;
@@ -323,7 +343,7 @@
         private Syncfusion.Windows.Forms.Tools.GradientPanel Panel_SubTop_3;
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonTrangChu;
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonPhong;
-        private Bunifu.Framework.UI.BunifuThinButton2 ButtonDichVu;
+        private Bunifu.Framework.UI.BunifuThinButton2 ButtonDatPhong;
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonThongTin;
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonDanhGia;
         private ReaLTaiizor.Controls.SpaceSeparatorHorizantal spaceSeparatorHorizantal1;

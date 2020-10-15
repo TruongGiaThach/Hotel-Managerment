@@ -12,55 +12,47 @@ namespace Project
 {
     public partial class Home : Form
     {
+        private LoginForm loginForm;
+        private TaiKhoan currentUser;
         public Home()
         {
             InitializeComponent();
+            InitalizeMdiChild();
         }
-
-        private void Profile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonDichVu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel_Center_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        TrangChu_MDIc TC;
-        private void ButtonTrangChu_Click(object sender, EventArgs e)
-        {
-            if (TC == null)
-            {
-                TC = new TrangChu_MDIc();
-                TC.MdiParent = this;
-                TC.Dock = System.Windows.Forms.DockStyle.Fill;
-                TC.Show();
-            }
-            else
-            {
-                TC.Show();
-            }
-        }
-
         private void Home_Load(object sender, EventArgs e)
         {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
             //load Trang chu
-            TC = new TrangChu_MDIc();
-            TC.MdiParent = this;
-            TC.Dock = System.Windows.Forms.DockStyle.Fill;
-            TC.Show();
+            //TC_MdiChild = new TrangChu_MDIc();
+            //TC_MdiChild.MdiParent = this;
+            //TC_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            TC_MdiChild.Show();
             //load phong
+        }
+
+        //Button Event Handle
+        private void ButtonTrangChu_Click(object sender, EventArgs e)
+        {
+            //check is null
+            if (TC_MdiChild != null)
+                TC_MdiChild.Close();
+            //create Form
+            TC_MdiChild = new TrangChu_MDIc();
+            TC_MdiChild.MdiParent = this;
+            TC_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            TC_MdiChild.Show();
+        }
+
+        private void ButtonDatPhong_Click(object sender, EventArgs e)
+        {
+            //check is null
+            if (BK_MdiChild != null)
+                BK_MdiChild.Close();
+            //create Form
+            BK_MdiChild = new BookingForm(loginForm, currentUser);
+            BK_MdiChild.MdiParent = this;
+            BK_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            BK_MdiChild.Show();
         }
     }
 }
