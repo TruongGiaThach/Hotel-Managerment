@@ -83,6 +83,9 @@ namespace Project
             this.loginForm.Show();
         }
 
-
+        private void BookingForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }
