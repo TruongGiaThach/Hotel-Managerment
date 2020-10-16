@@ -8,8 +8,7 @@ namespace Project
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private BookingForm BK_MdiChild;
-        private TrangChu_MDIc TC_MdiChild;
+        private Form MdiChild;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -295,6 +294,7 @@ namespace Project
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1422, 780);
             this.Controls.Add(this.gradientPanelTheme);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Name = "Home";
@@ -321,14 +321,14 @@ namespace Project
 
         public void InitalizeMdiChild()
         {
-            //booking
-            BK_MdiChild = new BookingForm(loginForm, currentUser);
-            BK_MdiChild.MdiParent = this;
-            BK_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            //trang chu
-            TC_MdiChild = new TrangChu_MDIc();
-            TC_MdiChild.MdiParent = this;
-            TC_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            ////booking
+            //BK_MdiChild = new BookingForm(loginForm, currentUser);
+            //BK_MdiChild.MdiParent = this;
+            //BK_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            ////trang chu
+            //TC_MdiChild = new TrangChu_MDIc();
+            //TC_MdiChild.MdiParent = this;
+            //TC_MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
         }
 
         #endregion

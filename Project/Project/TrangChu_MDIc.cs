@@ -26,5 +26,10 @@ namespace Project
             //pictureSlideBox.Image = imageSlideList.Images[PictureSlideIndex];
         }
         #endregion
+
+        private void TrangChu_MDIc_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }
