@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project.dataComu
 {
+    class existenceRoom : Exception
+    {
+        public existenceRoom(string msg) : base(msg)
+        {
+        }
+    }
     class DSPhong
     {
         private static DSPhong instance;
@@ -16,5 +24,55 @@ namespace Project.dataComu
             private set => instance = value;
         }
         private DSPhong() { }
+        public Phong getPhongbyId(string id)
+        {
+            List<Phong> lists = new List<Phong>();
+            string sqlQuery = "select * from PHONG where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            foreach (DataRow i in data.Rows)
+            {
+                Phong item = new Phong(i);
+                lists.Add(item);
+            }
+            return lists[0];
+        }
+        public List<Phong> GetDSTaiKhoan()
+        {
+            List<Phong> lists = new List<Phong>();
+            string sqlQuery = "select * from PHONG";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            foreach (DataRow i in data.Rows)
+            {
+                Phong item = new Phong(i);
+                lists.Add(item);
+            }
+            return lists;
+        }
+        public bool themPhong(string id,int loai, int gia)
+        {
+            string sqlQuery = "select * from PHONG where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            if (data.Rows.Count > 0)
+                throw new existenceRoom("Phòng đã tồn tại...");
+            sqlQuery = "insert into PHONG(ID, LOAI, GIAPHONG, TRANGTHAI) " +
+                                "values( @id , @loai , @gia , @trangthai )";
+            string[] parameter = new string[]
+                { id, loai.ToString() , gia.ToString(), "trong" };
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+            if (result == 1) return true;
+            return false;
+        }
+        public bool updatePhong(string id , string gia )
+        { 
+            string sqlQuery = "exec room_Update @id , @gia ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id, gia }) ;
+            return result > 0;
+        }
+        public bool xoaPhong(string id)
+        {
+            string sqlQuery = "delete from PHONG where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
+            return result > 0;
+        }
     }
 }

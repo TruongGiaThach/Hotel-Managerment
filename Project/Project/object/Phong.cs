@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -20,6 +21,13 @@ namespace Project
             this.loaiPhong = 0;
             this.trangThai = "";
             this.giaPhong = 0;
+        }
+        public Phong(DataRow item)
+        {
+            this.iD = item["ID"].ToString();
+            this.loaiPhong = Int32.Parse(item["LOAI"].ToString());
+            this.trangThai = item["TRANGTHAI"].ToString();
+            this.giaPhong = Int32.Parse(item["GIAPHONG"].ToString());
         }
         public Phong(string id, int loaiphong, string trangthai, int giaphong)
         {

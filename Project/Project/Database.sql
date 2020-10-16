@@ -58,7 +58,7 @@ select * from KHACHHANG
 declare @i int = 0;
 while @i < 10 
 begin
-	insert PHONG(ID) values ('KH00' + CONVERT(char, @i))
+	insert PHONG(ID) values ('PH00' + CONVERT(char, @i))
 	set @i = @i + 1
 end
 select * from PHONG
@@ -66,7 +66,7 @@ select * from PHONG
 declare @i int = 0;
 while @i < 10 
 begin
-	insert DANGKI(ID) values ('KH00' + CONVERT(char, @i))
+	insert DANGKI(ID) values ('DK00' + CONVERT(char, @i))
 	set @i = @i + 1
 end
 select * from DANGKI
