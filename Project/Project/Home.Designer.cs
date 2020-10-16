@@ -314,9 +314,9 @@ namespace Project
             // 
             this.userNameLable.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.userNameLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.userNameLable.Location = new System.Drawing.Point(-14, 38);
+            this.userNameLable.Location = new System.Drawing.Point(19, 62);
             this.userNameLable.Name = "userNameLable";
-            this.userNameLable.Size = new System.Drawing.Size(150, 31);
+            this.userNameLable.Size = new System.Drawing.Size(168, 31);
             this.userNameLable.TabIndex = 3;
             this.userNameLable.Text = "foxLabel1";
             // 
