@@ -44,21 +44,21 @@ namespace Project
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.buttonMoveLeft = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Images = new System.Windows.Forms.ImageList(this.components);
             this.materialButtonReserver = new MaterialSkin.Controls.MaterialButton();
+            this.labelReservation = new System.Windows.Forms.Label();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBoxRoomType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelReservation = new System.Windows.Forms.Label();
+            this.Images = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel_FormTheme)).BeginInit();
             this.gradientPanel_FormTheme.SuspendLayout();
             this.panel_Right.SuspendLayout();
@@ -203,21 +203,6 @@ namespace Project
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Images
-            // 
-            this.Images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Images.ImageStream")));
-            this.Images.TransparentColor = System.Drawing.Color.Transparent;
-            this.Images.Images.SetKeyName(0, "Room1.jpg");
-            this.Images.Images.SetKeyName(1, "Room2.jpg");
-            this.Images.Images.SetKeyName(2, "Room3.jpg");
-            this.Images.Images.SetKeyName(3, "Room4.jpg");
-            this.Images.Images.SetKeyName(4, "Room5.jpeg");
-            this.Images.Images.SetKeyName(5, "Room6.jpg");
-            this.Images.Images.SetKeyName(6, "Room7.jpg");
-            this.Images.Images.SetKeyName(7, "Room8.jpg");
-            this.Images.Images.SetKeyName(8, "Room9.jpg");
-            this.Images.Images.SetKeyName(9, "Room10.jpg");
-            // 
             // materialButtonReserver
             // 
             this.materialButtonReserver.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -239,6 +224,19 @@ namespace Project
             this.materialButtonReserver.UseAccentColor = false;
             this.materialButtonReserver.UseVisualStyleBackColor = false;
             // 
+            // labelReservation
+            // 
+            this.labelReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelReservation.AutoSize = true;
+            this.labelReservation.BackColor = System.Drawing.Color.Transparent;
+            this.labelReservation.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReservation.ForeColor = System.Drawing.Color.White;
+            this.labelReservation.Location = new System.Drawing.Point(145, 7);
+            this.labelReservation.Name = "labelReservation";
+            this.labelReservation.Size = new System.Drawing.Size(221, 38);
+            this.labelReservation.TabIndex = 71;
+            this.labelReservation.Text = "ĐẶT PHÒNG";
+            // 
             // dateTimePickerTo
             // 
             this.dateTimePickerTo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -250,6 +248,19 @@ namespace Project
             this.dateTimePickerTo.Size = new System.Drawing.Size(175, 27);
             this.dateTimePickerTo.TabIndex = 76;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 28);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "Họ và Tên";
+            // 
             // dateTimePickerFrom
             // 
             this.dateTimePickerFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -260,6 +271,19 @@ namespace Project
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(177, 27);
             this.dateTimePickerFrom.TabIndex = 75;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(22, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 28);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Phone Number";
             // 
             // comboBoxRoomType
             // 
@@ -273,6 +297,19 @@ namespace Project
             this.comboBoxRoomType.Size = new System.Drawing.Size(309, 27);
             this.comboBoxRoomType.TabIndex = 74;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(291, 298);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 28);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "To";
+            // 
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -285,6 +322,19 @@ namespace Project
             this.textBoxEmail.Size = new System.Drawing.Size(311, 20);
             this.textBoxEmail.TabIndex = 73;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(22, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 28);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "From";
+            // 
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -296,6 +346,19 @@ namespace Project
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(311, 20);
             this.textBoxPhoneNumber.TabIndex = 72;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(22, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 28);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Room Type";
             // 
             // textBoxName
             // 
@@ -322,87 +385,25 @@ namespace Project
             this.label4.TabIndex = 65;
             this.label4.Text = "Email";
             // 
-            // label5
+            // Images
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 28);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Room Type";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 301);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 28);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "From";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(291, 298);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 28);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "To";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 28);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Phone Number";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 28);
-            this.label1.TabIndex = 70;
-            this.label1.Text = "Họ và Tên";
-            // 
-            // labelReservation
-            // 
-            this.labelReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelReservation.AutoSize = true;
-            this.labelReservation.BackColor = System.Drawing.Color.Transparent;
-            this.labelReservation.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReservation.ForeColor = System.Drawing.Color.White;
-            this.labelReservation.Location = new System.Drawing.Point(145, 7);
-            this.labelReservation.Name = "labelReservation";
-            this.labelReservation.Size = new System.Drawing.Size(221, 38);
-            this.labelReservation.TabIndex = 71;
-            this.labelReservation.Text = "ĐẶT PHÒNG";
+            this.Images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Images.ImageStream")));
+            this.Images.TransparentColor = System.Drawing.Color.Transparent;
+            this.Images.Images.SetKeyName(0, "Room1.jpg");
+            this.Images.Images.SetKeyName(1, "Room2.jpg");
+            this.Images.Images.SetKeyName(2, "Room3.jpg");
+            this.Images.Images.SetKeyName(3, "Room4.jpg");
+            this.Images.Images.SetKeyName(4, "Room5.jpeg");
+            this.Images.Images.SetKeyName(5, "Room6.jpg");
+            this.Images.Images.SetKeyName(6, "Room7.jpg");
+            this.Images.Images.SetKeyName(7, "Room8.jpg");
+            this.Images.Images.SetKeyName(8, "Room9.jpg");
+            this.Images.Images.SetKeyName(9, "Room10.jpg");
             // 
             // BookingForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1335, 591);
             this.Controls.Add(this.gradientPanel_FormTheme);
             this.DoubleBuffered = true;

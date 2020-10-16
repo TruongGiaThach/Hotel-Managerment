@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu_MDIc));
             this.PanelTheme = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.pictureBox_notice = new System.Windows.Forms.PictureBox();
             this.CommonImage = new System.Windows.Forms.ImageList(this.components);
             this.timerPictureSlide = new System.Windows.Forms.Timer(this.components);
             this.imageSlideList = new Syncfusion.Windows.Forms.Tools.ImageListAdv(this.components);
-            this.pictureBox_notice = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PanelTheme)).BeginInit();
             this.PanelTheme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_notice)).BeginInit();
@@ -50,6 +50,18 @@
             this.PanelTheme.Name = "PanelTheme";
             this.PanelTheme.Size = new System.Drawing.Size(1451, 749);
             this.PanelTheme.TabIndex = 0;
+            // 
+            // pictureBox_notice
+            // 
+            this.pictureBox_notice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_notice.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_notice.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_notice.Image")));
+            this.pictureBox_notice.Location = new System.Drawing.Point(452, 28);
+            this.pictureBox_notice.Name = "pictureBox_notice";
+            this.pictureBox_notice.Size = new System.Drawing.Size(579, 547);
+            this.pictureBox_notice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_notice.TabIndex = 0;
+            this.pictureBox_notice.TabStop = false;
             // 
             // CommonImage
             // 
@@ -74,18 +86,6 @@
             ((System.Drawing.Image)(resources.GetObject("imageSlideList.Images2"))),
             ((System.Drawing.Image)(resources.GetObject("imageSlideList.Images3"))),
             ((System.Drawing.Image)(resources.GetObject("imageSlideList.Images4")))});
-            // 
-            // pictureBox_notice
-            // 
-            this.pictureBox_notice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox_notice.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_notice.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_notice.Image")));
-            this.pictureBox_notice.Location = new System.Drawing.Point(452, 28);
-            this.pictureBox_notice.Name = "pictureBox_notice";
-            this.pictureBox_notice.Size = new System.Drawing.Size(579, 547);
-            this.pictureBox_notice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_notice.TabIndex = 0;
-            this.pictureBox_notice.TabStop = false;
             // 
             // TrangChu_MDIc
             // 
