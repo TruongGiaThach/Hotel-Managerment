@@ -451,7 +451,7 @@ namespace Project
                     pictureBoxShow.Image = System.Drawing.Image.FromFile(".\\Images\\" + PicturePath);
                 };
             }
-            for (int i = 0; i < 4 && i < Images.Images.Count; ++i)
+            for (int i = 0; i < flowLayoutPanelPicturePreview.Width/128 && i < Images.Images.Count; ++i)
             {
                 flowLayoutPanelPicturePreview.Controls.Add(ROOMS[i]);
             }

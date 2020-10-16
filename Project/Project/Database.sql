@@ -42,3 +42,39 @@ as
 begin
 	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
 end
+
+insert TAIKHOAN(ID,TENDN,MATKHAU,PHANQUYEN) values ('0','root','1','0')
+declare @i int = 0;
+while @i < 10 
+begin
+	insert TAIKHOAN (ID) values (CONVERT(char, @i))
+	set @i = @i + 1
+end
+
+select * from TAIKHOAN
+
+declare @i int = 0;
+while @i < 10 
+begin
+	insert KHACHHANG (ID) values ('KH00' + CONVERT(char, @i))
+	set @i = @i + 1
+end
+select * from KHACHHANG
+
+declare @i int = 0;
+while @i < 10 
+begin
+	insert PHONG(ID) values ('KH00' + CONVERT(char, @i))
+	set @i = @i + 1
+end
+select * from PHONG
+
+declare @i int = 0;
+while @i < 10 
+begin
+	insert DANGKI(ID) values ('KH00' + CONVERT(char, @i))
+	set @i = @i + 1
+end
+select * from DANGKI
+
+select * from TAIKHOAN

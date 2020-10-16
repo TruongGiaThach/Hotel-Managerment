@@ -136,3 +136,4 @@ D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csproj.CoreCo
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csproj.CopyComplete
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.exe
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.pdb
+C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.FormCommon.resources

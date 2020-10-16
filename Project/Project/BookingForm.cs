@@ -86,6 +86,7 @@ namespace Project
         private void BookingForm_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            MaxIndex = this.flowLayoutPanelPicturePreview.Width / 128;
         }
     }
 }

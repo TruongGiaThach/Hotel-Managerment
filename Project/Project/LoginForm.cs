@@ -29,6 +29,7 @@ namespace Project
 
         private void B_Load(object sender, EventArgs e)
         {
+            this.loadingGif.Visible = false;
         }
 
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -39,8 +40,8 @@ namespace Project
         private void materialButton1_Click(object sender, EventArgs e) //dat phong
         {
             this.Hide();
-            BookingForm bookingForm = new BookingForm(this,this.currentUser);
-            bookingForm.Show();
+            Home home = new Home(this,this.currentUser);
+            home.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace Project
             {
                 throw new Exception("Please Fill All The Fields");
             }
-            return DSTaiKhoan.Instance.dangNhap(user, pass) ;
+            return DSTaiKhoan.Instance.dangNhap(user, pass ) ;
         }
         private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap admin
         {
@@ -77,6 +78,7 @@ namespace Project
                 if (login(user, pass))
                 {
                     timerToLogin.Start();
+                    this.currentUser = DSTaiKhoan.Instance.getTaiKhoanbyName(user);
                     this.loadingGif.Visible = true;
                 }
                 else throw new Exception("The username or password is incorrect...");
@@ -113,9 +115,24 @@ namespace Project
         private void timerToLogin_Tick(object sender, EventArgs e)
         {
             timerToLogin.Stop();
-            ManagerForm managerForm = new ManagerForm(this, this.currentUser);
-            this.Hide();
-            managerForm.Show();
+            switch (this.currentUser.PhanQuyen.Replace(" ",string.Empty)) 
+            {
+                case "admin":
+                    ManagerForm managerForm = new ManagerForm(this, this.currentUser);
+                    managerForm.Show();
+                    this.Hide();
+                    break;
+                case "user":
+                    Home homepage = new Home(this, this.currentUser);
+                    homepage.Show();
+                    this.Hide();
+                    break;
+                default:
+                    MessageBox.Show("Clone account!!!");
+                    B_Load(sender, e);
+                    break;
+            }
+      
         }
     }
 }

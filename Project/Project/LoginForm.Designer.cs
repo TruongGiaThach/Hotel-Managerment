@@ -246,7 +246,7 @@ namespace Project
             this.loginAsAdmin.Name = "loginAsAdmin";
             this.loginAsAdmin.Size = new System.Drawing.Size(208, 36);
             this.loginAsAdmin.TabIndex = 5;
-            this.loginAsAdmin.Text = "Đăng nhập băng quản lí";
+            this.loginAsAdmin.Text = "Đăng nhập ";
             this.loginAsAdmin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.loginAsAdmin.UseAccentColor = false;
             this.loginAsAdmin.UseVisualStyleBackColor = false;
@@ -266,7 +266,7 @@ namespace Project
             // 
             // timerToLogin
             // 
-            this.timerToLogin.Interval = 5000;
+            this.timerToLogin.Interval = 10;
             this.timerToLogin.Tick += new System.EventHandler(this.timerToLogin_Tick);
             // 
             // LoginForm

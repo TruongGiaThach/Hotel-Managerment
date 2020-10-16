@@ -32,6 +32,7 @@ namespace Project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.PanelMenu = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.Order_button = new System.Windows.Forms.Button();
             this.label_menu = new System.Windows.Forms.Label();
             this.ButtonRoom = new System.Windows.Forms.Button();
             this.ButtonAccounts = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@ namespace Project
             // PanelMenu
             // 
             this.PanelMenu.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.Aquamarine, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165))))));
+            this.PanelMenu.Controls.Add(this.Order_button);
             this.PanelMenu.Controls.Add(this.label_menu);
             this.PanelMenu.Controls.Add(this.ButtonRoom);
             this.PanelMenu.Controls.Add(this.ButtonAccounts);
@@ -69,6 +71,20 @@ namespace Project
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(239, 479);
             this.PanelMenu.TabIndex = 8;
+            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
+            // 
+            // Order_button
+            // 
+            this.Order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+            this.Order_button.Location = new System.Drawing.Point(25, 159);
+            this.Order_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Order_button.Name = "Order_button";
+            this.Order_button.Size = new System.Drawing.Size(183, 51);
+            this.Order_button.TabIndex = 9;
+            this.Order_button.Text = "Order";
+            this.Order_button.UseVisualStyleBackColor = true;
+            this.Order_button.Click += new System.EventHandler(this.Order_button_Click);
             // 
             // label_menu
             // 
@@ -94,6 +110,7 @@ namespace Project
             this.ButtonRoom.TabIndex = 6;
             this.ButtonRoom.Text = "Rooms";
             this.ButtonRoom.UseVisualStyleBackColor = true;
+            this.ButtonRoom.Click += new System.EventHandler(this.ButtonRoom_Click);
             // 
             // ButtonAccounts
             // 
@@ -106,6 +123,7 @@ namespace Project
             this.ButtonAccounts.TabIndex = 7;
             this.ButtonAccounts.Text = "Accounts";
             this.ButtonAccounts.UseVisualStyleBackColor = true;
+            this.ButtonAccounts.Click += new System.EventHandler(this.ButtonAccounts_Click);
             // 
             // MenuPanel_2
             // 
@@ -146,6 +164,7 @@ namespace Project
             this.bunifuImageButton1.TabIndex = 7;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // group_notification
             // 
@@ -303,5 +322,6 @@ namespace Project
         private Button ButtonSendText;
         private Button ButtonSendEmail;
         private Button ButtonCall;
+        private Button Order_button;
     }
 }

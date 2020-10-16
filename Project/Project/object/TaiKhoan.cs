@@ -1,24 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project
 {
     public class TaiKhoan
     {
-        private string Id;
+        private string iD;
         private string ten_DN;
         private string matKhau;
-        private KhachHang khachHang;
+        private string maKH;
         private string phanQuyen;
         public TaiKhoan()
         {
             this.ten_DN = "khach";
             this.matKhau = "1";
             this.phanQuyen = "khach";
+        }
+        public TaiKhoan(DataRow item)
+        {
+            this.iD = item["ID"].ToString();
+            this.tenDN = item["TENDN"].ToString();
+            this.matKhau = item["MATKHAU"].ToString();
+            this.maKH = item["MAKH"].ToString();
+            this.phanQuyen = item["PHANQUYEN"].ToString();
+        }
+        public TaiKhoan(string id, string tendn, string matkhau, string makh, string phanquyen)
+        {
+            this.iD = id;
+            this.tenDN = tendn;
+            this.matKhau = matkhau;
+            this.maKH = makh;
+            this.phanQuyen = phanquyen;
         }
         public string PhanQuyen
         {
@@ -27,37 +45,22 @@ namespace Project
         }
         public string ID
         {
-            get
-            {
-                return this.Id;
-            }
-            set
-            {
-                this.Id = value;
-            }
+            get { return this.iD; }
+            set { this.iD = value;}
         }
         public string tenDN
         {
-            get
-            {
-                return this.ten_DN;
-            }
-            set
-            {
-                this.ten_DN = value;
-            }
+            get{ return this.ten_DN;}
+            set{ this.ten_DN = value;}
         }
         public string MatKhau
         {
-            get
-            {
-                return this.matKhau;
-            }
-            set
-            {
-                this.matKhau = value;
-            }
+            get  {  return this.matKhau;   }
+            set { this.matKhau = value;     }
         }
+
+        public string MaKH { get => maKH; set => maKH = value; }
+
         public static string encode(string chuoi)
         {
             string str_md5 = "";

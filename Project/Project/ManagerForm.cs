@@ -24,14 +24,7 @@ namespace Project
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-            MdiChild = new FormCommon();
-            MdiChild.MdiParent = this;
-            MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            MdiChild.Show();
-            string sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
-                "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
-                "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI ";
-            //this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
+            this.Order_button_Click(sender, e);
         }
 
         private void ButtonAccounts_Click(object sender, EventArgs e)
@@ -40,10 +33,43 @@ namespace Project
             if (MdiChild != null)
                 MdiChild.Close();
             //create Form
-            MdiChild = new FormCommon();
+            MdiChild = new FormCommon("account");
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
+        }
+
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ButtonRoom_Click(object sender, EventArgs e)
+        {
+            if (MdiChild != null)
+                MdiChild.Close();
+            //create Form
+            MdiChild = new FormCommon("room");
+            MdiChild.MdiParent = this;
+            MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            MdiChild.Show();
+        }
+
+        private void Order_button_Click(object sender, EventArgs e)
+        {
+            if (MdiChild != null)
+                MdiChild.Close();
+            //create Form
+            MdiChild = new FormCommon("default");
+            MdiChild.MdiParent = this;
+            MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            MdiChild.Show();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.loginForm.Show();
         }
     }
 }

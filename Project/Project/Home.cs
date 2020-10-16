@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,10 +16,12 @@ namespace Project
         BackgroundWorker BackWorker = new BackgroundWorker();
         private LoginForm loginForm;
         private TaiKhoan currentUser;
-        public Home()
+        public Home(LoginForm form, TaiKhoan user = null)
         {
             InitializeComponent();
             InitalizeMdiChild();
+            this.loginForm = form;
+            this.currentUser = user;
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -26,6 +29,10 @@ namespace Project
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
+            //--------------
+            
+            this.userNameLable.Text = (this.currentUser == null)? "Tạo tài khoản mới" : this.currentUser.tenDN;
+
         }
 
         //Button Event Handle
@@ -66,6 +73,24 @@ namespace Project
         }
 
         private void BackWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)// go to login
+        {
+            this.Close();
+            this.loginForm.Show();
+        }
+
+        private void signUpButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUp signUp = new SignUp(this);
+            signUp.Show();
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
         {
 
         }
