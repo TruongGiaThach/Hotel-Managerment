@@ -39,8 +39,8 @@ namespace Project
         private void materialButton1_Click(object sender, EventArgs e) //dat phong
         {
             this.Hide();
-            BookingForm bookingForm = new BookingForm(this,this.currentUser);
-            bookingForm.Show();
+            Home HomeForm = new Home();
+            HomeForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
