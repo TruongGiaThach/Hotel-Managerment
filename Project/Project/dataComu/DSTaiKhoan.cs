@@ -85,5 +85,11 @@ namespace Project
 
             return result > 0;
         }
+        public bool xoaTaiKhoan(string user)
+        {
+            string sqlQuery = "delete from TAIKHOAN where TENDN = @user ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user });
+            return result > 0;
+        }
     }
 }

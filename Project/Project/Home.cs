@@ -80,6 +80,7 @@ namespace Project
         private void bunifuImageButton1_Click(object sender, EventArgs e)// go to login
         {
             this.Close();
+            this.loginForm.B_Load(sender, e);
             this.loginForm.Show();
         }
 

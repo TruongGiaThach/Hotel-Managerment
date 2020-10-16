@@ -36,12 +36,6 @@ create table PHONG
 	TRANGTHAI char(20),
 	GIAPHONG money
 )
-create procedure us_Login
-(@user varchar(40), @pass varchar(40))
-as
-begin
-	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
-end
 
 insert TAIKHOAN(ID,TENDN,MATKHAU,PHANQUYEN) values ('0','root','1','0')
 declare @i int = 0;
@@ -76,5 +70,37 @@ begin
 	set @i = @i + 1
 end
 select * from DANGKI
+------------------------------------------------
+create procedure us_UpdateTaiKhoan 
+@userName varchar(40), @password varchar(40), @newPassword varchar(40), @Phanquyen char(20)
+AS
+BEGIN
+	DECLARE @isRightPass INT = 0
+		
+	SELECT @isRightPass = COUNT(*) FROM TAIKHOAN 
+		WHERE TENDN = @userName AND MATKHAU = @password
 
+	IF (@isRightPass = 1)
+	BEGIN
+		IF (@newPassword = NULL OR @newPassword = '')
+		BEGIN
+			UPDATE TAIKHOAN 
+			set PHANQUYEN = @Phanquyen
+			WHERE TENDN = @userName
+		END		
+		ELSE
+			UPDATE TAIKHOAN 
+			SET MATKHAU = @newPassword 
+			WHERE TENDN = @userName
+	end
+END
+------------------------------------------------------
+create procedure us_Login
+(@user varchar(40), @pass varchar(40))
+as
+begin
+	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
+end
+
+UPDATE TAIKHOAN SET PHANQUYEN = 'admin' WHERE TENDN = 'thach'
 select * from TAIKHOAN

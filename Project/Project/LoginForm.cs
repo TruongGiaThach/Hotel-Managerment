@@ -27,9 +27,11 @@ namespace Project
 
         }
 
-        private void B_Load(object sender, EventArgs e)
+        public void B_Load(object sender, EventArgs e)
         {
             this.loadingGif.Visible = false;
+            UserTextBox.Text = string.Empty;
+            PasswordTextBox.Text = string.Empty;
         }
 
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -67,7 +69,7 @@ namespace Project
             }
             return DSTaiKhoan.Instance.dangNhap(user, pass ) ;
         }
-        private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap admin
+        private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap
         {
             string user;
             string pass;
