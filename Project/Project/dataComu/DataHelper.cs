@@ -11,8 +11,8 @@ namespace Project
 
     public class DataHelper
     {
-        private string connectionSTR = @"Server=DESKTOP-7RNKS49;Database=PROJECT;
-                                    User Id=sa;Password=27894869;";
+        private string connectionSTR = @"Server=DESKTOP-D36TE7P;Database=PROJECT;
+                                    User Id=sa;Password=0981097144;";
         private static DataHelper instance;
 
         public static DataHelper Instance
