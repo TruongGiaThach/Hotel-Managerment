@@ -36,7 +36,7 @@ namespace Project.dataComu
             }
             return lists[0];
         }
-        public List<Phong> GetDSTaiKhoan()
+        public List<Phong> GetDSPhong()
         {
             List<Phong> lists = new List<Phong>();
             string sqlQuery = "select * from PHONG";

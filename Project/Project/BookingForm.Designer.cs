@@ -213,7 +213,7 @@ namespace Project
             this.materialButtonReserver.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialButtonReserver.HighEmphasis = true;
             this.materialButtonReserver.Icon = null;
-            this.materialButtonReserver.Location = new System.Drawing.Point(187, 389);
+            this.materialButtonReserver.Location = new System.Drawing.Point(206, 377);
             this.materialButtonReserver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialButtonReserver.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButtonReserver.Name = "materialButtonReserver";
@@ -223,6 +223,7 @@ namespace Project
             this.materialButtonReserver.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButtonReserver.UseAccentColor = false;
             this.materialButtonReserver.UseVisualStyleBackColor = false;
+            this.materialButtonReserver.Click += new System.EventHandler(this.materialButtonReserver_Click);
             // 
             // labelReservation
             // 
@@ -271,6 +272,7 @@ namespace Project
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(177, 27);
             this.dateTimePickerFrom.TabIndex = 75;
+            this.dateTimePickerFrom.Value = new System.DateTime(2020, 10, 17, 1, 35, 31, 0);
             // 
             // label2
             // 
@@ -291,11 +293,18 @@ namespace Project
             this.comboBoxRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxRoomType.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRoomType.FormattingEnabled = true;
+            this.comboBoxRoomType.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "6",
+            "8"});
             this.comboBoxRoomType.Location = new System.Drawing.Point(206, 226);
             this.comboBoxRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRoomType.Name = "comboBoxRoomType";
             this.comboBoxRoomType.Size = new System.Drawing.Size(309, 27);
             this.comboBoxRoomType.TabIndex = 74;
+            this.comboBoxRoomType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoomType_SelectedIndexChanged);
             // 
             // label3
             // 

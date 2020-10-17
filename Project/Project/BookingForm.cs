@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.dataComu;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,6 +88,40 @@ namespace Project
         {
             this.ControlBox = false;
             MaxIndex = this.flowLayoutPanelPicturePreview.Width / 128;
+        }
+        private bool themDangKi(string makh, string maphong, string ngnhanphong, string ngtraphong,
+             string tgdoiphong, string ghichu)
+       {
+            return DSDangKi.Instance.themOrder( makh , maphong , ngnhanphong,ngtraphong,tgdoiphong,ghichu);
+        }
+        private void materialButtonReserver_Click(object sender, EventArgs e) // xac nhan
+        {
+            string ten,email,sodt,loaiphong;
+            DateTime ngbd, ngkt;
+            try
+            {
+                ten = this.textBoxName.Text;
+                email = this.textBoxEmail.Text;
+                sodt = this.textBoxPhoneNumber.Text;
+                if (this.comboBoxRoomType.SelectedIndex == -1)
+                {
+                    throw new Exception("Bạn chưa chọn loại phòng...");
+                }
+                loaiphong = this.comboBoxRoomType.SelectedItem.ToString();
+                ngbd = this.dateTimePickerFrom.Value;
+                ngkt = this.dateTimePickerTo.Value;
+                if (ngkt <= ngbd || ngbd < DateTime.Now)
+                    throw new Exception("Vui lòng nhập lại ngày tháng...");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

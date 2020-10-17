@@ -34,10 +34,11 @@ create table PHONG
 	ID char(5) NOT NULL PRIMARY KEY	,
 	LOAI	int,
 	TRANGTHAI char(20),
-	GIAPHONG money
+	GIAPHONG float
 )
 
 insert TAIKHOAN(ID,TENDN,MATKHAU,PHANQUYEN) values ('0','root','1','0')
+
 declare @i int = 0;
 while @i < 10 
 begin
@@ -102,5 +103,14 @@ begin
 	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
 end
 
-UPDATE TAIKHOAN SET PHANQUYEN = 'admin' WHERE TENDN = 'thach'
-select * from TAIKHOAN
+--------------------------------------
+create procedure room_Update
+(@id char(5), @gia float)
+as
+BEGIN
+	update PHONG set GIAPHONG = @gia  where ID = @id
+	
+END
+
+-------------------------------------
+select * from PHONG
