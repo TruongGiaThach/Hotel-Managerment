@@ -138,3 +138,4 @@ D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.exe
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.pdb
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.FormCommon.resources
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.RoomInfor.resources
+D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.RoomInfor.resources
