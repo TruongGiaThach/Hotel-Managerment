@@ -86,8 +86,11 @@ namespace Project
         private void signUpButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignUp signUp = new SignUp(this,ref this.currentUser);
+            TaiKhoan tmp;
+            SignUp signUp = new SignUp(this, tmp);
+            
             signUp.ShowDialog();
+            MessageBox.Show(tmp.ID);
             Home_Load(sender, e);
         }
 
