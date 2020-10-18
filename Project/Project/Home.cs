@@ -96,7 +96,7 @@ namespace Project
         private void signUpButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignUp signUp = new SignUp(this);
+            SignUp signUp = new SignUp(this, ref this.currentUser);
             signUp.Show();
         }
 
