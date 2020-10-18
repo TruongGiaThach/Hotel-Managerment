@@ -30,8 +30,17 @@ namespace Project
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
             //--------------
+            if (this.currentUser == null)
+            {
+                this.userNameLable.Text = "Tạo tài khoản mới";
+                this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
+            }
+            else
+            {
+                this.signUpButton.Image = System.Drawing.Image.FromFile(".\\Images\\profile_icon.png");
+                this.userNameLable.Text = this.currentUser.tenDN;
+            }
             
-            this.userNameLable.Text = (this.currentUser == null)? "Tạo tài khoản mới" : this.currentUser.tenDN;
 
         }
 
