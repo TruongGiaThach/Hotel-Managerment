@@ -67,7 +67,7 @@ namespace Project
             {
                 throw new Exception("Please Fill All The Fields");
             }
-            return DSTaiKhoan.Instance.dangNhap(user, pass ) ;
+            return DSTaiKhoan.Instance.dangNhap(user, TaiKhoan.encode(pass) ) ;
         }
         private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap
         {
