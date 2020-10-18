@@ -174,9 +174,9 @@
             this.autoLabel3.Location = new System.Drawing.Point(376, 202);
             this.autoLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(97, 17);
+            this.autoLabel3.Size = new System.Drawing.Size(47, 17);
             this.autoLabel3.TabIndex = 3;
-            this.autoLabel3.Text = "Email/phone";
+            this.autoLabel3.Text = "Email";
             // 
             // autoLabel1
             // 

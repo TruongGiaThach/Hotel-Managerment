@@ -30,7 +30,16 @@ namespace Project
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
             //--------------
-            this.userNameLable.Text = (this.currentUser == null)? "Tạo tài khoản mới" : this.currentUser.tenDN;
+            if (this.currentUser == null)
+            {
+                this.userNameLable.Text = "Tạo tài khoản mới";
+                this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
+            }
+            else
+            {
+                this.signUpButton.Image = System.Drawing.Image.FromFile(".\\Images\\profile_icon.png");
+                this.userNameLable.Text = this.currentUser.tenDN;
+            }
 
         }
 
@@ -86,7 +95,7 @@ namespace Project
         private void signUpButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignUp signUp = new SignUp(this, ref this.currentUser);
+            SignUp signUp = new SignUp(this.loginForm,this,ref this.currentUser);
             
             signUp.ShowDialog();
             Home_Load(sender, e);

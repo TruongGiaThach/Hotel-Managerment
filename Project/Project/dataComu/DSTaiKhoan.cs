@@ -44,7 +44,7 @@ namespace Project
             }
             return lists;
         }
-        public bool themTaiKhoan(string user, string pass) 
+        public bool themTaiKhoan(string user, string pass,string cusID) 
         {
             string sqlQuery = "select * from TAIKHOAN where TENDN = @user ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { user });
@@ -57,10 +57,10 @@ namespace Project
             string id = "US"  + i.ToString();
             updatePhanQuyen("root", i.ToString());
             //--------------
-            sqlQuery = "insert into TAIKHOAN(ID, TENDN, MATKHAU, PHANQUYEN) " +
-                                "values( @id , @tendn , @matkhau , @phanquyen  )";
+            sqlQuery = "insert into TAIKHOAN(ID, TENDN, MATKHAU , MAKH , PHANQUYEN) " +
+                                "values( @id , @tendn , @matkhau , @makh , @phanquyen  )";
             string[] parameter = new string[]
-                { id, user,pass, "user" };
+                { id, user ,pass , cusID , "user" };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result == 1) return true;
             return false;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -20,6 +21,14 @@ namespace Project
             this.hoTen ="";
             this.email = "";
             this.diaChi = "";
+        }
+        public KhachHang(DataRow item)
+        {
+            this.iD = item["ID"].ToString();
+            this.hoTen = item["HOTEN"].ToString();
+            this.soDT = item["SODT"].ToString();
+            this.email = item["EMAIL"].ToString();
+            this.diaChi = item["DIACHI"].ToString();
         }
         public KhachHang(string id, string hoten, string em, string diachi)
         {

@@ -281,6 +281,7 @@ namespace Project
             this.signUpButton.TabIndex = 3;
             this.signUpButton.TabStop = false;
             this.signUpButton.Zoom = 10;
+
             // 
             // bunifuImageButton1
             // 
