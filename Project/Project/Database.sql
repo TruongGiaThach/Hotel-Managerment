@@ -113,4 +113,4 @@ BEGIN
 END
 
 -------------------------------------
-select * from PHONG
+select * from TAIKHOAN

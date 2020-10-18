@@ -42,7 +42,7 @@ namespace Project
         private void materialButton1_Click(object sender, EventArgs e) //dat phong
         {
             this.Hide();
-            Home home = new Home(this);
+            Home home = new Home(this,null);
             home.Show();
         }
 

@@ -15,10 +15,11 @@ namespace Project
     {
         Home homePage;
         TaiKhoan currentUser;
-        public SignUp(Home form)
+        public SignUp(Home form,ref TaiKhoan user)
         {
             InitializeComponent();
             this.homePage = form;
+            this.currentUser = user;
         }
 
         private void button_Return_Click(object sender, EventArgs e) // when in sigup_panel
@@ -53,6 +54,7 @@ namespace Project
                 if (signUp(user, pass, repass))
                 {
                     MessageBox.Show("Thêm tài khoản thành công ><");
+                    this.currentUser = DSTaiKhoan.Instance.getTaiKhoanbyName(user);
                     this.Close();
                     homePage.Show();
                 }
