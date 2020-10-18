@@ -16,7 +16,7 @@ namespace Project
         BackgroundWorker BackWorker = new BackgroundWorker();
         private LoginForm loginForm;
         private TaiKhoan currentUser;
-        public Home(LoginForm form, TaiKhoan user = null)
+        public Home(LoginForm form, TaiKhoan user)
         {
             InitializeComponent();
             InitalizeMdiChild();
@@ -30,17 +30,7 @@ namespace Project
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
             //--------------
-            if (this.currentUser == null)
-            {
-                this.userNameLable.Text = "Tạo tài khoản mới";
-                this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
-            }
-            else
-            {
-                this.signUpButton.Image = System.Drawing.Image.FromFile(".\\Images\\profile_icon.png");
-                this.userNameLable.Text = this.currentUser.tenDN;
-            }
-            
+            this.userNameLable.Text = (this.currentUser == null)? "Tạo tài khoản mới" : this.currentUser.tenDN;
 
         }
 
@@ -97,7 +87,9 @@ namespace Project
         {
             this.Hide();
             SignUp signUp = new SignUp(this, ref this.currentUser);
-            signUp.Show();
+            
+            signUp.ShowDialog();
+            Home_Load(sender, e);
         }
 
         private void labelName_Click(object sender, EventArgs e)

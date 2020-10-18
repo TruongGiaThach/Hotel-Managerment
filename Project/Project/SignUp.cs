@@ -34,7 +34,7 @@ namespace Project
             {
                 throw new Exception("Please Fill All The Fields");
             }
-            return DSTaiKhoan.Instance.themTaiKhoan(user, pass);
+            return DSTaiKhoan.Instance.themTaiKhoan(user, TaiKhoan.encode(pass));
         }
 
         private void button_NextPage_Click(object sender, EventArgs e)  
