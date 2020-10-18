@@ -241,8 +241,9 @@ namespace Project
             // dateTimePickerTo
             // 
             this.dateTimePickerTo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerTo.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerTo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerTo.Location = new System.Drawing.Point(334, 296);
             this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
@@ -265,8 +266,9 @@ namespace Project
             // dateTimePickerFrom
             // 
             this.dateTimePickerFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerFrom.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerFrom.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerFrom.Location = new System.Drawing.Point(93, 298);
             this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
@@ -484,7 +486,6 @@ namespace Project
         private Label labelReservation;
         private DateTimePicker dateTimePickerTo;
         private Label label1;
-        private DateTimePicker dateTimePickerFrom;
         private Label label2;
         private ComboBox comboBoxRoomType;
         private Label label3;
@@ -494,5 +495,6 @@ namespace Project
         private Label label5;
         private TextBox textBoxName;
         private Label label4;
+        private DateTimePicker dateTimePickerFrom;
     }
 }
