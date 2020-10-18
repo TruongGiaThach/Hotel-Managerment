@@ -31,12 +31,18 @@ namespace Project
                 case "account":
                     sqlQuery = "select * from TAIKHOAN";
                     this.button_Add.Visible = false;
+                    this.button_Delete.Visible = false;
                     this.buttonChange.Visible = false;
                     break;
                 case "room":
                     sqlQuery = "select * from PHONG";
                     break;
-
+                case "customer":
+                    sqlQuery = "select * from KHACHHANG";
+                    this.button_Add.Visible = false;
+                    this.button_Delete.Visible = false;
+                    this.buttonChange.Visible = false;
+                    break;
                 default:
                     sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
                     "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +

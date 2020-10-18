@@ -72,5 +72,16 @@ namespace Project
             this.loginForm.B_Load(sender, e);
             this.loginForm.Show();
         }
+
+        private void button_Customer_Click(object sender, EventArgs e)
+        {
+            if (MdiChild != null)
+                MdiChild.Close();
+            //create Form
+            MdiChild = new FormCommon("customer");
+            MdiChild.MdiParent = this;
+            MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            MdiChild.Show();
+        }
     }
 }

@@ -36,6 +36,19 @@ namespace Project.dataComu
             }
             return lists[0];
         }
+        public List<Phong> getByStatus(string status)
+        {
+            List<Phong> lists = new List<Phong>();
+            string sqlQuery = "select * from PHONG where TRANGTHAI = @status ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status });
+            foreach (DataRow i in data.Rows)
+            {
+                Phong item = new Phong(i);
+                lists.Add(item);
+            };
+            return lists;
+
+        }
         public List<Phong> GetDSPhong()
         {
             List<Phong> lists = new List<Phong>();
@@ -62,10 +75,16 @@ namespace Project.dataComu
             if (result == 1) return true;
             return false;
         }
-        public bool updatePhong(string id , string gia )
-        { 
+        public bool updatePrice(string id, string gia)
+        {
             string sqlQuery = "exec room_Update @id , @gia ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id, gia }) ;
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id, gia });
+            return result > 0;
+        }
+        public bool updateStatus(string id, string status)
+        {
+            string sqlQuery = "update PHONG set TRANGTHAI = @status where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { status,id });
             return result > 0;
         }
         public bool xoaPhong(string id)

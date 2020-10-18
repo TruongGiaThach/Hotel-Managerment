@@ -50,7 +50,7 @@ namespace Project
         }
         private bool updateRoom(string id, string gia)
         {
-            return DSPhong.Instance.updatePhong(id, gia);
+            return DSPhong.Instance.updatePrice(id, gia);
         }
         private void RoomInfor_Load(object sender, EventArgs e)
         {

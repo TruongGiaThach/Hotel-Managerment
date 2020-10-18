@@ -48,6 +48,7 @@ namespace Project
             this.ButtonSendText = new System.Windows.Forms.Button();
             this.ButtonSendEmail = new System.Windows.Forms.Button();
             this.ButtonCall = new System.Windows.Forms.Button();
+            this.button_Customer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.MenuPanel_2.SuspendLayout();
@@ -62,6 +63,7 @@ namespace Project
             // PanelMenu
             // 
             this.PanelMenu.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.Aquamarine, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165))))));
+            this.PanelMenu.Controls.Add(this.button_Customer);
             this.PanelMenu.Controls.Add(this.Order_button);
             this.PanelMenu.Controls.Add(this.label_menu);
             this.PanelMenu.Controls.Add(this.ButtonRoom);
@@ -276,6 +278,19 @@ namespace Project
             this.ButtonCall.Text = "CALL";
             this.ButtonCall.UseVisualStyleBackColor = true;
             // 
+            // button_Customer
+            // 
+            this.button_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+            this.button_Customer.Location = new System.Drawing.Point(26, 212);
+            this.button_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Customer.Name = "button_Customer";
+            this.button_Customer.Size = new System.Drawing.Size(183, 51);
+            this.button_Customer.TabIndex = 10;
+            this.button_Customer.Text = "Customer";
+            this.button_Customer.UseVisualStyleBackColor = true;
+            this.button_Customer.Click += new System.EventHandler(this.button_Customer_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -323,5 +338,6 @@ namespace Project
         private Button ButtonSendEmail;
         private Button ButtonCall;
         private Button Order_button;
+        private Button button_Customer;
     }
 }

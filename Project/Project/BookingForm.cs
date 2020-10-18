@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,10 +90,17 @@ namespace Project
             this.ControlBox = false;
             MaxIndex = this.flowLayoutPanelPicturePreview.Width / 128;
         }
-        private bool themDangKi(string makh, string maphong, string ngnhanphong, string ngtraphong,
-             string tgdoiphong, string ghichu)
-       {
-            return DSDangKi.Instance.themOrder( makh , maphong , ngnhanphong,ngtraphong,tgdoiphong,ghichu);
+        private bool themDangKi(string ten, string sdt, string email,string ngbd, string ngkt, string loai)
+        {
+
+            if (string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(email))
+            {
+                throw new Exception("Please Fill All The Fields");
+            }
+            DSKhachHang.Instance.themKhachHang(ten, email, sdt, "");
+            string makh = DSKhachHang.Instance.getByEmail(email).ID;
+            string maphong = DSPhong.Instance.getByStatus("trong")[0].ID;
+            return DSDangKi.Instance.themOrder( makh , maphong , ngbd ,ngkt ,"","");
         }
         private void materialButtonReserver_Click(object sender, EventArgs e) // xac nhan
         {
@@ -112,6 +120,12 @@ namespace Project
                 ngkt = this.dateTimePickerTo.Value;
                 if (ngkt <= ngbd || ngbd < DateTime.Now)
                     throw new Exception("Vui lòng nhập lại ngày tháng...");
+                CultureInfo enUs = new CultureInfo("en-US");
+                if (themDangKi(ten, sodt, email, ngbd.ToString("d",enUs), ngkt.ToString("d", enUs), loaiphong))
+                {
+                    MessageBox.Show("Đã đặt phòng thành công ><");
+                    this.BookingForm_Load(sender,e);
+                }
             }
             catch (Exception ex)
             {
