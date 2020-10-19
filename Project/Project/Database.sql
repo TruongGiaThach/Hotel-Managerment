@@ -12,10 +12,11 @@ create table KHACHHANG
 (
 	ID char(5) NOT NULL PRIMARY KEY,	
 	HOTEN char(40),
-	SODT char(20),
-	EMAIL char(30),
+	SODT char(50),
+	EMAIL char(50),
 	DIACHI char(50)
 )
+
 create table DANGKI
 (
 	ID char(5) NOT NULL PRIMARY KEY,
@@ -111,6 +112,25 @@ BEGIN
 	update PHONG set GIAPHONG = @gia  where ID = @id
 	
 END
-
+-------------------------------------------
+create procedure kh_UpdatePhone
+(@email char(50) , @phone char(40))
+as
+BEGIN
+	update KHACHHANG
+	set SODT = @phone
+	where EMAIL = @email
+END
 -------------------------------------
-select * from TAIKHOAN
+insert KHACHHANG(ID, EMAIL, SODT) 
+values ('0','root@gmail.com','0')
+select * from PHONG
+select * from DANGKI
+select * from KHACHHANG
+delete DANGKI where ID = '-1'
+insert TAIKHOAN(ID, TENDN, MAKH,PHANQUYEN)
+values ('-1','root','0','0')
+insert DANGKI(ID,NGNHANPHONG,NGTRAPHONG,TRANGTHAIDON,TGDOIPHONG)
+values ('-1','1/1/2000','1/2/2000','root',0)
+insert PHONG(ID,LOAI,TRANGTHAI,GIAPHONG)
+values ('PH002','2','trong','800')
