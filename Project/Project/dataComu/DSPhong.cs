@@ -36,11 +36,11 @@ namespace Project.dataComu
             }
             return lists[0];
         }
-        public List<Phong> getByStatus(string status)
+        public List<Phong> getByStatusAndType(string status,int type)
         {
             List<Phong> lists = new List<Phong>();
-            string sqlQuery = "select * from PHONG where TRANGTHAI = @status ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status });
+            string sqlQuery = "select * from PHONG where TRANGTHAI = @status and LOAI = @type ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status , type.ToString() });
             foreach (DataRow i in data.Rows)
             {
                 Phong item = new Phong(i);

@@ -110,7 +110,7 @@
             this.buttonChange.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
             this.buttonChange.Size = new System.Drawing.Size(232, 37);
             this.buttonChange.TabIndex = 5;
-            this.buttonChange.Text = "CHANGE";
+            this.buttonChange.Text = "Thay đổi";
             this.buttonChange.TextAlignment = System.Drawing.StringAlignment.Center;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
@@ -133,7 +133,7 @@
             this.button_Add.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
             this.button_Add.Size = new System.Drawing.Size(236, 41);
             this.button_Add.TabIndex = 3;
-            this.button_Add.Text = "ADD";
+            this.button_Add.Text = "Thêm";
             this.button_Add.TextAlignment = System.Drawing.StringAlignment.Center;
             this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
@@ -156,7 +156,7 @@
             this.button_Delete.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
             this.button_Delete.Size = new System.Drawing.Size(232, 37);
             this.button_Delete.TabIndex = 4;
-            this.button_Delete.Text = "DELETE";
+            this.button_Delete.Text = "Xóa";
             this.button_Delete.TextAlignment = System.Drawing.StringAlignment.Center;
             this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 

@@ -32,6 +32,7 @@ namespace Project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.PanelMenu = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.button_Customer = new System.Windows.Forms.Button();
             this.Order_button = new System.Windows.Forms.Button();
             this.label_menu = new System.Windows.Forms.Label();
             this.ButtonRoom = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace Project
             this.ButtonSendText = new System.Windows.Forms.Button();
             this.ButtonSendEmail = new System.Windows.Forms.Button();
             this.ButtonCall = new System.Windows.Forms.Button();
-            this.button_Customer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.MenuPanel_2.SuspendLayout();
@@ -75,6 +75,19 @@ namespace Project
             this.PanelMenu.TabIndex = 8;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
+            // button_Customer
+            // 
+            this.button_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+            this.button_Customer.Location = new System.Drawing.Point(26, 212);
+            this.button_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Customer.Name = "button_Customer";
+            this.button_Customer.Size = new System.Drawing.Size(183, 51);
+            this.button_Customer.TabIndex = 10;
+            this.button_Customer.Text = "Khách hàng";
+            this.button_Customer.UseVisualStyleBackColor = true;
+            this.button_Customer.Click += new System.EventHandler(this.button_Customer_Click);
+            // 
             // Order_button
             // 
             this.Order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,7 +97,7 @@ namespace Project
             this.Order_button.Name = "Order_button";
             this.Order_button.Size = new System.Drawing.Size(183, 51);
             this.Order_button.TabIndex = 9;
-            this.Order_button.Text = "Order";
+            this.Order_button.Text = "Đơn đặt phòng";
             this.Order_button.UseVisualStyleBackColor = true;
             this.Order_button.Click += new System.EventHandler(this.Order_button_Click);
             // 
@@ -110,7 +123,7 @@ namespace Project
             this.ButtonRoom.Name = "ButtonRoom";
             this.ButtonRoom.Size = new System.Drawing.Size(183, 51);
             this.ButtonRoom.TabIndex = 6;
-            this.ButtonRoom.Text = "Rooms";
+            this.ButtonRoom.Text = "Phòng";
             this.ButtonRoom.UseVisualStyleBackColor = true;
             this.ButtonRoom.Click += new System.EventHandler(this.ButtonRoom_Click);
             // 
@@ -123,7 +136,7 @@ namespace Project
             this.ButtonAccounts.Name = "ButtonAccounts";
             this.ButtonAccounts.Size = new System.Drawing.Size(183, 51);
             this.ButtonAccounts.TabIndex = 7;
-            this.ButtonAccounts.Text = "Accounts";
+            this.ButtonAccounts.Text = "Tài khoản";
             this.ButtonAccounts.UseVisualStyleBackColor = true;
             this.ButtonAccounts.Click += new System.EventHandler(this.ButtonAccounts_Click);
             // 
@@ -184,7 +197,7 @@ namespace Project
             this.group_notification.Size = new System.Drawing.Size(376, 91);
             this.group_notification.TabIndex = 6;
             this.group_notification.TabStop = false;
-            this.group_notification.Text = "NOTIFICATION";
+            this.group_notification.Text = "Thông báo";
             // 
             // ButtonCheckinNotice
             // 
@@ -194,7 +207,7 @@ namespace Project
             this.ButtonCheckinNotice.Name = "ButtonCheckinNotice";
             this.ButtonCheckinNotice.Size = new System.Drawing.Size(117, 58);
             this.ButtonCheckinNotice.TabIndex = 0;
-            this.ButtonCheckinNotice.Text = "check-in notice";
+            this.ButtonCheckinNotice.Text = "Thông báo nhận phòng";
             this.ButtonCheckinNotice.UseVisualStyleBackColor = true;
             // 
             // ButtonCheckoutNotice
@@ -205,7 +218,7 @@ namespace Project
             this.ButtonCheckoutNotice.Name = "ButtonCheckoutNotice";
             this.ButtonCheckoutNotice.Size = new System.Drawing.Size(117, 58);
             this.ButtonCheckoutNotice.TabIndex = 0;
-            this.ButtonCheckoutNotice.Text = "Check-out Notice";
+            this.ButtonCheckoutNotice.Text = "Thông báo trả phòng";
             this.ButtonCheckoutNotice.UseVisualStyleBackColor = true;
             // 
             // ButtonBookingNotice
@@ -216,7 +229,7 @@ namespace Project
             this.ButtonBookingNotice.Name = "ButtonBookingNotice";
             this.ButtonBookingNotice.Size = new System.Drawing.Size(117, 58);
             this.ButtonBookingNotice.TabIndex = 0;
-            this.ButtonBookingNotice.Text = "Booking Notice";
+            this.ButtonBookingNotice.Text = "Thông báo đặt phòng";
             this.ButtonBookingNotice.UseVisualStyleBackColor = true;
             // 
             // kryptonSeparator1
@@ -243,7 +256,7 @@ namespace Project
             this.group_comunicate.Size = new System.Drawing.Size(344, 91);
             this.group_comunicate.TabIndex = 5;
             this.group_comunicate.TabStop = false;
-            this.group_comunicate.Text = "COMUNICATE";
+            this.group_comunicate.Text = "Liên lạc";
             // 
             // ButtonSendText
             // 
@@ -253,7 +266,7 @@ namespace Project
             this.ButtonSendText.Name = "ButtonSendText";
             this.ButtonSendText.Size = new System.Drawing.Size(105, 61);
             this.ButtonSendText.TabIndex = 0;
-            this.ButtonSendText.Text = "Send Text";
+            this.ButtonSendText.Text = "Gửi tin nhắn";
             this.ButtonSendText.UseVisualStyleBackColor = true;
             // 
             // ButtonSendEmail
@@ -264,7 +277,7 @@ namespace Project
             this.ButtonSendEmail.Name = "ButtonSendEmail";
             this.ButtonSendEmail.Size = new System.Drawing.Size(105, 61);
             this.ButtonSendEmail.TabIndex = 0;
-            this.ButtonSendEmail.Text = "Send Email";
+            this.ButtonSendEmail.Text = "Gửi Email";
             this.ButtonSendEmail.UseVisualStyleBackColor = true;
             // 
             // ButtonCall
@@ -275,21 +288,8 @@ namespace Project
             this.ButtonCall.Name = "ButtonCall";
             this.ButtonCall.Size = new System.Drawing.Size(103, 61);
             this.ButtonCall.TabIndex = 0;
-            this.ButtonCall.Text = "CALL";
+            this.ButtonCall.Text = "Gọi";
             this.ButtonCall.UseVisualStyleBackColor = true;
-            // 
-            // button_Customer
-            // 
-            this.button_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.button_Customer.Location = new System.Drawing.Point(26, 212);
-            this.button_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Customer.Name = "button_Customer";
-            this.button_Customer.Size = new System.Drawing.Size(183, 51);
-            this.button_Customer.TabIndex = 10;
-            this.button_Customer.Text = "Customer";
-            this.button_Customer.UseVisualStyleBackColor = true;
-            this.button_Customer.Click += new System.EventHandler(this.button_Customer_Click);
             // 
             // ManagerForm
             // 

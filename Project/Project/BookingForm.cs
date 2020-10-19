@@ -96,10 +96,22 @@ namespace Project
             if (string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(email))
             {
                 throw new Exception("Please Fill All The Fields");
-            }
+            };
+            long sodt = Int64.Parse(sdt);
+            if (!email.Contains('@'))
+                throw new Exception("Email sai format.....");
+            int i;
+            if (loai == null || loai == " ")
+                i = 0;
+            else i = Int32.Parse(loai);
+            List<Phong> phong = DSPhong.Instance.getByStatusAndType("trong", i);
+            string maphong = "";
+            if (phong.Count != 0)
+                maphong = phong[0].ID;
+            else throw new Exception("Đã hết loại phòng được chọn ..");
+
             DSKhachHang.Instance.themKhachHang(ten, email, sdt, "");
             string makh = DSKhachHang.Instance.getByEmail(email).ID;
-            string maphong = DSPhong.Instance.getByStatus("trong")[0].ID;
             return DSDangKi.Instance.themOrder( makh , maphong , ngbd ,ngkt ,"","");
         }
         private void materialButtonReserver_Click(object sender, EventArgs e) // xac nhan
@@ -126,6 +138,10 @@ namespace Project
                     MessageBox.Show("Đã đặt phòng thành công ><");
                     this.BookingForm_Load(sender,e);
                 }
+            }
+            catch(FormatException fe)
+            {
+                MessageBox.Show("Số điện thoại nhâp sai...");
             }
             catch (Exception ex)
             {

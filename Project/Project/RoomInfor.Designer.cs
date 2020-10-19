@@ -125,6 +125,7 @@
             this.Controls.Add(this.priceTextbox);
             this.Controls.Add(this.idTextbox);
             this.Name = "RoomInfor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoomInfor";
             this.Load += new System.EventHandler(this.RoomInfor_Load);
             this.ResumeLayout(false);

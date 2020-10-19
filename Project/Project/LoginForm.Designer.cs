@@ -41,7 +41,6 @@ namespace Project
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.airSeparator1 = new ReaLTaiizor.Controls.AirSeparator();
             this.rememberUser = new MaterialSkin.Controls.MaterialCheckbox();
-            this.resetPassword = new MaterialSkin.Controls.MaterialButton();
             this.UserTextBox = new ReaLTaiizor.Controls.MoonTextBox();
             this.PasswordTextBox = new ReaLTaiizor.Controls.MoonTextBox();
             this.loginAsAdmin = new MaterialSkin.Controls.MaterialButton();
@@ -96,7 +95,6 @@ namespace Project
             this.gradientPanel1.Controls.Add(this.airSeparator1);
             this.gradientPanel1.Controls.Add(this.bookingButton);
             this.gradientPanel1.Controls.Add(this.rememberUser);
-            this.gradientPanel1.Controls.Add(this.resetPassword);
             this.gradientPanel1.Controls.Add(this.UserTextBox);
             this.gradientPanel1.Controls.Add(this.PasswordTextBox);
             this.gradientPanel1.Controls.Add(this.loginAsAdmin);
@@ -169,7 +167,7 @@ namespace Project
             this.rememberUser.AutoSize = true;
             this.rememberUser.BackColor = System.Drawing.Color.Transparent;
             this.rememberUser.Depth = 0;
-            this.rememberUser.Location = new System.Drawing.Point(626, 309);
+            this.rememberUser.Location = new System.Drawing.Point(625, 332);
             this.rememberUser.Margin = new System.Windows.Forms.Padding(0);
             this.rememberUser.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rememberUser.MouseState = MaterialSkin.MouseState.HOVER;
@@ -179,29 +177,7 @@ namespace Project
             this.rememberUser.TabIndex = 10;
             this.rememberUser.Text = "Remember me   ";
             this.rememberUser.UseVisualStyleBackColor = false;
-            // 
-            // resetPassword
-            // 
-            this.resetPassword.AutoSize = false;
-            this.resetPassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.resetPassword.BackColor = System.Drawing.Color.Transparent;
-            this.resetPassword.Depth = 0;
-            this.resetPassword.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.resetPassword.DrawShadows = true;
-            this.resetPassword.Font = new System.Drawing.Font("Microsoft Himalaya", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetPassword.HighEmphasis = true;
-            this.resetPassword.Icon = null;
-            this.resetPassword.Location = new System.Drawing.Point(626, 376);
-            this.resetPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.resetPassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.resetPassword.Name = "resetPassword";
-            this.resetPassword.Size = new System.Drawing.Size(185, 29);
-            this.resetPassword.TabIndex = 9;
-            this.resetPassword.Text = "Reset password";
-            this.resetPassword.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.resetPassword.UseAccentColor = false;
-            this.resetPassword.UseVisualStyleBackColor = false;
-            this.resetPassword.Click += new System.EventHandler(this.materialButton3_Click_1);
+            this.rememberUser.CheckedChanged += new System.EventHandler(this.rememberUser_CheckedChanged);
             // 
             // UserTextBox
             // 
@@ -240,7 +216,7 @@ namespace Project
             this.loginAsAdmin.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginAsAdmin.HighEmphasis = true;
             this.loginAsAdmin.Icon = null;
-            this.loginAsAdmin.Location = new System.Drawing.Point(108, 333);
+            this.loginAsAdmin.Location = new System.Drawing.Point(212, 342);
             this.loginAsAdmin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.loginAsAdmin.MouseState = MaterialSkin.MouseState.HOVER;
             this.loginAsAdmin.Name = "loginAsAdmin";
@@ -266,7 +242,7 @@ namespace Project
             // 
             // timerToLogin
             // 
-            this.timerToLogin.Interval = 10;
+            this.timerToLogin.Interval = 1000;
             this.timerToLogin.Tick += new System.EventHandler(this.timerToLogin_Tick);
             // 
             // LoginForm
@@ -301,7 +277,6 @@ namespace Project
         private ReaLTaiizor.Controls.MoonTextBox UserTextBox;
         private MaterialSkin.Controls.MaterialButton loginAsAdmin;
         private MaterialCheckbox rememberUser;
-        private MaterialButton resetPassword;
         private ReaLTaiizor.Controls.AirSeparator airSeparator1;
         private MaterialDivider materialDivider1;
         private System.Windows.Forms.PictureBox pictureBox2;

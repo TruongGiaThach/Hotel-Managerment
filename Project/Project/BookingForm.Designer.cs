@@ -244,7 +244,7 @@ namespace Project
             this.dateTimePickerTo.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerTo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(334, 296);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(340, 299);
             this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(175, 27);
@@ -285,9 +285,9 @@ namespace Project
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(22, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 28);
+            this.label2.Size = new System.Drawing.Size(138, 28);
             this.label2.TabIndex = 69;
-            this.label2.Text = "Phone Number";
+            this.label2.Text = "Số điện thoại";
             // 
             // comboBoxRoomType
             // 
@@ -317,9 +317,9 @@ namespace Project
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(291, 298);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 28);
+            this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 68;
-            this.label3.Text = "To";
+            this.label3.Text = "Đến  ";
             // 
             // textBoxEmail
             // 
@@ -342,9 +342,9 @@ namespace Project
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(22, 301);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 28);
+            this.label6.Size = new System.Drawing.Size(37, 28);
             this.label6.TabIndex = 67;
-            this.label6.Text = "From";
+            this.label6.Text = "Từ";
             // 
             // textBoxPhoneNumber
             // 
@@ -367,9 +367,9 @@ namespace Project
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(22, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 28);
+            this.label5.Size = new System.Drawing.Size(117, 28);
             this.label5.TabIndex = 66;
-            this.label5.Text = "Room Type";
+            this.label5.Text = "Loại phòng";
             // 
             // textBoxName
             // 

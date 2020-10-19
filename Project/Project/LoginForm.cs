@@ -32,6 +32,7 @@ namespace Project
             this.loadingGif.Visible = false;
             UserTextBox.Text = string.Empty;
             PasswordTextBox.Text = string.Empty;
+            this.bookingButton.Visible = false;
         }
 
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -135,6 +136,11 @@ namespace Project
                     break;
             }
       
+        }
+
+        private void rememberUser_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
