@@ -244,7 +244,7 @@ namespace Project
             this.loginAsAdmin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.loginAsAdmin.MouseState = MaterialSkin.MouseState.HOVER;
             this.loginAsAdmin.Name = "loginAsAdmin";
-            this.loginAsAdmin.Size = new System.Drawing.Size(208, 36);
+            this.loginAsAdmin.Size = new System.Drawing.Size(105, 36);
             this.loginAsAdmin.TabIndex = 5;
             this.loginAsAdmin.Text = "Đăng nhập ";
             this.loginAsAdmin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -279,7 +279,8 @@ namespace Project
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.ShowIcon = false;
-            this.Text = "Login Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dang nhap";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.B_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
