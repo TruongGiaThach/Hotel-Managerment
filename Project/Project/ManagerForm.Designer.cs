@@ -303,7 +303,7 @@ namespace Project
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManagerForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manager_Form";
             this.Load += new System.EventHandler(this.Manager_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).EndInit();
