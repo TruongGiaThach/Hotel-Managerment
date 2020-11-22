@@ -49,6 +49,9 @@ namespace Project
             this.ButtonSendText = new System.Windows.Forms.Button();
             this.ButtonSendEmail = new System.Windows.Forms.Button();
             this.ButtonCall = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.MenuPanel_2.SuspendLayout();
@@ -58,6 +61,7 @@ namespace Project
             this.group_notification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSeparator1)).BeginInit();
             this.group_comunicate.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -79,7 +83,7 @@ namespace Project
             // 
             this.button_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.button_Customer.Location = new System.Drawing.Point(26, 212);
+            this.button_Customer.Location = new System.Drawing.Point(28, 217);
             this.button_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Customer.Name = "button_Customer";
             this.button_Customer.Size = new System.Drawing.Size(183, 51);
@@ -92,7 +96,7 @@ namespace Project
             // 
             this.Order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Order_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.Order_button.Location = new System.Drawing.Point(25, 159);
+            this.Order_button.Location = new System.Drawing.Point(28, 162);
             this.Order_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Order_button.Name = "Order_button";
             this.Order_button.Size = new System.Drawing.Size(183, 51);
@@ -118,7 +122,7 @@ namespace Project
             // 
             this.ButtonRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.ButtonRoom.Location = new System.Drawing.Point(25, 104);
+            this.ButtonRoom.Location = new System.Drawing.Point(28, 107);
             this.ButtonRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonRoom.Name = "ButtonRoom";
             this.ButtonRoom.Size = new System.Drawing.Size(183, 51);
@@ -131,7 +135,7 @@ namespace Project
             // 
             this.ButtonAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAccounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.ButtonAccounts.Location = new System.Drawing.Point(25, 49);
+            this.ButtonAccounts.Location = new System.Drawing.Point(28, 52);
             this.ButtonAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonAccounts.Name = "ButtonAccounts";
             this.ButtonAccounts.Size = new System.Drawing.Size(183, 51);
@@ -160,6 +164,7 @@ namespace Project
             this.gradientPanel3.Controls.Add(this.bunifuImageButton1);
             this.gradientPanel3.Controls.Add(this.group_notification);
             this.gradientPanel3.Controls.Add(this.kryptonSeparator1);
+            this.gradientPanel3.Controls.Add(this.groupBox1);
             this.gradientPanel3.Controls.Add(this.group_comunicate);
             this.gradientPanel3.Location = new System.Drawing.Point(3, 2);
             this.gradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -189,7 +194,7 @@ namespace Project
             this.group_notification.Controls.Add(this.ButtonBookingNotice);
             this.group_notification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group_notification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.group_notification.Location = new System.Drawing.Point(364, 6);
+            this.group_notification.Location = new System.Drawing.Point(589, 2);
             this.group_notification.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.group_notification.Name = "group_notification";
             this.group_notification.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,9 +240,9 @@ namespace Project
             // kryptonSeparator1
             // 
             this.kryptonSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonSeparator1.Location = new System.Drawing.Point(0, 94);
+            this.kryptonSeparator1.Location = new System.Drawing.Point(0, 96);
             this.kryptonSeparator1.Name = "kryptonSeparator1";
-            this.kryptonSeparator1.Size = new System.Drawing.Size(1372, 12);
+            this.kryptonSeparator1.Size = new System.Drawing.Size(1372, 10);
             this.kryptonSeparator1.TabIndex = 1;
             // 
             // group_comunicate
@@ -248,7 +253,7 @@ namespace Project
             this.group_comunicate.Controls.Add(this.ButtonCall);
             this.group_comunicate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group_comunicate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.group_comunicate.Location = new System.Drawing.Point(5, 6);
+            this.group_comunicate.Location = new System.Drawing.Point(239, 2);
             this.group_comunicate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.group_comunicate.Name = "group_comunicate";
             this.group_comunicate.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -291,6 +296,47 @@ namespace Project
             this.ButtonCall.Text = "Gọi";
             this.ButtonCall.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.groupBox1.Location = new System.Drawing.Point(6, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox1.Size = new System.Drawing.Size(227, 91);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thao Tác";
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.button2.Location = new System.Drawing.Point(114, 22);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 61);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Trả Phòng";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.button3.Location = new System.Drawing.Point(7, 22);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 61);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Lấy Phòng";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -315,6 +361,7 @@ namespace Project
             this.group_notification.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSeparator1)).EndInit();
             this.group_comunicate.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,5 +386,8 @@ namespace Project
         private Button ButtonCall;
         private Button Order_button;
         private Button button_Customer;
+        private GroupBox groupBox1;
+        private Button button2;
+        private Button button3;
     }
 }

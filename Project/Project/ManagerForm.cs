@@ -83,5 +83,17 @@ namespace Project
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LayPhong LPForm = new LayPhong();
+            LPForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TraPhong TPForm = new TraPhong();
+            TPForm.Show();
+        }
     }
 }

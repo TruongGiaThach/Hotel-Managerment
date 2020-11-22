@@ -52,9 +52,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Aquamarine;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -74,9 +71,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(4, -2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Turquoise;
@@ -87,7 +85,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 557);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 688);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -101,14 +99,14 @@
             this.buttonChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonChange.InactiveColorA = System.Drawing.Color.MediumSeaGreen;
             this.buttonChange.InactiveColorB = System.Drawing.Color.MediumSeaGreen;
-            this.buttonChange.Location = new System.Drawing.Point(11, 409);
-            this.buttonChange.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonChange.Location = new System.Drawing.Point(12, 511);
+            this.buttonChange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.PressedColorA = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(146)))), ((int)(((byte)(106)))));
             this.buttonChange.PressedColorB = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(146)))), ((int)(((byte)(106)))));
             this.buttonChange.PressedContourColorA = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
             this.buttonChange.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
-            this.buttonChange.Size = new System.Drawing.Size(232, 37);
+            this.buttonChange.Size = new System.Drawing.Size(261, 46);
             this.buttonChange.TabIndex = 5;
             this.buttonChange.Text = "Thay đổi";
             this.buttonChange.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -124,14 +122,14 @@
             this.button_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Add.InactiveColorA = System.Drawing.Color.MediumSeaGreen;
             this.button_Add.InactiveColorB = System.Drawing.Color.MediumSeaGreen;
-            this.button_Add.Location = new System.Drawing.Point(11, 70);
-            this.button_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Add.Location = new System.Drawing.Point(12, 88);
+            this.button_Add.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_Add.Name = "button_Add";
             this.button_Add.PressedColorA = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.button_Add.PressedColorB = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.button_Add.PressedContourColorA = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
             this.button_Add.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
-            this.button_Add.Size = new System.Drawing.Size(232, 41);
+            this.button_Add.Size = new System.Drawing.Size(261, 51);
             this.button_Add.TabIndex = 3;
             this.button_Add.Text = "Thêm";
             this.button_Add.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -147,14 +145,14 @@
             this.button_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Delete.InactiveColorA = System.Drawing.Color.MediumSeaGreen;
             this.button_Delete.InactiveColorB = System.Drawing.Color.MediumSeaGreen;
-            this.button_Delete.Location = new System.Drawing.Point(11, 239);
-            this.button_Delete.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Delete.Location = new System.Drawing.Point(12, 299);
+            this.button_Delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.PressedColorA = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(146)))), ((int)(((byte)(106)))));
             this.button_Delete.PressedColorB = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(146)))), ((int)(((byte)(106)))));
             this.button_Delete.PressedContourColorA = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
             this.button_Delete.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
-            this.button_Delete.Size = new System.Drawing.Size(232, 37);
+            this.button_Delete.Size = new System.Drawing.Size(261, 46);
             this.button_Delete.TabIndex = 4;
             this.button_Delete.Text = "Xóa";
             this.button_Delete.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -166,13 +164,13 @@
             System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(76)))), ((int)(((byte)(233))))),
             System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(151)))), ((int)(((byte)(240))))),
             System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))))});
-            this.PanelTheme.Controls.Add(this.panel1);
             this.PanelTheme.Controls.Add(this.dataGridView1);
+            this.PanelTheme.Controls.Add(this.panel1);
             this.PanelTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelTheme.Location = new System.Drawing.Point(0, 0);
-            this.PanelTheme.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelTheme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelTheme.Name = "PanelTheme";
-            this.PanelTheme.Size = new System.Drawing.Size(1068, 554);
+            this.PanelTheme.Size = new System.Drawing.Size(1202, 692);
             this.PanelTheme.TabIndex = 0;
             // 
             // panel1
@@ -184,25 +182,25 @@
             this.panel1.Controls.Add(this.button_Delete);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(781, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(912, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 550);
+            this.panel1.Size = new System.Drawing.Size(286, 688);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // FormCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1068, 554);
+            this.ClientSize = new System.Drawing.Size(1202, 692);
             this.Controls.Add(this.PanelTheme);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormCommon";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

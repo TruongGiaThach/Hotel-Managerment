@@ -56,3 +56,5 @@ C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Pro
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.exe
 C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Project.pdb
+D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.LayPhong.resources
+D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.TraPhong.resources
