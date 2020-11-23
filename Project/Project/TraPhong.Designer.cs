@@ -128,6 +128,7 @@
             this.Controls.Add(this.gradientPanelTheme);
             this.MaximizeBox = false;
             this.Name = "TraPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TraPhong";
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelTheme)).EndInit();
             this.gradientPanelTheme.ResumeLayout(false);
@@ -140,7 +141,7 @@
 
         #region Khung Thông Tin
         #region Thông Tin
-        private bool CoThongTin = true;
+        private bool CoThongTin = false;
         private string CName = null;
         private string CMND = null;
         private string SDT = null;
@@ -165,16 +166,19 @@
                     break;
             }
         }
-        private void getdata(string Data)
+        private void getdata(string Data) // Data = "CName/CMND/SDT/SoPhong/OTu/Den"
         {
-            string[] Datas = Data.Split('/');
-            this.CName = Datas[0];
-            this.CMND = Datas[1];
-            this.SDT = Datas[2];
-            this.SoPhong = Datas[3];
-            this.OTu = Datas[4];
-            this.Den = Datas[5];
-            CoThongTin = true;
+            if (Data != null)
+            {
+                string[] Datas = Data.Split('/');
+                this.CName = Datas[0];
+                this.CMND = Datas[1];
+                this.SDT = Datas[2];
+                this.SoPhong = Datas[3];
+                this.OTu = Datas[4];
+                this.Den = Datas[5];
+                CoThongTin = true;
+            }
         }
 
         private void ShowthongTin()
@@ -185,6 +189,11 @@
                 // Khung Thong Tin
                 //
                 this.panelKhungThongTin.Controls.Add(this.labelHoVaTen);
+                this.panelKhungThongTin.Controls.Add(this.labelCMND);
+                this.panelKhungThongTin.Controls.Add(this.labelSDT);
+                this.panelKhungThongTin.Controls.Add(this.labelSoPhong);
+                this.panelKhungThongTin.Controls.Add(this.labelOTu);
+                this.panelKhungThongTin.Controls.Add(this.labelDen);
                 //
                 // Label HoVaTen
                 //
@@ -196,11 +205,86 @@
                 this.labelHoVaTen.Name = "labelHoVaTen";
                 this.labelHoVaTen.Size = new System.Drawing.Size(118, 26);
                 this.labelHoVaTen.TabIndex = 9;
-                this.labelHoVaTen.Text = "Họ và tên:";
+                this.labelHoVaTen.Text = "Họ và tên: " + CName;
+                //
+                // label CMND
+                //
+                this.labelCMND.AutoSize = true;
+                this.labelCMND.BackColor = System.Drawing.Color.Transparent;
+                this.labelCMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelCMND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelCMND.Location = new System.Drawing.Point(11, 41);
+                this.labelCMND.Name = "labelCMND";
+                this.labelCMND.Size = new System.Drawing.Size(118, 26);
+                this.labelCMND.TabIndex = 9;
+                this.labelCMND.Text = "CMND: " + CMND;
+                //
+                // label SDT
+                //
+                this.labelSDT.AutoSize = true;
+                this.labelSDT.BackColor = System.Drawing.Color.Transparent;
+                this.labelSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelSDT.Location = new System.Drawing.Point(11, 73);
+                this.labelSDT.Name = "labelSDT";
+                this.labelSDT.Size = new System.Drawing.Size(118, 26);
+                this.labelSDT.TabIndex = 9;
+                this.labelSDT.Text = "SDT: " + SDT;
+                //
+                // label SoPhong
+                //
+                this.labelSoPhong.AutoSize = true;
+                this.labelSoPhong.BackColor = System.Drawing.Color.Transparent;
+                this.labelSoPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelSoPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelSoPhong.Location = new System.Drawing.Point(11, 104);
+                this.labelSoPhong.Name = "labelSoPhong";
+                this.labelSoPhong.Size = new System.Drawing.Size(118, 26);
+                this.labelSoPhong.TabIndex = 9;
+                this.labelSoPhong.Text = "Số Phòng: " + SoPhong;
+                //
+                // label OTu
+                //
+                this.labelOTu.AutoSize = true;
+                this.labelOTu.BackColor = System.Drawing.Color.Transparent;
+                this.labelOTu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelOTu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelOTu.Location = new System.Drawing.Point(11, 135);
+                this.labelOTu.Name = "labelOTu";
+                this.labelOTu.Size = new System.Drawing.Size(118, 26);
+                this.labelOTu.TabIndex = 9;
+                this.labelOTu.Text = "Ở Từ: " + OTu;
+                //
+                // label Den
+                //
+                this.labelDen.AutoSize = true;
+                this.labelDen.BackColor = System.Drawing.Color.Transparent;
+                this.labelDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelDen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelDen.Location = new System.Drawing.Point(11, 166);
+                this.labelDen.Name = "labelDen";
+                this.labelDen.Size = new System.Drawing.Size(118, 26);
+                this.labelDen.TabIndex = 9;
+                this.labelDen.Text = "Đến: " + Den;
             }
             else
             {
-
+                //
+                // Khung Thong Tin
+                //
+                this.panelKhungThongTin.Controls.Add(this.labelKhongTimThay);
+                //
+                // label KhongTimThay
+                //
+                this.labelKhongTimThay.AutoSize = true;
+                this.labelKhongTimThay.BackColor = System.Drawing.Color.Transparent;
+                this.labelKhongTimThay.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.labelKhongTimThay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
+                this.labelKhongTimThay.Location = new System.Drawing.Point(120, 130);
+                this.labelKhongTimThay.Name = "labelKhongTimThay";
+                this.labelKhongTimThay.Size = new System.Drawing.Size(118, 26);
+                this.labelKhongTimThay.TabIndex = 9;
+                this.labelKhongTimThay.Text = "Không Tìm Thấy Thông Tin" + Den;
             }
         }
 
@@ -217,5 +301,11 @@
         // Khung Thong Tin Control
         //
         System.Windows.Forms.Label labelHoVaTen = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelCMND = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelSoPhong = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelSDT = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelOTu = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelDen = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label labelKhongTimThay = new System.Windows.Forms.Label();
     }
 }
