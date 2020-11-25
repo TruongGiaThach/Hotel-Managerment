@@ -9,6 +9,7 @@ namespace Project
         /// </summary>
         private System.ComponentModel.IContainer components = null;
         private Form MdiChild;
+        private Button isSelect;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -30,364 +31,130 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
-            this.PanelMenu = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.button_Customer = new System.Windows.Forms.Button();
-            this.Order_button = new System.Windows.Forms.Button();
-            this.label_menu = new System.Windows.Forms.Label();
-            this.ButtonRoom = new System.Windows.Forms.Button();
-            this.ButtonAccounts = new System.Windows.Forms.Button();
-            this.MenuPanel_2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gradientPanel3 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.group_notification = new System.Windows.Forms.GroupBox();
-            this.ButtonCheckinNotice = new System.Windows.Forms.Button();
-            this.ButtonCheckoutNotice = new System.Windows.Forms.Button();
-            this.ButtonBookingNotice = new System.Windows.Forms.Button();
-            this.kryptonSeparator1 = new ComponentFactory.Krypton.Toolkit.KryptonSeparator();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.group_comunicate = new System.Windows.Forms.GroupBox();
-            this.ButtonSendText = new System.Windows.Forms.Button();
-            this.ButtonSendEmail = new System.Windows.Forms.Button();
-            this.ButtonCall = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).BeginInit();
-            this.PanelMenu.SuspendLayout();
-            this.MenuPanel_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).BeginInit();
-            this.gradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            this.group_notification.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSeparator1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.group_comunicate.SuspendLayout();
+            this.imageList_Menu_Icon = new System.Windows.Forms.ImageList(this.components);
+            this.tabControl_Menu = new System.Windows.Forms.TabControl();
+            this.tabPage_TaiKhoan = new System.Windows.Forms.TabPage();
+            this.tabPage_Phong = new System.Windows.Forms.TabPage();
+            this.tabPage_Oder_Room = new System.Windows.Forms.TabPage();
+            this.tabPage_Customer = new System.Windows.Forms.TabPage();
+            this.tabPage_NhanVien = new System.Windows.Forms.TabPage();
+            this.tabControl_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelMenu
+            // imageList_Menu_Icon
             // 
-            this.PanelMenu.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.Aquamarine, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165))))));
-            this.PanelMenu.Controls.Add(this.button_Customer);
-            this.PanelMenu.Controls.Add(this.Order_button);
-            this.PanelMenu.Controls.Add(this.label_menu);
-            this.PanelMenu.Controls.Add(this.ButtonRoom);
-            this.PanelMenu.Controls.Add(this.ButtonAccounts);
-            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelMenu.Location = new System.Drawing.Point(0, 118);
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(239, 479);
-            this.PanelMenu.TabIndex = 8;
-            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
+            this.imageList_Menu_Icon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Menu_Icon.ImageStream")));
+            this.imageList_Menu_Icon.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_Menu_Icon.Images.SetKeyName(0, "Account.jpg");
+            this.imageList_Menu_Icon.Images.SetKeyName(1, "room.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(2, "Order_room.jpg");
+            this.imageList_Menu_Icon.Images.SetKeyName(3, "Customer.jpg");
+            this.imageList_Menu_Icon.Images.SetKeyName(4, "staff.jpg");
             // 
-            // button_Customer
+            // tabControl_Menu
             // 
-            this.button_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.button_Customer.Location = new System.Drawing.Point(28, 217);
-            this.button_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Customer.Name = "button_Customer";
-            this.button_Customer.Size = new System.Drawing.Size(183, 51);
-            this.button_Customer.TabIndex = 10;
-            this.button_Customer.Text = "Khách hàng";
-            this.button_Customer.UseVisualStyleBackColor = true;
-            this.button_Customer.Click += new System.EventHandler(this.button_Customer_Click);
+            this.tabControl_Menu.Controls.Add(this.tabPage_TaiKhoan);
+            this.tabControl_Menu.Controls.Add(this.tabPage_Phong);
+            this.tabControl_Menu.Controls.Add(this.tabPage_Oder_Room);
+            this.tabControl_Menu.Controls.Add(this.tabPage_Customer);
+            this.tabControl_Menu.Controls.Add(this.tabPage_NhanVien);
+            this.tabControl_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl_Menu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl_Menu.ImageList = this.imageList_Menu_Icon;
+            this.tabControl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.tabControl_Menu.Name = "tabControl_Menu";
+            this.tabControl_Menu.SelectedIndex = 0;
+            this.tabControl_Menu.Size = new System.Drawing.Size(1380, 597);
+            this.tabControl_Menu.TabIndex = 15;
+            this.tabControl_Menu.SelectedIndexChanged += new System.EventHandler(this.tabControl_Menu_SelectedIndexChanged);
             // 
-            // Order_button
+            // tabPage_TaiKhoan
             // 
-            this.Order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.Order_button.Location = new System.Drawing.Point(28, 162);
-            this.Order_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Order_button.Name = "Order_button";
-            this.Order_button.Size = new System.Drawing.Size(183, 51);
-            this.Order_button.TabIndex = 9;
-            this.Order_button.Text = "Đơn đặt phòng";
-            this.Order_button.UseVisualStyleBackColor = true;
-            this.Order_button.Click += new System.EventHandler(this.Order_button_Click);
+            this.tabPage_TaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage_TaiKhoan.ImageIndex = 0;
+            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
+            this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_TaiKhoan.TabIndex = 0;
+            this.tabPage_TaiKhoan.Text = "Tài Khoản";
+            this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
             // 
-            // label_menu
+            // tabPage_Phong
             // 
-            this.label_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(157)))), ((int)(((byte)(156)))));
-            this.label_menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_menu.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_menu.Location = new System.Drawing.Point(0, 0);
-            this.label_menu.Name = "label_menu";
-            this.label_menu.Size = new System.Drawing.Size(235, 37);
-            this.label_menu.TabIndex = 8;
-            this.label_menu.Text = "Menu";
-            this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabPage_Phong.ImageIndex = 1;
+            this.tabPage_Phong.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Phong.Name = "tabPage_Phong";
+            this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Phong.TabIndex = 1;
+            this.tabPage_Phong.Text = "Phòng";
+            this.tabPage_Phong.UseVisualStyleBackColor = true;
             // 
-            // ButtonRoom
+            // tabPage_Oder_Room
             // 
-            this.ButtonRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.ButtonRoom.Location = new System.Drawing.Point(28, 107);
-            this.ButtonRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonRoom.Name = "ButtonRoom";
-            this.ButtonRoom.Size = new System.Drawing.Size(183, 51);
-            this.ButtonRoom.TabIndex = 6;
-            this.ButtonRoom.Text = "Phòng";
-            this.ButtonRoom.UseVisualStyleBackColor = true;
-            this.ButtonRoom.Click += new System.EventHandler(this.ButtonRoom_Click);
+            this.tabPage_Oder_Room.ImageIndex = 2;
+            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
+            this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Oder_Room.TabIndex = 2;
+            this.tabPage_Oder_Room.Text = "Hóa Đơn";
+            this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
             // 
-            // ButtonAccounts
+            // tabPage_Customer
             // 
-            this.ButtonAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAccounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.ButtonAccounts.Location = new System.Drawing.Point(28, 52);
-            this.ButtonAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonAccounts.Name = "ButtonAccounts";
-            this.ButtonAccounts.Size = new System.Drawing.Size(183, 51);
-            this.ButtonAccounts.TabIndex = 7;
-            this.ButtonAccounts.Text = "Tài khoản";
-            this.ButtonAccounts.UseVisualStyleBackColor = true;
-            this.ButtonAccounts.Click += new System.EventHandler(this.ButtonAccounts_Click);
+            this.tabPage_Customer.ImageIndex = 3;
+            this.tabPage_Customer.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Customer.Name = "tabPage_Customer";
+            this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Customer.TabIndex = 3;
+            this.tabPage_Customer.Text = "Khách Hàng";
+            this.tabPage_Customer.UseVisualStyleBackColor = true;
             // 
-            // MenuPanel_2
+            // tabPage_NhanVien
             // 
-            this.MenuPanel_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.MenuPanel_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.MenuPanel_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MenuPanel_2.Controls.Add(this.gradientPanel3);
-            this.MenuPanel_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MenuPanel_2.Location = new System.Drawing.Point(0, 0);
-            this.MenuPanel_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MenuPanel_2.Name = "MenuPanel_2";
-            this.MenuPanel_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MenuPanel_2.Size = new System.Drawing.Size(1380, 118);
-            this.MenuPanel_2.TabIndex = 7;
-            // 
-            // gradientPanel3
-            // 
-            this.gradientPanel3.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, System.Drawing.Color.Aquamarine, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165))))));
-            this.gradientPanel3.Controls.Add(this.bunifuImageButton1);
-            this.gradientPanel3.Controls.Add(this.group_notification);
-            this.gradientPanel3.Controls.Add(this.kryptonSeparator1);
-            this.gradientPanel3.Controls.Add(this.groupBox1);
-            this.gradientPanel3.Controls.Add(this.group_comunicate);
-            this.gradientPanel3.Location = new System.Drawing.Point(3, 2);
-            this.gradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(1376, 110);
-            this.gradientPanel3.TabIndex = 0;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1291, 7);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 71);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 7;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // group_notification
-            // 
-            this.group_notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.group_notification.Controls.Add(this.ButtonCheckinNotice);
-            this.group_notification.Controls.Add(this.ButtonCheckoutNotice);
-            this.group_notification.Controls.Add(this.ButtonBookingNotice);
-            this.group_notification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group_notification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.group_notification.Location = new System.Drawing.Point(589, 2);
-            this.group_notification.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.group_notification.Name = "group_notification";
-            this.group_notification.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.group_notification.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.group_notification.Size = new System.Drawing.Size(376, 91);
-            this.group_notification.TabIndex = 6;
-            this.group_notification.TabStop = false;
-            this.group_notification.Text = "Thông báo";
-            // 
-            // ButtonCheckinNotice
-            // 
-            this.ButtonCheckinNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonCheckinNotice.Location = new System.Drawing.Point(253, 25);
-            this.ButtonCheckinNotice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonCheckinNotice.Name = "ButtonCheckinNotice";
-            this.ButtonCheckinNotice.Size = new System.Drawing.Size(117, 58);
-            this.ButtonCheckinNotice.TabIndex = 0;
-            this.ButtonCheckinNotice.Text = "Thông báo nhận phòng";
-            this.ButtonCheckinNotice.UseVisualStyleBackColor = true;
-            // 
-            // ButtonCheckoutNotice
-            // 
-            this.ButtonCheckoutNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonCheckoutNotice.Location = new System.Drawing.Point(130, 25);
-            this.ButtonCheckoutNotice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonCheckoutNotice.Name = "ButtonCheckoutNotice";
-            this.ButtonCheckoutNotice.Size = new System.Drawing.Size(117, 58);
-            this.ButtonCheckoutNotice.TabIndex = 0;
-            this.ButtonCheckoutNotice.Text = "Thông báo trả phòng";
-            this.ButtonCheckoutNotice.UseVisualStyleBackColor = true;
-            // 
-            // ButtonBookingNotice
-            // 
-            this.ButtonBookingNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonBookingNotice.Location = new System.Drawing.Point(7, 25);
-            this.ButtonBookingNotice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonBookingNotice.Name = "ButtonBookingNotice";
-            this.ButtonBookingNotice.Size = new System.Drawing.Size(117, 58);
-            this.ButtonBookingNotice.TabIndex = 0;
-            this.ButtonBookingNotice.Text = "Thông báo đặt phòng";
-            this.ButtonBookingNotice.UseVisualStyleBackColor = true;
-            // 
-            // kryptonSeparator1
-            // 
-            this.kryptonSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonSeparator1.Location = new System.Drawing.Point(0, 96);
-            this.kryptonSeparator1.Name = "kryptonSeparator1";
-            this.kryptonSeparator1.Size = new System.Drawing.Size(1372, 10);
-            this.kryptonSeparator1.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.groupBox1.Location = new System.Drawing.Point(6, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(227, 91);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thao Tác";
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.button2.Location = new System.Drawing.Point(114, 22);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 61);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Trả Phòng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.button3.Location = new System.Drawing.Point(7, 22);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 61);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Lấy Phòng";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // group_comunicate
-            // 
-            this.group_comunicate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.group_comunicate.Controls.Add(this.ButtonSendText);
-            this.group_comunicate.Controls.Add(this.ButtonSendEmail);
-            this.group_comunicate.Controls.Add(this.ButtonCall);
-            this.group_comunicate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group_comunicate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.group_comunicate.Location = new System.Drawing.Point(239, 2);
-            this.group_comunicate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.group_comunicate.Name = "group_comunicate";
-            this.group_comunicate.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.group_comunicate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.group_comunicate.Size = new System.Drawing.Size(344, 91);
-            this.group_comunicate.TabIndex = 5;
-            this.group_comunicate.TabStop = false;
-            this.group_comunicate.Text = "Liên lạc";
-            // 
-            // ButtonSendText
-            // 
-            this.ButtonSendText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonSendText.Location = new System.Drawing.Point(226, 22);
-            this.ButtonSendText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonSendText.Name = "ButtonSendText";
-            this.ButtonSendText.Size = new System.Drawing.Size(105, 61);
-            this.ButtonSendText.TabIndex = 0;
-            this.ButtonSendText.Text = "Gửi tin nhắn";
-            this.ButtonSendText.UseVisualStyleBackColor = true;
-            // 
-            // ButtonSendEmail
-            // 
-            this.ButtonSendEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonSendEmail.Location = new System.Drawing.Point(114, 22);
-            this.ButtonSendEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonSendEmail.Name = "ButtonSendEmail";
-            this.ButtonSendEmail.Size = new System.Drawing.Size(105, 61);
-            this.ButtonSendEmail.TabIndex = 0;
-            this.ButtonSendEmail.Text = "Gửi Email";
-            this.ButtonSendEmail.UseVisualStyleBackColor = true;
-            // 
-            // ButtonCall
-            // 
-            this.ButtonCall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.ButtonCall.Location = new System.Drawing.Point(7, 22);
-            this.ButtonCall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonCall.Name = "ButtonCall";
-            this.ButtonCall.Size = new System.Drawing.Size(103, 61);
-            this.ButtonCall.TabIndex = 0;
-            this.ButtonCall.Text = "Gọi";
-            this.ButtonCall.UseVisualStyleBackColor = true;
+            this.tabPage_NhanVien.ImageIndex = 4;
+            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_NhanVien.Name = "tabPage_NhanVien";
+            this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_NhanVien.TabIndex = 4;
+            this.tabPage_NhanVien.Text = "Nhân Viên";
+            this.tabPage_NhanVien.UseVisualStyleBackColor = true;
             // 
             // ManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(80)))), ((int)(((byte)(84)))));
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1380, 597);
-            this.Controls.Add(this.PanelMenu);
-            this.Controls.Add(this.MenuPanel_2);
+            this.Controls.Add(this.tabControl_Menu);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manager_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PanelMenu)).EndInit();
-            this.PanelMenu.ResumeLayout(false);
-            this.MenuPanel_2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanel3)).EndInit();
-            this.gradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            this.group_notification.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSeparator1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.group_comunicate.ResumeLayout(false);
+            this.tabControl_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Syncfusion.Windows.Forms.Tools.GradientPanel PanelMenu;
-        private Label label_menu;
-        private Button ButtonRoom;
-        private Button ButtonAccounts;
-        private FlowLayoutPanel MenuPanel_2;
-        private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanel3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private GroupBox group_notification;
-        private Button ButtonCheckinNotice;
-        private Button ButtonCheckoutNotice;
-        private Button ButtonBookingNotice;
-        private ComponentFactory.Krypton.Toolkit.KryptonSeparator kryptonSeparator1;
-        private GroupBox group_comunicate;
-        private Button ButtonSendText;
-        private Button ButtonSendEmail;
-        private Button ButtonCall;
-        private Button Order_button;
-        private Button button_Customer;
-        private GroupBox groupBox1;
-        private Button button2;
-        private Button button3;
+        private ImageList imageList_Menu_Icon;
+        private TabControl tabControl_Menu;
+        private TabPage tabPage_TaiKhoan;
+        private TabPage tabPage_Phong;
+        private TabPage tabPage_Oder_Room;
+        private TabPage tabPage_Customer;
+        private TabPage tabPage_NhanVien;
     }
 }

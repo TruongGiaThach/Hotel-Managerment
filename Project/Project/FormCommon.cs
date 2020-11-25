@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project
 {
     public partial class FormCommon : Form
     {
+        private int tabPage;
         private string infor;
-        public FormCommon(string infor)
+        public FormCommon(string infor, int tabPage)
         {
             InitializeComponent();
+            this.tabPage = tabPage;
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
         }
@@ -32,7 +35,7 @@ namespace Project
                     sqlQuery = "select * from TAIKHOAN";
                     this.button_Add.Visible = false;
                     this.button_Delete.Visible = false;
-                    this.buttonChange.Visible = false;
+                    this.button_Change.Visible = false;
                     break;
                 case "room":
                     sqlQuery = "select * from PHONG";
@@ -41,14 +44,14 @@ namespace Project
                     sqlQuery = "select * from KHACHHANG";
                     this.button_Add.Visible = false;
                     this.button_Delete.Visible = false;
-                    this.buttonChange.Visible = false;
+                    this.button_Change.Visible = false;
                     break;
                 default:
                     sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
                     "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
                     "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI ";
                     this.button_Add.Visible = false;
-                    this.buttonChange.Visible = false;
+                    this.button_Change.Visible = false;
                     this.button_Delete.Visible = false;
                     break;
             };
@@ -56,12 +59,12 @@ namespace Project
             if (this.dataGridView1.Rows.Count == 1)
             {
                 this.button_Delete.Enabled = false;
-                this.buttonChange.Enabled = false;
+                this.button_Change.Enabled = false;
             }
             else
             {
                 this.button_Delete.Enabled = true;
-                this.buttonChange.Enabled = true;
+                this.button_Change.Enabled = true;
             }
         }
 
@@ -77,25 +80,28 @@ namespace Project
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
-            int index = 0;
-            if (this.dataGridView1.SelectedRows.Count > 0)
+            if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                index = this.dataGridView1.SelectedRows[0].Index;
-            }
-            switch (this.infor)
-            {
-                case"account":
-                    string user = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
-                    DSTaiKhoan.Instance.xoaTaiKhoan(user);
-                    this.FormCommon_Load(sender, e);
-                    break;
-                case "room":
-                    string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                    DSPhong.Instance.xoaPhong(id);
-                    this.FormCommon_Load(sender, e);
-                    break;
-                default:
-                    break;
+                int index = 0;
+                if (this.dataGridView1.SelectedRows.Count > 0)
+                {
+                    index = this.dataGridView1.SelectedRows[0].Index;
+                }
+                switch (this.infor)
+                {
+                    case "account":
+                        string user = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
+                        DSTaiKhoan.Instance.xoaTaiKhoan(user);
+                        this.FormCommon_Load(sender, e);
+                        break;
+                    case "room":
+                        string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
+                        DSPhong.Instance.xoaPhong(id);
+                        this.FormCommon_Load(sender, e);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
@@ -106,7 +112,7 @@ namespace Project
             this.FormCommon_Load(sender, e);
         }
 
-        private void buttonChange_Click(object sender, EventArgs e)
+        private void button_Change_Click(object sender, EventArgs e)
         {
             int index = 0;
             if (this.dataGridView1.SelectedRows.Count > 0)
@@ -120,5 +126,45 @@ namespace Project
             room.ShowDialog();
             this.FormCommon_Load(sender, e);
         }
+
+        #region Search bar
+        private DataGridViewCell GetCellWhereTextExistsInGridView(string searchText, DataGridView dataGridView, int columnIndex)
+        {
+            DataGridViewCell cellWhereTextIsMet = null;
+
+            // For every row in the grid (obviously)
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                // I did not test this case, but cell.Value is an object, and objects can be null
+                // So check if the cell is null before using .ToString()
+                if (row.Cells[columnIndex].Value != null && searchText == row.Cells[columnIndex].Value.ToString())
+                {
+                    // the searchText is equals to the text in this cell.
+                    cellWhereTextIsMet = row.Cells[columnIndex];
+                    break;
+                }
+            }
+
+            return cellWhereTextIsMet;
+        }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            
+            DataGridViewCell cell = GetCellWhereTextExistsInGridView(textBox1.Text, this.dataGridView1, 2);
+            if (cell != null)
+            {
+                // Value exists in the grid
+                // you can do extra stuff on the cell
+                cell.Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+            }
+            else
+            {
+                // Value does not exist in the grid
+            }
+        }
+
+        #endregion
+
     }
 }

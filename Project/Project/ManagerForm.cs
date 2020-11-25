@@ -24,7 +24,15 @@ namespace Project
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-            this.Order_button_Click(sender, e);
+            //tabControl_Menu.SelectedIndex = 1;
+            tabControl_Menu.SelectedIndex = 0;
+            tabControl_Menu.SelectedIndex = 0;
+
+        }
+
+        private void Mouse_enter(object sender, EventArgs e)
+        {
+
         }
 
         private void ButtonAccounts_Click(object sender, EventArgs e)
@@ -33,7 +41,7 @@ namespace Project
             if (MdiChild != null)
                 MdiChild.Close();
             //create Form
-            MdiChild = new FormCommon("account");
+            MdiChild = new FormCommon("account", 0);
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
@@ -49,7 +57,7 @@ namespace Project
             if (MdiChild != null)
                 MdiChild.Close();
             //create Form
-            MdiChild = new FormCommon("room");
+            MdiChild = new FormCommon("room", 1);
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
@@ -60,7 +68,7 @@ namespace Project
             if (MdiChild != null)
                 MdiChild.Close();
             //create Form
-            MdiChild = new FormCommon("default");
+            MdiChild = new FormCommon("default", 3);
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
@@ -78,7 +86,7 @@ namespace Project
             if (MdiChild != null)
                 MdiChild.Close();
             //create Form
-            MdiChild = new FormCommon("customer");
+            MdiChild = new FormCommon("customer", 2);
             MdiChild.MdiParent = this;
             MdiChild.Dock = System.Windows.Forms.DockStyle.Fill;
             MdiChild.Show();
@@ -94,6 +102,38 @@ namespace Project
         {
             TraPhong TPForm = new TraPhong();
             TPForm.Show();
+        }
+
+        private void tabControl_Menu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MdiChild != null)
+                MdiChild.Close();
+            string Data_path = "";
+            switch (tabControl_Menu.SelectedIndex)
+            {
+                case 0:
+                    Data_path = "account";
+                    break;
+                case 1:
+                    Data_path = "room";
+                    break;
+                case 2:
+                    Data_path = "default";
+                    break;
+                case 3:
+                    Data_path = "customer";
+                    break;
+                case 4:
+                    Data_path = "staff";
+                    break;
+            }
+            FormCommon newFrm = new FormCommon(Data_path, tabControl_Menu.SelectedIndex)
+            {
+                MdiParent = this,
+                Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
+            };
+            newFrm.Dock = DockStyle.Fill;
+            newFrm.Show();
         }
     }
 }
