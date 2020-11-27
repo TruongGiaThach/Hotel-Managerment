@@ -152,6 +152,9 @@ namespace Project
         List<System.Windows.Forms.Button> SelectedButton = new List<Button>();
         private void InitRoom(DataTable Data)
         {
+            SelectedButton.Clear();
+            Rooms.Clear();
+            this.panel_RoomShow.Controls.Clear();
             NumOfRoom = Data.Rows.Count;
             int drawPointX = this.margin;
             int drawPointY = this.margin;

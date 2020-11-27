@@ -41,9 +41,14 @@ namespace Project
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                for(int i = 0; i < SelectedButton.Count; ++i) DSPhong.Instance.xoaPhong(SelectedButton[i].Name);
+                for (int i = 0; i < SelectedButton.Count; ++i)
+                {
+                    DSPhong.Instance.xoaPhong(SelectedButton[i].Name);
+
+                }
             }
             SelectedButton.Clear();
+            RoomShow_Load(sender, e);
         }
 
         private void RoomSelect(object sender, EventArgs e)
@@ -54,20 +59,20 @@ namespace Project
                 SelectedButton.Add(selected);
                 selected.ForeColor = Color.AliceBlue;
                 selected.Tag = true;
+                return;
             }
-            else
+            
+            for (int i = 0; i < SelectedButton.Count; ++i)
             {
-                for (int i = 0; i < SelectedButton.Count; ++i)
+                if (SelectedButton[i] == selected)
                 {
-                    if(SelectedButton[i] == selected)
-                    {
-                        selected.ForeColor = SystemColors.ControlText;
-                        selected.Tag = false;
-                        SelectedButton.RemoveAt(i);
-                        break;
-                    }
+                    selected.ForeColor = SystemColors.ControlText;
+                    selected.Tag = false;
+                    SelectedButton.RemoveAt(i);
+                    return;
                 }
             }
+            
         }
     }
 }
