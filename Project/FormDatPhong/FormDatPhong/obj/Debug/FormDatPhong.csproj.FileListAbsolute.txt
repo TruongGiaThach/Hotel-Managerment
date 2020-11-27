@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\bin\Debug\FormDatPhong.exe.config
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\bin\Debug\FormDatPhong.exe
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\bin\Debug\FormDatPhong.pdb
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.Form1.resources
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.Properties.Resources.resources
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.exe
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.pdb
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.ThemNhanVien.resources
+C:\Users\Admin\source\repos\FormDatPhong\FormDatPhong\obj\Debug\FormDatPhong.ThuChi.resources
