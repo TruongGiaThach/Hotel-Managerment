@@ -1,22 +1,22 @@
-# **Welcome to Hotel Booking Management App** 👋
+# **Welcome to Hotel Booking Management App** 👋👋👋
 
 ***
 
-## **1. Introduction**
+## **1. Introduction** 📖📖📖
 
 > * Contant the basic Management of a hotel Book room, Room Management, Income Management
 
-## **2. Description**
+## **2. Description** 🖋
 
-> **a. Users:** 
+> **a. Users:** 👥👥👥
 
 > * Hotel employees.
 
-> **b. Object:**
+> **b. Object:** 🎯🎯🎯
 
 > * This program helps employees to management Hotel Room, Staff, Customer, income
 
-> **c. Features:**
+> **c. Features:** 📋📋📋
 
 > * Make and cancel the reservation
 
@@ -28,7 +28,7 @@
 
 > * Customer Management
 
-## **3. Author**
+## **3. Author** 👨‍💼👨‍💼👨‍💼
 
 > **Leader:** Trương Gia Thạch.
 
@@ -36,6 +36,6 @@
 
 > **Coder:** Nguyễn Văn Dũng.
 
-## **3. Instructor information**
+## **3. Instructor information** 👨‍🏫
 
 > MA. Nguyễn Tấn Toàn
