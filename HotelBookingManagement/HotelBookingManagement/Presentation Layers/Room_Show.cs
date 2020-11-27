@@ -39,15 +39,20 @@ namespace HotelBookingManagement
 
         private void buttonXoaPhong_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                for (int i = 0; i < SelectedButton.Count; ++i)
+                if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Phong_DAL.Instance.xoaPhong(SelectedButton[i].Name);
-
+                    for (int i = 0; i < SelectedButton.Count; ++i)
+                    {
+                        Phong_DAL.Instance.xoaPhong(SelectedButton[i].Name);
+                    }
                 }
+                SelectedButton.Clear();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            SelectedButton.Clear();
             RoomShow_Load(sender, e);
         }
 
@@ -72,6 +77,11 @@ namespace HotelBookingManagement
                     return;
                 }
             }
+
+        }
+
+        private void panel_MenuBar_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

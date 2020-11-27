@@ -57,16 +57,18 @@ namespace HotelBookingManagement
             this.panel_RoomShow.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel_RoomShow.Controls.Add(this.button1);
             this.panel_RoomShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_RoomShow.Location = new System.Drawing.Point(0, 98);
+            this.panel_RoomShow.Location = new System.Drawing.Point(0, 78);
+            this.panel_RoomShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_RoomShow.Name = "panel_RoomShow";
-            this.panel_RoomShow.Size = new System.Drawing.Size(1638, 352);
+            this.panel_RoomShow.Size = new System.Drawing.Size(1456, 282);
             this.panel_RoomShow.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1465, 302);
+            this.button1.Location = new System.Drawing.Point(1302, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 38);
+            this.button1.Size = new System.Drawing.Size(132, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,9 +87,11 @@ namespace HotelBookingManagement
             this.panel_MenuBar.Controls.Add(this.buttonThemPhong);
             this.panel_MenuBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_MenuBar.Location = new System.Drawing.Point(0, 0);
+            this.panel_MenuBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_MenuBar.Name = "panel_MenuBar";
-            this.panel_MenuBar.Size = new System.Drawing.Size(1638, 98);
+            this.panel_MenuBar.Size = new System.Drawing.Size(1456, 78);
             this.panel_MenuBar.TabIndex = 1;
+            this.panel_MenuBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_MenuBar_Paint);
             // 
             // buttonXoaPhong
             // 
@@ -95,9 +99,10 @@ namespace HotelBookingManagement
             this.buttonXoaPhong.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonXoaPhong.ImageIndex = 1;
             this.buttonXoaPhong.ImageList = this.imageList_RoomShow;
-            this.buttonXoaPhong.Location = new System.Drawing.Point(397, 15);
+            this.buttonXoaPhong.Location = new System.Drawing.Point(353, 12);
+            this.buttonXoaPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXoaPhong.Name = "buttonXoaPhong";
-            this.buttonXoaPhong.Size = new System.Drawing.Size(84, 80);
+            this.buttonXoaPhong.Size = new System.Drawing.Size(75, 64);
             this.buttonXoaPhong.TabIndex = 0;
             this.buttonXoaPhong.Text = "Xóa Phòng";
             this.buttonXoaPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -109,9 +114,10 @@ namespace HotelBookingManagement
             // 
             this.buttonThemPhong.ImageIndex = 0;
             this.buttonThemPhong.ImageList = this.imageList_RoomShow;
-            this.buttonThemPhong.Location = new System.Drawing.Point(307, 15);
+            this.buttonThemPhong.Location = new System.Drawing.Point(273, 12);
+            this.buttonThemPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonThemPhong.Name = "buttonThemPhong";
-            this.buttonThemPhong.Size = new System.Drawing.Size(84, 80);
+            this.buttonThemPhong.Size = new System.Drawing.Size(75, 64);
             this.buttonThemPhong.TabIndex = 0;
             this.buttonThemPhong.Text = "Thêm Phòng";
             this.buttonThemPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -121,14 +127,15 @@ namespace HotelBookingManagement
             // 
             // Room_Show
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1638, 450);
+            this.ClientSize = new System.Drawing.Size(1456, 360);
             this.Controls.Add(this.panel_RoomShow);
             this.Controls.Add(this.panel_MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Room_Show";
             this.Text = "RoomShow";
             this.Load += new System.EventHandler(this.RoomShow_Load);
@@ -163,7 +170,7 @@ namespace HotelBookingManagement
                 //
                 this.Rooms[i].ImageList = this.imageList_RoomShow;
                 this.Rooms[i].Tag = false;
-                if (Data.Rows[i].ItemArray[2].ToString() == "trong")
+                if (Data.Rows[i].ItemArray[2].ToString().Contains("trong"))
                 {
                     this.Rooms[i].ImageIndex = 2;
                     this.Rooms[i].BackColor = Color.White;

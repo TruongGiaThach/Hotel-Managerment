@@ -46,6 +46,12 @@ namespace HotelBookingManagement
                     this.button_Delete.Visible = false;
                     this.button_Change.Visible = false;
                     break;
+                case "staff":
+                    sqlQuery = "select * from NHANVIEN";
+                    this.button_Add.Visible = false;
+                    this.button_Delete.Visible = false;
+                    this.button_Change.Visible = false;
+                    break;
                 default:
                     sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
                     "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
