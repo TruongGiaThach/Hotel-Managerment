@@ -1,5 +1,4 @@
 ﻿using HotelBookingManagement.Data_Access_Layers;
-using Syncfusion.Windows.Forms.Events;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,7 +78,7 @@ namespace HotelBookingManagement
                 if (signUp(user, pass, repass, this.custumerID))
                 {
                     MessageBox.Show("Thêm tài khoản thành công ><");
-                    this.currentUser = DSTaiKhoan.Instance.getTaiKhoanbyName(user);
+                    this.currentUser = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);
                     this.Close();
                     this.loginForm.B_Load(sender, e);
                     this.loginForm.Show();
@@ -103,7 +102,7 @@ namespace HotelBookingManagement
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-            this.homePage.Show();
+            //this.homePage.Show();
         }
 
         private void SignUp_Load(object sender, EventArgs e)

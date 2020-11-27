@@ -68,8 +68,8 @@ namespace HotelBookingManagement
             switch (this.currentUser.PhanQuyen.Replace(" ", string.Empty))
             {
                 case "admin":
-                    //ManagerForm managerForm = new ManagerForm(this, this.currentUser);
-                    //managerForm.Show();
+                    Manager_Form managerForm = new Manager_Form(this, this.currentUser);
+                    managerForm.Show();
                     this.Hide();
                     break;
                 default:

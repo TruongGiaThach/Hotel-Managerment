@@ -1,7 +1,6 @@
 ﻿
 using System.Collections.Generic;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -76,10 +75,8 @@ namespace HotelBookingManagement
             // 
             this.imageList_RoomShow.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_RoomShow.ImageStream")));
             this.imageList_RoomShow.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_RoomShow.Images.SetKeyName(0, "PhongChuaCoNguoi.png");
-            this.imageList_RoomShow.Images.SetKeyName(1, "PhongDaCoNGuoi.png");
-            this.imageList_RoomShow.Images.SetKeyName(2, "addRoom.png");
-            this.imageList_RoomShow.Images.SetKeyName(3, "delRoom.png");
+            this.imageList_RoomShow.Images.SetKeyName(0, "addRoom.png");
+            this.imageList_RoomShow.Images.SetKeyName(1, "delRoom.png");
             // 
             // panel_MenuBar
             // 
@@ -96,9 +93,9 @@ namespace HotelBookingManagement
             // 
             this.buttonXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoaPhong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonXoaPhong.ImageIndex = 3;
+            this.buttonXoaPhong.ImageIndex = 1;
             this.buttonXoaPhong.ImageList = this.imageList_RoomShow;
-            this.buttonXoaPhong.Location = new System.Drawing.Point(113, 12);
+            this.buttonXoaPhong.Location = new System.Drawing.Point(397, 15);
             this.buttonXoaPhong.Name = "buttonXoaPhong";
             this.buttonXoaPhong.Size = new System.Drawing.Size(84, 80);
             this.buttonXoaPhong.TabIndex = 0;
@@ -110,9 +107,9 @@ namespace HotelBookingManagement
             // 
             // buttonThemPhong
             // 
-            this.buttonThemPhong.ImageIndex = 2;
+            this.buttonThemPhong.ImageIndex = 0;
             this.buttonThemPhong.ImageList = this.imageList_RoomShow;
-            this.buttonThemPhong.Location = new System.Drawing.Point(12, 12);
+            this.buttonThemPhong.Location = new System.Drawing.Point(307, 15);
             this.buttonThemPhong.Name = "buttonThemPhong";
             this.buttonThemPhong.Size = new System.Drawing.Size(84, 80);
             this.buttonThemPhong.TabIndex = 0;
@@ -122,7 +119,7 @@ namespace HotelBookingManagement
             this.buttonThemPhong.UseVisualStyleBackColor = true;
             this.buttonThemPhong.Click += new System.EventHandler(this.buttonThemPhong_Click);
             // 
-            // RoomShow
+            // Room_Show
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +129,7 @@ namespace HotelBookingManagement
             this.Controls.Add(this.panel_RoomShow);
             this.Controls.Add(this.panel_MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RoomShow";
+            this.Name = "Room_Show";
             this.Text = "RoomShow";
             this.Load += new System.EventHandler(this.RoomShow_Load);
             this.panel_RoomShow.ResumeLayout(false);
@@ -157,21 +154,24 @@ namespace HotelBookingManagement
             NumOfRoom = Data.Rows.Count;
             int drawPointX = this.margin;
             int drawPointY = this.margin;
-            for (int i = 0; i < NumOfRoom; ++i)
+            for (int i = 0; i < NumOfRoom; ++i)//create Rooms Buttom
             {
                 bool trong;
-                this.Rooms.Add(new System.Windows.Forms.Button());
+                this.Rooms.Add(new System.Windows.Forms.Button());      //Add a Button in Rooms Button list
+                //
+                // set Button Properties
+                //
                 this.Rooms[i].ImageList = this.imageList_RoomShow;
                 this.Rooms[i].Tag = false;
                 if (Data.Rows[i].ItemArray[2].ToString() == "trong")
                 {
-                    this.Rooms[i].ImageIndex = 0;
+                    this.Rooms[i].ImageIndex = 2;
                     this.Rooms[i].BackColor = Color.White;
                     trong = true;
                 }
                 else
                 {
-                    this.Rooms[i].ImageIndex = 1;
+                    this.Rooms[i].ImageIndex = 3;
                     this.Rooms[i].BackColor = Color.Silver;
                     trong = false;
                 }
@@ -186,7 +186,8 @@ namespace HotelBookingManagement
                 }
                 this.Rooms[i].TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
                 this.Rooms[i].Location = new System.Drawing.Point(drawPointX, drawPointY);
-                this.Rooms[i].Click += new EventHandler(RoomSelect);
+                this.Rooms[i].Click += new EventHandler(RoomSelect); // set Click event for Button
+                //this.Rooms[i].ContextMenuStrip;   // set ContexMenuStrip for Button
                 this.panel_RoomShow.Controls.Add(Rooms[i]);
             }
         }

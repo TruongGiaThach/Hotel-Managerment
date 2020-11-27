@@ -140,7 +140,7 @@ namespace HotelBookingManagement
             this.tabPage_ThongKe.Text = "Thống Kê";
             this.tabPage_ThongKe.UseVisualStyleBackColor = true;
             // 
-            // ManagerForm
+            // Manager_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
@@ -152,7 +152,7 @@ namespace HotelBookingManagement
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ManagerForm";
+            this.Name = "Manager_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

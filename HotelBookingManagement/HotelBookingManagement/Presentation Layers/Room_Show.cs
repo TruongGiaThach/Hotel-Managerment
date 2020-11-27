@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using HotelBookingManagement.Data_Access_Layers;
 
 namespace HotelBookingManagement
 {
@@ -42,7 +43,7 @@ namespace HotelBookingManagement
             {
                 for (int i = 0; i < SelectedButton.Count; ++i)
                 {
-                    DSPhong.Instance.xoaPhong(SelectedButton[i].Name);
+                    Phong_DAL.Instance.xoaPhong(SelectedButton[i].Name);
 
                 }
             }

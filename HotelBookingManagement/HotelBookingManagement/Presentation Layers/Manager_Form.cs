@@ -47,14 +47,14 @@ namespace HotelBookingManagement
   
         private void button3_Click(object sender, EventArgs e)
         {
-            LayPhong LPForm = new LayPhong();
+            Add_Receptionist LPForm = new Add_Receptionist();
             LPForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TraPhong TPForm = new TraPhong();
-            TPForm.Show();
+            //Room_Information TPForm = new Room_Information();
+            //TPForm.Show();
         }
 
         private void tabControl_Menu_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace HotelBookingManagement
             {
                 case 0:
                     Data_path = "account";
-                    newFrm = new FormCommon(Data_path, tabControl_Menu.SelectedIndex)
+                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -75,7 +75,7 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
-                    newFrm = new RoomShow()
+                    newFrm = new Room_Show()
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -83,7 +83,7 @@ namespace HotelBookingManagement
                     break;
                 case 2:
                     Data_path = "default";
-                    newFrm = new FormCommon(Data_path, tabControl_Menu.SelectedIndex)
+                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -91,7 +91,7 @@ namespace HotelBookingManagement
                     break;
                 case 3:
                     Data_path = "customer";
-                    newFrm = new FormCommon(Data_path, tabControl_Menu.SelectedIndex)
+                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -99,7 +99,7 @@ namespace HotelBookingManagement
                     break;
                 case 4:
                     Data_path = "staff";
-                    newFrm = new FormCommon(Data_path, tabControl_Menu.SelectedIndex)
+                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]

@@ -16,7 +16,7 @@ namespace HotelBookingManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add_Receptionist());
+            Application.Run(new Login_Form());
         }
     }
 }

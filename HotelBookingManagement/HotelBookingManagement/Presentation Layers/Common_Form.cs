@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using HotelBookingManagement.Data_Access_Layers;
 
 namespace HotelBookingManagement
 {
@@ -90,12 +91,12 @@ namespace HotelBookingManagement
                 {
                     case "account":
                         string user = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
-                        DSTaiKhoan.Instance.xoaTaiKhoan(user);
+                        TaiKhoan_DAL.Instance.xoaTaiKhoan(user);
                         this.FormCommon_Load(sender, e);
                         break;
                     case "room":
                         string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                        DSPhong.Instance.xoaPhong(id);
+                        Phong_DAL.Instance.xoaPhong(id);
                         this.FormCommon_Load(sender, e);
                         break;
                     default:
@@ -106,7 +107,7 @@ namespace HotelBookingManagement
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            RoomInfor roomInfor = new RoomInfor(this);
+            Room_Infor roomInfor = new Room_Infor(this);
             roomInfor.ShowDialog();
             this.FormCommon_Load(sender, e);
         }
@@ -121,7 +122,7 @@ namespace HotelBookingManagement
             string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
             string loai = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
             string gia = this.dataGridView1.Rows[index].Cells[3].Value.ToString();
-            RoomInfor room = new RoomInfor(this, id, loai, gia);
+            Room_Infor room = new Room_Infor(this, id, loai, gia);
             room.ShowDialog();
             this.FormCommon_Load(sender, e);
         }

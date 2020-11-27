@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_SignUp = new MaterialSkin.Controls.MaterialButton();
+            this.button_SignUp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textbox_Account = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.button_Return = new MaterialSkin.Controls.MaterialButton();
-            this.textbox_Password = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoLabel6 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textbox_Repassword = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel7 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.textbox_Account = new System.Windows.Forms.TextBox();
+            this.button_Return = new System.Windows.Forms.Button();
+            this.textbox_Password = new System.Windows.Forms.TextBox();
+            this.autoLabel5 = new System.Windows.Forms.Label();
+            this.autoLabel6 = new System.Windows.Forms.Label();
+            this.textbox_Repassword = new System.Windows.Forms.TextBox();
+            this.autoLabel7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Account)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Repassword)).BeginInit();
@@ -46,19 +46,12 @@
             // 
             this.button_SignUp.AutoSize = false;
             this.button_SignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_SignUp.Depth = 0;
-            this.button_SignUp.DrawShadows = true;
-            this.button_SignUp.HighEmphasis = true;
-            this.button_SignUp.Icon = null;
             this.button_SignUp.Location = new System.Drawing.Point(290, 364);
             this.button_SignUp.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.button_SignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_SignUp.Name = "button_SignUp";
             this.button_SignUp.Size = new System.Drawing.Size(162, 35);
             this.button_SignUp.TabIndex = 17;
             this.button_SignUp.Text = "Sign up";
-            this.button_SignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.button_SignUp.UseAccentColor = false;
             this.button_SignUp.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -76,7 +69,6 @@
             // 
             // textbox_Account
             // 
-            this.textbox_Account.BeforeTouchSize = new System.Drawing.Size(415, 26);
             this.textbox_Account.Location = new System.Drawing.Point(26, 131);
             this.textbox_Account.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textbox_Account.Name = "textbox_Account";
@@ -87,24 +79,16 @@
             // 
             this.button_Return.AutoSize = false;
             this.button_Return.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_Return.Depth = 0;
-            this.button_Return.DrawShadows = true;
-            this.button_Return.HighEmphasis = true;
-            this.button_Return.Icon = null;
             this.button_Return.Location = new System.Drawing.Point(26, 364);
             this.button_Return.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.button_Return.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_Return.Name = "button_Return";
             this.button_Return.Size = new System.Drawing.Size(156, 35);
             this.button_Return.TabIndex = 15;
             this.button_Return.Text = "Return ";
-            this.button_Return.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.button_Return.UseAccentColor = false;
             this.button_Return.UseVisualStyleBackColor = true;
             // 
             // textbox_Password
             // 
-            this.textbox_Password.BeforeTouchSize = new System.Drawing.Size(415, 26);
             this.textbox_Password.Location = new System.Drawing.Point(26, 211);
             this.textbox_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textbox_Password.Name = "textbox_Password";
@@ -140,7 +124,6 @@
             // 
             // textbox_Repassword
             // 
-            this.textbox_Repassword.BeforeTouchSize = new System.Drawing.Size(415, 26);
             this.textbox_Repassword.Location = new System.Drawing.Point(26, 287);
             this.textbox_Repassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textbox_Repassword.Name = "textbox_Repassword";
@@ -192,15 +175,15 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton button_SignUp;
+        private System.Windows.Forms.Button button_SignUp;
         private System.Windows.Forms.Label label2;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textbox_Account;
-        private MaterialSkin.Controls.MaterialButton button_Return;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textbox_Password;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textbox_Repassword;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel7;
+        private System.Windows.Forms.TextBox textbox_Account;
+        private System.Windows.Forms.Button button_Return;
+        private System.Windows.Forms.TextBox textbox_Password;
+        private System.Windows.Forms.Label autoLabel5;
+        private System.Windows.Forms.Label autoLabel6;
+        private System.Windows.Forms.TextBox textbox_Repassword;
+        private System.Windows.Forms.Label autoLabel7;
     }
 }
 
