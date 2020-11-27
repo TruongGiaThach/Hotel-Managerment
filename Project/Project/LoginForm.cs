@@ -22,22 +22,11 @@ namespace Project
             this.currentUser = new TaiKhoan();
         }
 
-        private void ribbonForm1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void B_Load(object sender, EventArgs e)
         {
             this.loadingGif.Visible = false;
             UserTextBox.Text = string.Empty;
             PasswordTextBox.Text = string.Empty;
-            this.bookingButton.Visible = false;
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void materialButton1_Click(object sender, EventArgs e) //dat phong
@@ -47,20 +36,6 @@ namespace Project
             home.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialButton3_Click(object sender, EventArgs e)
-        {
-
-        }
         private bool login(string user, string pass)
         {
             if (string.IsNullOrWhiteSpace(user) ||
@@ -70,7 +45,7 @@ namespace Project
             }
             return DSTaiKhoan.Instance.dangNhap(user, TaiKhoan.encode(pass) ) ;
         }
-        private void materialButton2_Click_1(object sender, EventArgs e) // dang nhap
+        private void Button_DangNhap_Click(object sender, EventArgs e) // dang nhap
         {
             string user;
             string pass;
@@ -93,26 +68,6 @@ namespace Project
                 PasswordTextBox.Text = string.Empty;
             }
             
-        }
-
-        private void materialDivider1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialButton3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialDivider1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void timerToLogin_Tick(object sender, EventArgs e)
@@ -138,9 +93,5 @@ namespace Project
       
         }
 
-        private void rememberUser_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

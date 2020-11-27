@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class SignUp : MaterialSkin.Controls.MaterialForm
+    public partial class SignUp : Form
     {
         Home homePage;
         LoginForm loginForm;
@@ -26,11 +26,11 @@ namespace Project
             this.currentUser = user;
         }
 
-        private void button_Return_Click(object sender, EventArgs e) // when in sigup_panel
-        {
-            this.information_panel.Show();
+        //private void button_Return_Click(object sender, EventArgs e) // when in sigup_panel
+        //{
+        //    this.information_panel.Show();
             
-        }
+        //}
         private bool signUp(string user, string pass, string repass,string cusID)
         {
             if (string.IsNullOrWhiteSpace(user) ||
@@ -48,27 +48,27 @@ namespace Project
             }
             return DSKhachHang.Instance.themKhachHang(name, email,"","");
         }
-        private void button_NextPage_Click(object sender, EventArgs e)  
-        {
-            string name, email;
-            try
-            {
-                name = this.textbox_Name.Text;
-                email = this.textbox_EmailPhone.Text;
-                if (addCustumer(name,email))
-                {
-                    this.information_panel.Hide();
-                    MessageBox.Show("Đã thêm khách hàng thành công ><");
-                    this.custumerID = DSKhachHang.Instance.getByEmail(email).ID;
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                this.textbox_Name.Text = string.Empty;
-                this.textbox_EmailPhone.Text = string.Empty;
-            }
+        //private void button_NextPage_Click(object sender, EventArgs e)  
+        //{
+        //    string name, email;
+        //    try
+        //    {
+        //        name = this.textbox_Name.Text;
+        //        email = this.textbox_EmailPhone.Text;
+        //        if (addCustumer(name,email))
+        //        {
+        //            this.information_panel.Hide();
+        //            MessageBox.Show("Đã thêm khách hàng thành công ><");
+        //            this.custumerID = DSKhachHang.Instance.getByEmail(email).ID;
+        //        }
+        //    }catch(Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        this.textbox_Name.Text = string.Empty;
+        //        this.textbox_EmailPhone.Text = string.Empty;
+        //    }
             
-        }
+        //}
 
         private void button_SignUp_Click(object sender, EventArgs e)
         {

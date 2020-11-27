@@ -58,3 +58,4 @@ C:\Users\ad\Documents\GitHub\Graph_Drawing_Program\Project\Project\obj\Debug\Pro
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.LayPhong.resources
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.TraPhong.resources
 D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\GitHub\Hotel-Room-Booking-App\Project\Project\obj\Debug\Project.RoomShow.resources

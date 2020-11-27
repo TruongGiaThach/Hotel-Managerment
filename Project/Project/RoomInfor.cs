@@ -13,22 +13,22 @@ namespace Project
 {
     public partial class RoomInfor : Form
     {
-        FormCommon formCommon;
+        Form preForm = null;
         string id, loai, gia;
         string type;
-        public RoomInfor(FormCommon form)
+        public RoomInfor(Form form)
         {
             InitializeComponent();
-            this.formCommon = form;
+            this.preForm = form;
             this.id = string.Empty;
             this.loai = string.Empty;
             this.type = "them";
             this.gia = string.Empty;
         }
-        public RoomInfor(FormCommon form, string id, string loai, string gia)
+        public RoomInfor(Form form, string id, string loai, string gia)
         {
             InitializeComponent();
-            this.formCommon = form;
+            this.preForm = form;
             this.id = id;
             this.loai = loai;
             this.gia = gia;
@@ -94,7 +94,7 @@ namespace Project
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            this.formCommon.Show();
+            this.preForm.Show();
         }
     }
 }
