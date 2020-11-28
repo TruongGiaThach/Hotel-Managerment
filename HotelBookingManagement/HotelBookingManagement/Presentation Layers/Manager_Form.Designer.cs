@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using HotelBookingManagement.Data_Access_Layers;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace HotelBookingManagement
 {
@@ -8,6 +10,8 @@ namespace HotelBookingManagement
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Phong_DAL Phong_Data;
+        private List<Phong> DS_Phong;
         private Form MdiChild;
         private Button isSelect;
         /// <summary>
@@ -31,6 +35,7 @@ namespace HotelBookingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.Phong_Data = new Phong_DAL();
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
             this.imageList_Menu_Icon = new System.Windows.Forms.ImageList(this.components);

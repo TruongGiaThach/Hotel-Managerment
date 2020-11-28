@@ -16,19 +16,21 @@ namespace HotelBookingManagement
         Form preForm = null;
         string id, loai, gia;
         string type;
-        public Room_Infor(Form form)
+        public Room_Infor(Form form, ref List<Phong> Data)
         {
             InitializeComponent();
             this.preForm = form;
+            this.Data = Data;
             this.id = string.Empty;
             this.loai = string.Empty;
             this.type = "them";
             this.gia = string.Empty;
         }
-        public Room_Infor(Form form, string id, string loai, string gia)
+        public Room_Infor(Form form, ref List<Phong> Data, string id, string loai, string gia)
         {
             InitializeComponent();
             this.preForm = form;
+            this.Data = Data;
             this.id = id;
             this.loai = loai;
             this.gia = gia;
@@ -45,8 +47,8 @@ namespace HotelBookingManagement
         }
         private bool addRoom(string id, string loai, string gia)
         {
-
-            return Phong_DAL.Instance.themPhong(id, Int32.Parse(loai), Int32.Parse(gia));
+            this.Data.Add(new Phong(id, int.Parse(loai), "trong", int.Parse(gia)));
+            return Phong_DAL.Instance.themPhong(id, Int32.Parse(loai), Int32.Parse(gia.ToString()));
         }
         private bool updateRoom(string id, string gia)
         {

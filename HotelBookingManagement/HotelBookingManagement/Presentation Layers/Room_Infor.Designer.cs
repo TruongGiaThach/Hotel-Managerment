@@ -1,4 +1,6 @@
-﻿namespace HotelBookingManagement
+﻿using System.Collections.Generic;
+
+namespace HotelBookingManagement
 {
     partial class Room_Infor
     {
@@ -6,7 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private List<Phong> Data;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>

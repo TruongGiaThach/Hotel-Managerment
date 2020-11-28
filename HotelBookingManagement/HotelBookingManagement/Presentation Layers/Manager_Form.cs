@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelBookingManagement.Data_Access_Layers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,12 +22,11 @@ namespace HotelBookingManagement
             InitializeComponent();
             this.loginForm = form;
             this.currentUser = user;
+            this.DS_Phong = Phong_Data.GetDsPhong();
+            tabControl_Menu.SelectedIndex = 1;
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-            //tabControl_Menu.SelectedIndex = 1;
-            tabControl_Menu.SelectedIndex = 0;
-            tabControl_Menu.SelectedIndex = 0;
 
         }
 
@@ -75,7 +75,7 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
-                    newFrm = new Room_Show()
+                    newFrm = new Room_Show(ref DS_Phong)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]

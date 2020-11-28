@@ -17,7 +17,7 @@ namespace HotelBookingManagement
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private List<Phong> Data;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -146,12 +146,12 @@ namespace HotelBookingManagement
         private int margin = 10;
         List<System.Windows.Forms.Button> Rooms = new List<System.Windows.Forms.Button>();
         List<System.Windows.Forms.Button> SelectedButton = new List<Button>();
-        private void InitRoom(DataTable Data)
+        private void InitRoom()
         {
             SelectedButton.Clear();
             Rooms.Clear();
             this.panel_RoomShow.Controls.Clear();
-            NumOfRoom = Data.Rows.Count;
+            NumOfRoom = Data.Count;
             int drawPointX = this.margin;
             int drawPointY = this.margin;
             for (int i = 0; i < NumOfRoom; ++i)//create Rooms Buttom
@@ -162,8 +162,8 @@ namespace HotelBookingManagement
                 // set Button Properties
                 //
                 this.Rooms[i].ImageList = this.imageList_RoomShow;
-                this.Rooms[i].Tag = false;
-                if (Data.Rows[i].ItemArray[2].ToString() == "trong")
+                this.Rooms[i].Tag = Data[i];
+                if (Data[i].TrangThai == "trong")
                 {
                     this.Rooms[i].ImageIndex = 2;
                     this.Rooms[i].BackColor = Color.White;
@@ -175,8 +175,8 @@ namespace HotelBookingManagement
                     this.Rooms[i].BackColor = Color.Silver;
                     trong = false;
                 }
-                this.Rooms[i].Name = Data.Rows[i].ItemArray[0].ToString();
-                this.Rooms[i].Text = ((trong) ? "Trống" : "Đang Thuê") + "\n" + "Phòng " + Data.Rows[i].ItemArray[0].ToString();
+                this.Rooms[i].Name = i.ToString();
+                this.Rooms[i].Text = ((trong) ? "Trống" : "Đang Thuê") + "\n" + "Phòng " + Data[i].ID;
                 this.Rooms[i].Size = new System.Drawing.Size((this.panel_RoomShow.Width - ((MaxNumOfRoom + 1) * margin)) / MaxNumOfRoom, 100);
                 if (i % MaxNumOfRoom != 0 || i == 0) drawPointX = ((i % MaxNumOfRoom) * Rooms[i].Width) + margin;
                 else

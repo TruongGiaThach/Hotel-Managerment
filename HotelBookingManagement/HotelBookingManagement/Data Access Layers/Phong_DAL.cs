@@ -23,7 +23,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             get { if (instance == null) instance = new Phong_DAL(); return Phong_DAL.instance; }
             private set => instance = value;
         }
-        private Phong_DAL() { }
+        public Phong_DAL() { }
         public Phong getPhongbyId(string id)
         {
             List<Phong> lists = new List<Phong>();

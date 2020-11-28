@@ -148,7 +148,7 @@ namespace HotelBookingManagement
             this.button_Change.Size = new System.Drawing.Size(40, 40);
             this.button_Change.TabIndex = 0;
             this.button_Change.UseVisualStyleBackColor = false;
-            this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
+            //this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
             // 
             // button_Delete
             // 
@@ -171,7 +171,7 @@ namespace HotelBookingManagement
             this.button_Add.Size = new System.Drawing.Size(40, 40);
             this.button_Add.TabIndex = 0;
             this.button_Add.UseVisualStyleBackColor = true;
-            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
+            //this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // FormCommon
             // 

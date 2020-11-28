@@ -105,27 +105,27 @@ namespace HotelBookingManagement
             }
         }
 
-        private void button_Add_Click(object sender, EventArgs e)
-        {
-            Room_Infor roomInfor = new Room_Infor(this);
-            roomInfor.ShowDialog();
-            this.FormCommon_Load(sender, e);
-        }
+        //private void button_Add_Click(object sender, EventArgs e)
+        //{
+        //    Room_Infor roomInfor = new Room_Infor(this);
+        //    roomInfor.ShowDialog();
+        //    this.FormCommon_Load(sender, e);
+        //}
 
-        private void button_Change_Click(object sender, EventArgs e)
-        {
-            int index = 0;
-            if (this.dataGridView1.SelectedRows.Count > 0)
-            {
-                index = this.dataGridView1.SelectedRows[0].Index;
-            }
-            string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-            string loai = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
-            string gia = this.dataGridView1.Rows[index].Cells[3].Value.ToString();
-            Room_Infor room = new Room_Infor(this, id, loai, gia);
-            room.ShowDialog();
-            this.FormCommon_Load(sender, e);
-        }
+        //private void button_Change_Click(object sender, EventArgs e)
+        //{
+        //    int index = 0;
+        //    if (this.dataGridView1.SelectedRows.Count > 0)
+        //    {
+        //        index = this.dataGridView1.SelectedRows[0].Index;
+        //    }
+        //    string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
+        //    string loai = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
+        //    string gia = this.dataGridView1.Rows[index].Cells[3].Value.ToString();
+        //    Room_Infor room = new Room_Infor(this, id, loai, gia);
+        //    room.ShowDialog();
+        //    this.FormCommon_Load(sender, e);
+        //}
 
         #region Search bar
         private DataGridViewCell GetCellWhereTextExistsInGridView(string searchText, DataGridView dataGridView, int columnIndex)

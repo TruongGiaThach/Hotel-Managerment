@@ -17,12 +17,7 @@ namespace HotelBookingManagement
             InitializeComponent();
         }
 
-        private void labelLoaiPhong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void Reservation_Form_Load(object sender, EventArgs e)
         {
 
         }

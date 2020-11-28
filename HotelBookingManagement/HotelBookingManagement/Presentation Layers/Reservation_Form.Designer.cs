@@ -29,258 +29,226 @@ namespace HotelBookingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradientPanelTheme = new System.Windows.Forms.Panel();
-            this.ButtonXacNhan = new System.Windows.Forms.Button();
-            this.buttonHuy = new System.Windows.Forms.Button();
-            this.labelHoVaTen = new System.Windows.Forms.Label();
-            this.labelSoDT = new System.Windows.Forms.Label();
-            this.labelSoNguoi = new System.Windows.Forms.Label();
-            this.labelLoaiPhong = new System.Windows.Forms.Label();
-            this.labelSoPhong = new System.Windows.Forms.Label();
-            this.labelCMND = new System.Windows.Forms.Label();
-            this.textBoxHoTen = new System.Windows.Forms.TextBox();
-            this.textBoxCMND = new System.Windows.Forms.TextBox();
-            this.textBoxSDT = new System.Windows.Forms.TextBox();
-            this.textBoxSoPhong = new System.Windows.Forms.TextBox();
-            this.textBoxSoNguoi = new System.Windows.Forms.TextBox();
-            this.comboBoxLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.labelThanhToan = new System.Windows.Forms.Label();
-            this.comboBoxThanhToan = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanelTheme)).BeginInit();
-            this.gradientPanelTheme.SuspendLayout();
+            this.label_HoVaTen = new System.Windows.Forms.Label();
+            this.textBox_HoVaTen = new System.Windows.Forms.TextBox();
+            this.label_CMND = new System.Windows.Forms.Label();
+            this.textBox_CMND = new System.Windows.Forms.TextBox();
+            this.label_SDT = new System.Windows.Forms.Label();
+            this.textBox_SDT = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_ThongTinDatPhong = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_LoaiPhong = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_SoPhong = new System.Windows.Forms.TextBox();
+            this.button_DatPhong = new System.Windows.Forms.Button();
+            this.button_Huy = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox_ThongTinDatPhong.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gradientPanelTheme
+            // label_HoVaTen
             // 
-            this.gradientPanelTheme.Controls.Add(this.comboBoxThanhToan);
-            this.gradientPanelTheme.Controls.Add(this.comboBoxLoaiPhong);
-            this.gradientPanelTheme.Controls.Add(this.textBoxSoNguoi);
-            this.gradientPanelTheme.Controls.Add(this.textBoxSoPhong);
-            this.gradientPanelTheme.Controls.Add(this.textBoxSDT);
-            this.gradientPanelTheme.Controls.Add(this.textBoxCMND);
-            this.gradientPanelTheme.Controls.Add(this.textBoxHoTen);
-            this.gradientPanelTheme.Controls.Add(this.labelSoPhong);
-            this.gradientPanelTheme.Controls.Add(this.labelThanhToan);
-            this.gradientPanelTheme.Controls.Add(this.labelLoaiPhong);
-            this.gradientPanelTheme.Controls.Add(this.labelSoNguoi);
-            this.gradientPanelTheme.Controls.Add(this.labelCMND);
-            this.gradientPanelTheme.Controls.Add(this.labelSoDT);
-            this.gradientPanelTheme.Controls.Add(this.labelHoVaTen);
-            this.gradientPanelTheme.Controls.Add(this.buttonHuy);
-            this.gradientPanelTheme.Controls.Add(this.ButtonXacNhan);
-            this.gradientPanelTheme.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanelTheme.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanelTheme.Name = "gradientPanelTheme";
-            this.gradientPanelTheme.Size = new System.Drawing.Size(769, 450);
-            this.gradientPanelTheme.TabIndex = 0;
-            this.gradientPanelTheme.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
+            this.label_HoVaTen.AutoSize = true;
+            this.label_HoVaTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_HoVaTen.Location = new System.Drawing.Point(9, 45);
+            this.label_HoVaTen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_HoVaTen.Name = "label_HoVaTen";
+            this.label_HoVaTen.Size = new System.Drawing.Size(163, 26);
+            this.label_HoVaTen.TabIndex = 0;
+            this.label_HoVaTen.Text = "Tên Người Đặt";
             // 
-            // ButtonXacNhan
+            // textBox_HoVaTen
             // 
-            this.ButtonXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.ButtonXacNhan.Location = new System.Drawing.Point(460, 373);
-            this.ButtonXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ButtonXacNhan.Name = "ButtonXacNhan";
-            this.ButtonXacNhan.Size = new System.Drawing.Size(183, 51);
-            this.ButtonXacNhan.TabIndex = 8;
-            this.ButtonXacNhan.Text = "Xác Nhận";
-            this.ButtonXacNhan.UseVisualStyleBackColor = true;
+            this.textBox_HoVaTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_HoVaTen.Location = new System.Drawing.Point(218, 40);
+            this.textBox_HoVaTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_HoVaTen.Name = "textBox_HoVaTen";
+            this.textBox_HoVaTen.Size = new System.Drawing.Size(415, 35);
+            this.textBox_HoVaTen.TabIndex = 1;
             // 
-            // buttonHuy
+            // label_CMND
             // 
-            this.buttonHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(178)))), ((int)(((byte)(160)))));
-            this.buttonHuy.Location = new System.Drawing.Point(140, 373);
-            this.buttonHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonHuy.Name = "buttonHuy";
-            this.buttonHuy.Size = new System.Drawing.Size(183, 51);
-            this.buttonHuy.TabIndex = 8;
-            this.buttonHuy.Text = "Hủy";
-            this.buttonHuy.UseVisualStyleBackColor = true;
+            this.label_CMND.AutoSize = true;
+            this.label_CMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CMND.Location = new System.Drawing.Point(86, 111);
+            this.label_CMND.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_CMND.Name = "label_CMND";
+            this.label_CMND.Size = new System.Drawing.Size(86, 26);
+            this.label_CMND.TabIndex = 0;
+            this.label_CMND.Text = "CMND";
             // 
-            // labelHoVaTen
+            // textBox_CMND
             // 
-            this.labelHoVaTen.AutoSize = true;
-            this.labelHoVaTen.BackColor = System.Drawing.Color.Transparent;
-            this.labelHoVaTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoVaTen.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelHoVaTen.Location = new System.Drawing.Point(48, 49);
-            this.labelHoVaTen.Name = "labelHoVaTen";
-            this.labelHoVaTen.Size = new System.Drawing.Size(118, 26);
-            this.labelHoVaTen.TabIndex = 9;
-            this.labelHoVaTen.Text = "Họ và tên:";
+            this.textBox_CMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CMND.Location = new System.Drawing.Point(218, 106);
+            this.textBox_CMND.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_CMND.Name = "textBox_CMND";
+            this.textBox_CMND.Size = new System.Drawing.Size(415, 35);
+            this.textBox_CMND.TabIndex = 1;
             // 
-            // labelSoDT
+            // label_SDT
             // 
-            this.labelSoDT.AutoSize = true;
-            this.labelSoDT.BackColor = System.Drawing.Color.Transparent;
-            this.labelSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoDT.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSoDT.Location = new System.Drawing.Point(48, 141);
-            this.labelSoDT.Name = "labelSoDT";
-            this.labelSoDT.Size = new System.Drawing.Size(81, 26);
-            this.labelSoDT.TabIndex = 9;
-            this.labelSoDT.Text = "Số ĐT:";
+            this.label_SDT.AutoSize = true;
+            this.label_SDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SDT.Location = new System.Drawing.Point(116, 175);
+            this.label_SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_SDT.Name = "label_SDT";
+            this.label_SDT.Size = new System.Drawing.Size(57, 26);
+            this.label_SDT.TabIndex = 0;
+            this.label_SDT.Text = "SDT";
             // 
-            // labelSoNguoi
+            // textBox_SDT
             // 
-            this.labelSoNguoi.AutoSize = true;
-            this.labelSoNguoi.BackColor = System.Drawing.Color.Transparent;
-            this.labelSoNguoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoNguoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSoNguoi.Location = new System.Drawing.Point(48, 186);
-            this.labelSoNguoi.Name = "labelSoNguoi";
-            this.labelSoNguoi.Size = new System.Drawing.Size(110, 26);
-            this.labelSoNguoi.TabIndex = 9;
-            this.labelSoNguoi.Text = "Số người:";
+            this.textBox_SDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SDT.Location = new System.Drawing.Point(218, 171);
+            this.textBox_SDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_SDT.Name = "textBox_SDT";
+            this.textBox_SDT.Size = new System.Drawing.Size(415, 35);
+            this.textBox_SDT.TabIndex = 1;
             // 
-            // labelLoaiPhong
+            // groupBox1
             // 
-            this.labelLoaiPhong.AutoSize = true;
-            this.labelLoaiPhong.BackColor = System.Drawing.Color.Transparent;
-            this.labelLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiPhong.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelLoaiPhong.Location = new System.Drawing.Point(48, 228);
-            this.labelLoaiPhong.Name = "labelLoaiPhong";
-            this.labelLoaiPhong.Size = new System.Drawing.Size(130, 26);
-            this.labelLoaiPhong.TabIndex = 9;
-            this.labelLoaiPhong.Text = "Loại Phòng";
-            this.labelLoaiPhong.Click += new System.EventHandler(this.labelLoaiPhong_Click);
+            this.groupBox1.Controls.Add(this.label_HoVaTen);
+            this.groupBox1.Controls.Add(this.textBox_SDT);
+            this.groupBox1.Controls.Add(this.label_CMND);
+            this.groupBox1.Controls.Add(this.textBox_CMND);
+            this.groupBox1.Controls.Add(this.label_SDT);
+            this.groupBox1.Controls.Add(this.textBox_HoVaTen);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(18, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(732, 245);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông Tin Người Thuê";
             // 
-            // labelSoPhong
+            // groupBox_ThongTinDatPhong
             // 
-            this.labelSoPhong.AutoSize = true;
-            this.labelSoPhong.BackColor = System.Drawing.Color.Transparent;
-            this.labelSoPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoPhong.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSoPhong.Location = new System.Drawing.Point(48, 276);
-            this.labelSoPhong.Name = "labelSoPhong";
-            this.labelSoPhong.Size = new System.Drawing.Size(108, 26);
-            this.labelSoPhong.TabIndex = 9;
-            this.labelSoPhong.Text = "Số Phòng";
+            this.groupBox_ThongTinDatPhong.Controls.Add(this.panel1);
+            this.groupBox_ThongTinDatPhong.Controls.Add(this.label_LoaiPhong);
+            this.groupBox_ThongTinDatPhong.Controls.Add(this.textBox1);
+            this.groupBox_ThongTinDatPhong.Controls.Add(this.label1);
+            this.groupBox_ThongTinDatPhong.Controls.Add(this.textBox_SoPhong);
+            this.groupBox_ThongTinDatPhong.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_ThongTinDatPhong.Location = new System.Drawing.Point(759, 18);
+            this.groupBox_ThongTinDatPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox_ThongTinDatPhong.Name = "groupBox_ThongTinDatPhong";
+            this.groupBox_ThongTinDatPhong.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox_ThongTinDatPhong.Size = new System.Drawing.Size(638, 494);
+            this.groupBox_ThongTinDatPhong.TabIndex = 2;
+            this.groupBox_ThongTinDatPhong.TabStop = false;
+            this.groupBox_ThongTinDatPhong.Text = "Thông Tin Đặt Phòng";
             // 
-            // labelCMND
+            // panel1
             // 
-            this.labelCMND.AutoSize = true;
-            this.labelCMND.BackColor = System.Drawing.Color.Transparent;
-            this.labelCMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCMND.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCMND.Location = new System.Drawing.Point(48, 92);
-            this.labelCMND.Name = "labelCMND";
-            this.labelCMND.Size = new System.Drawing.Size(94, 26);
-            this.labelCMND.TabIndex = 9;
-            this.labelCMND.Text = "CMND:";
+            this.panel1.Location = new System.Drawing.Point(32, 45);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(576, 300);
+            this.panel1.TabIndex = 2;
             // 
-            // textBoxHoTen
+            // label_LoaiPhong
             // 
-            this.textBoxHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHoTen.Location = new System.Drawing.Point(202, 41);
-            this.textBoxHoTen.Name = "textBoxHoTen";
-            this.textBoxHoTen.Size = new System.Drawing.Size(494, 35);
-            this.textBoxHoTen.TabIndex = 10;
+            this.label_LoaiPhong.AutoSize = true;
+            this.label_LoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_LoaiPhong.Location = new System.Drawing.Point(74, 428);
+            this.label_LoaiPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_LoaiPhong.Name = "label_LoaiPhong";
+            this.label_LoaiPhong.Size = new System.Drawing.Size(130, 26);
+            this.label_LoaiPhong.TabIndex = 0;
+            this.label_LoaiPhong.Text = "Loại Phòng";
             // 
-            // textBoxCMND
+            // textBox1
             // 
-            this.textBoxCMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCMND.Location = new System.Drawing.Point(202, 89);
-            this.textBoxCMND.Name = "textBoxCMND";
-            this.textBoxCMND.Size = new System.Drawing.Size(494, 35);
-            this.textBoxCMND.TabIndex = 10;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(256, 423);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 35);
+            this.textBox1.TabIndex = 1;
             // 
-            // textBoxSDT
+            // label1
             // 
-            this.textBoxSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSDT.Location = new System.Drawing.Point(202, 138);
-            this.textBoxSDT.Name = "textBoxSDT";
-            this.textBoxSDT.Size = new System.Drawing.Size(494, 35);
-            this.textBoxSDT.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(74, 368);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Số Phòng";
             // 
-            // textBoxSoPhong
+            // textBox_SoPhong
             // 
-            this.textBoxSoPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoPhong.Location = new System.Drawing.Point(202, 273);
-            this.textBoxSoPhong.Name = "textBoxSoPhong";
-            this.textBoxSoPhong.Size = new System.Drawing.Size(156, 35);
-            this.textBoxSoPhong.TabIndex = 10;
+            this.textBox_SoPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SoPhong.Location = new System.Drawing.Point(256, 363);
+            this.textBox_SoPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_SoPhong.Name = "textBox_SoPhong";
+            this.textBox_SoPhong.Size = new System.Drawing.Size(292, 35);
+            this.textBox_SoPhong.TabIndex = 1;
             // 
-            // textBoxSoNguoi
+            // button_DatPhong
             // 
-            this.textBoxSoNguoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoNguoi.Location = new System.Drawing.Point(202, 183);
-            this.textBoxSoNguoi.Name = "textBoxSoNguoi";
-            this.textBoxSoNguoi.Size = new System.Drawing.Size(156, 35);
-            this.textBoxSoNguoi.TabIndex = 10;
+            this.button_DatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DatPhong.Location = new System.Drawing.Point(418, 323);
+            this.button_DatPhong.Name = "button_DatPhong";
+            this.button_DatPhong.Size = new System.Drawing.Size(159, 61);
+            this.button_DatPhong.TabIndex = 3;
+            this.button_DatPhong.Text = "Đặt Phòng";
+            this.button_DatPhong.UseVisualStyleBackColor = true;
             // 
-            // comboBoxLoaiPhong
+            // button_Huy
             // 
-            this.comboBoxLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(12)));
-            this.comboBoxLoaiPhong.FormattingEnabled = true;
-            this.comboBoxLoaiPhong.Location = new System.Drawing.Point(202, 230);
-            this.comboBoxLoaiPhong.Name = "comboBoxLoaiPhong";
-            this.comboBoxLoaiPhong.Size = new System.Drawing.Size(121, 35);
-            this.comboBoxLoaiPhong.TabIndex = 11;
+            this.button_Huy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Huy.Location = new System.Drawing.Point(176, 323);
+            this.button_Huy.Name = "button_Huy";
+            this.button_Huy.Size = new System.Drawing.Size(159, 61);
+            this.button_Huy.TabIndex = 3;
+            this.button_Huy.Text = "Hủy";
+            this.button_Huy.UseVisualStyleBackColor = true;
             // 
-            // labelThanhToan
-            // 
-            this.labelThanhToan.AutoSize = true;
-            this.labelThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.labelThanhToan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThanhToan.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelThanhToan.Location = new System.Drawing.Point(45, 318);
-            this.labelThanhToan.Name = "labelThanhToan";
-            this.labelThanhToan.Size = new System.Drawing.Size(134, 26);
-            this.labelThanhToan.TabIndex = 9;
-            this.labelThanhToan.Text = "Thanh Toán";
-            this.labelThanhToan.Click += new System.EventHandler(this.labelLoaiPhong_Click);
-            // 
-            // comboBoxThanhToan
-            // 
-            this.comboBoxThanhToan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(12)));
-            this.comboBoxThanhToan.FormattingEnabled = true;
-            this.comboBoxThanhToan.Items.AddRange(new object[] {
-            "Đã thanh toán",
-            "chưa thanh toán"});
-            this.comboBoxThanhToan.Location = new System.Drawing.Point(202, 315);
-            this.comboBoxThanhToan.Name = "comboBoxThanhToan";
-            this.comboBoxThanhToan.Size = new System.Drawing.Size(198, 35);
-            this.comboBoxThanhToan.TabIndex = 11;
-            // 
-            // LayPhong
+            // Reservation_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 450);
-            this.Controls.Add(this.gradientPanelTheme);
+            this.ClientSize = new System.Drawing.Size(1414, 522);
+            this.Controls.Add(this.button_Huy);
+            this.Controls.Add(this.button_DatPhong);
+            this.Controls.Add(this.groupBox_ThongTinDatPhong);
+            this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
-            this.Name = "LayPhong";
+            this.Name = "Reservation_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lấy Phòng";
-            ((System.ComponentModel.ISupportInitialize)(this.gradientPanelTheme)).EndInit();
-            this.gradientPanelTheme.ResumeLayout(false);
-            this.gradientPanelTheme.PerformLayout();
+            this.Text = "Đặt Phòng";
+            this.Load += new System.EventHandler(this.Reservation_Form_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox_ThongTinDatPhong.ResumeLayout(false);
+            this.groupBox_ThongTinDatPhong.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel gradientPanelTheme;
-        private System.Windows.Forms.Label labelSoPhong;
-        private System.Windows.Forms.Label labelLoaiPhong;
-        private System.Windows.Forms.Label labelSoNguoi;
-        private System.Windows.Forms.Label labelCMND;
-        private System.Windows.Forms.Label labelSoDT;
-        private System.Windows.Forms.Label labelHoVaTen;
-        private System.Windows.Forms.Button buttonHuy;
-        private System.Windows.Forms.Button ButtonXacNhan;
-        private System.Windows.Forms.ComboBox comboBoxLoaiPhong;
-        private System.Windows.Forms.TextBox textBoxSoNguoi;
-        private System.Windows.Forms.TextBox textBoxSoPhong;
-        private System.Windows.Forms.TextBox textBoxSDT;
-        private System.Windows.Forms.TextBox textBoxCMND;
-        private System.Windows.Forms.TextBox textBoxHoTen;
-        private System.Windows.Forms.ComboBox comboBoxThanhToan;
-        private System.Windows.Forms.Label labelThanhToan;
+        private System.Windows.Forms.Label label_HoVaTen;
+        private System.Windows.Forms.TextBox textBox_HoVaTen;
+        private System.Windows.Forms.Label label_CMND;
+        private System.Windows.Forms.TextBox textBox_CMND;
+        private System.Windows.Forms.Label label_SDT;
+        private System.Windows.Forms.TextBox textBox_SDT;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_ThongTinDatPhong;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label_LoaiPhong;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_SoPhong;
+        private System.Windows.Forms.Button button_DatPhong;
+        private System.Windows.Forms.Button button_Huy;
     }
 }
