@@ -39,6 +39,8 @@ create table PHONG
 	TRANGTHAI char(20),
 	GIAPHONG money
 )
+alter table PHONG 
+	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho')
 create table NHANVIEN
 (
 	ID char(5) not null primary key,
@@ -51,6 +53,8 @@ create table NHANVIEN
 )
 alter table NHANVIEN
 	add constraint GT_GIOI_TINH check (GIOITINH = 'nam' or GIOITINH = 'nu')
+alter table NHANVIEN	
+	add constraint unique_cmnd unique(CMND)
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
 as
