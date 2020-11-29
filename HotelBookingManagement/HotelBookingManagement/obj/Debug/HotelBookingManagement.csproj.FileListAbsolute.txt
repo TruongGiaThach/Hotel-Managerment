@@ -54,3 +54,4 @@ C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\Hotel
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csproj.CoreCompileInputs.cache
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.exe
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.pdb
+C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Time_Control.resources
