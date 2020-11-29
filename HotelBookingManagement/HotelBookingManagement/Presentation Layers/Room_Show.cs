@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
 
 namespace HotelBookingManagement
 {
     public partial class Room_Show : Form
     {
-        public Room_Show()
+        public Room_Show(ref List<Phong> phongs)
         {
             InitializeComponent();
+            this.Data = phongs;
             RoomShow_Load(new object { }, new EventArgs { });
         }
 
@@ -27,43 +29,38 @@ namespace HotelBookingManagement
 
         private void getData()
         {
-            InitRoom(DataHelper.Instance.getDataTable("select * from PHONG"));
+            InitRoom();
         }
 
         private void buttonThemPhong_Click(object sender, EventArgs e)
         {
-            Room_Infor roomInfor = new Room_Infor(this);
+            Room_Infor roomInfor = new Room_Infor(this, ref Data);
             roomInfor.ShowDialog();
             this.RoomShow_Load(sender, e);
         }
 
         private void buttonXoaPhong_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                for (int i = 0; i < SelectedButton.Count; ++i)
                 {
-                    for (int i = 0; i < SelectedButton.Count; ++i)
-                    {
-                        Phong_DAL.Instance.xoaPhong(SelectedButton[i].Name);
-                    }
+                    Data.RemoveAt(int.Parse(SelectedButton[i].Name));
+                    Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID);
                 }
-                SelectedButton.Clear();
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
+            SelectedButton.Clear();
             RoomShow_Load(sender, e);
         }
 
         private void RoomSelect(object sender, EventArgs e)
         {
             Button selected = sender as Button;
-            if (selected.Tag.Equals(false))
+            if ((selected.Tag as Phong).IsSelect == false)
             {
                 SelectedButton.Add(selected);
                 selected.ForeColor = Color.AliceBlue;
-                selected.Tag = true;
+                (selected.Tag as Phong).IsSelect = true;
                 return;
             }
 
@@ -72,7 +69,7 @@ namespace HotelBookingManagement
                 if (SelectedButton[i] == selected)
                 {
                     selected.ForeColor = SystemColors.ControlText;
-                    selected.Tag = false;
+                    (selected.Tag as Phong).IsSelect = false;
                     SelectedButton.RemoveAt(i);
                     return;
                 }
@@ -80,9 +77,11 @@ namespace HotelBookingManagement
 
         }
 
-        private void panel_MenuBar_Paint(object sender, PaintEventArgs e)
+        private void button_ThuePhong_Click(object sender, EventArgs e)
         {
-
+            Reservation_Form ThuePhong = new Reservation_Form(ref Data);
+            ThuePhong.ShowDialog();
+            this.RoomShow_Load(sender, e);
         }
     }
 }

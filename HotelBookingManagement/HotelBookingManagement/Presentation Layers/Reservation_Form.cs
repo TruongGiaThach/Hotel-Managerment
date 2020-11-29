@@ -12,19 +12,25 @@ namespace HotelBookingManagement
 {
     public partial class Reservation_Form : Form
     {
-        public Reservation_Form()
+        public Reservation_Form(ref List<Phong> Rooms)
         {
             InitializeComponent();
+            this.Data = Rooms;
+            Reservation_Form_Load(new object { }, new EventArgs { });
         }
 
-        private void labelLoaiPhong_Click(object sender, EventArgs e)
+        private void Reservation_Form_Load(object sender, EventArgs e)
         {
-
+            InitRoomFinder();
         }
 
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
-
+            RadioButton Selected = sender as RadioButton;
+            if (Selected.Checked)
+            {
+                
+            }
         }
     }
 }
