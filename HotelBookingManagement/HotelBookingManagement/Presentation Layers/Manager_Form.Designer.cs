@@ -35,7 +35,6 @@ namespace HotelBookingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.Phong_Data = new Phong_DAL();
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
             this.imageList_Menu_Icon = new System.Windows.Forms.ImageList(this.components);
@@ -53,12 +52,12 @@ namespace HotelBookingManagement
             // 
             this.imageList_Menu_Icon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Menu_Icon.ImageStream")));
             this.imageList_Menu_Icon.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_Menu_Icon.Images.SetKeyName(0, "Account.jpg");
+            this.imageList_Menu_Icon.Images.SetKeyName(0, "hethong.png");
             this.imageList_Menu_Icon.Images.SetKeyName(1, "room.png");
-            this.imageList_Menu_Icon.Images.SetKeyName(2, "Order_room.jpg");
-            this.imageList_Menu_Icon.Images.SetKeyName(3, "Customer.jpg");
-            this.imageList_Menu_Icon.Images.SetKeyName(4, "staff.jpg");
-            this.imageList_Menu_Icon.Images.SetKeyName(5, "Money.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(2, "hoadon.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(3, "Khachhang.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(4, "nhanvien.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(5, "thongke.png");
             // 
             // tabControl_Menu
             // 
