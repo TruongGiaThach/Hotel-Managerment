@@ -36,14 +36,6 @@ namespace HotelBookingManagement
 
         }
 
-       
-   
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            this.loginForm.B_Load(sender, e);
-            this.loginForm.Show();
-        }
 
   
         private void button3_Click(object sender, EventArgs e)
@@ -52,11 +44,7 @@ namespace HotelBookingManagement
             LPForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Room_Information TPForm = new Room_Information();
-            //TPForm.Show();
-        }
+
 
         private void tabControl_Menu_SelectedIndexChanged(object sender, EventArgs e)
         {

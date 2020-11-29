@@ -48,7 +48,7 @@ namespace HotelBookingManagement
                     break;
                 case "staff":
                     sqlQuery = "select * from NHANVIEN";
-                    this.button_Add.Visible = false;
+                    this.button_Add.Visible = true;
                     this.button_Delete.Visible = false;
                     this.button_Change.Visible = false;
                     break;
@@ -111,13 +111,6 @@ namespace HotelBookingManagement
             }
         }
 
-        //private void button_Add_Click(object sender, EventArgs e)
-        //{
-        //    Room_Infor roomInfor = new Room_Infor(this);
-        //    roomInfor.ShowDialog();
-        //    this.FormCommon_Load(sender, e);
-        //}
-
         //private void button_Change_Click(object sender, EventArgs e)
         //{
         //    int index = 0;
@@ -172,5 +165,17 @@ namespace HotelBookingManagement
 
         #endregion
 
+        private void button_Change_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Add_Click_1(object sender, EventArgs e)
+        {
+
+            Add_Receptionist add_Receptionist = new Add_Receptionist();
+            add_Receptionist.ShowDialog();
+            this.FormCommon_Load(sender, e);
+        }
     }
 }
