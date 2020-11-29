@@ -109,8 +109,11 @@ namespace HotelBookingManagement
                 default:
                     break;
             }
-            newFrm.Dock = DockStyle.Fill;
-            newFrm.Show();
+            if (newFrm != null)
+            {
+                newFrm.Dock = DockStyle.Fill;
+                newFrm.Show();
+            }
         }
     }
 }

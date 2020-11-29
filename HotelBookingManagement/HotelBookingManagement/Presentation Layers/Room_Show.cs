@@ -41,16 +41,19 @@ namespace HotelBookingManagement
 
         private void buttonXoaPhong_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (SelectedButton.Count > 0)
             {
-                for (int i = 0; i < SelectedButton.Count; ++i)
+                if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Data.RemoveAt(int.Parse(SelectedButton[i].Name));
-                    Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID);
+                    for (int i = 0; i < SelectedButton.Count; ++i)
+                    {
+                        Data.RemoveAt(int.Parse(SelectedButton[i].Name));
+                        Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID);
+                    }
+                    SelectedButton.Clear();
+                    RoomShow_Load(sender, e);
                 }
             }
-            SelectedButton.Clear();
-            RoomShow_Load(sender, e);
         }
 
         private void RoomSelect(object sender, EventArgs e)

@@ -122,12 +122,6 @@
     <Compile Include="Presentation Layers\Room_Show.Designer.cs">
       <DependentUpon>Room_Show.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layers\Sigup_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layers\Sigup_Form.Designer.cs">
-      <DependentUpon>Sigup_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentation Layers\Staff_Information.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Room_Show.resx">
       <DependentUpon>Room_Show.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layers\Sigup_Form.resx">
-      <DependentUpon>Sigup_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Staff_Information.resx">
       <DependentUpon>Staff_Information.cs</DependentUpon>
