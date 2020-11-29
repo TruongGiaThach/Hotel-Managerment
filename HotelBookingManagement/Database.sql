@@ -35,12 +35,14 @@ alter table DANGKI
 create table PHONG
 (
 	ID char(5) NOT NULL PRIMARY KEY	,
-	LOAI	int,
+	LOAI	varchar(20),
 	TRANGTHAI char(20),
 	GIAPHONG money
 )
 alter table PHONG 
 	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho')
+alter table PHONG 
+	add constraint gt_loai_phong check (LOAI = 'nomal1' or LOAI = 'nomal2' or LOAI = 'vip1' or LOAI = 'vip2' )
 create table NHANVIEN
 (
 	ID char(5) not null primary key,
@@ -55,10 +57,13 @@ alter table NHANVIEN
 	add constraint GT_GIOI_TINH check (GIOITINH = 'nam' or GIOITINH = 'nu')
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
+insert into NHANVIEN (ID,HOTEN,CMND,SDT,GIOITINH) values ('0',' ','root','0','nam');
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
 as
 begin
 	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
 end
+select * from NHANVIEN
+select * from KHACHHANG
 select * from PHONG
