@@ -186,7 +186,7 @@ namespace HotelBookingManagement
                 //
                 this.Rooms[i].ImageList = this.imageList_RoomShow;
                 this.Rooms[i].Tag = Data[i];
-                if (Data[i].TrangThai == "trong")
+                if (Data[i].TrangThai.Contains("trong"))
                 {
                     this.Rooms[i].ImageIndex = 2;
                     this.Rooms[i].BackColor = Color.White;

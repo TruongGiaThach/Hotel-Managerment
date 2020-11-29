@@ -68,7 +68,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themKhachHang(string name, string email, string phoneNum, string address)
+        public bool themKhachHang(string name, string email, string phoneNum, string address,string cmnd)
         {
             string sqlQuery = "select * from KHACHHANG where EMAIL = @email ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { email });
@@ -82,10 +82,10 @@ namespace HotelBookingManagement.Data_Access_Layers
             string id = "KH" + i.ToString();
 
             //--------------
-            sqlQuery = "insert into KhachHang(ID, HOTEN, EMAIL, SODT, DIACHI) " +
-                                "values( @id , @tendn , @email , @phoneNum , @address  )";
+            sqlQuery = "insert into KhachHang(ID, HOTEN, EMAIL, SODT, DIACHI, CMND) " +
+                                "values( @id , @tendn , @email , @phoneNum , @address , @cmnd  )";
             string[] parameter = new string[]
-                { id, name , email , phoneNum, address };
+                { id, name , email , phoneNum, address , cmnd };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result == 1)
             {

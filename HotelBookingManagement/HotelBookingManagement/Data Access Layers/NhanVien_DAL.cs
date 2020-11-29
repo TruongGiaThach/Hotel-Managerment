@@ -30,13 +30,13 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public NhanVien getByEmail(string email)
+        public NhanVien getByCMND(string cmnd)
         {
             List<NhanVien> lists = new List<NhanVien>();
-            string sqlQuery = "select * from NHANVIEN where EMAIL = @email ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { email });
+            string sqlQuery = "select * from NHANVIEN where CMND = @cmnd ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
             if (data.Rows.Count == 0)
-                throw new Exception("Không tìm thấy email...");
+                throw new Exception("Không tìm thấy cmnd...");
             foreach (DataRow i in data.Rows)
             {
                 NhanVien item = new NhanVien(i);
@@ -47,7 +47,7 @@ namespace HotelBookingManagement.Data_Access_Layers
         public NhanVien getByPhoneNumber(string phonennum)
         {
             List<NhanVien> lists = new List<NhanVien>();
-            string sqlQuery = "select * from NHANVIEN where EMAIL = @num ";
+            string sqlQuery = "select * from NHANVIEN where SDT = @num ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { phonennum });
             foreach (DataRow i in data.Rows)
             {
@@ -68,43 +68,43 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themNhanVien(string name, string email, string phoneNum, string address)
+        public bool themNhanVien(string name, string cmnd, string phoneNum, string gender , string begin, string last)
         {
-            string sqlQuery = "select * from NHANVIEN where EMAIL = @email ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { email });
+            string sqlQuery = "select * from NHANVIEN where CMND = @cmnd ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
             if (data.Rows.Count > 0)
-                throw new Exception("Email đã được sử dụng!!");
+                throw new Exception("CMND đã được sử dụng!!");
             //-----------
 
-            NhanVien tk = getByEmail("root@gmail.com");
+            NhanVien tk = getByCMND("root");
             int i = Int32.Parse((tk.SoDT));
             i++;
-            string id = "KH" + i.ToString();
+            string id = "NV" + i.ToString();
 
             //--------------
-            sqlQuery = "insert into NHANVIEN(ID, HOTEN, EMAIL, SODT, DIACHI) " +
-                                "values( @id , @tendn , @email , @phoneNum , @address  )";
+            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SODT, GIOITINH, NGBD, TGHOPDONG) " +
+                                "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last  )";
             string[] parameter = new string[]
-                { id, name , email , phoneNum, address };
+                { id, name , cmnd , phoneNum, gender , begin,last };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result == 1)
             {
-                updatePhoneNumber("root@gmail.com", i.ToString());
+                updatePhoneNumber("root", i.ToString());
                 return true;
             }
             return false;
         }
 
-        public bool updatePhoneNumber(string email, string phoneNum)
+        public bool updatePhoneNumber(string cmnd, string phoneNum)
         {
-            string sqlQuery = "exec kh_UpdatePhone @user , @phone ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { email, phoneNum });
+            string sqlQuery = "update NHANVIEN set SDT = @phone where CMND = @cmnd ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { cmnd,phoneNum });
             return result > 0;
         }
-        public bool updateName(string email, string name)
+        public bool updateName(string cmnd, string name)
         {
-            string sqlQuery = string.Format("UPDATE NHANVIEN SET HOTEN = @name WHERE EMAIL = @email ");
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { name, email });
+            string sqlQuery = string.Format("UPDATE NHANVIEN SET HOTEN = @name WHERE CMND = @cmnd ");
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { name, cmnd });
             return result > 0;
         }
     }

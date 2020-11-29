@@ -36,11 +36,11 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists[0];
         }
-        public List<Phong> getByStatusAndType(string status, int type)
+        public List<Phong> getByStatusAndType(string status, string type)
         {
             List<Phong> lists = new List<Phong>();
             string sqlQuery = "select * from PHONG where TRANGTHAI = @status and LOAI = @type ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status, type.ToString() });
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status, type });
             foreach (DataRow i in data.Rows)
             {
                 Phong item = new Phong(i);
@@ -61,7 +61,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themPhong(string id, int loai, int gia)
+        public bool themPhong(string id, string loai, int gia)
         {
             string sqlQuery = "select * from PHONG where ID = @id ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });

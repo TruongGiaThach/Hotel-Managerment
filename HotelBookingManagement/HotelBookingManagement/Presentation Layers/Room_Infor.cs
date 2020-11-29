@@ -22,7 +22,6 @@ namespace HotelBookingManagement
             this.preForm = form;
             this.Data = Data;
             this.id = string.Empty;
-            this.loai = string.Empty;
             this.type = "them";
             this.gia = string.Empty;
         }
@@ -32,7 +31,6 @@ namespace HotelBookingManagement
             this.preForm = form;
             this.Data = Data;
             this.id = id;
-            this.loai = loai;
             this.gia = gia;
             this.type = "sua";
         }
@@ -47,8 +45,9 @@ namespace HotelBookingManagement
         }
         private bool addRoom(string id, string loai, string gia)
         {
-            this.Data.Add(new Phong(id, int.Parse(loai), "trong", int.Parse(gia)));
-            return Phong_DAL.Instance.themPhong(id, Int32.Parse(loai), Int32.Parse(gia.ToString()));
+            
+            return Phong_DAL.Instance.themPhong(id,loai, Int32.Parse(gia.ToString()));
+           
         }
         private bool updateRoom(string id, string gia)
         {
@@ -59,7 +58,7 @@ namespace HotelBookingManagement
             if (this.type == "sua")
             {
                 this.idTextbox.Text = this.id;
-                this.roomTypeTextbox.Text = this.loai;
+                this.comboBox1.SelectedItem = this.loai;
                 this.priceTextbox.Text = this.gia;
                 this.addButton.Text = "Sửa";
             }
@@ -71,12 +70,13 @@ namespace HotelBookingManagement
             try
             {
                 string id = this.idTextbox.Text;
-                string loai = this.roomTypeTextbox.Text;
+                string loai = this.comboBox1.SelectedItem.ToString();
                 string gia = this.priceTextbox.Text;
                 if (type == "them")
                     if (addRoom(id, loai, gia))
                     {
                         MessageBox.Show("Thêm phòng thành công ><");
+                        this.Data.Add(new Phong(id, loai, "trong", int.Parse(gia)));
                         exitButton_Click(sender, e);
                     }
                 if (type == "sua")
