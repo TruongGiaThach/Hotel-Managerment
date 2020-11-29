@@ -44,7 +44,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themTaiKhoan(string user, string pass, string cusID)
+        public bool themTaiKhoan(string user, string pass, string staffID)
         {
             string sqlQuery = "select * from TAIKHOAN where TENDN = @user ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { user });
@@ -55,14 +55,18 @@ namespace HotelBookingManagement.Data_Access_Layers
             int i = Int32.Parse((tk.PhanQuyen));
             i++;
             string id = "US" + i.ToString();
-            updatePhanQuyen("root", i.ToString());
+           
             //--------------
-            sqlQuery = "insert into TAIKHOAN(ID, TENDN, MATKHAU , MAKH , PHANQUYEN) " +
-                                "values( @id , @tendn , @matkhau , @makh , @phanquyen  )";
+            sqlQuery = "insert into TAIKHOAN(ID, TENDN, MATKHAU , PHANQUYEN , MANV) " +
+                                "values( @id , @tendn , @matkhau , @phanquyen , @manv )";
             string[] parameter = new string[]
-                { id, user ,pass , cusID , "user" };
+                { id, user ,pass ,  "user" , staffID };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result == 1) return true;
+            if (result == 1)
+            {
+                updatePhanQuyen("root", i.ToString());
+                return true;
+            }
             return false;
         }
         public bool dangNhap(string user, string pass)

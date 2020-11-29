@@ -34,7 +34,7 @@ namespace HotelBookingManagement
                 case "account":
                     sqlQuery = "select * from TAIKHOAN";
                     this.button_Add.Visible = false;
-                    this.button_Delete.Visible = false;
+                    this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
                     break;
                 case "room":
@@ -43,13 +43,13 @@ namespace HotelBookingManagement
                 case "customer":
                     sqlQuery = "select * from KHACHHANG";
                     this.button_Add.Visible = false;
-                    this.button_Delete.Visible = false;
+                    this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
                     break;
                 case "staff":
                     sqlQuery = "select * from NHANVIEN";
                     this.button_Add.Visible = true;
-                    this.button_Delete.Visible = false;
+                    this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
                     break;
                 default:
@@ -58,18 +58,18 @@ namespace HotelBookingManagement
                     "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI ";
                     this.button_Add.Visible = false;
                     this.button_Change.Visible = false;
-                    this.button_Delete.Visible = false;
+                    this.button_Delete_staff.Visible = false;
                     break;
             };
             this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
             if (this.dataGridView1.Rows.Count == 1)
             {
-                this.button_Delete.Enabled = false;
+                this.button_Delete_staff.Enabled = false;
                 this.button_Change.Enabled = false;
             }
             else
             {
-                this.button_Delete.Enabled = true;
+                this.button_Delete_staff.Enabled = true;
                 this.button_Change.Enabled = true;
             }
         }
@@ -93,21 +93,11 @@ namespace HotelBookingManagement
                 {
                     index = this.dataGridView1.SelectedRows[0].Index;
                 }
-                switch (this.infor)
-                {
-                    case "account":
-                        string user = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
-                        TaiKhoan_DAL.Instance.xoaTaiKhoan(user);
-                        this.FormCommon_Load(sender, e);
-                        break;
-                    case "room":
-                        string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                        Phong_DAL.Instance.xoaPhong(id);
-                        this.FormCommon_Load(sender, e);
-                        break;
-                    default:
-                        break;
-                }
+                
+                string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
+                Phong_DAL.Instance.xoaPhong(id);
+                this.FormCommon_Load(sender, e);
+                
             }
         }
 

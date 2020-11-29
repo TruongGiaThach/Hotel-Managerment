@@ -52,10 +52,10 @@ namespace HotelBookingManagement
             // button_DangNhap
             // 
             this.button_DangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DangNhap.Location = new System.Drawing.Point(349, 199);
+            this.button_DangNhap.Location = new System.Drawing.Point(310, 159);
             this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_DangNhap.Name = "button_DangNhap";
-            this.button_DangNhap.Size = new System.Drawing.Size(130, 48);
+            this.button_DangNhap.Size = new System.Drawing.Size(116, 38);
             this.button_DangNhap.TabIndex = 3;
             this.button_DangNhap.Text = "Đăng nhập";
             this.button_DangNhap.UseVisualStyleBackColor = true;
@@ -63,10 +63,9 @@ namespace HotelBookingManagement
             // 
             // loadingGif
             // 
-            this.loadingGif.Location = new System.Drawing.Point(1, 648);
-            this.loadingGif.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.loadingGif.Location = new System.Drawing.Point(1, 518);
             this.loadingGif.Name = "loadingGif";
-            this.loadingGif.Size = new System.Drawing.Size(78, 82);
+            this.loadingGif.Size = new System.Drawing.Size(69, 66);
             this.loadingGif.TabIndex = 25;
             this.loadingGif.TabStop = false;
             this.loadingGif.Visible = false;
@@ -75,10 +74,9 @@ namespace HotelBookingManagement
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(155, 156);
+            this.pictureBox3.Size = new System.Drawing.Size(138, 125);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
@@ -86,10 +84,10 @@ namespace HotelBookingManagement
             // button_Thoat
             // 
             this.button_Thoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Thoat.Location = new System.Drawing.Point(148, 199);
+            this.button_Thoat.Location = new System.Drawing.Point(132, 159);
             this.button_Thoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Thoat.Name = "button_Thoat";
-            this.button_Thoat.Size = new System.Drawing.Size(130, 48);
+            this.button_Thoat.Size = new System.Drawing.Size(116, 38);
             this.button_Thoat.TabIndex = 4;
             this.button_Thoat.Text = "Thoát";
             this.button_Thoat.UseVisualStyleBackColor = true;
@@ -98,9 +96,9 @@ namespace HotelBookingManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(176, 48);
+            this.label1.Location = new System.Drawing.Point(156, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 26);
+            this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 27;
             this.label1.Text = "Tên đăng nhập";
             // 
@@ -108,37 +106,37 @@ namespace HotelBookingManagement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(191, 116);
+            this.label2.Location = new System.Drawing.Point(170, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 26);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 27;
             this.label2.Text = "Mật khẩu";
             // 
             // UserTextBox
             // 
             this.UserTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTextBox.Location = new System.Drawing.Point(349, 39);
+            this.UserTextBox.Location = new System.Drawing.Point(310, 31);
             this.UserTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserTextBox.Name = "UserTextBox";
-            this.UserTextBox.Size = new System.Drawing.Size(240, 35);
+            this.UserTextBox.Size = new System.Drawing.Size(214, 30);
             this.UserTextBox.TabIndex = 1;
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(349, 108);
+            this.PasswordTextBox.Location = new System.Drawing.Point(310, 86);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(240, 35);
+            this.PasswordTextBox.Size = new System.Drawing.Size(214, 30);
             this.PasswordTextBox.TabIndex = 2;
             // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(605, 249);
+            this.ClientSize = new System.Drawing.Size(541, 206);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserTextBox);
             this.Controls.Add(this.label2);
@@ -148,10 +146,9 @@ namespace HotelBookingManagement
             this.Controls.Add(this.loadingGif);
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(627, 305);
-            this.MinimumSize = new System.Drawing.Size(627, 305);
+            this.MaximumSize = new System.Drawing.Size(559, 253);
+            this.MinimumSize = new System.Drawing.Size(559, 253);
             this.Name = "Login_Form";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
