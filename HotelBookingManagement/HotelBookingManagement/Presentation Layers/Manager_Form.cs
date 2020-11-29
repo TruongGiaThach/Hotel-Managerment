@@ -23,6 +23,7 @@ namespace HotelBookingManagement
             this.loginForm = form;
             this.currentUser = user;
             this.DS_Phong = Phong_Data.GetDsPhong();
+            tabControl_Menu.SelectedIndex = 0;
             tabControl_Menu.SelectedIndex = 1;
         }
         private void Manager_Form_Load(object sender, EventArgs e)

@@ -76,5 +76,12 @@ namespace HotelBookingManagement
             }
 
         }
+
+        private void button_ThuePhong_Click(object sender, EventArgs e)
+        {
+            Reservation_Form ThuePhong = new Reservation_Form(ref Data);
+            ThuePhong.ShowDialog();
+            this.RoomShow_Load(sender, e);
+        }
     }
 }
