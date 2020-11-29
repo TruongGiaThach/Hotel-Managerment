@@ -106,6 +106,8 @@ namespace HotelBookingManagement
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
+                default:
+                    break;
             }
             newFrm.Dock = DockStyle.Fill;
             newFrm.Show();
