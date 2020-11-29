@@ -111,6 +111,8 @@ namespace HotelBookingManagement
             // 
             // NgayDi
             // 
+            this.NgayDi.CustomFormat = "dd-MM-yyyy";
+            this.NgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayDi.Location = new System.Drawing.Point(180, 175);
             this.NgayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayDi.Name = "NgayDi";
@@ -119,6 +121,8 @@ namespace HotelBookingManagement
             // 
             // NgayDen
             // 
+            this.NgayDen.CustomFormat = "dd-MM-yyyy";
+            this.NgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayDen.Location = new System.Drawing.Point(180, 117);
             this.NgayDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayDen.Name = "NgayDen";
@@ -292,6 +296,8 @@ namespace HotelBookingManagement
             // 
             // NgayCapCMT
             // 
+            this.NgayCapCMT.CustomFormat = "dd-MM-yyyy";
+            this.NgayCapCMT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayCapCMT.Location = new System.Drawing.Point(492, 217);
             this.NgayCapCMT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayCapCMT.Name = "NgayCapCMT";
@@ -300,6 +306,8 @@ namespace HotelBookingManagement
             // 
             // NgaySinh
             // 
+            this.NgaySinh.CustomFormat = "dd-MM-yyyy";
+            this.NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgaySinh.Location = new System.Drawing.Point(492, 117);
             this.NgaySinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgaySinh.Name = "NgaySinh";
@@ -492,7 +500,7 @@ namespace HotelBookingManagement
             this.MinimumSize = new System.Drawing.Size(1262, 862);
             this.Name = "Reservation_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Đặt Phòng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -527,6 +535,7 @@ namespace HotelBookingManagement
                     this.Rooms[i].Tag = Data[i];
                     this.Rooms[i].Name = i.ToString();
                     this.Rooms[i].Text = Data[i].ID;
+                    this.Rooms[i].ForeColor = System.Drawing.SystemColors.Control;
                     this.Rooms[i].Tag = Data[i];
                     this.Rooms[i].Size = new System.Drawing.Size(100, (this.panel_Find_Room.Height - ((MaxNumOfRoom + 1) * margin)) / MaxNumOfRoom);
                     if (i % MaxNumOfRoom != 0 || i == 0) drawPointY = ((i % MaxNumOfRoom) * Rooms[i].Height) + margin;

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JacksonSoft.CustomTabControl">
+      <HintPath>..\..\..\..\GAME\Compressed\JacksonSoft.CustomTabControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -125,6 +128,12 @@
     <Compile Include="Presentation Layers\Sigup_Form.Designer.cs">
       <DependentUpon>Sigup_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layers\Staff_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Staff_Information.Designer.cs">
+      <DependentUpon>Staff_Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layers\Time_Control.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -162,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Sigup_Form.resx">
       <DependentUpon>Sigup_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Staff_Information.resx">
+      <DependentUpon>Staff_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Time_Control.resx">
       <DependentUpon>Time_Control.cs</DependentUpon>

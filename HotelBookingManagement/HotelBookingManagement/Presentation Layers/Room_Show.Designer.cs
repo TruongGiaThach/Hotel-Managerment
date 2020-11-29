@@ -94,7 +94,7 @@ namespace HotelBookingManagement
             this.buttonXoaPhong.Location = new System.Drawing.Point(98, 12);
             this.buttonXoaPhong.Name = "buttonXoaPhong";
             this.buttonXoaPhong.Size = new System.Drawing.Size(80, 80);
-            this.buttonXoaPhong.TabIndex = 0;
+            this.buttonXoaPhong.TabIndex = 2;
             this.buttonXoaPhong.Text = "Xóa Phòng";
             this.buttonXoaPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonXoaPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -109,7 +109,7 @@ namespace HotelBookingManagement
             this.buttonThemPhong.Location = new System.Drawing.Point(12, 12);
             this.buttonThemPhong.Name = "buttonThemPhong";
             this.buttonThemPhong.Size = new System.Drawing.Size(80, 80);
-            this.buttonThemPhong.TabIndex = 0;
+            this.buttonThemPhong.TabIndex = 1;
             this.buttonThemPhong.Text = "Thêm Phòng";
             this.buttonThemPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonThemPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -123,7 +123,7 @@ namespace HotelBookingManagement
             this.button_ThuePhong.Location = new System.Drawing.Point(236, 12);
             this.button_ThuePhong.Name = "button_ThuePhong";
             this.button_ThuePhong.Size = new System.Drawing.Size(84, 80);
-            this.button_ThuePhong.TabIndex = 0;
+            this.button_ThuePhong.TabIndex = 3;
             this.button_ThuePhong.Text = "Thuê Phòng";
             this.button_ThuePhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_ThuePhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -137,7 +137,7 @@ namespace HotelBookingManagement
             this.button_TraPhong.Location = new System.Drawing.Point(326, 12);
             this.button_TraPhong.Name = "button_TraPhong";
             this.button_TraPhong.Size = new System.Drawing.Size(84, 80);
-            this.button_TraPhong.TabIndex = 0;
+            this.button_TraPhong.TabIndex = 4;
             this.button_TraPhong.Text = "Trả Phòng";
             this.button_TraPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_TraPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

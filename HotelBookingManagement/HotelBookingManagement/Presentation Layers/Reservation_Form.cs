@@ -29,7 +29,7 @@ namespace HotelBookingManagement
             RadioButton Selected = sender as RadioButton;
             if (Selected.Checked)
             {
-                
+                MessageBox.Show(Text = this.NgayDen.Value.ToString());
             }
         }
     }

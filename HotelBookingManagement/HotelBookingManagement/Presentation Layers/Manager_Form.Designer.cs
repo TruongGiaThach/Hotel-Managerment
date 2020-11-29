@@ -45,6 +45,7 @@ namespace HotelBookingManagement
             this.tabPage_Customer = new System.Windows.Forms.TabPage();
             this.tabPage_NhanVien = new System.Windows.Forms.TabPage();
             this.tabPage_ThongKe = new System.Windows.Forms.TabPage();
+            this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.tabControl_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@ namespace HotelBookingManagement
             this.imageList_Menu_Icon.Images.SetKeyName(3, "Khachhang.png");
             this.imageList_Menu_Icon.Images.SetKeyName(4, "nhanvien.png");
             this.imageList_Menu_Icon.Images.SetKeyName(5, "thongke.png");
+            this.imageList_Menu_Icon.Images.SetKeyName(6, "supply-chain-management.png");
             // 
             // tabControl_Menu
             // 
@@ -67,6 +69,7 @@ namespace HotelBookingManagement
             this.tabControl_Menu.Controls.Add(this.tabPage_Customer);
             this.tabControl_Menu.Controls.Add(this.tabPage_NhanVien);
             this.tabControl_Menu.Controls.Add(this.tabPage_ThongKe);
+            this.tabControl_Menu.Controls.Add(this.tabPage_Settings);
             this.tabControl_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_Menu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_Menu.ImageList = this.imageList_Menu_Icon;
@@ -74,7 +77,7 @@ namespace HotelBookingManagement
             this.tabControl_Menu.Name = "tabControl_Menu";
             this.tabControl_Menu.SelectedIndex = 0;
             this.tabControl_Menu.Size = new System.Drawing.Size(1380, 597);
-            this.tabControl_Menu.TabIndex = 15;
+            this.tabControl_Menu.TabIndex = 1;
             this.tabControl_Menu.SelectedIndexChanged += new System.EventHandler(this.tabControl_Menu_SelectedIndexChanged);
             // 
             // tabPage_TaiKhoan
@@ -144,6 +147,17 @@ namespace HotelBookingManagement
             this.tabPage_ThongKe.Text = "Thống Kê";
             this.tabPage_ThongKe.UseVisualStyleBackColor = true;
             // 
+            // tabPage_Settings
+            // 
+            this.tabPage_Settings.ImageIndex = 6;
+            this.tabPage_Settings.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Settings.Name = "tabPage_Settings";
+            this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Settings.TabIndex = 6;
+            this.tabPage_Settings.Text = "Settings";
+            this.tabPage_Settings.UseVisualStyleBackColor = true;
+            // 
             // Manager_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -175,5 +189,6 @@ namespace HotelBookingManagement
         private TabPage tabPage_Customer;
         private TabPage tabPage_NhanVien;
         private TabPage tabPage_ThongKe;
+        private TabPage tabPage_Settings;
     }
 }

@@ -35,3 +35,4 @@ D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\b
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.exe
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.pdb
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Time_Control.resources
