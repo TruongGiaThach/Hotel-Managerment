@@ -82,11 +82,12 @@ namespace HotelBookingManagement.Data_Access_Layers
             string id = "NV" + i.ToString();
 
             //--------------
-            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SODT, GIOITINH, NGBD, TGHOPDONG) " +
+            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SDT, GIOITINH, NGBD, TGHOPDONG) " +
                                 "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last  )";
             string[] parameter = new string[]
-                { id, name , cmnd , phoneNum, gender , begin,last };
+                { id, name , cmnd , phoneNum, gender , begin, last };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+            
             if (result == 1)
             {
                 updatePhoneNumber("root", i.ToString());
@@ -98,7 +99,7 @@ namespace HotelBookingManagement.Data_Access_Layers
         public bool updatePhoneNumber(string cmnd, string phoneNum)
         {
             string sqlQuery = "update NHANVIEN set SDT = @phone where CMND = @cmnd ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { cmnd,phoneNum });
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { phoneNum,cmnd });
             return result > 0;
         }
         public bool updateName(string cmnd, string name)

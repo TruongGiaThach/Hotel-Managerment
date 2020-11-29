@@ -11,35 +11,32 @@ namespace HotelBookingManagement.Object
     {
         private string iD;
         private string hoTen;
+        string cmnd;
         private string soDT;
-        private string email;
-        private string diaChi;
+        private string gioitinh;
+        private string ngayBD;
+        string tghd;
         public NhanVien()
         {
-            this.iD = "";
-            this.hoTen = "";
-            this.email = "";
-            this.diaChi = "";
+
         }
         public NhanVien(DataRow item)
         {
-            this.iD = item["ID"].ToString();
-            this.hoTen = item["HOTEN"].ToString();
-            this.soDT = item["SODT"].ToString();
-            this.email = item["EMAIL"].ToString();
-            this.diaChi = item["DIACHI"].ToString();
+            this.ID = item["ID"].ToString();
+            this.HoTen = item["HOTEN"].ToString();
+            this.Cmnd = item["CMND"].ToString();
+            this.SoDT = item["SDT"].ToString();
+            this.Gioitinh = item["GIOITINH"].ToString();
+            this.NgayBD = item["NGBD"].ToString();
+            this.Tghd = item["TGHOPDONG"].ToString();
         }
-        public NhanVien(string id, string hoten, string em, string diachi)
-        {
-            this.iD = id;
-            this.hoTen = hoten;
-            this.email = em;
-            this.diaChi = diachi;
-        }
+
         public string ID { get => iD; set => iD = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
+        public string Cmnd { get => cmnd; set => cmnd = value; }
         public string SoDT { get => soDT; set => soDT = value; }
-        public string Email { get => email; set => email = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string Gioitinh { get => gioitinh; set => gioitinh = value; }
+        public string NgayBD { get => ngayBD; set => ngayBD = value; }
+        public string Tghd { get => tghd; set => tghd = value; }
     }
 }

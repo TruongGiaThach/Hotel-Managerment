@@ -14,7 +14,7 @@ namespace HotelBookingManagement
         private string iD;
         private string ten_DN;
         private string matKhau;
-        private string maKH;
+        private string maNV;
         private string phanQuyen;
         public TaiKhoan()
         {
@@ -27,7 +27,7 @@ namespace HotelBookingManagement
             this.iD = item["ID"].ToString();
             this.tenDN = item["TENDN"].ToString();
             this.matKhau = item["MATKHAU"].ToString();
-            this.maKH = item["MAKH"].ToString();
+            this.maNV = item["MANV"].ToString();
             this.phanQuyen = item["PHANQUYEN"].ToString();
         }
         public TaiKhoan(string id, string tendn, string matkhau, string makh, string phanquyen)
@@ -35,7 +35,7 @@ namespace HotelBookingManagement
             this.iD = id;
             this.tenDN = tendn;
             this.matKhau = matkhau;
-            this.maKH = makh;
+            this.maNV = makh;
             this.phanQuyen = phanquyen;
         }
         public string PhanQuyen
@@ -59,22 +59,22 @@ namespace HotelBookingManagement
             set { this.matKhau = value; }
         }
 
-        public string MaKH { get => maKH; set => maKH = value; }
+        public string MaKH { get => maNV; set => maNV = value; }
 
         public static string encode(string chuoi)
         {
-            //string str_md5 = "";
-            //byte[] mang = System.Text.Encoding.UTF8.GetBytes(chuoi);
+            string str_md5 = "";
+            byte[] mang = System.Text.Encoding.UTF8.GetBytes(chuoi);
 
-            //MD5CryptoServiceProvider my_md5 = new MD5CryptoServiceProvider();
-            //mang = my_md5.ComputeHash(mang);
+            MD5CryptoServiceProvider my_md5 = new MD5CryptoServiceProvider();
+            mang = my_md5.ComputeHash(mang);
 
-            //foreach (byte b in mang)
-            //{
-            //    str_md5 += b.ToString("X2");
-            //}
+            foreach (byte b in mang)
+            {
+                str_md5 += b.ToString("X2");
+            }
 
-            //return str_md5;
+            return str_md5;
             return chuoi;
         }
     }

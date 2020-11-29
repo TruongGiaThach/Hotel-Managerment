@@ -41,7 +41,7 @@ namespace HotelBookingManagement
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_Search = new System.Windows.Forms.Button();
             this.button_Change = new System.Windows.Forms.Button();
-            this.button_Delete = new System.Windows.Forms.Button();
+            this.button_Delete_staff = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,7 +78,7 @@ namespace HotelBookingManagement
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridView1.Location = new System.Drawing.Point(0, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Turquoise;
@@ -98,12 +98,12 @@ namespace HotelBookingManagement
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel_Search_Bar);
             this.panel1.Controls.Add(this.button_Change);
-            this.panel1.Controls.Add(this.button_Delete);
+            this.panel1.Controls.Add(this.button_Delete_staff);
             this.panel1.Controls.Add(this.button_Add);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1068, 39);
             this.panel1.TabIndex = 8;
@@ -152,17 +152,18 @@ namespace HotelBookingManagement
             this.button_Change.UseVisualStyleBackColor = false;
             this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
             // 
-            // button_Delete
+            // button_Delete_staff
             // 
-            this.button_Delete.BackColor = System.Drawing.SystemColors.Control;
-            this.button_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Delete.Location = new System.Drawing.Point(49, 2);
-            this.button_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(36, 32);
-            this.button_Delete.TabIndex = 0;
-            this.button_Delete.UseVisualStyleBackColor = false;
-            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
+            this.button_Delete_staff.BackColor = System.Drawing.SystemColors.Control;
+            this.button_Delete_staff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Delete_staff.BackgroundImage")));
+            this.button_Delete_staff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Delete_staff.Location = new System.Drawing.Point(49, 2);
+            this.button_Delete_staff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Delete_staff.Name = "button_Delete_staff";
+            this.button_Delete_staff.Size = new System.Drawing.Size(36, 32);
+            this.button_Delete_staff.TabIndex = 0;
+            this.button_Delete_staff.UseVisualStyleBackColor = false;
+            this.button_Delete_staff.Click += new System.EventHandler(this.button_Delete_Click);
             // 
             // button_Add
             // 
@@ -189,7 +190,7 @@ namespace HotelBookingManagement
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Common";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -214,7 +215,7 @@ namespace HotelBookingManagement
         private TextBox textBox1;
         private Button button_Search;
         private Button button_Change;
-        private Button button_Delete;
+        private Button button_Delete_staff;
         private Button button_Add;
     }
 }
