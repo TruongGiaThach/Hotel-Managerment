@@ -125,6 +125,12 @@
     <Compile Include="Presentation Layers\Sigup_Form.Designer.cs">
       <DependentUpon>Sigup_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layers\Time_Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Time_Control.Designer.cs">
+      <DependentUpon>Time_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation Layers\Add_Receptionist.resx">
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Sigup_Form.resx">
       <DependentUpon>Sigup_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Time_Control.resx">
+      <DependentUpon>Time_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
