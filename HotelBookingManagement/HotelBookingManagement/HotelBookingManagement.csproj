@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9875BBB4-A5A4-49E2-9452-40EE05C8F056}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotelBookingManagement</RootNamespace>
+    <AssemblyName>HotelBookingManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JacksonSoft.CustomTabControl">
+      <HintPath>..\..\..\..\GAME\Compressed\JacksonSoft.CustomTabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\HoaDon.cs" />
+    <Compile Include="Data Access Layers\DataHelper.cs" />
+    <Compile Include="Data Access Layers\DatPhong_DAL.cs" />
+    <Compile Include="Data Access Layers\HoaDon_DAL.cs" />
+    <Compile Include="Data Access Layers\KhachHang_DAL.cs" />
+    <Compile Include="Data Access Layers\NhanVien_DAL.cs" />
+    <Compile Include="Data Access Layers\Phong_DAL.cs" />
+    <Compile Include="Data Access Layers\TaiKhoan_DAL.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\DangKi.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\KhachHang.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\NhanVien.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\Phong.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\TaiKhoan.cs" />
+    <Compile Include="Presentation Layers\Add_Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Add_Receptionist.Designer.cs">
+      <DependentUpon>Add_Receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Budget_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Budget_Form.Designer.cs">
+      <DependentUpon>Budget_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Common_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Common_Form.Designer.cs">
+      <DependentUpon>Common_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Reservation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Reservation_Form.Designer.cs">
+      <DependentUpon>Reservation_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Reset_Pass_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Reset_Pass_Form.Designer.cs">
+      <DependentUpon>Reset_Pass_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Infor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Infor.Designer.cs">
+      <DependentUpon>Room_Infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Manager_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Manager_Form.Designer.cs">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Information.Designer.cs">
+      <DependentUpon>Room_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Room_Show.Designer.cs">
+      <DependentUpon>Room_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Staff_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Staff_Information.Designer.cs">
+      <DependentUpon>Staff_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layers\Time_Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\Time_Control.Designer.cs">
+      <DependentUpon>Time_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layers\Add_Receptionist.resx">
+      <DependentUpon>Add_Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Budget_Form.resx">
+      <DependentUpon>Budget_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Common_Form.resx">
+      <DependentUpon>Common_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Login_Form.en-AS.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Manager_Form.resx">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Reservation_Form.resx">
+      <DependentUpon>Reservation_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Reset_Pass_Form.resx">
+      <DependentUpon>Reset_Pass_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Room_Infor.resx">
+      <DependentUpon>Room_Infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Room_Show.resx">
+      <DependentUpon>Room_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Staff_Information.resx">
+      <DependentUpon>Staff_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\Time_Control.resx">
+      <DependentUpon>Time_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\Login_Form_Image\" />
+    <Folder Include="Image\Management_Form_Image\" />
+    <Folder Include="Image\Room_Show_Image\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
