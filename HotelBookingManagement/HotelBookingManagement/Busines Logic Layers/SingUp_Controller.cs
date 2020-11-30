@@ -15,7 +15,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
             {
                 if (pass != pass1)
                     throw new  Exception("Repassword is wrong");
-                TaiKhoan_DAL.Instance.themTaiKhoan(user, pass, staffID);
+                TaiKhoan_DAL.Instance.themTaiKhoan(user, TaiKhoan.encode(pass), staffID);
             }
             catch(Exception ex)
             {
