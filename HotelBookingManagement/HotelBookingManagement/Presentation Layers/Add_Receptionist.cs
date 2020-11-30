@@ -42,10 +42,11 @@ namespace HotelBookingManagement
             string cmnd = this.CMTNhanVien.Text;
             string sdt = this.phoneNhanVien.Text;
             string gt = this.comboBox2.SelectedItem.ToString();
+            bool check_addStaff= false;
             try
             {
                 
-                addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
+                check_addStaff =  addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
                 //
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
@@ -56,6 +57,8 @@ namespace HotelBookingManagement
             }
             catch(Exception ex)
             {
+                if (check_addStaff)
+                    NhanVien_DAL.Instance.xoaTheoId(NhanVien_DAL.Instance.getByCMND(cmnd).ID);
                 MessageBox.Show(ex.Message);
             }
         }
