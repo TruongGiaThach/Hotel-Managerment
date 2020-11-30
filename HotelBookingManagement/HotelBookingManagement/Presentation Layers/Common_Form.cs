@@ -95,7 +95,16 @@ namespace HotelBookingManagement
                 }
                 
                 string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                Phong_DAL.Instance.xoaPhong(id);
+                switch (this.infor)
+                {
+                    case "staff":
+                        NhanVien_DAL.Instance.xoaTheoId(id);
+                        break;
+                    case "room":
+                        Phong_DAL.Instance.xoaPhong(id);
+                        break;
+                }
+                    
                 this.FormCommon_Load(sender, e);
                 
             }

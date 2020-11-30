@@ -75,7 +75,6 @@ namespace HotelBookingManagement
             }
 
             return str_md5;
-            return chuoi;
         }
     }
 }
