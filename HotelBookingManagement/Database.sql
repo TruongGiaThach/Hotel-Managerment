@@ -8,6 +8,10 @@ create table TAIKHOAN
 	MAKH char(5),
 	PHANQUYEN char(20) NOT NULL,
 )
+alter table TAIKHOAN
+	drop column MAKH
+alter table TAIKHOAN
+	add MANV char(5);
 create table KHACHHANG
 (
 	ID char(5) NOT NULL PRIMARY KEY,	
@@ -16,6 +20,7 @@ create table KHACHHANG
 	EMAIL char(30),
 	DIACHI char(50)
 )
+
 alter table KHACHHANG 
 	add CMND varchar(20)
 create table DANGKI
@@ -42,7 +47,7 @@ create table PHONG
 alter table PHONG 
 	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho')
 alter table PHONG 
-	add constraint gt_loai_phong check (LOAI = 'nomal1' or LOAI = 'nomal2' or LOAI = 'vip1' or LOAI = 'vip2' )
+	add constraint gt_loai_phong check (LOAI = 'Nomal1' or LOAI = 'Nomal2' or LOAI = 'Vip1' or LOAI = 'Vip2' )
 create table NHANVIEN
 (
 	ID char(5) not null primary key,
@@ -53,11 +58,14 @@ create table NHANVIEN
 	NGBD smalldatetime,
 	TGHOPDONG int
 )
-alter table NHANVIEN
-	add constraint GT_GIOI_TINH check (GIOITINH = 'nam' or GIOITINH = 'nu')
+
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
 insert into NHANVIEN (ID,HOTEN,CMND,SDT,GIOITINH) values ('0',' ','root','0','nam');
+alter table TAIKHOAN
+	add constraint fk_TK_NV 
+	foreign key (MANV)
+	references NHANVIEN(ID)
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
 as
@@ -67,3 +75,7 @@ end
 select * from NHANVIEN
 select * from KHACHHANG
 select * from PHONG
+select * from DANGKI
+select * from TAIKHOAN
+update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
+	where ID = '0'
