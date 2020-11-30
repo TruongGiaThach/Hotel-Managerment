@@ -53,7 +53,7 @@ namespace HotelBookingManagement
                 string pass1 = this.textBox_NhapLai.Text;
                 string staffID = NhanVien_DAL.Instance.getByCMND(cmnd).ID;
                 SingUp_Controller.signUp(user, pass, pass1,staffID);
-
+                MessageBox.Show("Thêm nhân viên thành công✌(◕‿-)✌");
             }
             catch(Exception ex)
             {

@@ -34,7 +34,7 @@ namespace HotelBookingManagement
                 case "account":
                     sqlQuery = "select * from TAIKHOAN";
                     this.button_Add.Visible = false;
-                    this.button_Delete_staff.Visible = false;
+                    this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
                     break;
                 case "room":
@@ -102,6 +102,9 @@ namespace HotelBookingManagement
                         break;
                     case "room":
                         Phong_DAL.Instance.xoaPhong(id);
+                        break;
+                    case "account":
+                        TaiKhoan_DAL.Instance.xoaTaiKhoanID(id);
                         break;
                 }
                     

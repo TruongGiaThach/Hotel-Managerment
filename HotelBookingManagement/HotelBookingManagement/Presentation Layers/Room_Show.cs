@@ -86,7 +86,11 @@ namespace HotelBookingManagement
 
         private void button_ThuePhong_Click(object sender, EventArgs e)
         {
-            if (Data.Count <= 0)
+            int dem = 0;
+            for (int i = 0; i < Data.Count; i++)
+                if (Data[i].TrangThai.Contains("trong"))
+                    dem++;
+            if (dem <= 0)
                 MessageBox.Show("Đã hết phòng (▀̿Ĺ̯▀̿ ̿)");
             else
             {

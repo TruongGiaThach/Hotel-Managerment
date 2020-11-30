@@ -56,6 +56,18 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists[0];
         }
+        public KhachHang getByCMND(string cmnd)
+        {
+            List<KhachHang> lists = new List<KhachHang>();
+            string sqlQuery = "select * from KHACHHANG where CMND = @cmnd ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
+            foreach (DataRow i in data.Rows)
+            {
+                KhachHang item = new KhachHang(i);
+                lists.Add(item);
+            }
+            return lists[0];
+        }
         public List<KhachHang> GetKhachHang_DAL()
         {
             List<KhachHang> lists = new List<KhachHang>();
@@ -70,10 +82,10 @@ namespace HotelBookingManagement.Data_Access_Layers
         }
         public bool themKhachHang(string name, string email, string phoneNum, string address,string cmnd)
         {
-            string sqlQuery = "select * from KHACHHANG where EMAIL = @email ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { email });
+            string sqlQuery = "select * from KHACHHANG where CMND = @cmnd ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
             if (data.Rows.Count > 0)
-                throw new Exception("Email đã được sử dụng!!");
+                throw new Exception("CMND đã được sử dụng!!");
             //-----------
 
             KhachHang tk = getByEmail("root@gmail.com");
@@ -105,6 +117,12 @@ namespace HotelBookingManagement.Data_Access_Layers
         {
             string sqlQuery = string.Format("UPDATE KHACHHANG SET HOTEN = @name WHERE EMAIL = @email ");
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { name, email });
+            return result > 0;
+        }
+        public bool xoaTheoCMND(string cmnd)
+        {
+            string sqlQuery = string.Format("delete from KHACHHANG CMND  = @cmnd ");
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { cmnd });
             return result > 0;
         }
     }

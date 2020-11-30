@@ -66,7 +66,6 @@ namespace HotelBookingManagement
             this.GioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel_Find_Room = new System.Windows.Forms.Panel();
-            this.TimPhongTrong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -334,6 +333,7 @@ namespace HotelBookingManagement
             this.SaveDatPhong.TabIndex = 26;
             this.SaveDatPhong.Text = "Lưu";
             this.SaveDatPhong.UseVisualStyleBackColor = true;
+            this.SaveDatPhong.Click += new System.EventHandler(this.SaveDatPhong_Click);
             // 
             // GhiChu
             // 
@@ -457,7 +457,6 @@ namespace HotelBookingManagement
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.panel_Find_Room);
-            this.groupBox3.Controls.Add(this.TimPhongTrong);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(0, 291);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -477,18 +476,6 @@ namespace HotelBookingManagement
             this.panel_Find_Room.Name = "panel_Find_Room";
             this.panel_Find_Room.Size = new System.Drawing.Size(378, 230);
             this.panel_Find_Room.TabIndex = 1;
-            // 
-            // TimPhongTrong
-            // 
-            this.TimPhongTrong.FlatAppearance.BorderSize = 5;
-            this.TimPhongTrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimPhongTrong.Location = new System.Drawing.Point(160, 55);
-            this.TimPhongTrong.Margin = new System.Windows.Forms.Padding(4);
-            this.TimPhongTrong.Name = "TimPhongTrong";
-            this.TimPhongTrong.Size = new System.Drawing.Size(100, 28);
-            this.TimPhongTrong.TabIndex = 0;
-            this.TimPhongTrong.Text = "Tìm";
-            this.TimPhongTrong.UseVisualStyleBackColor = true;
             // 
             // Reservation_Form
             // 
@@ -579,7 +566,6 @@ namespace HotelBookingManagement
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button TimPhongTrong;
         private System.Windows.Forms.TextBox GhiChu;
         private System.Windows.Forms.TextBox QuocTich;
         private System.Windows.Forms.TextBox DiaChiNg;

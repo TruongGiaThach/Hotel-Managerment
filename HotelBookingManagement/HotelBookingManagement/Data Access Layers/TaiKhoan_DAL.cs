@@ -89,10 +89,10 @@ namespace HotelBookingManagement.Data_Access_Layers
 
             return result > 0;
         }
-        public bool xoaTaiKhoan(string user)
+        public bool xoaTaiKhoanID(string id)
         {
-            string sqlQuery = "delete from TAIKHOAN where TENDN = @user ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user });
+            string sqlQuery = "delete from TAIKHOAN where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
         }
     }
