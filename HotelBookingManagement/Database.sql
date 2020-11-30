@@ -2,31 +2,31 @@ create database PROJECT
 use PROJECT
 create table TAIKHOAN
 (
-	ID char(5) NOT NULL PRIMARY KEY,
+	ID varchar(5) NOT NULL PRIMARY KEY,
 	TENDN varchar(40)NOT NULL default 'tk_khach',
 	MATKHAU varchar(40) NOT NULL default 'thach',
-	MAKH char(5),
-	PHANQUYEN char(20) NOT NULL,
+	MAKH varchar(5),
+	PHANQUYEN varchar(20) NOT NULL,
 )
 create table KHACHHANG
 (
-	ID char(5) NOT NULL PRIMARY KEY,	
-	HOTEN char(40),
-	SODT char(20),
-	EMAIL char(30),
-	DIACHI char(50)
+	ID varchar(5) NOT NULL PRIMARY KEY,	
+	HOTEN varchar(40),
+	SODT varchar(20),
+	EMAIL varchar(30),
+	DIACHI varchar(50)
 )
 alter table KHACHHANG 
 	add CMND varchar(20)
 create table DANGKI
 (
-	ID char(5) NOT NULL PRIMARY KEY,
-	MAKH char (5),
-	MAPHONG char(5),
+	ID varchar(5) NOT NULL PRIMARY KEY,
+	MAKH varchar (5),
+	MAPHONG varchar(5),
 	NGNHANPHONG smalldatetime,
 	NGTRAPHONG smalldatetime,
 	check (NGTRAPHONG > NGNHANPHONG),
-	TRANGTHAIDON char(20),
+	TRANGTHAIDON varchar(20),
 	TGDOIPHONG int,
 	GHICHU varchar(50)
 )
@@ -34,9 +34,9 @@ alter table DANGKI
 	add constraint df_ngay_nhan_phong default getdate() for NGNHANPHONG
 create table PHONG
 (
-	ID char(5) NOT NULL PRIMARY KEY	,
+	ID varchar(5) NOT NULL PRIMARY KEY	,
 	LOAI	varchar(20),
-	TRANGTHAI char(20),
+	TRANGTHAI varchar(20),
 	GIAPHONG money
 )
 alter table PHONG 
@@ -45,7 +45,7 @@ alter table PHONG
 	add constraint gt_loai_phong check (LOAI = 'nomal1' or LOAI = 'nomal2' or LOAI = 'vip1' or LOAI = 'vip2' )
 create table NHANVIEN
 (
-	ID char(5) not null primary key,
+	ID varchar(5) not null primary key,
 	HOTEN varchar(40),
 	CMND	varchar(20),
 	SDT	  varchar(20),
