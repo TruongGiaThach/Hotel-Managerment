@@ -95,6 +95,19 @@ namespace HotelBookingManagement
                     };
                     break;
                 default:
+                case 5:
+                    newFrm = new Presentation_Layers.Budget_Form()
+                    {
+                        MdiParent = this,
+                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
+                    };
+                    break;
+                case 6:
+                    newFrm = new Setting()
+                    {
+                        MdiParent = this,
+                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
+                    };
                     break;
             }
             if (newFrm != null)
