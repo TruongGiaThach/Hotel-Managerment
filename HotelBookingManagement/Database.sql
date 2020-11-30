@@ -8,6 +8,7 @@ create table TAIKHOAN
 	MAKH varchar(5),
 	PHANQUYEN varchar(20) NOT NULL,
 )
+
 alter table TAIKHOAN
 	drop column MAKH
 alter table TAIKHOAN
@@ -58,7 +59,8 @@ create table NHANVIEN
 	NGBD smalldatetime,
 	TGHOPDONG int
 )
-
+alter table NHANVIEN
+	alter column GIOITINH nvarchar(20)
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
 insert into NHANVIEN (ID,HOTEN,CMND,SDT,GIOITINH) values ('0',' ','root','0','nam');
@@ -77,5 +79,5 @@ select * from KHACHHANG
 select * from PHONG
 select * from DANGKI
 select * from TAIKHOAN
-update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
+update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 	where ID = '0'
