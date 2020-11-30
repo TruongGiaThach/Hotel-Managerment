@@ -179,6 +179,7 @@ namespace HotelBookingManagement
             int drawPointY = this.margin;
             for (int i = 0; i < NumOfRoom; ++i)//create Rooms Buttom
             {
+                Data[i].IsSelect = false;
                 bool trong;
                 this.Rooms.Add(new System.Windows.Forms.Button());      //Add a Button in Rooms Button list
                 //
