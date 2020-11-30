@@ -32,5 +32,10 @@ namespace HotelBookingManagement
                 MessageBox.Show(Text = this.NgayDen.Value.ToString());
             }
         }
+
+        private void HuyDatPhong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
