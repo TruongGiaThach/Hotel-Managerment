@@ -336,6 +336,7 @@
             this.ButtonHuy.TabIndex = 16;
             this.ButtonHuy.Text = "Hủy";
             this.ButtonHuy.UseVisualStyleBackColor = true;
+            this.ButtonHuy.Click += new System.EventHandler(this.ButtonHuy_Click);
             // 
             // ButtonThemNhanVien
             // 

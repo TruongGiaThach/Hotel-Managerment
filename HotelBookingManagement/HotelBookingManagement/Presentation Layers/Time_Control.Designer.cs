@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 83);
+            this.label1.Location = new System.Drawing.Point(1, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 0;
@@ -48,11 +48,8 @@
             // 
             // Time_Control
             // 
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "Time_Control";
+            this.Size = new System.Drawing.Size(800, 450);
             this.Text = "Time_Control";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -54,6 +54,7 @@ namespace HotelBookingManagement
                 string staffID = NhanVien_DAL.Instance.getByCMND(cmnd).ID;
                 SingUp_Controller.signUp(user, pass, pass1,staffID);
                 MessageBox.Show("Thêm nhân viên thành công✌(◕‿-)✌");
+                this.Close();
             }
             catch(Exception ex)
             {
@@ -79,6 +80,11 @@ namespace HotelBookingManagement
             {
                  CMTNhanVien.Text = CMTNhanVien.Text.Remove(CMTNhanVien.Text.Length - 1);
             }
+        }
+
+        private void ButtonHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

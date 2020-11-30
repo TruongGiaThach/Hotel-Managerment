@@ -37,9 +37,6 @@ namespace HotelBookingManagement
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
                     break;
-                case "room":
-                    sqlQuery = "select * from PHONG";
-                    break;
                 case "customer":
                     sqlQuery = "select * from KHACHHANG";
                     this.button_Add.Visible = false;
@@ -61,8 +58,9 @@ namespace HotelBookingManagement
                     this.button_Delete_staff.Visible = false;
                     break;
             };
+            // tạo function riêng trong mỗi DAL để lấy data, bỏ root khi hiển thị
             this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
-            if (this.dataGridView1.Rows.Count == 1)
+            if (this.dataGridView1.Rows.Count == 1 )
             {
                 this.button_Delete_staff.Enabled = false;
                 this.button_Change.Enabled = false;
@@ -95,18 +93,16 @@ namespace HotelBookingManagement
                 }
                 
                 string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                switch (this.infor)
-                {
-                    case "staff":
-                        NhanVien_DAL.Instance.xoaTheoId(id);
-                        break;
-                    case "room":
-                        Phong_DAL.Instance.xoaPhong(id);
-                        break;
-                    case "account":
-                        TaiKhoan_DAL.Instance.xoaTaiKhoanID(id);
-                        break;
-                }
+                if (index > 0)
+                    switch (this.infor)
+                    {
+                        case "staff":
+                            NhanVien_DAL.Instance.xoaTheoId(id);
+                            break;
+                        case "account":
+                            TaiKhoan_DAL.Instance.xoaTaiKhoanID(id);
+                            break;
+                    }
                     
                 this.FormCommon_Load(sender, e);
                 

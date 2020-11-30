@@ -46,7 +46,10 @@ namespace HotelBookingManagement
             this.tabPage_NhanVien = new System.Windows.Forms.TabPage();
             this.tabPage_ThongKe = new System.Windows.Forms.TabPage();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.time_Control1 = new HotelBookingManagement.Presentation_Layers.Time_Control();
             this.tabControl_Menu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList_Menu_Icon
@@ -84,10 +87,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_TaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage_TaiKhoan.ImageIndex = 0;
-            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 32);
             this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
             this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_TaiKhoan.TabIndex = 0;
             this.tabPage_TaiKhoan.Text = "Tài Khoản";
             this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
@@ -95,10 +98,10 @@ namespace HotelBookingManagement
             // tabPage_Phong
             // 
             this.tabPage_Phong.ImageIndex = 1;
-            this.tabPage_Phong.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Phong.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Phong.Name = "tabPage_Phong";
             this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_Phong.TabIndex = 1;
             this.tabPage_Phong.Text = "Phòng";
             this.tabPage_Phong.UseVisualStyleBackColor = true;
@@ -106,10 +109,10 @@ namespace HotelBookingManagement
             // tabPage_Oder_Room
             // 
             this.tabPage_Oder_Room.ImageIndex = 2;
-            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
             this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_Oder_Room.TabIndex = 2;
             this.tabPage_Oder_Room.Text = "Hóa Đơn";
             this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
@@ -117,10 +120,10 @@ namespace HotelBookingManagement
             // tabPage_Customer
             // 
             this.tabPage_Customer.ImageIndex = 3;
-            this.tabPage_Customer.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Customer.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Customer.Name = "tabPage_Customer";
             this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_Customer.TabIndex = 3;
             this.tabPage_Customer.Text = "Khách Hàng";
             this.tabPage_Customer.UseVisualStyleBackColor = true;
@@ -128,10 +131,10 @@ namespace HotelBookingManagement
             // tabPage_NhanVien
             // 
             this.tabPage_NhanVien.ImageIndex = 4;
-            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 32);
             this.tabPage_NhanVien.Name = "tabPage_NhanVien";
             this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_NhanVien.TabIndex = 4;
             this.tabPage_NhanVien.Text = "Nhân Viên";
             this.tabPage_NhanVien.UseVisualStyleBackColor = true;
@@ -139,10 +142,10 @@ namespace HotelBookingManagement
             // tabPage_ThongKe
             // 
             this.tabPage_ThongKe.ImageIndex = 5;
-            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 32);
             this.tabPage_ThongKe.Name = "tabPage_ThongKe";
             this.tabPage_ThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_ThongKe.TabIndex = 5;
             this.tabPage_ThongKe.Text = "Thống Kê";
             this.tabPage_ThongKe.UseVisualStyleBackColor = true;
@@ -150,13 +153,30 @@ namespace HotelBookingManagement
             // tabPage_Settings
             // 
             this.tabPage_Settings.ImageIndex = 6;
-            this.tabPage_Settings.Location = new System.Drawing.Point(4, 35);
+            this.tabPage_Settings.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Settings.Name = "tabPage_Settings";
             this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 558);
+            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 561);
             this.tabPage_Settings.TabIndex = 6;
             this.tabPage_Settings.Text = "Settings";
             this.tabPage_Settings.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.time_Control1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 566);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1380, 31);
+            this.panel1.TabIndex = 3;
+            // 
+            // time_Control1
+            // 
+            this.time_Control1.Location = new System.Drawing.Point(0, 3);
+            this.time_Control1.Name = "time_Control1";
+            this.time_Control1.Size = new System.Drawing.Size(179, 24);
+            this.time_Control1.TabIndex = 0;
+            this.time_Control1.Text = "time_Control1";
             // 
             // Manager_Form
             // 
@@ -164,6 +184,7 @@ namespace HotelBookingManagement
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1380, 597);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl_Menu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
@@ -176,6 +197,7 @@ namespace HotelBookingManagement
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manager_Form_Load);
             this.tabControl_Menu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,5 +212,7 @@ namespace HotelBookingManagement
         private TabPage tabPage_NhanVien;
         private TabPage tabPage_ThongKe;
         private TabPage tabPage_Settings;
+        private Panel panel1;
+        private Presentation_Layers.Time_Control time_Control1;
     }
 }
