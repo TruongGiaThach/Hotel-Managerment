@@ -15,12 +15,14 @@ namespace HotelBookingManagement
         private string soDT;
         private string email;
         private string diaChi;
+        string cmnd;
         public KhachHang()
         {
             this.iD = "";
             this.hoTen = "";
             this.email = "";
             this.diaChi = "";
+            this.Cmnd = "";
         }
         public KhachHang(DataRow item)
         {
@@ -29,18 +31,21 @@ namespace HotelBookingManagement
             this.soDT = item["SODT"].ToString();
             this.email = item["EMAIL"].ToString();
             this.diaChi = item["DIACHI"].ToString();
+            this.diaChi = item["CMND"].ToString();
         }
-        public KhachHang(string id, string hoten, string em, string diachi)
+        public KhachHang(string id, string hoten, string em, string diachi,string cmnd)
         {
             this.iD = id;
             this.hoTen = hoten;
             this.email = em;
             this.diaChi = diachi;
+            this.Cmnd = cmnd;
         }
         public string ID { get => iD; set => iD = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string SoDT { get => soDT; set => soDT = value; }
         public string Email { get => email; set => email = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string Cmnd { get => cmnd; set => cmnd = value; }
     }
 }

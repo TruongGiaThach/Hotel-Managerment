@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Busines Logic Layers\addStaff_Controller].cs" />
+    <Compile Include="Busines Logic Layers\addCustomer_Controller.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\HoaDon.cs" />
     <Compile Include="Busines Logic Layers\SingUp_Controller.cs" />
     <Compile Include="Data Access Layers\DataHelper.cs" />
