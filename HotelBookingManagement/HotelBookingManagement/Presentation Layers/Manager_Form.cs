@@ -49,12 +49,11 @@ namespace HotelBookingManagement
             if (MdiChild != null)
                 MdiChild.Close();
             string Data_path = "";
-            Form newFrm = null;
             switch (tabControl_Menu.SelectedIndex)
             {
                 case 6:
                     Data_path = "account";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -62,7 +61,7 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
-                    newFrm = new Room_Show(ref DS_Phong)
+                    MdiChild = new Room_Show(ref DS_Phong)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -70,7 +69,7 @@ namespace HotelBookingManagement
                     break;
                 case 2:
                     Data_path = "default";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -78,7 +77,7 @@ namespace HotelBookingManagement
                     break;
                 case 3:
                     Data_path = "customer";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -86,21 +85,21 @@ namespace HotelBookingManagement
                     break;
                 case 4:
                     Data_path = "staff";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
                 case 5:
-                    newFrm = new Presentation_Layers.Budget_Form()
+                    MdiChild = new Presentation_Layers.Budget_Form()
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
                 case 7:
-                    newFrm = new Setting()
+                    MdiChild = new Setting()
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -109,10 +108,10 @@ namespace HotelBookingManagement
                 default:
                     break;
             }
-            if (newFrm != null)
+            if (MdiChild != null)
             {
-                newFrm.Dock = DockStyle.Fill;
-                newFrm.Show();
+                MdiChild.Dock = DockStyle.Fill;
+                MdiChild.Show();
             }
         }
 
@@ -120,5 +119,16 @@ namespace HotelBookingManagement
         {
 
         }
+
+        private void Button_Back_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 0;
+        }
+
+        private void Button_Refesh_Click(object sender, EventArgs e)
+        {
+            tabControl_Menu_SelectedIndexChanged(this.tabControl_Menu.SelectedTab, e);
+        }
+
     }
 }
