@@ -99,5 +99,10 @@ namespace HotelBookingManagement
             }
             this.RoomShow_Load(sender, e);
         }
+
+        private void button_TraPhong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,5 +79,11 @@ select * from KHACHHANG
 select * from PHONG
 select * from DANGKI
 select * from TAIKHOAN
+<<<<<<< Updated upstream
 update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 	where ID = '0'
+=======
+update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
+	where ID = '0'
+insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' ',' ','0');
+>>>>>>> Stashed changes

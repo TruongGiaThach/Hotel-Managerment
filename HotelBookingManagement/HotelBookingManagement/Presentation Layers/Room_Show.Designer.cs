@@ -142,6 +142,7 @@ namespace HotelBookingManagement
             this.button_TraPhong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_TraPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_TraPhong.UseVisualStyleBackColor = true;
+            this.button_TraPhong.Click += new System.EventHandler(this.button_TraPhong_Click);
             // 
             // Room_Show
             // 
