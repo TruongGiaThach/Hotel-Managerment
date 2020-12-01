@@ -17,18 +17,16 @@ namespace HotelBookingManagement
     {
         private Login_Form loginForm;
         private TaiKhoan currentUser;
-        public Manager_Form(Login_Form form, TaiKhoan user)
+        public Manager_Form()
         {
             InitializeComponent();
-            this.loginForm = form;
-            this.currentUser = user;
-            this.DS_Phong = Phong_Data.GetDsPhong();
-            tabControl_Menu.SelectedIndex = 0;
-            tabControl_Menu.SelectedIndex = 1;
+            this.Hide();
+            Login_Form Login = new Login_Form(this,ref currentUser);
+            Login.ShowDialog();
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-
+            this.DS_Phong = Phong_Data.GetDsPhong();
         }
 
         private void Mouse_enter(object sender, EventArgs e)
@@ -54,7 +52,7 @@ namespace HotelBookingManagement
             Form newFrm = null;
             switch (tabControl_Menu.SelectedIndex)
             {
-                case 0:
+                case 6:
                     Data_path = "account";
                     newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
@@ -94,7 +92,6 @@ namespace HotelBookingManagement
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
-                default:
                 case 5:
                     newFrm = new Presentation_Layers.Budget_Form()
                     {
@@ -102,12 +99,14 @@ namespace HotelBookingManagement
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
-                case 6:
+                case 7:
                     newFrm = new Setting()
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
+                    break;
+                default:
                     break;
             }
             if (newFrm != null)
@@ -115,6 +114,11 @@ namespace HotelBookingManagement
                 newFrm.Dock = DockStyle.Fill;
                 newFrm.Show();
             }
+        }
+
+        private void tabPage_TrangChu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

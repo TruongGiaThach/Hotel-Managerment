@@ -14,10 +14,12 @@ namespace HotelBookingManagement
     public partial class Login_Form : Form
     {
         private TaiKhoan currentUser;
-        public Login_Form()
+        private Manager_Form Frm;
+        public Login_Form(Manager_Form Frm, ref TaiKhoan User)
         {
             InitializeComponent();
-            this.currentUser = new TaiKhoan();
+            this.currentUser = User;
+            this.Frm = Frm;
         }
 
         public void B_Load(object sender, EventArgs e)
@@ -68,9 +70,8 @@ namespace HotelBookingManagement
             switch (this.currentUser.PhanQuyen.Replace(" ", string.Empty))
             {
                 case "admin":
-                    Manager_Form managerForm = new Manager_Form(this, this.currentUser);
-                    managerForm.Show();
-                    this.Hide();
+                    Frm.Show();
+                    this.Close();
                     break;
                 default:
                     MessageBox.Show("Clone account!!!");
