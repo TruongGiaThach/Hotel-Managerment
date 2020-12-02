@@ -186,6 +186,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
@@ -207,6 +208,12 @@
     <Folder Include="Image\Login_Form_Image\" />
     <Folder Include="Image\Management_Form_Image\" />
     <Folder Include="Image\Room_Show_Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Image_Setting\tiki-1-7475-1606442126.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Image_Setting\Abou_setting.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

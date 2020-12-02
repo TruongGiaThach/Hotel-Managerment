@@ -63,7 +63,7 @@ namespace HotelBookingManagement
 
         }
 
-        private void groupBox7_Enter(object sender, EventArgs e)
+        private void label16_Click(object sender, EventArgs e)
         {
 
         }
