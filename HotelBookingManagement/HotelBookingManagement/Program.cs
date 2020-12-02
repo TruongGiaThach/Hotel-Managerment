@@ -14,9 +14,12 @@ namespace HotelBookingManagement
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            TaiKhoan a = new TaiKhoan();
+            Login_Form b = new Login_Form();
+            Application.Run(new Manager_Form(b,a));
         }
     }
 }
