@@ -17,9 +17,7 @@ namespace HotelBookingManagement
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            TaiKhoan a = new TaiKhoan();
-            Login_Form b = new Login_Form();
-            Application.Run(new Manager_Form(b,a));
+            Application.Run(new Login_Form());
         }
     }
 }
