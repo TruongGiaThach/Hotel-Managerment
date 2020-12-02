@@ -108,7 +108,7 @@ namespace HotelBookingManagement
                 default:
                     break;
             }
-            if (MdiChild != null)
+            if (MdiChild != null && this.tabControl_Menu.SelectedIndex != 0)
             {
                 MdiChild.Dock = DockStyle.Fill;
                 MdiChild.Show();
@@ -130,5 +130,39 @@ namespace HotelBookingManagement
             tabControl_Menu_SelectedIndexChanged(this.tabControl_Menu.SelectedTab, e);
         }
 
+        private void button_Phong_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 1;
+        }
+
+        private void button_HoaDon_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 2;
+        }
+
+        private void button_KhachHang_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 3;
+        }
+
+        private void button_NhanVien_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 4;
+        }
+
+        private void button_HeThong_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 5;
+        }
+
+        private void button_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 6;
+        }
+
+        private void button_CaiDat_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 7;
+        }
     }
 }
