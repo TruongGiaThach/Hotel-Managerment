@@ -49,6 +49,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,9 +61,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(148, 37);
+            this.button2.Location = new System.Drawing.Point(151, 33);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 27);
             this.button2.TabIndex = 2;
@@ -280,7 +279,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.vScrollBar1);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label12);
@@ -299,6 +297,27 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "About";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(80, 405);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(218, 38);
+            this.label15.TabIndex = 19;
+            this.label15.Text = " * Hotline: 0857550531.\r\n * Email: vandungktty@gmail.com.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label13.Location = new System.Drawing.Point(27, 376);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(164, 48);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Thông tin liên hệ:\r\n ";
             // 
             // label12
             // 
@@ -406,40 +425,11 @@
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label13.Location = new System.Drawing.Point(27, 376);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(164, 48);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Thông tin liên hệ:\r\n ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(80, 405);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(218, 38);
-            this.label15.TabIndex = 19;
-            this.label15.Text = " * Hotline: 0857550531.\r\n * Email: vandungktty@gmail.com.";
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.AllowDrop = true;
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(672, 93);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 496);
-            this.vScrollBar1.TabIndex = 21;
-            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -496,6 +486,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
