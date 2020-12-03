@@ -81,5 +81,9 @@ namespace HotelBookingManagement
 
         }
 
+        private void button_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

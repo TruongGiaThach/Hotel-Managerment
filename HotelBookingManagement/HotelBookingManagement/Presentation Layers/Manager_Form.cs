@@ -26,6 +26,10 @@ namespace HotelBookingManagement
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
+            if (this.currentUser == null)
+            {
+                Application.Exit();
+            }
             this.DS_Phong = Phong_Data.GetDsPhong();
         }
 
