@@ -62,7 +62,6 @@ namespace HotelBookingManagement
                 check_addOrder =  DatPhong_DAL.Instance.themOrder(khachHang.ID, RoomID, ngbd.ToString(), ngkt.ToString(), "3", "Nothing");
                 if (check_addOrder)
                 {
-                    Phong_DAL.Instance.updateStatus(RoomID, "dang cho");
                     (CheckButton.Tag as Phong).TrangThai = "dang cho";
                 }
 

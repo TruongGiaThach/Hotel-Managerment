@@ -109,8 +109,8 @@ namespace HotelBookingManagement.Data_Access_Layers
 
         public bool updatePhoneNumber(string email, string phoneNum)
         {
-            string sqlQuery = "exec kh_UpdatePhone @user , @phone ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { email, phoneNum });
+            string sqlQuery = "UPDATE KHACHHANG SET SODT = @phoneNum WHERE EMAIL = @email";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { phoneNum,email });
             return result > 0;
         }
         public bool updateName(string email, string name)
