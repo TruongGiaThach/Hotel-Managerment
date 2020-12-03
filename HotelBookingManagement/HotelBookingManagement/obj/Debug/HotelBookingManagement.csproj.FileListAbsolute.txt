@@ -58,7 +58,6 @@ C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\Hotel
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.exe
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.pdb
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.pdb
-C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.exe.config
 C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.exe
 C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.pdb

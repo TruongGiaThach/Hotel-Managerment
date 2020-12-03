@@ -31,22 +31,24 @@ create table DANGKI
 	MAPHONG varchar(5),
 	NGNHANPHONG smalldatetime,
 	NGTRAPHONG smalldatetime,
-	check (NGTRAPHONG > NGNHANPHONG),
+	
 	TRANGTHAIDON varchar(20),
 	TGDOIPHONG int,
 	GHICHU varchar(50)
 )
+alter table DANGKI
+	add constraint ck_datetime check (NGTRAPHONG > NGNHANPHONG)
 alter table DANGKI	
 	add constraint df_ngay_nhan_phong default getdate() for NGNHANPHONG
 create table PHONG
 (
 	ID varchar(5) NOT NULL PRIMARY KEY	,
 	LOAI	varchar(20),
-	TRANGTHAI varchar(20),
+	TRANGTHAI nvarchar(20),
 	GIAPHONG money
 )
 alter table PHONG 
-	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho')
+	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho' or TRANGTHAI = 'da nhan')
 alter table PHONG 
 	add constraint gt_loai_phong check (LOAI = 'Nomal1' or LOAI = 'Nomal2' or LOAI = 'Vip1' or LOAI = 'Vip2' )
 create table NHANVIEN

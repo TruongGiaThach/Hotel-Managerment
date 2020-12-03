@@ -30,6 +30,7 @@ namespace HotelBookingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Common));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,6 +45,8 @@ namespace HotelBookingManagement
             this.button_Delete_staff = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ToolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel_Search_Bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,9 +62,9 @@ namespace HotelBookingManagement
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 37);
+            this.panel1.Size = new System.Drawing.Size(1245, 45);
             this.panel1.TabIndex = 8;
             // 
             // panel_Search_Bar
@@ -69,29 +72,32 @@ namespace HotelBookingManagement
             this.panel_Search_Bar.Controls.Add(this.textBox1);
             this.panel_Search_Bar.Controls.Add(this.button_Search);
             this.panel_Search_Bar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Search_Bar.Location = new System.Drawing.Point(431, 0);
-            this.panel_Search_Bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_Search_Bar.Location = new System.Drawing.Point(574, 0);
+            this.panel_Search_Bar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Search_Bar.Name = "panel_Search_Bar";
-            this.panel_Search_Bar.Size = new System.Drawing.Size(503, 37);
+            this.panel_Search_Bar.Size = new System.Drawing.Size(671, 45);
             this.panel_Search_Bar.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(2, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(3, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(464, 29);
+            this.textBox1.Size = new System.Drawing.Size(617, 34);
             this.textBox1.TabIndex = 1;
             // 
             // button_Search
             // 
-            this.button_Search.BackColor = System.Drawing.SystemColors.Control;
+            this.button_Search.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Search.Location = new System.Drawing.Point(470, 2);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.Image = ((System.Drawing.Image)(resources.GetObject("button_Search.Image")));
+            this.button_Search.Location = new System.Drawing.Point(627, 2);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(31, 30);
+            this.button_Search.Size = new System.Drawing.Size(41, 36);
             this.button_Search.TabIndex = 0;
             this.button_Search.UseVisualStyleBackColor = false;
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
@@ -100,10 +106,10 @@ namespace HotelBookingManagement
             // 
             this.button_Change.BackColor = System.Drawing.SystemColors.Control;
             this.button_Change.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Change.Location = new System.Drawing.Point(79, 2);
-            this.button_Change.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Change.Location = new System.Drawing.Point(105, 2);
+            this.button_Change.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Change.Name = "button_Change";
-            this.button_Change.Size = new System.Drawing.Size(31, 30);
+            this.button_Change.Size = new System.Drawing.Size(41, 36);
             this.button_Change.TabIndex = 0;
             this.button_Change.UseVisualStyleBackColor = false;
             this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
@@ -113,11 +119,12 @@ namespace HotelBookingManagement
             this.button_Delete_staff.BackColor = System.Drawing.SystemColors.Control;
             this.button_Delete_staff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Delete_staff.BackgroundImage")));
             this.button_Delete_staff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Delete_staff.Location = new System.Drawing.Point(43, 2);
-            this.button_Delete_staff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Delete_staff.Location = new System.Drawing.Point(57, 2);
+            this.button_Delete_staff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Delete_staff.Name = "button_Delete_staff";
-            this.button_Delete_staff.Size = new System.Drawing.Size(31, 30);
+            this.button_Delete_staff.Size = new System.Drawing.Size(41, 36);
             this.button_Delete_staff.TabIndex = 0;
+            this.ToolTip1.SetToolTip(this.button_Delete_staff, "Xóa thông tin");
             this.button_Delete_staff.UseVisualStyleBackColor = false;
             this.button_Delete_staff.Click += new System.EventHandler(this.button_Delete_Click);
             // 
@@ -125,11 +132,12 @@ namespace HotelBookingManagement
             // 
             this.button_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Add.BackgroundImage")));
             this.button_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Add.Location = new System.Drawing.Point(7, 2);
-            this.button_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Add.Location = new System.Drawing.Point(9, 2);
+            this.button_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Add.Name = "button_Add";
-            this.button_Add.Size = new System.Drawing.Size(31, 30);
+            this.button_Add.Size = new System.Drawing.Size(41, 36);
             this.button_Add.TabIndex = 0;
+            this.ToolTip1.SetToolTip(this.button_Add, "Thêm nhân viên");
             this.button_Add.UseVisualStyleBackColor = true;
             this.button_Add.Click += new System.EventHandler(this.button_Add_Click_1);
             // 
@@ -144,7 +152,7 @@ namespace HotelBookingManagement
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -153,7 +161,7 @@ namespace HotelBookingManagement
             this.dataGridView1.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -161,13 +169,14 @@ namespace HotelBookingManagement
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 37);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 45);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -180,24 +189,24 @@ namespace HotelBookingManagement
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 482);
+            this.dataGridView1.Size = new System.Drawing.Size(1245, 583);
             this.dataGridView1.TabIndex = 9;
             // 
             // Form_Common
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(934, 519);
+            this.ClientSize = new System.Drawing.Size(1245, 628);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Common";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -223,5 +232,7 @@ namespace HotelBookingManagement
         private Button button_Delete_staff;
         private Button button_Add;
         private DataGridView dataGridView1;
+        private ToolTip ToolTip1;
+        private ToolTip ToolTip2;
     }
 }

@@ -33,7 +33,7 @@ namespace HotelBookingManagement
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LoaiPhong = new System.Windows.Forms.ComboBox();
+            this.LoaiPhong = new System.Windows.Forms.TextBox();
             this.NgayDi = new System.Windows.Forms.DateTimePicker();
             this.NgayDen = new System.Windows.Forms.DateTimePicker();
             this.TienCoc = new System.Windows.Forms.TextBox();
@@ -95,19 +95,13 @@ namespace HotelBookingManagement
             // 
             // LoaiPhong
             // 
-            this.LoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiPhong.FormattingEnabled = true;
-            this.LoaiPhong.Items.AddRange(new object[] {
-            "Nomal1",
-            "Nomal2",
-            "Vip1",
-            "Vip2"});
-            this.LoaiPhong.Location = new System.Drawing.Point(160, 43);
+            this.LoaiPhong.Location = new System.Drawing.Point(160, 50);
             this.LoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.LoaiPhong.Name = "LoaiPhong";
-            this.LoaiPhong.Size = new System.Drawing.Size(199, 28);
-            this.LoaiPhong.TabIndex = 17;
+            this.LoaiPhong.ReadOnly = true;
+            this.LoaiPhong.Size = new System.Drawing.Size(199, 27);
+            this.LoaiPhong.TabIndex = 16;
             // 
             // NgayDi
             // 
@@ -119,6 +113,7 @@ namespace HotelBookingManagement
             this.NgayDi.Name = "NgayDi";
             this.NgayDi.Size = new System.Drawing.Size(199, 27);
             this.NgayDi.TabIndex = 15;
+            this.NgayDi.Value = DateTime.Now.AddDays(1);
             // 
             // NgayDen
             // 
@@ -371,6 +366,7 @@ namespace HotelBookingManagement
             this.CMT.Name = "CMT";
             this.CMT.Size = new System.Drawing.Size(166, 27);
             this.CMT.TabIndex = 21;
+            this.CMT.TextChanged += new System.EventHandler(this.CMT_TextChanged);
             // 
             // label14
             // 
@@ -549,7 +545,6 @@ namespace HotelBookingManagement
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox LoaiPhong;
         private System.Windows.Forms.DateTimePicker NgayDi;
         private System.Windows.Forms.DateTimePicker NgayDen;
         private System.Windows.Forms.TextBox TienCoc;
@@ -582,5 +577,6 @@ namespace HotelBookingManagement
         private System.Windows.Forms.DateTimePicker NgayCapCMT;
         private System.Windows.Forms.DateTimePicker NgaySinh;
         private System.Windows.Forms.Panel panel_Find_Room;
+        private TextBox LoaiPhong;
     }
 }

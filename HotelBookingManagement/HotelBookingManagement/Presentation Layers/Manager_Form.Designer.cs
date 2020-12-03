@@ -60,6 +60,9 @@ namespace HotelBookingManagement
             this.button_Refesh = new System.Windows.Forms.Button();
             this.button_Back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ToolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.time_Control1 = new HotelBookingManagement.Presentation_Layers.Time_Control();
             this.tabControl_Menu.SuspendLayout();
             this.tabPage_TrangChu.SuspendLayout();
@@ -100,7 +103,7 @@ namespace HotelBookingManagement
             this.tabControl_Menu.Location = new System.Drawing.Point(0, 0);
             this.tabControl_Menu.Name = "tabControl_Menu";
             this.tabControl_Menu.SelectedIndex = 0;
-            this.tabControl_Menu.Size = new System.Drawing.Size(1380, 735);
+            this.tabControl_Menu.Size = new System.Drawing.Size(1380, 721);
             this.tabControl_Menu.TabIndex = 1;
             this.tabControl_Menu.SelectedIndexChanged += new System.EventHandler(this.tabControl_Menu_SelectedIndexChanged);
             // 
@@ -113,7 +116,7 @@ namespace HotelBookingManagement
             this.tabPage_TrangChu.ImageIndex = 0;
             this.tabPage_TrangChu.Location = new System.Drawing.Point(4, 32);
             this.tabPage_TrangChu.Name = "tabPage_TrangChu";
-            this.tabPage_TrangChu.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_TrangChu.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_TrangChu.TabIndex = 0;
             this.tabPage_TrangChu.Text = "Trang Chủ";
             this.tabPage_TrangChu.Click += new System.EventHandler(this.tabPage_TrangChu_Click);
@@ -124,7 +127,7 @@ namespace HotelBookingManagement
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(734, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(638, 699);
+            this.pictureBox2.Size = new System.Drawing.Size(638, 685);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -142,7 +145,7 @@ namespace HotelBookingManagement
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 699);
+            this.panel2.Size = new System.Drawing.Size(734, 685);
             this.panel2.TabIndex = 2;
             // 
             // button_CaiDat
@@ -265,7 +268,7 @@ namespace HotelBookingManagement
             this.button_HoaDon.Name = "button_HoaDon";
             this.button_HoaDon.Size = new System.Drawing.Size(198, 67);
             this.button_HoaDon.TabIndex = 7;
-            this.button_HoaDon.Text = "Hóa Đơn";
+            this.button_HoaDon.Text = "Đăng kí";
             this.button_HoaDon.UseVisualStyleBackColor = false;
             this.button_HoaDon.Click += new System.EventHandler(this.button_HoaDon_Click);
             // 
@@ -276,7 +279,7 @@ namespace HotelBookingManagement
             this.tabPage_Phong.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Phong.Name = "tabPage_Phong";
             this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_Phong.TabIndex = 1;
             this.tabPage_Phong.Text = "Phòng";
             this.tabPage_Phong.UseVisualStyleBackColor = true;
@@ -288,9 +291,9 @@ namespace HotelBookingManagement
             this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
             this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_Oder_Room.TabIndex = 2;
-            this.tabPage_Oder_Room.Text = "Hóa Đơn";
+            this.tabPage_Oder_Room.Text = "Đăng kí";
             this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
             // 
             // tabPage_Customer
@@ -300,7 +303,7 @@ namespace HotelBookingManagement
             this.tabPage_Customer.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Customer.Name = "tabPage_Customer";
             this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_Customer.TabIndex = 3;
             this.tabPage_Customer.Text = "Khách Hàng";
             this.tabPage_Customer.UseVisualStyleBackColor = true;
@@ -312,7 +315,7 @@ namespace HotelBookingManagement
             this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 32);
             this.tabPage_NhanVien.Name = "tabPage_NhanVien";
             this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_NhanVien.TabIndex = 4;
             this.tabPage_NhanVien.Text = "Nhân Viên";
             this.tabPage_NhanVien.UseVisualStyleBackColor = true;
@@ -324,7 +327,7 @@ namespace HotelBookingManagement
             this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 32);
             this.tabPage_ThongKe.Name = "tabPage_ThongKe";
             this.tabPage_ThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_ThongKe.TabIndex = 5;
             this.tabPage_ThongKe.Text = "Thống Kê";
             this.tabPage_ThongKe.UseVisualStyleBackColor = true;
@@ -337,7 +340,7 @@ namespace HotelBookingManagement
             this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 32);
             this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
             this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_TaiKhoan.TabIndex = 6;
             this.tabPage_TaiKhoan.Text = "Tài Khoản";
             this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
@@ -349,7 +352,7 @@ namespace HotelBookingManagement
             this.tabPage_Settings.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Settings.Name = "tabPage_Settings";
             this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 699);
+            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 685);
             this.tabPage_Settings.TabIndex = 6;
             this.tabPage_Settings.Text = "Settings";
             this.tabPage_Settings.UseVisualStyleBackColor = true;
@@ -358,10 +361,13 @@ namespace HotelBookingManagement
             // 
             this.button_Refesh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Refesh.BackgroundImage")));
             this.button_Refesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Refesh.Location = new System.Drawing.Point(49, 3);
+            this.button_Refesh.FlatAppearance.BorderSize = 0;
+            this.button_Refesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Refesh.Location = new System.Drawing.Point(63, 2);
             this.button_Refesh.Name = "button_Refesh";
-            this.button_Refesh.Size = new System.Drawing.Size(39, 34);
+            this.button_Refesh.Size = new System.Drawing.Size(51, 49);
             this.button_Refesh.TabIndex = 0;
+            this.ToolTip1.SetToolTip(this.button_Refesh, "Tải lại trang này");
             this.button_Refesh.UseVisualStyleBackColor = true;
             this.button_Refesh.Click += new System.EventHandler(this.Button_Refesh_Click);
             // 
@@ -369,27 +375,41 @@ namespace HotelBookingManagement
             // 
             this.button_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Back.BackgroundImage")));
             this.button_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Back.FlatAppearance.BorderSize = 0;
+            this.button_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Back.Location = new System.Drawing.Point(4, 3);
             this.button_Back.Name = "button_Back";
-            this.button_Back.Size = new System.Drawing.Size(39, 34);
+            this.button_Back.Size = new System.Drawing.Size(53, 49);
             this.button_Back.TabIndex = 0;
+            this.ToolTip1.SetToolTip(this.button_Back, "Về trang chủ");
             this.button_Back.UseVisualStyleBackColor = true;
             this.button_Back.Click += new System.EventHandler(this.Button_Back_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button_Refesh);
             this.panel1.Controls.Add(this.time_Control1);
             this.panel1.Controls.Add(this.button_Back);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 735);
+            this.panel1.Location = new System.Drawing.Point(0, 721);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1380, 41);
+            this.panel1.Size = new System.Drawing.Size(1380, 55);
             this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(641, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.TabIndex = 1;
             // 
             // time_Control1
             // 
-            this.time_Control1.Location = new System.Drawing.Point(94, 10);
+            this.time_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.time_Control1.Location = new System.Drawing.Point(1189, 16);
             this.time_Control1.Name = "time_Control1";
             this.time_Control1.Size = new System.Drawing.Size(179, 24);
             this.time_Control1.TabIndex = 0;
@@ -419,6 +439,7 @@ namespace HotelBookingManagement
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -448,5 +469,8 @@ namespace HotelBookingManagement
         private Button button_Phong;
         private Button button_HoaDon;
         private PictureBox pictureBox2;
+        private Label label1;
+        private ToolTip ToolTip1;
+        private ToolTip ToolTip2;
     }
 }

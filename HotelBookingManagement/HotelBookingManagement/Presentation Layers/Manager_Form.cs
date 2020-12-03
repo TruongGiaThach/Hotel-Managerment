@@ -31,6 +31,8 @@ namespace HotelBookingManagement
                 Application.Exit();
             }
             this.DS_Phong = Phong_Data.GetDsPhong();
+            if (this.currentUser != null)
+                this.label1.Text = (this.currentUser.PhanQuyen.Contains("user")) ? "NHÂN VIÊN" : "QUẢN LÍ";
         }
 
         private void Mouse_enter(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace HotelBookingManagement
             {
                 case 6:
                     Data_path = "account";
-                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex,currentUser)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -73,7 +75,7 @@ namespace HotelBookingManagement
                     break;
                 case 2:
                     Data_path = "default";
-                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex,currentUser)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -81,7 +83,7 @@ namespace HotelBookingManagement
                     break;
                 case 3:
                     Data_path = "customer";
-                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex,currentUser)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -89,7 +91,7 @@ namespace HotelBookingManagement
                     break;
                 case 4:
                     Data_path = "staff";
-                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex,currentUser)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]

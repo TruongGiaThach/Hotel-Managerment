@@ -22,6 +22,7 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            label1.AutoSize = true;
             label1.Text = DateTime.Now.ToString("d/M/yyyy HH:mm:ss tt");
         }
     }

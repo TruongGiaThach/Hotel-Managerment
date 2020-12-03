@@ -66,7 +66,9 @@ namespace HotelBookingManagement.Data_Access_Layers
                 KhachHang item = new KhachHang(i);
                 lists.Add(item);
             }
-            return lists[0];
+            if (lists.Count != 0)
+                return lists[0];
+            else return null;
         }
         public List<KhachHang> GetKhachHang_DAL()
         {

@@ -1,5 +1,6 @@
 ﻿using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
 using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace HotelBookingManagement
 {
     public partial class Reservation_Form : Form
     {
+        private bool isHasCustomer = false;
         public Reservation_Form(ref List<Phong> Rooms)
         {
             InitializeComponent();
@@ -24,6 +26,9 @@ namespace HotelBookingManagement
         private void Reservation_Form_Load(object sender, EventArgs e)
         {
             InitRoomFinder();
+            var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            if (CheckButton != null)
+                this.LoaiPhong.Text = (CheckButton.Tag as Phong).LoaiPhong; 
         }
 
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +36,8 @@ namespace HotelBookingManagement
             RadioButton Selected = sender as RadioButton;
             if (Selected.Checked)
             {
+                if (Selected.Tag != null)
+                    this.LoaiPhong.Text = (Selected.Tag as Phong).LoaiPhong;
             }
         }
 
@@ -51,10 +58,12 @@ namespace HotelBookingManagement
                 string sdt = this.Phone.Text;
                 string email = this.Email.Text;
                 cmnd = this.CMT.Text;
-                check_addCus =  addCustomer_Controller.run(ten,gioitinh,sdt,email,cmnd);
+                if (isHasCustomer)
+                    check_addCus = true;
+                else  check_addCus =  addCustomer_Controller.run(ten,gioitinh,sdt,email,cmnd);
                 KhachHang khachHang = KhachHang_DAL.Instance.getByCMND(cmnd);
                 //
-                string loaiPhong = this.LoaiPhong.SelectedItem.ToString();
+                string loaiPhong = this.LoaiPhong.Text;
                 DateTime ngbd = this.NgayDen.Value;
                 DateTime ngkt = this.NgayDi.Value;
                 var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
@@ -65,14 +74,25 @@ namespace HotelBookingManagement
                     (CheckButton.Tag as Phong).TrangThai = "dang cho";
                 }
 
-                MessageBox.Show("Thuê phòng thành công");
+                MessageBox.Show("Thuê phòng thành công","Status");
                 this.Close();
             }catch(Exception ex)
             {
-                if (check_addCus)
-                    KhachHang_DAL.Instance.xoaTheoCMND(cmnd);
-
+                
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CMT_TextChanged(object sender, EventArgs e)
+        {
+            KhachHang khachHangs = KhachHang_DAL.Instance.getByCMND(this.CMT.Text);
+            if (khachHangs != null)
+            {
+                isHasCustomer = true;
+                this.TenKhachHang.Text = khachHangs.HoTen;
+                
+                this.Phone.Text = khachHangs.SoDT;
+                this.Email.Text = khachHangs.Email;
             }
         }
     }

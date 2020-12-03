@@ -45,7 +45,14 @@ namespace HotelBookingManagement.Data_Access_Layers
           "values( @id , @makh , @maphong , @ngnhanphong , @ngtraphong , @trangthai , @tgdoiphong , @ghichu )";
             string[] parameter = new string[]
                 { id, makh , maphong, ngnhanphong, ngtraphong, "dang cho" ,tgdoiphong,ghichu};
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+            int result = 0;
+            try
+            {
+                result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+            } catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
             if (result == 1)
             {
                 Phong_DAL.Instance.updateStatus(maphong, "dang cho");

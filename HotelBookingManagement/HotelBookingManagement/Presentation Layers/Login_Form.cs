@@ -74,6 +74,11 @@ namespace HotelBookingManagement
                     Frm.Show();
                     this.Close();
                     break;
+                case "user":
+                    Frm.currentUser = this.currentUser;
+                    Frm.Show();
+                    this.Hide();
+                    break;
                 default:
                     MessageBox.Show("Clone account!!!");
                     B_Load(sender, e);

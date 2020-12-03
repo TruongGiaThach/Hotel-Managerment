@@ -15,10 +15,12 @@ namespace HotelBookingManagement
     public partial class Form_Common : Form
     {
         private int tabPage;
+        private TaiKhoan currentUser;
         private string infor;
-        public Form_Common(string infor, int tabPage)
+        public Form_Common(string infor, int tabPage, TaiKhoan tk)
         {
             InitializeComponent();
+            this.currentUser = tk;
             this.tabPage = tabPage;
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
@@ -28,7 +30,7 @@ namespace HotelBookingManagement
         {
             this.ControlBox = false;
             string sqlQuery = "";
-
+           
             switch (infor)
             {
                 case "account":
@@ -38,13 +40,15 @@ namespace HotelBookingManagement
                     this.button_Change.Visible = false;
                     break;
                 case "customer":
-                    sqlQuery = "select * from KHACHHANG";
+                    sqlQuery = "select HOTEN as [Tên khách hàng], SODT as [Số điện thoại], EMAIL as [Email]," +
+                        "DIACHI as [Địa chỉ], CMND as [Số CMND] from KHACHHANG";
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
                     break;
                 case "staff":
-                    sqlQuery = "select * from NHANVIEN";
+                    sqlQuery = "select ID as [Mã nhân viên], HOTEN as [Họ tên], CMND as [Số CMND], SDT as [Số điện thoại]," +
+                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN ";
                     this.button_Add.Visible = true;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
@@ -57,7 +61,14 @@ namespace HotelBookingManagement
                     this.button_Change.Visible = false;
                     this.button_Delete_staff.Visible = false;
                     break;
+
             };
+            if (this.currentUser.PhanQuyen.Contains("user"))
+            {
+                this.button_Add.Visible = false;
+                this.button_Change.Visible = false;
+                this.button_Delete_staff.Visible = false;
+            }
             // tạo function riêng trong mỗi DAL để lấy data, bỏ root khi hiển thị
             this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
             if (this.dataGridView1.Rows.Count == 1 )
