@@ -15,10 +15,9 @@ namespace HotelBookingManagement
     {
         private TaiKhoan currentUser;
         private Manager_Form Frm;
-        public Login_Form(Manager_Form Frm, ref TaiKhoan User)
+        public Login_Form(Manager_Form Frm)
         {
             InitializeComponent();
-            this.currentUser = User;
             this.Frm = Frm;
         }
 
@@ -70,6 +69,7 @@ namespace HotelBookingManagement
             switch (this.currentUser.PhanQuyen.Replace(" ", string.Empty))
             {
                 case "admin":
+                    Frm.currentUser = this.currentUser;
                     Frm.Show();
                     this.Close();
                     break;

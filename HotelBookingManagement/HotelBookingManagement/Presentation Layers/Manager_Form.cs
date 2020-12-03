@@ -16,12 +16,12 @@ namespace HotelBookingManagement
     public partial class Manager_Form : Form
     {
         private Login_Form loginForm;
-        private TaiKhoan currentUser;
+        public TaiKhoan currentUser;
         public Manager_Form()
         {
             InitializeComponent();
             this.Hide();
-            Login_Form Login = new Login_Form(this,ref currentUser);
+            Login_Form Login = new Login_Form(this);
             Login.ShowDialog();
         }
         private void Manager_Form_Load(object sender, EventArgs e)
