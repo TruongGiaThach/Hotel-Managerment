@@ -56,7 +56,8 @@ namespace HotelBookingManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Access denied!!");
+                this.falseMessage.Location = new Point(this.ClientSize.Width - 5*ex.Message.Length, this.falseMessage.Location.Y);
+                this.falseMessage.Text = ex.Message;
                 UserTextBox.Text = string.Empty;
                 PasswordTextBox.Text = string.Empty;
             }

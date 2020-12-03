@@ -40,6 +40,7 @@ namespace HotelBookingManagement
             this.label2 = new System.Windows.Forms.Label();
             this.UserTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.falseMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -134,12 +135,23 @@ namespace HotelBookingManagement
             this.PasswordTextBox.Size = new System.Drawing.Size(240, 35);
             this.PasswordTextBox.TabIndex = 2;
             // 
+            // falseMessage
+            // 
+            this.falseMessage.AutoSize = true;
+            this.falseMessage.ForeColor = System.Drawing.Color.Red;
+            this.falseMessage.Location = new System.Drawing.Point(349, 151);
+            this.falseMessage.Name = "falseMessage";
+            this.falseMessage.Size = new System.Drawing.Size(0, 20);
+            this.falseMessage.TabIndex = 28;
+            this.falseMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(604, 246);
+            this.Controls.Add(this.falseMessage);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserTextBox);
             this.Controls.Add(this.label2);
@@ -176,6 +188,7 @@ namespace HotelBookingManagement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UserTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label falseMessage;
     }
 }
 
