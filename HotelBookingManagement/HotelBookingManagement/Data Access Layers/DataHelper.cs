@@ -11,8 +11,8 @@ namespace HotelBookingManagement
 
     public class DataHelper
     {
-        private string connectionSTR = @"Server=ADMIN;Database=PROJECT1;
-                                    User Id=sa;Password=dg142001;";
+        private string connectionSTR = @"Server=DESKTOP-D36TE7P;Database=PROJECT;
+                                    User Id=sa;Password=0981097144;";
         //DESKTOP-7RNKS49
         //DESKTOP-D36TE7P
         private static DataHelper instance;
