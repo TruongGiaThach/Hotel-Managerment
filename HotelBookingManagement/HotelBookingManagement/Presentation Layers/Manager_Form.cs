@@ -17,18 +17,20 @@ namespace HotelBookingManagement
     {
         private Login_Form loginForm;
         private TaiKhoan currentUser;
-        public Manager_Form(Login_Form form, TaiKhoan user)
+        public Manager_Form()
         {
             InitializeComponent();
-            this.loginForm = form;
-            this.currentUser = user;
-            this.DS_Phong = Phong_Data.GetDsPhong();
-            tabControl_Menu.SelectedIndex = 0;
-            tabControl_Menu.SelectedIndex = 1;
+            this.Hide();
+            Login_Form Login = new Login_Form(this,ref currentUser);
+            Login.ShowDialog();
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
-
+            if (this.currentUser == null)
+            {
+                Application.Exit();
+            }
+            this.DS_Phong = Phong_Data.GetDsPhong();
         }
 
         private void Mouse_enter(object sender, EventArgs e)
@@ -51,12 +53,11 @@ namespace HotelBookingManagement
             if (MdiChild != null)
                 MdiChild.Close();
             string Data_path = "";
-            Form newFrm = null;
             switch (tabControl_Menu.SelectedIndex)
             {
-                case 0:
+                case 6:
                     Data_path = "account";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -64,7 +65,7 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
-                    newFrm = new Room_Show(ref DS_Phong)
+                    MdiChild = new Room_Show(ref DS_Phong)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -72,7 +73,7 @@ namespace HotelBookingManagement
                     break;
                 case 2:
                     Data_path = "default";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -80,7 +81,7 @@ namespace HotelBookingManagement
                     break;
                 case 3:
                     Data_path = "customer";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -88,33 +89,84 @@ namespace HotelBookingManagement
                     break;
                 case 4:
                     Data_path = "staff";
-                    newFrm = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    MdiChild = new Form_Common(Data_path, tabControl_Menu.SelectedIndex)
+                    {
+                        MdiParent = this,
+                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
+                    };
+                    break;
+                case 5:
+                    MdiChild = new Presentation_Layers.Budget_Form()
+                    {
+                        MdiParent = this,
+                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
+                    };
+                    break;
+                case 7:
+                    MdiChild = new Setting()
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
                     };
                     break;
                 default:
-                case 5:
-                    newFrm = new Presentation_Layers.Budget_Form()
-                    {
-                        MdiParent = this,
-                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
-                    };
-                    break;
-                case 6:
-                    newFrm = new Setting()
-                    {
-                        MdiParent = this,
-                        Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
-                    };
                     break;
             }
-            if (newFrm != null)
+            if (MdiChild != null && this.tabControl_Menu.SelectedIndex != 0)
             {
-                newFrm.Dock = DockStyle.Fill;
-                newFrm.Show();
+                MdiChild.Dock = DockStyle.Fill;
+                MdiChild.Show();
             }
+        }
+
+        private void tabPage_TrangChu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Back_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 0;
+        }
+
+        private void Button_Refesh_Click(object sender, EventArgs e)
+        {
+            tabControl_Menu_SelectedIndexChanged(this.tabControl_Menu.SelectedTab, e);
+        }
+
+        private void button_Phong_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 1;
+        }
+
+        private void button_HoaDon_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 2;
+        }
+
+        private void button_KhachHang_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 3;
+        }
+
+        private void button_NhanVien_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 4;
+        }
+
+        private void button_HeThong_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 5;
+        }
+
+        private void button_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 6;
+        }
+
+        private void button_CaiDat_Click(object sender, EventArgs e)
+        {
+            this.tabControl_Menu.SelectedIndex = 7;
         }
     }
 }
