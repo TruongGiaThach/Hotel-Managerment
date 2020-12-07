@@ -40,7 +40,7 @@ namespace HotelBookingManagement
 
         }
 
-
+        j
   
         private void button3_Click(object sender, EventArgs e)
         {
@@ -169,6 +169,11 @@ namespace HotelBookingManagement
         private void button_CaiDat_Click(object sender, EventArgs e)
         {
             this.tabControl_Menu.SelectedIndex = 7;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

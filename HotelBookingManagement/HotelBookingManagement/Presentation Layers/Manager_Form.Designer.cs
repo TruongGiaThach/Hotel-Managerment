@@ -100,6 +100,7 @@ namespace HotelBookingManagement
             this.tabControl_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_Menu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_Menu.ImageList = this.imageList_Menu_Icon;
+            this.tabControl_Menu.ItemSize = new System.Drawing.Size(132, 40);
             this.tabControl_Menu.Location = new System.Drawing.Point(0, 0);
             this.tabControl_Menu.Name = "tabControl_Menu";
             this.tabControl_Menu.SelectedIndex = 0;
@@ -114,9 +115,9 @@ namespace HotelBookingManagement
             this.tabPage_TrangChu.Controls.Add(this.pictureBox2);
             this.tabPage_TrangChu.Controls.Add(this.panel2);
             this.tabPage_TrangChu.ImageIndex = 0;
-            this.tabPage_TrangChu.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_TrangChu.Location = new System.Drawing.Point(4, 44);
             this.tabPage_TrangChu.Name = "tabPage_TrangChu";
-            this.tabPage_TrangChu.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_TrangChu.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_TrangChu.TabIndex = 0;
             this.tabPage_TrangChu.Text = "Trang Chủ";
             this.tabPage_TrangChu.Click += new System.EventHandler(this.tabPage_TrangChu_Click);
@@ -127,10 +128,11 @@ namespace HotelBookingManagement
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(734, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(638, 685);
+            this.pictureBox2.Size = new System.Drawing.Size(638, 673);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
@@ -145,7 +147,7 @@ namespace HotelBookingManagement
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 685);
+            this.panel2.Size = new System.Drawing.Size(734, 673);
             this.panel2.TabIndex = 2;
             // 
             // button_CaiDat
@@ -276,10 +278,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_Phong.AutoScroll = true;
             this.tabPage_Phong.ImageIndex = 1;
-            this.tabPage_Phong.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_Phong.Location = new System.Drawing.Point(4, 44);
             this.tabPage_Phong.Name = "tabPage_Phong";
             this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_Phong.TabIndex = 1;
             this.tabPage_Phong.Text = "Phòng";
             this.tabPage_Phong.UseVisualStyleBackColor = true;
@@ -288,10 +290,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_Oder_Room.AutoScroll = true;
             this.tabPage_Oder_Room.ImageIndex = 2;
-            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 44);
             this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
             this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_Oder_Room.TabIndex = 2;
             this.tabPage_Oder_Room.Text = "Đăng kí";
             this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
@@ -300,10 +302,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_Customer.AutoScroll = true;
             this.tabPage_Customer.ImageIndex = 3;
-            this.tabPage_Customer.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_Customer.Location = new System.Drawing.Point(4, 44);
             this.tabPage_Customer.Name = "tabPage_Customer";
             this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_Customer.TabIndex = 3;
             this.tabPage_Customer.Text = "Khách Hàng";
             this.tabPage_Customer.UseVisualStyleBackColor = true;
@@ -312,10 +314,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_NhanVien.AutoScroll = true;
             this.tabPage_NhanVien.ImageIndex = 4;
-            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 44);
             this.tabPage_NhanVien.Name = "tabPage_NhanVien";
             this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_NhanVien.TabIndex = 4;
             this.tabPage_NhanVien.Text = "Nhân Viên";
             this.tabPage_NhanVien.UseVisualStyleBackColor = true;
@@ -324,10 +326,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_ThongKe.AutoScroll = true;
             this.tabPage_ThongKe.ImageIndex = 5;
-            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 44);
             this.tabPage_ThongKe.Name = "tabPage_ThongKe";
             this.tabPage_ThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_ThongKe.TabIndex = 5;
             this.tabPage_ThongKe.Text = "Thống Kê";
             this.tabPage_ThongKe.UseVisualStyleBackColor = true;
@@ -337,10 +339,10 @@ namespace HotelBookingManagement
             this.tabPage_TaiKhoan.AutoScroll = true;
             this.tabPage_TaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage_TaiKhoan.ImageIndex = 6;
-            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 44);
             this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
             this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_TaiKhoan.TabIndex = 6;
             this.tabPage_TaiKhoan.Text = "Tài Khoản";
             this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
@@ -349,10 +351,10 @@ namespace HotelBookingManagement
             // 
             this.tabPage_Settings.AutoScroll = true;
             this.tabPage_Settings.ImageIndex = 7;
-            this.tabPage_Settings.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_Settings.Location = new System.Drawing.Point(4, 44);
             this.tabPage_Settings.Name = "tabPage_Settings";
             this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 685);
+            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 673);
             this.tabPage_Settings.TabIndex = 6;
             this.tabPage_Settings.Text = "Settings";
             this.tabPage_Settings.UseVisualStyleBackColor = true;
