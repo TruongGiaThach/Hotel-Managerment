@@ -16,12 +16,11 @@ alter table TAIKHOAN
 create table KHACHHANG
 (
 	ID varchar(5) NOT NULL PRIMARY KEY,	
-	HOTEN varchar(40),
+	HOTEN nvarchar(40),
 	SODT varchar(20),
 	EMAIL varchar(30),
 	DIACHI varchar(50)
 )
-
 alter table KHACHHANG 
 	add CMND varchar(20)
 create table DANGKI
@@ -54,13 +53,14 @@ alter table PHONG
 create table NHANVIEN
 (
 	ID varchar(5) not null primary key,
-	HOTEN varchar(40),
+	HOTEN nvarchar(40),
 	CMND	varchar(20),
 	SDT	  varchar(20),
 	GIOITINH varchar(10),
 	NGBD smalldatetime,
 	TGHOPDONG int
 )
+
 alter table NHANVIEN
 	alter column GIOITINH nvarchar(20)
 alter table NHANVIEN	

@@ -540,6 +540,12 @@ namespace HotelBookingManagement
                     j++;
                 }
             }
+            bool count = false;
+            foreach (RadioButton radioButton in this.Rooms)
+                if (radioButton.Checked)
+                    if (!count)
+                        count = !count;
+                    else radioButton.Checked = false;
         }
 
         #endregion
