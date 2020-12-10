@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Object;
 
 namespace HotelBookingManagement
 {
@@ -25,7 +26,6 @@ namespace HotelBookingManagement
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
         }
-
         public void FormCommon_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
@@ -34,32 +34,39 @@ namespace HotelBookingManagement
             switch (infor)
             {
                 case "account":
-                    sqlQuery = "select * from TAIKHOAN";
+                    sqlQuery = "select TAIKHOAN.ID as [ID], TAIKHOAN.TENDN as [Tên đăng nhập] ," +
+                        " NHANVIEN.HOTEN as [Tên nhân viên], TAIKHOAN.PHANQUYEN as [Phân Quyền] " +
+                        "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " +
+                        "where TAIKHOAN.ID != '-1' ";
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
+                    this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;
                 case "customer":
                     sqlQuery = "select HOTEN as [Tên khách hàng], SODT as [Số điện thoại], EMAIL as [Email]," +
-                        "DIACHI as [Địa chỉ], CMND as [Số CMND] from KHACHHANG";
+                        "DIACHI as [Địa chỉ], CMND as [Số CMND] from KHACHHANG where KHACHHANG.ID != '0'";
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
+                    this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;
                 case "staff":
                     sqlQuery = "select ID as [Mã nhân viên], HOTEN as [Họ tên], CMND as [Số CMND], SDT as [Số điện thoại]," +
-                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN ";
+                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN where NHANVIEN.ID != '0' ";
                     this.button_Add.Visible = true;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
+                    this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;
                 default:
                     sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
                     "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
-                    "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI ";
+                    "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI where DANGKI.ID != '-1'";
                     this.button_Add.Visible = false;
                     this.button_Change.Visible = false;
                     this.button_Delete_staff.Visible = false;
+                    this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;
 
             };
@@ -70,7 +77,7 @@ namespace HotelBookingManagement
                 this.button_Delete_staff.Visible = false;
             }
             // tạo function riêng trong mỗi DAL để lấy data, bỏ root khi hiển thị
-            this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
+            
             if (this.dataGridView1.Rows.Count == 1 )
             {
                 this.button_Delete_staff.Enabled = false;

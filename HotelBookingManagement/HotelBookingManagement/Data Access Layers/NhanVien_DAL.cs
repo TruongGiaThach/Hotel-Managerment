@@ -23,12 +23,30 @@ namespace HotelBookingManagement.Data_Access_Layers
             List<NhanVien> lists = new List<NhanVien>();
             string sqlQuery = "select * from NHANVIEN where HOTEN = @name ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { name });
+            if (data.Rows.Count == 0)
+                throw new Exception("Không tìm thấy tên này...");
             foreach (DataRow i in data.Rows)
             {
                 NhanVien item = new NhanVien(i);
                 lists.Add(item);
             }
             return lists;
+        }
+        public NhanVien getNhanVienByID(string id)
+        {
+            if (id == null)
+                return null;
+            List<NhanVien> lists = new List<NhanVien>();
+            string sqlQuery = "select * from NHANVIEN where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            if (data.Rows.Count == 0)
+                return null;
+            foreach (DataRow i in data.Rows)
+            {
+                NhanVien item = new NhanVien(i);
+                lists.Add(item);
+            }
+            return lists[0];
         }
         public NhanVien getByCMND(string cmnd)
         {
@@ -49,6 +67,8 @@ namespace HotelBookingManagement.Data_Access_Layers
             List<NhanVien> lists = new List<NhanVien>();
             string sqlQuery = "select * from NHANVIEN where SDT = @num ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { phonennum });
+            if (data.Rows.Count == 0)
+                throw new Exception("Không tìm thấy sdt phù hợp...");
             foreach (DataRow i in data.Rows)
             {
                 NhanVien item = new NhanVien(i);

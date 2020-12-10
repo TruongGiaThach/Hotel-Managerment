@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using HotelBookingManagement.Data_Access_Layers;
 using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
+using HotelBookingManagement.Presentation_Layers;
+using HotelBookingManagement.Busines_Logic_Layers;
 
 namespace HotelBookingManagement
 {
@@ -45,18 +47,20 @@ namespace HotelBookingManagement
             {
                 if (SelectedButton.Count > 0)
                 {
-                    if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có muốn xóa phòng này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         for (int i = 0; i < SelectedButton.Count; ++i)
                         {
-                            Data.RemoveAt(int.Parse(SelectedButton[i].Name));
-                            Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID);
+                            if (Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID))
+                                Data.RemoveAt(int.Parse(SelectedButton[i].Name));                           
                         }
                         SelectedButton.Clear();
                         RoomShow_Load(sender, e);
                     }
                 }
-            }catch(Exception ex) { MessageBox.Show(ex.Message); }
+            }
+            catch (SqlException sqlEx) { MessageBox.Show("Không thể xóa phòng này", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void RoomSelect(object sender, EventArgs e)
@@ -65,7 +69,6 @@ namespace HotelBookingManagement
             if ((selected.Tag as Phong).IsSelect == false)
             {
                 SelectedButton.Add(selected);
-
                 selected.ForeColor = Color.BlueViolet;
                 (selected.Tag as Phong).IsSelect = true;
                 return;
@@ -102,7 +105,8 @@ namespace HotelBookingManagement
 
         private void button_TraPhong_Click(object sender, EventArgs e)
         {
-
+            CheckOut_Controller.checkOut_openForm(SelectedButton);
+            this.RoomShow_Load(sender, e);
         }
     }
 }

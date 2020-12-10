@@ -59,7 +59,7 @@ namespace HotelBookingManagement
             set { this.matKhau = value; }
         }
 
-        public string MaKH { get => maNV; set => maNV = value; }
+        public string MaNV { get => maNV; set => maNV = value; }
 
         public static string encode(string chuoi)
         {
