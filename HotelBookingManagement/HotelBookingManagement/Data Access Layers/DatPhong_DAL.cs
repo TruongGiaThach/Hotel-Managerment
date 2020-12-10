@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,34 @@ namespace HotelBookingManagement.Data_Access_Layers
             private set => instance = value;
         }
         private DatPhong_DAL() { }
+        public DangKi getByID(string id)
+        {
+            List<DangKi> lists = new List<DangKi>();
+            string sqlQuery = "select * from DANGKI where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            foreach (DataRow i in data.Rows)
+            {
+                DangKi item = new DangKi(i);
+                lists.Add(item);
+            }
+            if (lists.Count < 1)
+                return null;
+            return lists[0];
+        }
+        public DangKi getByWaitingRoom(string roomID)
+        {
+            List<DangKi> lists = new List<DangKi>();
+            string sqlQuery = "select * from DANGKI where MAPHONG = @roomID and TRANGTHAIDON = 'dang cho' ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { roomID });
+            foreach (DataRow i in data.Rows)
+            {
+                DangKi item = new DangKi(i);
+                lists.Add(item);
+            }
+            if (lists.Count < 1)
+                return null;
+            return lists[0];
+        }
         public List<DangKi> getByStatus(string status)
         {
             List<DangKi> lists = new List<DangKi>();
@@ -34,11 +63,11 @@ namespace HotelBookingManagement.Data_Access_Layers
              string tgdoiphong, string ghichu)
         {
             //-----------
-            DangKi tk = getByStatus("root")[0];
+            DangKi tk = getByNote("root")[0];
             int i = tk.TgChoPhong;
             string id = "DK" + i.ToString();
             i++;
-            string sqlQuery = "update DANGKI set TGDOIPHONG = @time where TRANGTHAIDON = @status ";
+            string sqlQuery = "update DANGKI set TGDOIPHONG = @time where GHICHU = @status ";
             DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { i.ToString(), "root" });
             //--------------
             sqlQuery = "insert into DANGKI(ID, MAKH, MAPHONG, NGNHANPHONG, NGTRAPHONG, TRANGTHAIDON, TGDOIPHONG, GHICHU) " +
@@ -53,7 +82,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             {
                 throw new Exception(e.Message);
             }
-            if (result == 1)
+            if (result > 1)
             {
                 Phong_DAL.Instance.updateStatus(maphong, "dang cho");
                 return true;
@@ -67,6 +96,18 @@ namespace HotelBookingManagement.Data_Access_Layers
             string sqlQuery = "delete from DANGKI where ID = @id ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
+        }
+        public List<DangKi> getByNote(string status)
+        {
+            List<DangKi> lists = new List<DangKi>();
+            string sqlQuery = "select * from DANGKI where GHICHU = @status ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { status });
+            foreach (DataRow i in data.Rows)
+            {
+                DangKi item = new DangKi(i);
+                lists.Add(item);
+            }
+            return lists;
         }
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using HotelBookingManagement.Data_Access_Layers;
 using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
+using HotelBookingManagement.Presentation_Layers;
+using HotelBookingManagement.Busines_Logic_Layers;
 
 namespace HotelBookingManagement
 {
@@ -103,7 +105,8 @@ namespace HotelBookingManagement
 
         private void button_TraPhong_Click(object sender, EventArgs e)
         {
-
+            CheckOut_Controller.checkOut_openForm(SelectedButton);
+            this.RoomShow_Load(sender, e);
         }
     }
 }

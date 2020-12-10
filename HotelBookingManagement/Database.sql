@@ -13,6 +13,7 @@ alter table TAIKHOAN
 	drop column MAKH
 alter table TAIKHOAN
 	add MANV char(5);
+		-----------------------------
 create table KHACHHANG
 (
 	ID varchar(5) NOT NULL PRIMARY KEY,	
@@ -23,6 +24,7 @@ create table KHACHHANG
 )
 alter table KHACHHANG 
 	add CMND varchar(20)
+		-----------------------------
 create table DANGKI
 (
 	ID varchar(5) NOT NULL PRIMARY KEY,
@@ -39,6 +41,11 @@ alter table DANGKI
 	add constraint ck_datetime check (NGTRAPHONG > NGNHANPHONG)
 alter table DANGKI	
 	add constraint df_ngay_nhan_phong default getdate() for NGNHANPHONG
+alter table DANGKI
+	add constraint gt_trangthaidon check (TRANGTHAIDON = 'dang cho' or TRANGTHAIDON = 'da nhan' or TRANGTHAIDON = 'da thanh toan');
+insert into DANGKI (ID,NGNHANPHONG,NGTRAPHONG,TRANGTHAIDON,TGDOIPHONG,GHICHU)
+	values ('-1',GETDATE(),GETDATE()+1,'da thanh toan','1','root')
+		--------------------------------
 create table PHONG
 (
 	ID varchar(5) NOT NULL PRIMARY KEY	,
@@ -50,6 +57,7 @@ alter table PHONG
 	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho' or TRANGTHAI = 'da nhan')
 alter table PHONG 
 	add constraint gt_loai_phong check (LOAI = 'Nomal1' or LOAI = 'Nomal2' or LOAI = 'Vip1' or LOAI = 'Vip2' )
+		------------------------------
 create table NHANVIEN
 (
 	ID varchar(5) not null primary key,
@@ -70,25 +78,27 @@ alter table TAIKHOAN
 	add constraint fk_TK_NV 
 	foreign key (MANV)
 	references NHANVIEN(ID)
+	-----------------
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
 as
 begin
 	select * from TAIKHOAN where TENDN = @user and MATKHAU = @pass
 end
+	-------------------
 select * from NHANVIEN
 select * from KHACHHANG
 select * from PHONG
 select * from DANGKI
 select * from TAIKHOAN
-<<<<<<< Updated upstream
+------------<<<<<<< Updated upstream
 update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 	where ID = '0'
-=======
+
 update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 	where ID = '0'
 insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' ',' ','0');
->>>>>>> Stashed changes
+------------>>>>>>> Stashed changes
 
-
+ 
 
