@@ -31,5 +31,9 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public static void checkOut_Execute()
+        {
+
+        }
     }
 }

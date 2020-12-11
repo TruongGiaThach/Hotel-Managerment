@@ -8,11 +8,6 @@ create table TAIKHOAN
 	MAKH varchar(5),
 	PHANQUYEN varchar(20) NOT NULL,
 )
-
-alter table TAIKHOAN
-	drop column MAKH
-alter table TAIKHOAN
-	add MANV char(5);
 		-----------------------------
 create table KHACHHANG
 (
@@ -20,10 +15,10 @@ create table KHACHHANG
 	HOTEN nvarchar(40),
 	SODT varchar(20),
 	EMAIL varchar(30),
-	DIACHI varchar(50)
+	DIACHI varchar(50),
+	CMND varchar(20)
 )
-alter table KHACHHANG 
-	add CMND varchar(20)
+
 		-----------------------------
 create table DANGKI
 (
@@ -32,11 +27,17 @@ create table DANGKI
 	MAPHONG varchar(5),
 	NGNHANPHONG smalldatetime,
 	NGTRAPHONG smalldatetime,
-	
 	TRANGTHAIDON varchar(20),
+	MAHD varchar(5) ,
 	TGDOIPHONG int,
 	GHICHU varchar(50)
 )
+alter table DANGKI
+	add constraint fk_DK_PHONG foreign key (MAPHONG) references PHONG(ID)
+alter table DANGKI
+	add constraint fk_DK_KH foreign key (MAKH) references KHACHHANG(ID)
+alter table DANGKI
+	add constraint fk_DK_HD foreign key (MAHD) references HOADON(ID)
 alter table DANGKI
 	add constraint ck_datetime check (NGTRAPHONG > NGNHANPHONG)
 alter table DANGKI	
@@ -45,10 +46,23 @@ alter table DANGKI
 	add constraint gt_trangthaidon check (TRANGTHAIDON = 'dang cho' or TRANGTHAIDON = 'da nhan' or TRANGTHAIDON = 'da thanh toan');
 insert into DANGKI (ID,NGNHANPHONG,NGTRAPHONG,TRANGTHAIDON,TGDOIPHONG,GHICHU)
 	values ('-1',GETDATE(),GETDATE()+1,'da thanh toan','1','root')
+create  trigger trigger_cap_nhat_gt_hoadon on DANGKI
+for insert,update,delete
+as
+begin
+	update HOADON 
+	set TRIGIA = 
+	(
+		select sum(PHONG.GIAPHONG)
+		from PHONG,DANGKI
+		where (HOADON.ID = DANGKI.MAHD)and(PHONG.ID = DANGKI.MAPHONG)
+				and (DANGKI.TRANGTHAIDON = 'da nhan')		
+	) 
+end
 		--------------------------------
 create table PHONG
 (
-	ID varchar(5) NOT NULL PRIMARY KEY	,
+	ID varchar(5) NOT NULL PRIMARY KEY,
 	LOAI	varchar(20),
 	TRANGTHAI nvarchar(20),
 	GIAPHONG money
@@ -64,20 +78,29 @@ create table NHANVIEN
 	HOTEN nvarchar(40),
 	CMND	varchar(20),
 	SDT	  varchar(20),
-	GIOITINH varchar(10),
+	GIOITINH nvarchar(10),
 	NGBD smalldatetime,
 	TGHOPDONG int
 )
 
-alter table NHANVIEN
-	alter column GIOITINH nvarchar(20)
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
 insert into NHANVIEN (ID,HOTEN,CMND,SDT,GIOITINH) values ('0',' ','root','0','nam');
 alter table TAIKHOAN
-	add constraint fk_TK_NV 
-	foreign key (MANV)
-	references NHANVIEN(ID)
+	add constraint fk_TK_NV foreign key (MANV) references NHANVIEN(ID)
+	-----------------
+create table HOADON
+(
+	ID varchar(5) not null primary key,
+	MAKH varchar(5),
+	MANV varchar(5),
+	TRIGIA money,
+)
+alter table HOADON
+	add constraint fk_HD_KH foreign key (MAKH) references KHACHHANG(ID)
+alter table HOADON
+	add constraint fk_HF_NV foreign key (MANV) references NHANVIEN(ID)
+
 	-----------------
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
@@ -91,6 +114,7 @@ select * from KHACHHANG
 select * from PHONG
 select * from DANGKI
 select * from TAIKHOAN
+select *from HOADON
 ------------<<<<<<< Updated upstream
 update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 	where ID = '0'

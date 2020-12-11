@@ -158,6 +158,9 @@
     <EmbeddedResource Include="Presentation Layers\Budget_Form.resx">
       <DependentUpon>Budget_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\CheckOut_Form.resx">
+      <DependentUpon>CheckOut_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Common_Form.resx">
       <DependentUpon>Common_Form.cs</DependentUpon>
     </EmbeddedResource>
