@@ -124,5 +124,9 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' ',' ','0');
 ------------>>>>>>> Stashed changes
 
- 
-
+ create table MAKER
+ (
+	MARK_TABLE VARCHAR(10),
+	NUMBER INT
+ )
+ INSERT INTO MAKER VALUES ('HOADON','0')

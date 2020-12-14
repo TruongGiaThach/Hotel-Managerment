@@ -108,5 +108,10 @@ namespace HotelBookingManagement
             CheckOut_Controller.checkOut_openForm(SelectedButton);
             this.RoomShow_Load(sender, e);
         }
+
+        private void cancelReservationButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

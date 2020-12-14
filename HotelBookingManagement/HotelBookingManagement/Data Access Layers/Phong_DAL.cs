@@ -34,6 +34,8 @@ namespace HotelBookingManagement.Data_Access_Layers
                 Phong item = new Phong(i);
                 lists.Add(item);
             }
+            if (lists.Count < 1)
+                return null;
             return lists[0];
         }
         public List<Phong> getByStatusAndType(string status, string type)
@@ -72,7 +74,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             string[] parameter = new string[]
                 { id, loai.ToString() , gia.ToString(), "trong" };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result == 1) return true;
+            if (result > 1) return true;
             return false;
         }
         public bool updatePrice(string id, string gia)
