@@ -51,14 +51,23 @@ for insert,update,delete
 as
 begin
 	update HOADON 
-	set TRIGIA = 
+	set CHUATHANHTOAN = 
 	(
 		select sum(PHONG.GIAPHONG)
 		from PHONG,DANGKI
 		where (HOADON.ID = DANGKI.MAHD)and(PHONG.ID = DANGKI.MAPHONG)
 				and (DANGKI.TRANGTHAIDON = 'da nhan')		
 	) 
+	update HOADON 
+	set DATHANHTOAN = 
+	(
+		select sum(PHONG.GIAPHONG)
+		from PHONG,DANGKI
+		where (HOADON.ID = DANGKI.MAHD)and(PHONG.ID = DANGKI.MAPHONG)
+				and (DANGKI.TRANGTHAIDON = 'da thanh toan')		
+	) 
 end
+
 		--------------------------------
 create table PHONG
 (
@@ -94,7 +103,8 @@ create table HOADON
 	ID varchar(5) not null primary key,
 	MAKH varchar(5),
 	MANV varchar(5),
-	TRIGIA money,
+	CHUATHANHTOAN money,
+	DATHANHTOAN money
 )
 alter table HOADON
 	add constraint fk_HD_KH foreign key (MAKH) references KHACHHANG(ID)

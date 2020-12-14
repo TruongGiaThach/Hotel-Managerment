@@ -68,13 +68,16 @@ namespace HotelBookingManagement.Data_Access_Layers
             string sqlQuery = "select * from PHONG where ID = @id ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
             if (data.Rows.Count > 0)
+            {
                 throw new existenceRoom("Phòng đã tồn tại...");
+                return false;
+            }
             sqlQuery = "insert into PHONG(ID, LOAI, GIAPHONG, TRANGTHAI) " +
                                 "values( @id , @loai , @gia , @trangthai )";
             string[] parameter = new string[]
                 { id, loai.ToString() , gia.ToString(), "trong" };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result > 1) return true;
+            if (result > 0) return true;
             return false;
         }
         public bool updatePrice(string id, string gia)

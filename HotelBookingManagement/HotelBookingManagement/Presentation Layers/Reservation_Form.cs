@@ -1,4 +1,5 @@
-﻿using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
+﻿using HotelBookingManagement.Busines_Logic_Layers;
+using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
 using HotelBookingManagement.Data_Access_Layers;
 using HotelBookingManagement.Object;
 using System;
@@ -45,42 +46,45 @@ namespace HotelBookingManagement
         {
             this.Close();
         }
-
-        private void SaveDatPhong_Click(object sender, EventArgs e)
+        private bool datPhong()
         {
-            bool check_addCus = false;
-            bool check_addOrder = false;
-            string cmnd="";
             try
             {
+                string cmnd = "";
                 string ten = this.TenKhachHang.Text;
                 string gioitinh = this.GioiTinh.SelectedItem.ToString();
                 string sdt = this.Phone.Text;
                 string email = this.Email.Text;
                 cmnd = this.CMT.Text;
-                if (isHasCustomer)
-                    check_addCus = true;
-                else  check_addCus =  addCustomer_Controller.run(ten,gioitinh,sdt,email,cmnd);
-                KhachHang khachHang = KhachHang_DAL.Instance.getByCMND(cmnd);
-                //
+                //----------
+                var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
                 string loaiPhong = this.LoaiPhong.Text;
                 DateTime ngbd = this.NgayDen.Value;
                 DateTime ngkt = this.NgayDi.Value;
-                var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
                 string RoomID = CheckButton.Text;
-                check_addOrder =  DatPhong_DAL.Instance.themOrder(khachHang.ID, RoomID, ngbd.ToString(), ngkt.ToString(), "3", "Nothing");
-                if (check_addOrder)
-                {
-                    (CheckButton.Tag as Phong).TrangThai = "dang cho";
-                }
-
-                MessageBox.Show("Thuê phòng thành công","Status");
-                this.Close();
-            }catch(Exception ex)
+                //----------
+                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID);
+            }catch (Exception ex)
             {
-                
                 MessageBox.Show(ex.Message);
+                return false;
             }
+        }
+        private void SaveDatPhong_Click(object sender, EventArgs e) // dat va nhan phong
+        {
+            
+            var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            if (datPhong())
+            {
+                string RoomID = CheckButton.Text;
+                (CheckButton.Tag as Phong).TrangThai = "da nhan";
+                string maDK = DatPhong_DAL.Instance.getByRoomAndStatus(RoomID, "dang cho").ID;
+                DatPhong_DAL.Instance.nhanPhong(maDK, RoomID);
+                MessageBox.Show("Thuê phòng thành công", "Status");
+            }
+            else MessageBox.Show("Thuê phòng không thành công", "Status");
+            this.Close();
+           
         }
 
         private void CMT_TextChanged(object sender, EventArgs e)
@@ -90,10 +94,21 @@ namespace HotelBookingManagement
             {
                 isHasCustomer = true;
                 this.TenKhachHang.Text = khachHangs.HoTen;
-                
                 this.Phone.Text = khachHangs.SoDT;
                 this.Email.Text = khachHangs.Email;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e) // dat phong
+        {
+            var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            if (datPhong())
+            {
+                (CheckButton.Tag as Phong).TrangThai = "dang cho";
+                MessageBox.Show("Đặt phòng thành công", "Status");
+            }
+            else MessageBox.Show("Đặt phòng không thành công", "Status");
+            this.Close();
         }
     }
 }

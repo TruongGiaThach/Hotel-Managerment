@@ -33,11 +33,11 @@ namespace HotelBookingManagement.Data_Access_Layers
                 return null;
             return lists[0];
         }
-        public DangKi getByWaitingRoom(string roomID)
+        public DangKi getByRoomAndStatus(string roomID,string status)
         {
             List<DangKi> lists = new List<DangKi>();
-            string sqlQuery = "select * from DANGKI where MAPHONG = @roomID and TRANGTHAIDON = 'dang cho' ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { roomID });
+            string sqlQuery = "select * from DANGKI where MAPHONG = @roomID and TRANGTHAIDON = @status ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { roomID,status });
             foreach (DataRow i in data.Rows)
             {
                 DangKi item = new DangKi(i);
@@ -82,7 +82,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             {
                 throw new Exception(e.Message);
             }
-            if (result > 1)
+            if (result > 0)
             {
                 Phong_DAL.Instance.updateStatus(maphong, "dang cho");
                 return true;
@@ -90,7 +90,18 @@ namespace HotelBookingManagement.Data_Access_Layers
 
             return false;
         }
-
+        public bool nhanPhong(string maDK,string maPhong)
+        {
+            DangKi dk = DatPhong_DAL.Instance.getByID(maDK);
+            Phong phong = Phong_DAL.Instance.getPhongbyId(maPhong);
+            if (dk != null)
+            {
+                string sqlQuery = "Update DANGKI set TRANGTHAIDON = 'da nhan' on ID = @id ";
+                if (DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { maDK }) > 0)
+                   return Phong_DAL.Instance.updateStatus(maPhong, "da nhan");
+            }
+            return false;
+        }
         public bool xoaDangKi(string id)
         {
             string sqlQuery = "delete from DANGKI where ID = @id ";

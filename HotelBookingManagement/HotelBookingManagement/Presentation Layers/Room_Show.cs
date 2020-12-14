@@ -113,5 +113,39 @@ namespace HotelBookingManagement
         {
 
         }
+
+        private void button_NhanPhong_Click(object sender, EventArgs e)
+        {
+            int dem = 0;
+            for (int i = 0; i < Data.Count; i++)
+                if (Data[i].TrangThai.Contains("dang cho"))
+                    dem++;
+            if (dem <= 0)
+                MessageBox.Show("Chưa có phòng nào được đặt");
+            else
+            {
+                try
+                {
+                    int countSelectedRoom = SelectedButton.Count;
+                    if (countSelectedRoom < 1)
+                        throw new Exception("Cần chọn phòng để thực hiện");
+                    else if (countSelectedRoom > 1)
+                        throw new Exception("Hãy chắc chắn chỉ có 1 phòng được chọn");
+                    Phong selectedRoom = SelectedButton[0].Tag as Phong;
+                    if (!selectedRoom.TrangThai.Contains("dang cho"))
+                        throw new Exception("Phòng đang ở hoặc vẫn chưa được đặt");
+                    Room_Information room_Information = new Room_Information(selectedRoom);
+                    room_Information.ShowDialog();
+                    
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                
+            }
+            this.RoomShow_Load(sender, e);
+        }
     }
 }

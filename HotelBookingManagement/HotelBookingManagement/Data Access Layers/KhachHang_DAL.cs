@@ -56,6 +56,20 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists[0];
         }
+        public KhachHang getByID(string id)
+        {
+            List<KhachHang> lists = new List<KhachHang>();
+            string sqlQuery = "select * from KHACHHANG where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            foreach (DataRow i in data.Rows)
+            {
+                KhachHang item = new KhachHang(i);
+                lists.Add(item);
+            }
+            if (lists.Count != 0)
+                return lists[0];
+            else return null;
+        }
         public KhachHang getByCMND(string cmnd)
         {
             List<KhachHang> lists = new List<KhachHang>();

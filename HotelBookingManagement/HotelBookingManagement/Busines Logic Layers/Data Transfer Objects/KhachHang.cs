@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotelBookingManagement
 {
-    class KhachHang
+    public class KhachHang
     {
         private string iD;
         private string hoTen;

@@ -72,7 +72,7 @@ namespace HotelBookingManagement.Data_Access_Layers
                 { id,maKH,maNV , "0" };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             //--------------
-            if (result > 1)
+            if (result > 0)
             {
                 sqlQuery = "update MAKER set NUMBER = @i where MARK_TABLE ='HOADON'";
                 DataHelper.Instance.ExecuteNonQuery(sqlQuery,new object[] { i});

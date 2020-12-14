@@ -19,7 +19,7 @@ namespace HotelBookingManagement
         private string ghiChu;
         public DangKi(DataRow item)
         {
-            this.iD = item["ID"].ToString();
+            this.ID = item["ID"].ToString();
             this.maKH = item["MAKH"].ToString();
             this.maPhong = item["MAPHONG"].ToString();
             this.NgayNhanPhong = DateTime.Parse(item["NGNHANPHONG"].ToString());
@@ -36,5 +36,6 @@ namespace HotelBookingManagement
         public string TrangThaiDon { get => trangThaiDon; set => trangThaiDon = value; }
         public int TgChoPhong { get => tgChoPhong; set => tgChoPhong = value; }
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
+        public string ID { get => iD; set => iD = value; }
     }
 }

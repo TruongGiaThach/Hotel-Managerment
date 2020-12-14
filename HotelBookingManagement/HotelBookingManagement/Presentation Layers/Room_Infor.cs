@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace HotelBookingManagement
 {
-    public partial class Room_Infor : Form
+    public partial class Room_Infor : Form     // add room  form
     {
         Form preForm = null;
-        string id, loai, gia;
+        string id, gia;
         string type;
         public Room_Infor(Form form, ref List<Phong> Data)
         {
@@ -58,7 +58,7 @@ namespace HotelBookingManagement
             if (this.type == "sua")
             {
                 this.idTextbox.Text = this.id;
-                this.comboBox1.SelectedItem = this.loai;
+                //this.comboBox1.SelectedItem = this.;
                 this.priceTextbox.Text = this.gia;
                 this.addButton.Text = "Sửa";
             }
