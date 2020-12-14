@@ -21,6 +21,7 @@ namespace HotelBookingManagement
             this.iD = "";
             this.hoTen = "";
             this.email = "";
+            this.soDT = "";
             this.diaChi = "";
             this.Cmnd = "";
         }
@@ -31,16 +32,9 @@ namespace HotelBookingManagement
             this.soDT = item["SODT"].ToString();
             this.email = item["EMAIL"].ToString();
             this.diaChi = item["DIACHI"].ToString();
-            this.diaChi = item["CMND"].ToString();
+            this.cmnd = item["CMND"].ToString();
         }
-        public KhachHang(string id, string hoten, string em, string diachi,string cmnd)
-        {
-            this.iD = id;
-            this.hoTen = hoten;
-            this.email = em;
-            this.diaChi = diachi;
-            this.Cmnd = cmnd;
-        }
+       
         public string ID { get => iD; set => iD = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string SoDT { get => soDT; set => soDT = value; }

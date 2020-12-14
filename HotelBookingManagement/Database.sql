@@ -18,7 +18,6 @@ create table KHACHHANG
 	DIACHI varchar(50),
 	CMND varchar(20)
 )
-
 		-----------------------------
 create table DANGKI
 (
@@ -67,7 +66,6 @@ begin
 				and (DANGKI.TRANGTHAIDON = 'da thanh toan')		
 	) 
 end
-
 		--------------------------------
 create table PHONG
 (
@@ -125,6 +123,7 @@ select * from PHONG
 select * from DANGKI
 select * from TAIKHOAN
 select *from HOADON
+select * from MARKER
 ------------<<<<<<< Updated upstream
 update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 	where ID = '0'
@@ -134,9 +133,9 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' ',' ','0');
 ------------>>>>>>> Stashed changes
 
- create table MAKER
+ create table MARKER
  (
 	MARK_TABLE VARCHAR(10),
 	NUMBER INT
  )
- INSERT INTO MAKER VALUES ('HOADON','0')
+ INSERT INTO MARKER VALUES ('HOADON','0')

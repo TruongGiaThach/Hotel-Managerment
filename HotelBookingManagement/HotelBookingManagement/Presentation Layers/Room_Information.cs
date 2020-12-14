@@ -16,17 +16,21 @@ namespace HotelBookingManagement.Presentation_Layers
         private KhachHang khachHang;
         private Phong phong;
         private DangKi dangKi;
-        public Room_Information(Phong p)
+        public Room_Information(ref Phong p)
         {
             InitializeComponent();
             this.phong = p;
             if (phong.TrangThai.Contains("dang cho"))
             {
-                this.dangKi = DatPhong_DAL.Instance.getByRoomAndStatus(p.ID, "dang cho");
+                 List<DangKi> dangKis =  DatPhong_DAL.Instance.getByRoomAndStatus(p.ID, "dang cho");
+                if (dangKis != null)
+                    this.dangKi = dangKis[0];
             }
             else if (phong.TrangThai.Contains("da nhan"))
             {
-                this.dangKi = DatPhong_DAL.Instance.getByRoomAndStatus(p.ID, "da nhan");
+                List<DangKi> dangKis = DatPhong_DAL.Instance.getByRoomAndStatus(p.ID, "da nhan");
+                if (dangKis != null)
+                    this.dangKi = dangKis[0];
                 this.SaveDatPhong.Enabled = false;
             }
             this.khachHang = KhachHang_DAL.Instance.getByID(dangKi.MaKH);
@@ -46,8 +50,8 @@ namespace HotelBookingManagement.Presentation_Layers
         private void initRoomInfor()
         {
             this.LoaiPhong.Text = phong.LoaiPhong;
-            this.NgayDen.Text = dangKi.NgayNhanPhong.ToString("dd - mm - yyyy");
-            this.NgayDi.Text = dangKi.NgayTraPhong.ToString("dd - mm - yyyy");
+            this.NgayDen.Text = dangKi.NgayNhanPhong.ToString("dd / MM / yyyy");
+            this.NgayDi.Text = dangKi.NgayTraPhong.ToString("dd / MM / yyyy");
             this.TienCoc.Text = phong.ID;
         }
         private void label6_Click(object sender, EventArgs e)
@@ -58,6 +62,27 @@ namespace HotelBookingManagement.Presentation_Layers
         private void Room_Information_Load(object sender, EventArgs e)
         {
             initCustomerInfor();
+            initRoomInfor();
+        }
+
+        private void HuyDatPhong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SaveDatPhong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DatPhong_DAL.Instance.nhanPhong(dangKi.ID, phong.ID))
+                    Phong_DAL.Instance.updateStatus(phong.ID,"da nhan");
+                phong.TrangThai = "da nhan";
+                MessageBox.Show("Đã nhận phòng thành công !!!!");
+                this.Close();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
         }
     }
 }

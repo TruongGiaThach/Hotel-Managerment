@@ -560,6 +560,8 @@ namespace HotelBookingManagement
                     if (!count)
                         count = !count;
                     else radioButton.Checked = false;
+            if (!count)
+                this.Rooms[0].Checked = true;
         }
 
         #endregion

@@ -78,7 +78,10 @@ namespace HotelBookingManagement
             {
                 string RoomID = CheckButton.Text;
                 (CheckButton.Tag as Phong).TrangThai = "da nhan";
-                string maDK = DatPhong_DAL.Instance.getByRoomAndStatus(RoomID, "dang cho").ID;
+                List<DangKi> dangKis = DatPhong_DAL.Instance.getByRoomAndStatus(RoomID, "dang cho");
+                string maDK = "";
+                if (dangKis != null)
+                    maDK = dangKis[0].ID;
                 DatPhong_DAL.Instance.nhanPhong(maDK, RoomID);
                 MessageBox.Show("Thuê phòng thành công", "Status");
             }
@@ -109,6 +112,11 @@ namespace HotelBookingManagement
             }
             else MessageBox.Show("Đặt phòng không thành công", "Status");
             this.Close();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

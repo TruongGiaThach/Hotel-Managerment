@@ -17,6 +17,8 @@ namespace HotelBookingManagement
 {
     public partial class Room_Show : Form
     {
+        private List<DangKi> DangKi_DAL;
+
         public Room_Show(ref List<Phong> phongs)
         {
             InitializeComponent();
@@ -111,7 +113,13 @@ namespace HotelBookingManagement
 
         private void cancelReservationButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+               CancelReservation_Controller.excecute(this.SelectedButton )
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Warning!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
         }
 
         private void button_NhanPhong_Click(object sender, EventArgs e)
@@ -134,7 +142,7 @@ namespace HotelBookingManagement
                     Phong selectedRoom = SelectedButton[0].Tag as Phong;
                     if (!selectedRoom.TrangThai.Contains("dang cho"))
                         throw new Exception("Phòng đang ở hoặc vẫn chưa được đặt");
-                    Room_Information room_Information = new Room_Information(selectedRoom);
+                    Room_Information room_Information = new Room_Information(ref selectedRoom);
                     room_Information.ShowDialog();
                     
                 }

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Busines Logic Layers\addStaff_Controller].cs" />
     <Compile Include="Busines Logic Layers\addCustomer_Controller.cs" />
+    <Compile Include="Busines Logic Layers\CancelReservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\CheckOut_Controller.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\HoaDon.cs" />
     <Compile Include="Busines Logic Layers\Reservation_Controller.cs" />

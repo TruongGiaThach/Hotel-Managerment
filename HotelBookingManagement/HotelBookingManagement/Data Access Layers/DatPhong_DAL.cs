@@ -33,7 +33,7 @@ namespace HotelBookingManagement.Data_Access_Layers
                 return null;
             return lists[0];
         }
-        public DangKi getByRoomAndStatus(string roomID,string status)
+        public List<DangKi> getByRoomAndStatus(string roomID,string status)
         {
             List<DangKi> lists = new List<DangKi>();
             string sqlQuery = "select * from DANGKI where MAPHONG = @roomID and TRANGTHAIDON = @status ";
@@ -45,8 +45,23 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             if (lists.Count < 1)
                 return null;
-            return lists[0];
+            return lists;
         }
+        public List<DangKi> getByMaKH(string maKH)
+        {
+            List<DangKi> lists = new List<DangKi>();
+            string sqlQuery = "select * from DANGKI where MAKH = @maKH ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { maKH });
+            foreach (DataRow i in data.Rows)
+            {
+                DangKi item = new DangKi(i);
+                lists.Add(item);
+            }
+            if (lists.Count > 0)
+                return lists;
+            else return null;
+        }
+
         public List<DangKi> getByStatus(string status)
         {
             List<DangKi> lists = new List<DangKi>();
@@ -94,13 +109,34 @@ namespace HotelBookingManagement.Data_Access_Layers
         {
             DangKi dk = DatPhong_DAL.Instance.getByID(maDK);
             Phong phong = Phong_DAL.Instance.getPhongbyId(maPhong);
-            if (dk != null)
+            if (dk == null)
+                return false;
+
+            string maHD = null;
+            List<DangKi> listDKofcurrentCustomer = DatPhong_DAL.Instance.getByMaKH(dk.MaKH);
+            if (listDKofcurrentCustomer != null)
             {
-                string sqlQuery = "Update DANGKI set TRANGTHAIDON = 'da nhan' on ID = @id ";
-                if (DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { maDK }) > 0)
-                   return Phong_DAL.Instance.updateStatus(maPhong, "da nhan");
+                foreach (DangKi dangki in listDKofcurrentCustomer)                
+                    if (dangki.TrangThaiDon.Contains("da nhan"))
+                    {
+                        maHD = dangki.MaHD; 
+                        break;
+                    }                
+            };
+             
+            if (maHD == null)
+            {
+                HoaDon_DAL.Instance.themHoaDon(ref maHD,dk.MaKH, "");
             }
-            return false;
+
+            string sqlQuery = "Update DANGKI set MAHD = @maHD where ID = @id ";
+            DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { maHD, maDK });
+            //---------------------------------------
+            Phong_DAL.Instance.updateStatus(maPhong, "da nhan");
+            sqlQuery = "Update DANGKI set TRANGTHAIDON = 'da nhan' where ID = @id ";
+            return DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { maDK }) > 0;
+
+            
         }
         public bool xoaDangKi(string id)
         {

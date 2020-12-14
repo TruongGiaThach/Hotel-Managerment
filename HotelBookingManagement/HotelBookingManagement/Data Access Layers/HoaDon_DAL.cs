@@ -43,7 +43,9 @@ namespace HotelBookingManagement.Data_Access_Layers
                 HoaDon item = new HoaDon(i);
                 lists.Add(item);
             }
-            return lists;
+            if (lists.Count > 0)
+                return lists;
+            else return null;
         }
         public List<HoaDon> GetDsHoaDon()
         {
@@ -57,24 +59,28 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themHoaDon(string maKH, string maNV)
+        public bool themHoaDon(ref string maHD,string maKH, string maNV)
         {
             string sqlQuery = "select * from MARKER where MARK_TABLE = 'HOADON'";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
-            DataRow dataRow = data.Rows[0];
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                dataRow = data.Rows[0];
+            else throw new Exception("Không thể thêm hóa đơn, đăng kí sẽ chuyển về trạng thái đang chờ");
             int i = Int32.Parse(dataRow["NUMBER"].ToString());
             i++;
             string id = "HD" + i.ToString();
             //--------------
-            sqlQuery = "insert into HOADON(ID,MAKH,MANV,TRIGIA) " +
-                                "values( @id , @makh , @manv , @trigia )";
+            sqlQuery = "insert into HOADON(ID,MAKH,MANV,CHUATHANHTOAN,DATHANHTOAN) " +
+                                "values( @id , @makh , @manv , @chuathanhtoan , @dathanhtoan )";
             string[] parameter = new string[]
-                { id,maKH,maNV , "0" };
+                { id,maKH,maNV , "0" ,"0"};
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             //--------------
             if (result > 0)
             {
-                sqlQuery = "update MAKER set NUMBER = @i where MARK_TABLE ='HOADON'";
+                maHD = id;
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='HOADON'";
                 DataHelper.Instance.ExecuteNonQuery(sqlQuery,new object[] { i});
                 return true;
             }
