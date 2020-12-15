@@ -44,10 +44,8 @@ namespace HotelBookingManagement
             string gt = this.comboBox2.SelectedItem.ToString();
             bool check_addStaff= false;
             try
-            {
-                
+            {                
                 check_addStaff =  addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
-                //
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
                 string pass1 = this.textBox_NhapLai.Text;

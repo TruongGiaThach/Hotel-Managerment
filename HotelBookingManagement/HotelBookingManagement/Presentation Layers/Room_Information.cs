@@ -81,7 +81,7 @@ namespace HotelBookingManagement.Presentation_Layers
                 this.Close();
             }catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Warning");
+                MessageBox.Show(ex.Message, "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
     }

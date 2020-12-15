@@ -31,7 +31,7 @@ create table DANGKI
 	TGDOIPHONG int,
 	GHICHU varchar(50)
 )
-alter table DANGKI
+alter table DANGKI	
 	add constraint fk_DK_PHONG foreign key (MAPHONG) references PHONG(ID)
 alter table DANGKI
 	add constraint fk_DK_KH foreign key (MAKH) references KHACHHANG(ID)

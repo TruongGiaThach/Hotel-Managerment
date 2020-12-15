@@ -61,7 +61,6 @@ namespace HotelBookingManagement.Data_Access_Layers
                 return lists;
             else return null;
         }
-
         public List<DangKi> getByStatus(string status)
         {
             List<DangKi> lists = new List<DangKi>();
@@ -77,31 +76,27 @@ namespace HotelBookingManagement.Data_Access_Layers
         public bool themOrder(string makh, string maphong, string ngnhanphong, string ngtraphong,
              string tgdoiphong, string ghichu)
         {
-            //-----------
-            DangKi tk = getByNote("root")[0];
-            int i = tk.TgChoPhong;
-            string id = "DK" + i.ToString();
+            string sqlQuery = "select * from MARKER where MARK_TABLE = 'DANGKI'";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                dataRow = data.Rows[0];
+            else throw new Exception("Không thể thêm đăng kí");
+            int i = Int32.Parse(dataRow["NUMBER"].ToString());
             i++;
-            string sqlQuery = "update DANGKI set TGDOIPHONG = @time where GHICHU = @status ";
-            DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { i.ToString(), "root" });
+            string id = "DK" + i.ToString();
             //--------------
             sqlQuery = "insert into DANGKI(ID, MAKH, MAPHONG, NGNHANPHONG, NGTRAPHONG, TRANGTHAIDON, TGDOIPHONG, GHICHU) " +
           "values( @id , @makh , @maphong , @ngnhanphong , @ngtraphong , @trangthai , @tgdoiphong , @ghichu )";
             string[] parameter = new string[]
                 { id, makh , maphong, ngnhanphong, ngtraphong, "dang cho" ,tgdoiphong,ghichu};
-            int result = 0;
-            try
-            {
-                result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            } catch(Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result > 0)
             {
-                Phong_DAL.Instance.updateStatus(maphong, "dang cho");
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='DANGKI'";
+                DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
                 return true;
-            };
+            }
 
             return false;
         }

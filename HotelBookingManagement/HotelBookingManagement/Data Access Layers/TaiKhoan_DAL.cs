@@ -30,7 +30,9 @@ namespace HotelBookingManagement.Data_Access_Layers
                 TaiKhoan item = new TaiKhoan(i);
                 lists.Add(item);
             }
-            return lists[0];
+            if (lists.Count != 0)
+                return lists[0];
+            else return null;
         }
         public List<TaiKhoan> GetTaiKhoan_DAL()
         {
@@ -42,29 +44,35 @@ namespace HotelBookingManagement.Data_Access_Layers
                 TaiKhoan item = new TaiKhoan(i);
                 lists.Add(item);
             }
+            if (lists.Count == 0) return null;
             return lists;
         }
         public bool themTaiKhoan(string user, string pass, string staffID)
         {
-            string sqlQuery = "select * from TAIKHOAN where TENDN = @user ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { user });
-            if (data.Rows.Count > 0)
+            TaiKhoan taiKhoan = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);
+            if (taiKhoan != null)
                 throw new Exception("Tài khoản đã tồn tại!!");
             //-----------
-            TaiKhoan tk = getTaiKhoanbyName("root");
-            int i = Int32.Parse((tk.PhanQuyen));
+            string sqlQuery = "select * from MARKER where MARK_TABLE = 'TAIKHOAN'";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                dataRow = data.Rows[0];
+            else throw new Exception("Không thể thêm tài khoản");
+            int i = Int32.Parse(dataRow["NUMBER"].ToString());
             i++;
             string id = "US" + i.ToString();
-           
+
             //--------------
             sqlQuery = "insert into TAIKHOAN(ID, TENDN, MATKHAU , PHANQUYEN , MANV) " +
                                 "values( @id , @tendn , @matkhau , @phanquyen , @manv )";
             string[] parameter = new string[]
                 { id, user ,pass ,  "user" , staffID };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result == 1)
+            if (result > 0)
             {
-                updatePhanQuyen("root", i.ToString());
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='TAIKHOAN'";
+                DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
                 return true;
             }
             return false;

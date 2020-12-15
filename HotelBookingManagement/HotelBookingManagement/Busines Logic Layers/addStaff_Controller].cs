@@ -15,14 +15,11 @@ namespace HotelBookingManagement.Busines_Logic_Layers
             string last = "0";
             try
             {
-
-                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last);
-                    
-
+                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last);                  
             }
             catch(Exception ex)
             {
-                throw new Exception("addStaff_Controller: " + ex.Message);
+                throw new Exception(ex.Message);
             }
         }
     }

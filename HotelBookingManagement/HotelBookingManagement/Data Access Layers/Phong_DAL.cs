@@ -94,6 +94,7 @@ namespace HotelBookingManagement.Data_Access_Layers
         }
         public bool xoaPhong(string id)
         {
+           
             string sqlQuery = "delete from PHONG where ID = @id ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;

@@ -49,10 +49,12 @@ namespace HotelBookingManagement
             {
                 if (SelectedButton.Count > 0)
                 {
-                    if (MessageBox.Show("Bạn có muốn xóa phòng này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc chắn muốn xóa các phòng đã chọn", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         for (int i = 0; i < SelectedButton.Count; ++i)
                         {
+                            if (!(SelectedButton[i].Tag as Phong).TrangThai.Contains("trong"))
+                                throw new Exception("Chỉ có thể xóa các phòng trống");
                             if (Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID))
                                 Data.RemoveAt(int.Parse(SelectedButton[i].Name));                           
                         }
@@ -61,8 +63,8 @@ namespace HotelBookingManagement
                     }
                 }
             }
-            catch (SqlException sqlEx) { MessageBox.Show("Không thể xóa phòng này", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException) { MessageBox.Show("Không thể xóa phòng này", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch(Exception ex) { MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void RoomSelect(object sender, EventArgs e)
@@ -113,13 +115,9 @@ namespace HotelBookingManagement
 
         private void cancelReservationButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-               CancelReservation_Controller.excecute(this.SelectedButton )
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message,"Warning!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
+            
+            CancelReservation_Controller.excecute(ref this.SelectedButton);
+            this.RoomShow_Load(sender, e);
         }
 
         private void button_NhanPhong_Click(object sender, EventArgs e)

@@ -18,6 +18,9 @@ namespace HotelBookingManagement
         private int tabPage;
         private TaiKhoan currentUser;
         private string infor;
+        private string valOfSelectedCell;
+        private int indexOfSeclectedCell;
+
         public Form_Common(string infor, int tabPage, TaiKhoan tk)
         {
             InitializeComponent();
@@ -25,6 +28,8 @@ namespace HotelBookingManagement
             this.tabPage = tabPage;
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
+            valOfSelectedCell = "";
+            indexOfSeclectedCell = 0;
         }
         public void FormCommon_Load(object sender, EventArgs e)
         {
@@ -36,8 +41,7 @@ namespace HotelBookingManagement
                 case "account":
                     sqlQuery = "select TAIKHOAN.ID as [ID], TAIKHOAN.TENDN as [Tên đăng nhập] ," +
                         " NHANVIEN.HOTEN as [Tên nhân viên], TAIKHOAN.PHANQUYEN as [Phân Quyền] " +
-                        "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " +
-                        "where TAIKHOAN.ID != '-1' ";
+                        "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " ;
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
@@ -45,7 +49,7 @@ namespace HotelBookingManagement
                     break;
                 case "customer":
                     sqlQuery = "select HOTEN as [Tên khách hàng], SODT as [Số điện thoại], EMAIL as [Email]," +
-                        "DIACHI as [Địa chỉ], CMND as [Số CMND] from KHACHHANG where KHACHHANG.ID != '0'";
+                        "DIACHI as [Địa chỉ], CMND as [Số CMND] from KHACHHANG";
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
@@ -53,7 +57,7 @@ namespace HotelBookingManagement
                     break;
                 case "staff":
                     sqlQuery = "select ID as [Mã nhân viên], HOTEN as [Họ tên], CMND as [Số CMND], SDT as [Số điện thoại]," +
-                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN where NHANVIEN.ID != '0' ";
+                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN ";
                     this.button_Add.Visible = true;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
@@ -62,7 +66,7 @@ namespace HotelBookingManagement
                 default:
                     sqlQuery = "select MAKH as [Mã khách hàng], MAPHONG as [Mã phòng], " +
                     "NGNHANPHONG as [Ngày nhận phòng], NGTRAPHONG as[Ngày trả phòng], TRANGTHAIDON as [Trạng thái đơn]," +
-                    "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI where DANGKI.ID != '-1'";
+                    "TGDOIPHONG as [Thời gian chờ phòng], GHICHU as [Ghi chú thêm] from DANGKI";
                     this.button_Add.Visible = false;
                     this.button_Change.Visible = false;
                     this.button_Delete_staff.Visible = false;
@@ -78,7 +82,7 @@ namespace HotelBookingManagement
             }
             // tạo function riêng trong mỗi DAL để lấy data, bỏ root khi hiển thị
             
-            if (this.dataGridView1.Rows.Count == 1 )
+            if (this.dataGridView1.Rows.Count == 0 )
             {
                 this.button_Delete_staff.Enabled = false;
                 this.button_Change.Enabled = false;
@@ -99,79 +103,72 @@ namespace HotelBookingManagement
         {
 
         }
-
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                if (e.ColumnIndex == 0)
+                     this.valOfSelectedCell = this.dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+                this.indexOfSeclectedCell = e.ColumnIndex;
+            }
+        }
         private void button_Delete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                int index = 0;
-                if (this.dataGridView1.SelectedRows.Count > 0)
+           
+                switch (this.infor)
                 {
-                    index = this.dataGridView1.SelectedRows[0].Index;
+                    case "staff":
+                        NhanVien_DAL.Instance.xoaTheoId(valOfSelectedCell);
+                        break;
+                    case "account":
+                        TaiKhoan_DAL.Instance.xoaTaiKhoanID(valOfSelectedCell);
+                        break;
                 }
-                
-                string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-                if (index > 0)
-                    switch (this.infor)
-                    {
-                        case "staff":
-                            NhanVien_DAL.Instance.xoaTheoId(id);
-                            break;
-                        case "account":
-                            TaiKhoan_DAL.Instance.xoaTaiKhoanID(id);
-                            break;
-                    }
                     
                 this.FormCommon_Load(sender, e);
                 
             }
         }
 
-        //private void button_Change_Click(object sender, EventArgs e)
-        //{
-        //    int index = 0;
-        //    if (this.dataGridView1.SelectedRows.Count > 0)
-        //    {
-        //        index = this.dataGridView1.SelectedRows[0].Index;
-        //    }
-        //    string id = this.dataGridView1.Rows[index].Cells[0].Value.ToString();
-        //    string loai = this.dataGridView1.Rows[index].Cells[1].Value.ToString();
-        //    string gia = this.dataGridView1.Rows[index].Cells[3].Value.ToString();
-        //    Room_Infor room = new Room_Infor(this, id, loai, gia);
-        //    room.ShowDialog();
-        //    this.FormCommon_Load(sender, e);
-        //}
 
         #region Search bar
-        private DataGridViewCell GetCellWhereTextExistsInGridView(string searchText, DataGridView dataGridView, int columnIndex)
+        private List<DataGridViewCell> GetCellWhereTextExistsInGridView(string searchText, DataGridView dataGridView, int columnIndex)
         {
-            DataGridViewCell cellWhereTextIsMet = null;
+            List<DataGridViewCell> cellWhereTextIsMet = new List<DataGridViewCell>();
 
             // For every row in the grid (obviously)
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 // I did not test this case, but cell.Value is an object, and objects can be null
                 // So check if the cell is null before using .ToString()
-                if (row.Cells[columnIndex].Value != null && searchText == row.Cells[columnIndex].Value.ToString())
+                if (row.Cells[columnIndex].Value != null && row.Cells[columnIndex].Value.ToString().Contains(searchText))
                 {
                     // the searchText is equals to the text in this cell.
-                    cellWhereTextIsMet = row.Cells[columnIndex];
-                    break;
+                    cellWhereTextIsMet.Add(row.Cells[columnIndex]);
                 }
             }
-
-            return cellWhereTextIsMet;
+            if (cellWhereTextIsMet.Count != 0)
+                return cellWhereTextIsMet;
+            else return null;
         }
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-
-            DataGridViewCell cell = GetCellWhereTextExistsInGridView(textBox1.Text, this.dataGridView1, 2);
-            if (cell != null)
+            this.FormCommon_Load(sender, e);
+            if (textBox1.Text == "")
+                return;
+            List<DataGridViewCell> cells = GetCellWhereTextExistsInGridView(textBox1.Text, this.dataGridView1, indexOfSeclectedCell);
+            if (cells != null)
             {
                 // Value exists in the grid
                 // you can do extra stuff on the cell
-                cell.Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+                foreach (DataGridViewCell cell in cells)
+                {
+                    foreach(DataGridViewCell c in this.dataGridView1.Rows[cell.RowIndex].Cells)
+                        c.Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+                }
             }
             else
             {

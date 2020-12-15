@@ -21,8 +21,8 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 else if (countSelectedRoom > 1)
                     throw new Exception("Hãy chắc chắn chỉ có 1 phòng được chọn");
                 Phong selectedRoom = selectedButton[0].Tag as Phong;
-                if (selectedRoom.TrangThai.Contains("dang cho"))
-                    throw new Exception("Phòng đang chờ, không thể thực hiện trả phòng");
+                if (!selectedRoom.TrangThai.Contains("da nhan"))
+                    throw new Exception("Phòng đang được đặt hoặc còn trống, không thể thực hiện trả phòng");
                 CheckOut_Form checkOut_Form = new CheckOut_Form();
                 checkOut_Form.ShowDialog();
             }
