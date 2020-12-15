@@ -17,23 +17,6 @@ namespace HotelBookingManagement
         public Add_Receptionist()
         {
             InitializeComponent();
-            DoubleBuffered = true;
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void ButtonThemNhanVien_Click(object sender, EventArgs e)
@@ -62,27 +45,29 @@ namespace HotelBookingManagement
             }
         }
 
-        private void phoneNhanVien_TextChanged(object sender, EventArgs e)
-        {
-            
-                if (System.Text.RegularExpressions.Regex.IsMatch(phoneNhanVien.Text, "[^0-9]"))
-                {
-                    phoneNhanVien.Text = phoneNhanVien.Text.Remove(phoneNhanVien.Text.Length - 1);
-                }
-            
-        }
-
-        private void CMTNhanVien_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(phoneNhanVien.Text, "[^0-9]"))
-            {
-                 CMTNhanVien.Text = CMTNhanVien.Text.Remove(CMTNhanVien.Text.Length - 1);
-            }
-        }
-
+        
         private void ButtonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void phoneNhanVien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keycode = e.KeyChar;
+            int c = (int)keycode;
+            if ((c >= 48) && (c <= 57))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TenNhanVien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

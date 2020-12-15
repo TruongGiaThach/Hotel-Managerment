@@ -43,8 +43,7 @@ alter table DANGKI
 	add constraint df_ngay_nhan_phong default getdate() for NGNHANPHONG
 alter table DANGKI
 	add constraint gt_trangthaidon check (TRANGTHAIDON = 'dang cho' or TRANGTHAIDON = 'da nhan' or TRANGTHAIDON = 'da thanh toan');
-insert into DANGKI (ID,NGNHANPHONG,NGTRAPHONG,TRANGTHAIDON,TGDOIPHONG,GHICHU)
-	values ('-1',GETDATE(),GETDATE()+1,'da thanh toan','1','root')
+
 create  trigger trigger_cap_nhat_gt_hoadon on DANGKI
 for insert,update,delete
 as
@@ -92,9 +91,8 @@ create table NHANVIEN
 
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
-insert into NHANVIEN (ID,HOTEN,CMND,SDT,GIOITINH) values ('0',' ','root','0','nam');
 alter table TAIKHOAN
-	add constraint fk_TK_NV foreign key (MANV) references NHANVIEN(ID)
+	add constraint fk_TK_NV foreign key (MANV) references NHANVIEN(ID) on delete cascade
 	-----------------
 create table HOADON
 (
@@ -130,7 +128,6 @@ update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
 
 update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 	where ID = '0'
-insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' ',' ','0');
 ------------>>>>>>> Stashed changes
 
  create table MARKER
@@ -139,3 +136,8 @@ insert into TAIKHOAN (ID, TENDN, MATKHAU, PHANQUYEN, MANV) values ('0','root',' 
 	NUMBER INT
  )
  INSERT INTO MARKER VALUES ('HOADON','0')
+ insert into MARKER values ('DANGKI','0')
+ insert into MARKER values ('KHACHHANG','0')
+ insert into MARKER values ('NHANVIEN','0')
+ insert into MARKER values ('TAIKHOAN','0')
+

@@ -70,10 +70,6 @@ namespace HotelBookingManagement
             switch (this.currentUser.PhanQuyen.Replace(" ", string.Empty))
             {
                 case "admin":
-                    Frm.currentUser = this.currentUser;
-                    Frm.Show();
-                    this.Close();
-                    break;
                 case "user":
                     Frm.currentUser = this.currentUser;
                     Frm.Show();
