@@ -82,3 +82,4 @@ C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\ob
 C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.pdb
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Setting.resources
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Budget_Table.resources
