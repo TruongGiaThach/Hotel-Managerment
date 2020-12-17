@@ -72,10 +72,10 @@ namespace HotelBookingManagement.Data_Access_Layers
                 throw new existenceRoom("Phòng đã tồn tại...");
                 return false;
             }
-            sqlQuery = "insert into PHONG(ID, LOAI, GIAPHONG, TRANGTHAI) " +
-                                "values( @id , @loai , @gia , @trangthai )";
+            sqlQuery = "insert into PHONG(ID, LOAI, GIAPHONG, TRANGTHAI , TIENCOC) " +
+                                "values( @id , @loai , @gia , @trangthai , @tiencoc )";
             string[] parameter = new string[]
-                { id, loai.ToString() , gia.ToString(), "trong" };
+                { id, loai.ToString() , gia.ToString(), "trong" , "0" };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result > 0) return true;
             return false;
@@ -89,6 +89,12 @@ namespace HotelBookingManagement.Data_Access_Layers
         public bool updateStatus(string id, string status)
         {
             string sqlQuery = "update PHONG set TRANGTHAI = @status where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { status, id });
+            return result > 0;
+        }
+        public bool updateDeposit(string id, string status)
+        {
+            string sqlQuery = "update PHONG set TIENCOC = @status where ID = @id ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { status, id });
             return result > 0;
         }

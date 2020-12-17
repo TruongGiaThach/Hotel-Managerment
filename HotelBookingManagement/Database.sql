@@ -71,7 +71,8 @@ create table PHONG
 	ID varchar(5) NOT NULL PRIMARY KEY,
 	LOAI	varchar(20),
 	TRANGTHAI nvarchar(20),
-	GIAPHONG money
+	GIAPHONG money,
+	TIENCOC money
 )
 alter table PHONG 
 	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho' or TRANGTHAI = 'da nhan')

@@ -31,7 +31,7 @@ namespace HotelBookingManagement.Presentation_Layers
                 List<DangKi> dangKis = DatPhong_DAL.Instance.getByRoomAndStatus(p.ID, "da nhan");
                 if (dangKis != null)
                     this.dangKi = dangKis[0];
-                this.SaveDatPhong.Enabled = false;
+                this.SaveDatPhong.Visible = false;
             }
             this.khachHang = KhachHang_DAL.Instance.getByID(dangKi.MaKH);
         }
@@ -53,6 +53,7 @@ namespace HotelBookingManagement.Presentation_Layers
             this.NgayDen.Text = dangKi.NgayNhanPhong.ToString("dd / MM / yyyy");
             this.NgayDi.Text = dangKi.NgayTraPhong.ToString("dd / MM / yyyy");
             this.TienCoc.Text = phong.ID;
+            this.textBox1.Text = phong.TienCoc.ToString();
         }
         private void label6_Click(object sender, EventArgs e)
         {
@@ -83,6 +84,11 @@ namespace HotelBookingManagement.Presentation_Layers
             {
                 MessageBox.Show(ex.Message, "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+        }
+
+        private void TenKhachHang_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

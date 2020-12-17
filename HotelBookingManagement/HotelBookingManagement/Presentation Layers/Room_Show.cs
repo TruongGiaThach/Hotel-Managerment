@@ -17,7 +17,7 @@ namespace HotelBookingManagement
 {
     public partial class Room_Show : Form
     {
-        private List<DangKi> DangKi_DAL;
+        private DateTime time;
 
         public Room_Show(ref List<Phong> phongs)
         {
@@ -41,6 +41,17 @@ namespace HotelBookingManagement
             Room_Infor roomInfor = new Room_Infor(this, ref Data);
             roomInfor.ShowDialog();
             this.RoomShow_Load(sender, e);
+        }
+        private void viewRoomInfor(ref Phong p)
+        {
+            if (p.TrangThai.Contains("trong"))
+            {
+                Room_Infor room_Infor = new Room_Infor(this, ref this.Data,p.ID,p.LoaiPhong,p.GiaPhong.ToString());
+                room_Infor.ShowDialog();
+                return;
+            }
+            Room_Information room_Information = new Room_Information(ref p);
+            room_Information.ShowDialog();
         }
 
         private void buttonXoaPhong_Click(object sender, EventArgs e)
@@ -70,20 +81,24 @@ namespace HotelBookingManagement
         private void RoomSelect(object sender, EventArgs e)
         {
             Button selected = sender as Button;
-            if ((selected.Tag as Phong).IsSelect == false)
+            Phong p = selected.Tag as Phong;
+            if (p.IsSelect == false)
             {
                 SelectedButton.Add(selected);
                 selected.ForeColor = Color.BlueViolet;
-                (selected.Tag as Phong).IsSelect = true;
+                p.IsSelect = true;
+                time = DateTime.Now;
                 return;
             }
-
+            TimeSpan dist = DateTime.Now - time;
+            if (dist.TotalSeconds <= 1)
+                viewRoomInfor(ref p);
             for (int i = 0; i < SelectedButton.Count; ++i)
             {
                 if (SelectedButton[i] == selected)
                 {
                     selected.ForeColor = SystemColors.ControlText;
-                    (selected.Tag as Phong).IsSelect = false;
+                    p.IsSelect = false;
                     SelectedButton.RemoveAt(i);
                     return;
                 }

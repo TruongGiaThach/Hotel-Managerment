@@ -14,7 +14,7 @@ namespace HotelBookingManagement
     public partial class Room_Infor : Form     // add room  form
     {
         Form preForm = null;
-        string id, gia;
+        string id, gia,loai;
         string type;
         public Room_Infor(Form form, ref List<Phong> Data)
         {
@@ -31,17 +31,9 @@ namespace HotelBookingManagement
             this.preForm = form;
             this.Data = Data;
             this.id = id;
+            this.loai = loai;
             this.gia = gia;
             this.type = "sua";
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
         private bool addRoom(string id, string loai, string gia)
         {
@@ -58,15 +50,13 @@ namespace HotelBookingManagement
             if (this.type == "sua")
             {
                 this.idTextbox.Text = this.id;
-                //this.comboBox1.SelectedItem = this.;
+                this.idTextbox.ReadOnly = true;
+                this.comboBox1.SelectedItem = loai ;
                 this.priceTextbox.Text = this.gia;
                 this.addButton.Text = "Sửa";
+                this.Text = "Sửa giá phòng";
+                this.label4.Text = "Thông Tin Phòng";
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -81,7 +71,7 @@ namespace HotelBookingManagement
                     if (addRoom(id, loai, gia))
                     {
                         MessageBox.Show("Thêm phòng thành công ><");
-                        this.Data.Add(new Phong(id, loai, "trong", int.Parse(gia)));
+                        this.Data.Add(new Phong(id, loai, "trong", int.Parse(gia),0));
                         exitButton_Click(sender, e);
                     }
                 if (type == "sua")

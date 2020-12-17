@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelBookingManagement.Presentation_Layers;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -114,7 +115,7 @@ namespace HotelBookingManagement
             this.NgayDi.Name = "NgayDi";
             this.NgayDi.Size = new System.Drawing.Size(199, 27);
             this.NgayDi.TabIndex = 15;
-            this.NgayDi.Value = new System.DateTime(2020, 12, 15, 8, 29, 17, 554);
+            this.NgayDi.Value = DateTime.Now.AddDays(1);
             // 
             // NgayDen
             // 
@@ -124,6 +125,7 @@ namespace HotelBookingManagement
             this.NgayDen.Location = new System.Drawing.Point(160, 94);
             this.NgayDen.Margin = new System.Windows.Forms.Padding(4);
             this.NgayDen.Name = "NgayDen";
+            this.NgayDen.Value = DateTime.Now;
             this.NgayDen.Size = new System.Drawing.Size(199, 27);
             this.NgayDen.TabIndex = 14;
             // 
@@ -135,6 +137,7 @@ namespace HotelBookingManagement
             this.TienCoc.Name = "TienCoc";
             this.TienCoc.Size = new System.Drawing.Size(199, 27);
             this.TienCoc.TabIndex = 9;
+            this.TienCoc.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label7
             // 
@@ -232,6 +235,7 @@ namespace HotelBookingManagement
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(166, 27);
             this.Phone.TabIndex = 10;
+            this.Phone.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // TenKhachHang
             // 
@@ -241,6 +245,7 @@ namespace HotelBookingManagement
             this.TenKhachHang.Name = "TenKhachHang";
             this.TenKhachHang.Size = new System.Drawing.Size(465, 27);
             this.TenKhachHang.TabIndex = 11;
+            this.TenKhachHang.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
             // 
             // Email
             // 
@@ -362,6 +367,7 @@ namespace HotelBookingManagement
             this.QuocTich.Name = "QuocTich";
             this.QuocTich.Size = new System.Drawing.Size(465, 27);
             this.QuocTich.TabIndex = 24;
+            this.QuocTich.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
             // 
             // DiaChiNg
             // 
@@ -381,6 +387,7 @@ namespace HotelBookingManagement
             this.CMT.Size = new System.Drawing.Size(166, 27);
             this.CMT.TabIndex = 21;
             this.CMT.TextChanged += new System.EventHandler(this.CMT_TextChanged);
+            this.CMT.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label14
             // 

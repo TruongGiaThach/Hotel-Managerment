@@ -56,17 +56,20 @@ namespace HotelBookingManagement
                 string sdt = this.Phone.Text;
                 string email = this.Email.Text;
                 cmnd = this.CMT.Text;
+                string dps = this.TienCoc.Text;
                 //----------
                 var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
                 string loaiPhong = this.LoaiPhong.Text;
                 DateTime ngbd = this.NgayDen.Value;
                 DateTime ngkt = this.NgayDi.Value;
+                if (ngbd >= ngkt)
+                    throw new Exception("Ngày đi phải sau ngày đến.");
                 string RoomID = CheckButton.Text;
                 //----------
-                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID);
+                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps);
             }catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return false;
             }
         }
@@ -77,7 +80,8 @@ namespace HotelBookingManagement
             if (datPhong())
             {
                 string RoomID = CheckButton.Text;
-                (CheckButton.Tag as Phong).TrangThai = "da nhan";
+                (CheckButton.Tag as Phong).TrangThai = "dang cho";
+                (CheckButton.Tag as Phong).TienCoc = Int32.Parse(TienCoc.Text);
                 List<DangKi> dangKis = DatPhong_DAL.Instance.getByRoomAndStatus(RoomID, "dang cho");
                 string maDK = "";
                 if (dangKis != null)
@@ -108,6 +112,7 @@ namespace HotelBookingManagement
             if (datPhong())
             {
                 (CheckButton.Tag as Phong).TrangThai = "dang cho";
+                (CheckButton.Tag as Phong).TienCoc = Int32.Parse(TienCoc.Text);
                 MessageBox.Show("Đặt phòng thành công", "Status");
             }
             else MessageBox.Show("Đặt phòng không thành công", "Status");

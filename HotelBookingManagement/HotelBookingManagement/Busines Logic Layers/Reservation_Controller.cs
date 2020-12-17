@@ -11,7 +11,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
     class Reservation_Controller
     {
         public static bool execute(string ten,string gioitinh,string sdt,string email, string cmnd, bool isHasCustomer,
-            DateTime ngbd, DateTime ngkt, string RoomID)
+            DateTime ngbd, DateTime ngkt, string RoomID,string dps)
         {
             bool check_addCus = false;
             bool check_addOrder = false;
@@ -20,7 +20,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
             else check_addCus = addCustomer_Controller.run(ten, gioitinh, sdt, email, cmnd);
             KhachHang khachHang = KhachHang_DAL.Instance.getByCMND(cmnd);
             //
-            check_addOrder = DatPhong_DAL.Instance.themOrder(khachHang.ID, RoomID, ngbd.ToString(), ngkt.ToString(), "3", "Nothing");
+            check_addOrder = DatPhong_DAL.Instance.themOrder(khachHang.ID, RoomID, ngbd.ToString(), ngkt.ToString(), "3", "Nothing",dps);
             return check_addOrder;
         }
     }

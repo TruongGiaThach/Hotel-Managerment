@@ -74,7 +74,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             return lists;
         }
         public bool themOrder(string makh, string maphong, string ngnhanphong, string ngtraphong,
-             string tgdoiphong, string ghichu)
+             string tgdoiphong, string ghichu,string deposit)
         {
             string sqlQuery = "select * from MARKER where MARK_TABLE = 'DANGKI'";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
@@ -93,6 +93,8 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
             if (result > 0)
             {
+                Phong_DAL.Instance.updateStatus(maphong, "dang cho");
+                Phong_DAL.Instance.updateDeposit(maphong, deposit);
                 sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='DANGKI'";
                 DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
                 return true;
@@ -121,7 +123,7 @@ namespace HotelBookingManagement.Data_Access_Layers
              
             if (maHD == null)
             {
-                HoaDon_DAL.Instance.themHoaDon(ref maHD,dk.MaKH, "");
+                HoaDon_DAL.Instance.themHoaDon(ref maHD,dk.MaKH,"");
             }
 
             string sqlQuery = "Update DANGKI set MAHD = @maHD where ID = @id ";

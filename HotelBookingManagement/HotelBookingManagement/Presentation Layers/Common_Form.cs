@@ -43,7 +43,7 @@ namespace HotelBookingManagement
                         " NHANVIEN.HOTEN as [Tên nhân viên], TAIKHOAN.PHANQUYEN as [Phân Quyền] " +
                         "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " ;
                     this.button_Add.Visible = false;
-                    this.button_Delete_staff.Visible = true;
+                    this.button_Delete_staff.Visible = false;
                     this.button_Change.Visible = false;
                     this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;

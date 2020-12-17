@@ -92,6 +92,7 @@
     <Compile Include="Presentation Layers\Common_Form.Designer.cs">
       <DependentUpon>Common_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layers\Normalisation.cs" />
     <Compile Include="Presentation Layers\Reservation_Form.cs">
       <SubType>Form</SubType>
     </Compile>

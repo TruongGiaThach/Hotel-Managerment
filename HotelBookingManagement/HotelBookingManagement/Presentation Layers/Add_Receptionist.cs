@@ -50,24 +50,5 @@ namespace HotelBookingManagement
         {
             this.Close();
         }
-
-        private void phoneNhanVien_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char keycode = e.KeyChar;
-            int c = (int)keycode;
-            if ((c >= 48) && (c <= 57))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void TenNhanVien_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
     }
 }
