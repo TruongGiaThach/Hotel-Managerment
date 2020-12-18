@@ -468,6 +468,7 @@ namespace HotelBookingManagement
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Size = new System.Drawing.Size(166, 28);
             this.GioiTinh.TabIndex = 13;
+            this.GioiTinh.SelectedItem = this.GioiTinh.Items[0];
             // 
             // groupBox3
             // 

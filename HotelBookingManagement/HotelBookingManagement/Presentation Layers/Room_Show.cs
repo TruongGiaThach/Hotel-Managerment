@@ -18,11 +18,13 @@ namespace HotelBookingManagement
     public partial class Room_Show : Form
     {
         private DateTime time;
+        private TaiKhoan tk;
 
-        public Room_Show(ref List<Phong> phongs)
+        public Room_Show(ref List<Phong> phongs,TaiKhoan tk)
         {
             InitializeComponent();
             this.Data = phongs;
+            this.tk = tk;
             RoomShow_Load(new object { }, new EventArgs { });
         }
 
@@ -124,7 +126,7 @@ namespace HotelBookingManagement
 
         private void button_TraPhong_Click(object sender, EventArgs e)
         {
-            CheckOut_Controller.checkOut_openForm(SelectedButton);
+            CheckOut_Controller.checkOut_openForm(SelectedButton,this.tk);
             this.RoomShow_Load(sender, e);
         }
 

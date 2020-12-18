@@ -92,5 +92,17 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
         }
+        public bool updatePaid(string id,string paid)
+        {
+            string sqlQuery = "update HOADON set DATHANHTOAN = @paid where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {paid, id });
+            return result > 0;
+        }
+        public bool updateStaffID(string id, string paid)
+        {
+            string sqlQuery = "update HOADON set MANV = @paid where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { paid, id });
+            return result > 0;
+        }
     }
 }

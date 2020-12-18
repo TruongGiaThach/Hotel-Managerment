@@ -27,12 +27,16 @@ namespace HotelBookingManagement
             string gt = this.comboBox2.SelectedItem.ToString();
             bool check_addStaff= false;
             try
-            {                
+            {
+                if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
+                    throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
                 check_addStaff =  addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
                 string pass1 = this.textBox_NhapLai.Text;
                 string staffID = NhanVien_DAL.Instance.getByCMND(cmnd).ID;
+                if (user.Length == 0 || pass.Length == 0 || pass1.Length == 0)
+                    throw new Exception("Hãy nhập đủ các trường thông tin tài khoản");
                 SingUp_Controller.signUp(user, pass, pass1,staffID);
                 MessageBox.Show("Thêm nhân viên thành công✌(◕‿-)✌");
                 this.Close();
@@ -41,7 +45,7 @@ namespace HotelBookingManagement
             {
                 if (check_addStaff)
                     NhanVien_DAL.Instance.xoaTheoId(NhanVien_DAL.Instance.getByCMND(cmnd).ID);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

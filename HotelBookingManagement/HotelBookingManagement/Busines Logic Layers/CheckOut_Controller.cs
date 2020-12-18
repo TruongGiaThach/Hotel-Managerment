@@ -11,7 +11,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
 {
     public class CheckOut_Controller
     {
-        public static void checkOut_openForm(List<Button> selectedButton)
+        public static void checkOut_openForm(List<Button> selectedButton, TaiKhoan tk)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 Phong selectedRoom = selectedButton[0].Tag as Phong;
                 if (!selectedRoom.TrangThai.Contains("da nhan"))
                     throw new Exception("Phòng đang được đặt hoặc còn trống, không thể thực hiện trả phòng");
-                CheckOut_Form checkOut_Form = new CheckOut_Form();
+                CheckOut_Form checkOut_Form = new CheckOut_Form(selectedRoom,tk);
                 checkOut_Form.ShowDialog();
             }
             catch (Exception ex)
@@ -31,9 +31,28 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        public static void checkOut_Execute()
+        public static bool _Execute(List<Phong> phongs,List<DangKi> dangKis,string tongTien,HoaDon hoaDon,string maNV)
         {
-
+            bool b = false;
+            try
+            {
+                foreach (Phong phong in phongs) 
+                {
+                    Phong_DAL.Instance.updateStatus(phong.ID, "trong");
+                    Phong_DAL.Instance.updateDeposit(phong.ID, "0");
+                }
+                foreach(DangKi dangKi in dangKis)
+                {
+                    DatPhong_DAL.Instance.updateStatus(dangKi.ID, "da thanh toan");
+                }
+                HoaDon_DAL.Instance.updatePaid(hoaDon.ID, tongTien);
+                HoaDon_DAL.Instance.updateStaffID(hoaDon.ID, maNV);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            b = true;
+            return b;
         }
     }
 }

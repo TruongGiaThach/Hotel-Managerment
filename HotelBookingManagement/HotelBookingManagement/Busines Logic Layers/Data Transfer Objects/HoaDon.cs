@@ -28,10 +28,24 @@ namespace HotelBookingManagement
             this.ID = item["ID"].ToString();
             this.MaKH = item["MAKH"].ToString() ;
             this.MaNV = item["MANV"].ToString();
-            this.chuaThanhToan = Int32.Parse(item["CHUATHANHTOAN"].ToString());
-            
-            this.daThanhToan  = Int32.Parse(item["DATHANHTOAN"].ToString());
-            
+            string s = item["DATHANHTOAN"].ToString();
+            if (s.Length == 0)
+                this.daThanhToan = 0;
+            else
+            {
+                s = s.Split('.')[0];
+                this.daThanhToan = Int32.Parse(s);
+            }
+            s = item["CHUATHANHTOAN"].ToString();
+            if (s.Length == 0)
+                this.chuaThanhToan = 0;
+            else
+            {
+                s = s.Split('.')[0];
+                this.chuaThanhToan = Int32.Parse(s);
+            }
+
+
         }
 
         public HoaDon(string iD, string maKH, string maNV, int chthanhtoan, int dathanhtoan)

@@ -144,7 +144,6 @@ namespace HotelBookingManagement
             this.textBox_NhapLai.PasswordChar = '*';
             this.textBox_NhapLai.Size = new System.Drawing.Size(205, 30);
             this.textBox_NhapLai.TabIndex = 3;
-            this.textBox_NhapLai.KeyPress += Normalisation.TextboxID_KeyPress;
             // 
             // mkNhanVien
             // 
@@ -155,7 +154,6 @@ namespace HotelBookingManagement
             this.mkNhanVien.PasswordChar = '*';
             this.mkNhanVien.Size = new System.Drawing.Size(205, 30);
             this.mkNhanVien.TabIndex = 3;
-            this.mkNhanVien.KeyPress += Normalisation.TextboxID_KeyPress;
             // 
             // label_NhapLai
             // 
@@ -187,7 +185,6 @@ namespace HotelBookingManagement
             this.TaiKhoanNhanVien.Name = "TaiKhoanNhanVien";
             this.TaiKhoanNhanVien.Size = new System.Drawing.Size(205, 30);
             this.TaiKhoanNhanVien.TabIndex = 4;
-            this.TaiKhoanNhanVien.KeyPress += Normalisation.TextboxID_KeyPress;
             // 
             // label1
             // 
@@ -225,7 +222,6 @@ namespace HotelBookingManagement
             this.textBox_Luong.Name = "textBox_Luong";
             this.textBox_Luong.Size = new System.Drawing.Size(237, 30);
             this.textBox_Luong.TabIndex = 5;
-            this.textBox_Luong.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // ChucVuNhanVien
             // 
@@ -367,7 +363,6 @@ namespace HotelBookingManagement
             this.phoneNhanVien.Name = "phoneNhanVien";
             this.phoneNhanVien.Size = new System.Drawing.Size(214, 30);
             this.phoneNhanVien.TabIndex = 11;
-            this.phoneNhanVien.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // CMTNhanVien
             // 
@@ -377,7 +372,6 @@ namespace HotelBookingManagement
             this.CMTNhanVien.Name = "CMTNhanVien";
             this.CMTNhanVien.Size = new System.Drawing.Size(617, 30);
             this.CMTNhanVien.TabIndex = 9;
-            this.CMTNhanVien.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // TenNhanVien
             // 
@@ -387,7 +381,6 @@ namespace HotelBookingManagement
             this.TenNhanVien.Name = "TenNhanVien";
             this.TenNhanVien.Size = new System.Drawing.Size(617, 30);
             this.TenNhanVien.TabIndex = 8;
-            this.TenNhanVien.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
             // 
             // label11
             // 
@@ -474,7 +467,8 @@ namespace HotelBookingManagement
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_Receptionist";
-            this.Text = "ThemNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Thêm nhân viên";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

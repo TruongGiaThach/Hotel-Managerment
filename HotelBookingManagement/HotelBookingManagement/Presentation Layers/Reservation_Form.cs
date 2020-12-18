@@ -51,12 +51,14 @@ namespace HotelBookingManagement
             try
             {
                 string cmnd = "";
-                string ten = this.TenKhachHang.Text;
+                string ten =(this.TenKhachHang.Text);
                 string gioitinh = this.GioiTinh.SelectedItem.ToString();
-                string sdt = this.Phone.Text;
+                string sdt = (this.Phone.Text);
                 string email = this.Email.Text;
-                cmnd = this.CMT.Text;
+                cmnd =(this.CMT.Text);
                 string dps = this.TienCoc.Text;
+                if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
+                    throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
                 //----------
                 var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
                 string loaiPhong = this.LoaiPhong.Text;
@@ -65,8 +67,9 @@ namespace HotelBookingManagement
                 if (ngbd >= ngkt)
                     throw new Exception("Ngày đi phải sau ngày đến.");
                 string RoomID = CheckButton.Text;
+                string node = string.Format(this.GhiChu.Text);
                 //----------
-                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps);
+                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps,node);
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -87,10 +90,11 @@ namespace HotelBookingManagement
                 if (dangKis != null)
                     maDK = dangKis[0].ID;
                 DatPhong_DAL.Instance.nhanPhong(maDK, RoomID);
-                MessageBox.Show("Thuê phòng thành công", "Status");
+                MessageBox.Show("Thuê phòng thành công", "Status"); 
+                this.Close();
             }
             else MessageBox.Show("Thuê phòng không thành công", "Status");
-            this.Close();
+          
            
         }
 
@@ -114,9 +118,10 @@ namespace HotelBookingManagement
                 (CheckButton.Tag as Phong).TrangThai = "dang cho";
                 (CheckButton.Tag as Phong).TienCoc = Int32.Parse(TienCoc.Text);
                 MessageBox.Show("Đặt phòng thành công", "Status");
+                this.Close();
             }
             else MessageBox.Show("Đặt phòng không thành công", "Status");
-            this.Close();
+            
         }
 
         private void label15_Click(object sender, EventArgs e)

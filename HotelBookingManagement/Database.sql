@@ -51,7 +51,7 @@ begin
 	update HOADON 
 	set CHUATHANHTOAN = 
 	(
-		select sum(PHONG.GIAPHONG)
+		select sum(PHONG.GIAPHONG * datediff(day,DANGKI.NGNHANPHONG,DANGKI.NGTRAPHONG))
 		from PHONG,DANGKI
 		where (HOADON.ID = DANGKI.MAHD)and(PHONG.ID = DANGKI.MAPHONG)
 				and (DANGKI.TRANGTHAIDON = 'da nhan')		
@@ -65,6 +65,7 @@ begin
 				and (DANGKI.TRANGTHAIDON = 'da thanh toan')		
 	) 
 end
+
 		--------------------------------
 create table PHONG
 (
@@ -103,6 +104,10 @@ create table HOADON
 	CHUATHANHTOAN money,
 	DATHANHTOAN money
 )
+alter table HOADON
+	add constraint df_gt default '0' for CHUATHANHTOAN
+alter table HOADON
+	add constraint df_gt2 default '0' for DATHANHTOAN
 alter table HOADON
 	add constraint fk_HD_KH foreign key (MAKH) references KHACHHANG(ID)
 alter table HOADON

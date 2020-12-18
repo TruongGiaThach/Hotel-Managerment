@@ -141,6 +141,12 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
         }
+        public bool updateStatus(string id,string status)
+        {
+            string sqlQuery = "update DANGKI set TRANGTHAIDON = @status where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { status,id });
+            return result > 0;
+        }
         public List<DangKi> getByNote(string status)
         {
             List<DangKi> lists = new List<DangKi>();

@@ -419,6 +419,7 @@ namespace HotelBookingManagement
             // 
             // Manager_Form
             // 
+           
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;

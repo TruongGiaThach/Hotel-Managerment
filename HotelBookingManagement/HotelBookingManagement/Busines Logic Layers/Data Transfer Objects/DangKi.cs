@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelBookingManagement
 {
-    class DangKi
+    public class DangKi
     {
         private string iD;
         private string maKH;

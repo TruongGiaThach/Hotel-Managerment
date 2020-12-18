@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace HotelBookingManagement
 {
     public partial class Setting : Form
     {
-        public Setting()
+        private Manager_Form manager_Form;
+        private Login_Form login;
+        public Setting(Manager_Form m,Login_Form l)
         {
             InitializeComponent();
+            this.manager_Form = m;
+            this.login = l;
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -63,9 +69,21 @@ namespace HotelBookingManagement
 
         }
 
-        private void label16_Click(object sender, EventArgs e)
-        {
+      
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            manager_Form.logout(sender,e);
+        }
+
+        private void Setting_Load(object sender, EventArgs e)
+        {
+            NhanVien nhanVien = NhanVien_DAL.Instance.getNhanVienByID(manager_Form.currentUser.MaNV);
+            this.textBox1.Text = nhanVien.HoTen;
+            this.textBox2.Text = nhanVien.SoDT;
+            this.textBox3.Text = nhanVien.Cmnd;
+            this.textBox4.Text = manager_Form.currentUser.tenDN;
+            this.textBox5.Text = manager_Form.currentUser.PhanQuyen;
         }
     }
 }
