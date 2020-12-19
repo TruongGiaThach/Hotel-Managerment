@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace HotelBookingManagement.Busines_Logic_Layers
 {
-    public class addStaff_Controller_
+    public class addStaff_Controller
     {
-        public static bool addStaff_Controller(string name,string cmnd,string phoneNum,string gender)
+        public static bool _run(string name,string cmnd,string phoneNum,string gender,string luong)
         {
             string begin = DateTime.Now.ToString();
             string last = "0";
+            long l = 0;
             try
             {
-                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last);                  
+                l = Int64.Parse(luong);
+            }
+            catch (Exception) { };
+            try
+            {
+                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last,l);                  
             }
             catch(Exception ex)
             {

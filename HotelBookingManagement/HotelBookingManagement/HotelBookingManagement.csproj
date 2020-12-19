@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Busines Logic Layers\addStaff_Controller].cs" />
+    <Compile Include="Busines Logic Layers\addStaff_Controller.cs" />
     <Compile Include="Busines Logic Layers\addCustomer_Controller.cs" />
     <Compile Include="Busines Logic Layers\CancelReservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\CheckOut_Controller.cs" />
@@ -93,6 +93,12 @@
       <DependentUpon>Common_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layers\Normalisation.cs" />
+    <Compile Include="Presentation Layers\PrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\PrintBill.Designer.cs">
+      <DependentUpon>PrintBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layers\Reservation_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Manager_Form.resx">
       <DependentUpon>Manager_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\PrintBill.resx">
+      <DependentUpon>PrintBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Reservation_Form.resx">
       <DependentUpon>Reservation_Form.cs</DependentUpon>

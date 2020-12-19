@@ -217,7 +217,7 @@ namespace HotelBookingManagement
             // textBox_Luong
             // 
             this.textBox_Luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Luong.Location = new System.Drawing.Point(236, 146);
+            this.textBox_Luong.Location = new System.Drawing.Point(236, 141);
             this.textBox_Luong.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Luong.Name = "textBox_Luong";
             this.textBox_Luong.Size = new System.Drawing.Size(237, 30);
@@ -251,12 +251,12 @@ namespace HotelBookingManagement
             // 
             this.label_Lương.AutoSize = true;
             this.label_Lương.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Lương.Location = new System.Drawing.Point(62, 152);
+            this.label_Lương.Location = new System.Drawing.Point(59, 146);
             this.label_Lương.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Lương.Name = "label_Lương";
-            this.label_Lương.Size = new System.Drawing.Size(141, 25);
+            this.label_Lương.Size = new System.Drawing.Size(72, 25);
             this.label_Lương.TabIndex = 7;
-            this.label_Lương.Text = "Lương theo giờ";
+            this.label_Lương.Text = "Lương ";
             // 
             // groupBox1
             // 
@@ -354,6 +354,7 @@ namespace HotelBookingManagement
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(214, 33);
             this.comboBox2.TabIndex = 12;
+            this.comboBox2.SelectedItem = this.comboBox2.Items[0];
             // 
             // phoneNhanVien
             // 

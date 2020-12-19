@@ -104,5 +104,11 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { paid, id });
             return result > 0;
         }
+        public bool updateInvoiceDate(string id, string day)
+        {
+            string sqlQuery = "update HOADON set NGHD = @day where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { day, id });
+            return result > 0;
+        }
     }
 }

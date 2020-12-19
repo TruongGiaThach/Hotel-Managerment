@@ -31,7 +31,7 @@ namespace HotelBookingManagement
             {
                 Application.Exit();
             }
-            this.DS_Phong = Phong_Data.GetDsPhong();
+            this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
             if (this.currentUser != null)
                 this.label1.Text = (this.currentUser.PhanQuyen.Contains("user")) ? "NHÂN VIÊN" : "QUẢN LÍ";
             this.tabControl_Menu.SelectedIndex = 0;
@@ -73,6 +73,7 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
+                    this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
                     MdiChild = new Room_Show(ref DS_Phong,this.currentUser)
                     {
                         MdiParent = this,

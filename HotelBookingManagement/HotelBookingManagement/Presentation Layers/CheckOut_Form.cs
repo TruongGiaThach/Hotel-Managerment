@@ -147,8 +147,12 @@ namespace HotelBookingManagement.Presentation_Layers
                 MessageBox.Show("Tiền thanh toán chưa đủ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (CheckOut_Controller._Execute(this.dsPhong, this.dsDangki,this.textBox5.Text,this.hd,this.tk.MaNV))
+            if (CheckOut_Controller._Execute(this.dsPhong, this.dsDangki, this.textBox5.Text, this.hd, this.tk.MaNV))
+            {
                 MessageBox.Show("Thanh toán thành công", "Status");
+                PrintBill printBill = new PrintBill(this.dsPhong, this.dsDangki, this.textBox5.Text, this.hd,richTextBox1.Text,textBox1.Text);
+                printBill.ShowDialog();
+            }
             else MessageBox.Show("Thanh toán không thành công", "Status");
             this.Close();
         }

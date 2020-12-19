@@ -47,11 +47,12 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 }
                 HoaDon_DAL.Instance.updatePaid(hoaDon.ID, tongTien);
                 HoaDon_DAL.Instance.updateStaffID(hoaDon.ID, maNV);
+                HoaDon_DAL.Instance.updateInvoiceDate(hoaDon.ID, DateTime.Now.ToString());
+                b = true;
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            b = true;
             return b;
         }
     }

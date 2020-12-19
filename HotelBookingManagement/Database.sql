@@ -88,9 +88,9 @@ create table NHANVIEN
 	SDT	  varchar(20),
 	GIOITINH nvarchar(10),
 	NGBD smalldatetime,
-	TGHOPDONG int
+	TGHOPDONG int,
+	LUONG varchar(20)
 )
-
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
 alter table TAIKHOAN
@@ -102,8 +102,10 @@ create table HOADON
 	MAKH varchar(5),
 	MANV varchar(5),
 	CHUATHANHTOAN money,
-	DATHANHTOAN money
+	DATHANHTOAN money,
+	NGHD smalldatetime
 )
+
 alter table HOADON
 	add constraint df_gt default '0' for CHUATHANHTOAN
 alter table HOADON

@@ -93,7 +93,7 @@ namespace HotelBookingManagement
                 return;
             }
             TimeSpan dist = DateTime.Now - time;
-            if (dist.TotalSeconds <= 1)
+            if (dist.TotalMilliseconds <= 300)
                 viewRoomInfor(ref p);
             for (int i = 0; i < SelectedButton.Count; ++i)
             {

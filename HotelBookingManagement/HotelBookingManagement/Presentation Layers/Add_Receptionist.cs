@@ -24,13 +24,14 @@ namespace HotelBookingManagement
             string ten = this.TenNhanVien.Text;
             string cmnd = this.CMTNhanVien.Text;
             string sdt = this.phoneNhanVien.Text;
+            string luong = this.textBox_Luong.Text;
             string gt = this.comboBox2.SelectedItem.ToString();
             bool check_addStaff= false;
             try
             {
                 if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
                     throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
-                check_addStaff =  addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
+                check_addStaff =  addStaff_Controller._run(ten, cmnd, sdt, gt,luong);              
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
                 string pass1 = this.textBox_NhapLai.Text;

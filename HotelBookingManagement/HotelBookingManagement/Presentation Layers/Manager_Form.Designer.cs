@@ -10,7 +10,6 @@ namespace HotelBookingManagement
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Phong_DAL Phong_Data = new Phong_DAL();
         private List<Phong> DS_Phong;
         private Form MdiChild;
         private Button isSelect;

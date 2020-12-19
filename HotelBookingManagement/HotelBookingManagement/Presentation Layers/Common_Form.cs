@@ -57,7 +57,7 @@ namespace HotelBookingManagement
                     break;
                 case "staff":
                     sqlQuery = "select ID as [Mã nhân viên], HOTEN as [Họ tên], CMND as [Số CMND], SDT as [Số điện thoại]," +
-                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] from NHANVIEN ";
+                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] , LUONG as [Lương] from NHANVIEN ";
                     this.button_Add.Visible = true;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
