@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelBookingManagement.Presentation_Layers;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -49,6 +50,7 @@ namespace HotelBookingManagement
             this.TenKhachHang = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.NgayCapCMT = new System.Windows.Forms.DateTimePicker();
             this.NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.HuyDatPhong = new System.Windows.Forms.Button();
@@ -123,6 +125,7 @@ namespace HotelBookingManagement
             this.NgayDen.Location = new System.Drawing.Point(160, 94);
             this.NgayDen.Margin = new System.Windows.Forms.Padding(4);
             this.NgayDen.Name = "NgayDen";
+            this.NgayDen.Value = DateTime.Now;
             this.NgayDen.Size = new System.Drawing.Size(199, 27);
             this.NgayDen.TabIndex = 14;
             // 
@@ -134,6 +137,7 @@ namespace HotelBookingManagement
             this.TienCoc.Name = "TienCoc";
             this.TienCoc.Size = new System.Drawing.Size(199, 27);
             this.TienCoc.TabIndex = 9;
+            this.TienCoc.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label7
             // 
@@ -231,6 +235,7 @@ namespace HotelBookingManagement
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(166, 27);
             this.Phone.TabIndex = 10;
+            this.Phone.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // TenKhachHang
             // 
@@ -240,6 +245,7 @@ namespace HotelBookingManagement
             this.TenKhachHang.Name = "TenKhachHang";
             this.TenKhachHang.Size = new System.Drawing.Size(465, 27);
             this.TenKhachHang.TabIndex = 11;
+            this.TenKhachHang.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
             // 
             // Email
             // 
@@ -252,6 +258,7 @@ namespace HotelBookingManagement
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.NgayCapCMT);
             this.groupBox2.Controls.Add(this.NgaySinh);
             this.groupBox2.Controls.Add(this.HuyDatPhong);
@@ -284,6 +291,18 @@ namespace HotelBookingManagement
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(138, 551);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 56);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Đặt phòng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NgayCapCMT
             // 
             this.NgayCapCMT.CustomFormat = "dd-MM-yyyy";
@@ -309,10 +328,10 @@ namespace HotelBookingManagement
             // HuyDatPhong
             // 
             this.HuyDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HuyDatPhong.Location = new System.Drawing.Point(473, 551);
+            this.HuyDatPhong.Location = new System.Drawing.Point(463, 551);
             this.HuyDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.HuyDatPhong.Name = "HuyDatPhong";
-            this.HuyDatPhong.Size = new System.Drawing.Size(117, 45);
+            this.HuyDatPhong.Size = new System.Drawing.Size(127, 56);
             this.HuyDatPhong.TabIndex = 27;
             this.HuyDatPhong.Text = "Hủy";
             this.HuyDatPhong.UseVisualStyleBackColor = true;
@@ -321,12 +340,12 @@ namespace HotelBookingManagement
             // SaveDatPhong
             // 
             this.SaveDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveDatPhong.Location = new System.Drawing.Point(306, 551);
+            this.SaveDatPhong.Location = new System.Drawing.Point(294, 551);
             this.SaveDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.SaveDatPhong.Name = "SaveDatPhong";
-            this.SaveDatPhong.Size = new System.Drawing.Size(117, 45);
+            this.SaveDatPhong.Size = new System.Drawing.Size(149, 56);
             this.SaveDatPhong.TabIndex = 26;
-            this.SaveDatPhong.Text = "Lưu";
+            this.SaveDatPhong.Text = "Nhận phòng";
             this.SaveDatPhong.UseVisualStyleBackColor = true;
             this.SaveDatPhong.Click += new System.EventHandler(this.SaveDatPhong_Click);
             // 
@@ -348,6 +367,7 @@ namespace HotelBookingManagement
             this.QuocTich.Name = "QuocTich";
             this.QuocTich.Size = new System.Drawing.Size(465, 27);
             this.QuocTich.TabIndex = 24;
+            this.QuocTich.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
             // 
             // DiaChiNg
             // 
@@ -367,6 +387,7 @@ namespace HotelBookingManagement
             this.CMT.Size = new System.Drawing.Size(166, 27);
             this.CMT.TabIndex = 21;
             this.CMT.TextChanged += new System.EventHandler(this.CMT_TextChanged);
+            this.CMT.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label14
             // 
@@ -447,6 +468,7 @@ namespace HotelBookingManagement
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Size = new System.Drawing.Size(166, 28);
             this.GioiTinh.TabIndex = 13;
+            this.GioiTinh.SelectedItem = this.GioiTinh.Items[0];
             // 
             // groupBox3
             // 
@@ -546,6 +568,8 @@ namespace HotelBookingManagement
                     if (!count)
                         count = !count;
                     else radioButton.Checked = false;
+            if (!count)
+                this.Rooms[0].Checked = true;
         }
 
         #endregion
@@ -584,5 +608,6 @@ namespace HotelBookingManagement
         private System.Windows.Forms.DateTimePicker NgaySinh;
         private System.Windows.Forms.Panel panel_Find_Room;
         private TextBox LoaiPhong;
+        private Button button1;
     }
 }

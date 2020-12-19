@@ -10,7 +10,6 @@ namespace HotelBookingManagement
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Phong_DAL Phong_Data = new Phong_DAL();
         private List<Phong> DS_Phong;
         private Form MdiChild;
         private Button isSelect;
@@ -419,6 +418,7 @@ namespace HotelBookingManagement
             // 
             // Manager_Form
             // 
+           
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;

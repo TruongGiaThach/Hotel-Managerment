@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using HotelBookingManagement.Presentation_Layers;
+using System.Collections.Generic;
 
 namespace HotelBookingManagement
 {
@@ -44,36 +45,37 @@ namespace HotelBookingManagement
             // idTextbox
             // 
             this.idTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextbox.Location = new System.Drawing.Point(158, 86);
+            this.idTextbox.Location = new System.Drawing.Point(200, 99);
             this.idTextbox.Name = "idTextbox";
             this.idTextbox.Size = new System.Drawing.Size(268, 30);
             this.idTextbox.TabIndex = 0;
+            this.idTextbox.KeyPress += Normalisation.TextboxID_KeyPress;
             // 
             // priceTextbox
             // 
             this.priceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextbox.Location = new System.Drawing.Point(158, 226);
+            this.priceTextbox.Location = new System.Drawing.Point(200, 239);
             this.priceTextbox.Name = "priceTextbox";
             this.priceTextbox.Size = new System.Drawing.Size(268, 30);
             this.priceTextbox.TabIndex = 1;
-            this.priceTextbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.priceTextbox.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 232);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(102, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Giá phòng";
             // 
             // addButton
             // 
-            this.addButton.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(267, 294);
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Location = new System.Drawing.Point(313, 320);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(113, 49);
+            this.addButton.Size = new System.Drawing.Size(144, 49);
             this.addButton.TabIndex = 6;
             this.addButton.Text = "Thêm phòng";
             this.addButton.UseVisualStyleBackColor = true;
@@ -81,8 +83,8 @@ namespace HotelBookingManagement
             // 
             // exitButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(61, 294);
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(83, 320);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(111, 49);
             this.exitButton.TabIndex = 7;
@@ -103,20 +105,20 @@ namespace HotelBookingManagement
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(43, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.Size = new System.Drawing.Size(91, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "ID phòng";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 165);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.Size = new System.Drawing.Size(109, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "Loại phòng";
             // 
@@ -130,17 +132,17 @@ namespace HotelBookingManagement
             "Nomal2",
             "Vip1",
             "Vip2"});
-            this.comboBox1.Location = new System.Drawing.Point(158, 150);
+            this.comboBox1.Location = new System.Drawing.Point(200, 163);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(268, 33);
             this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedItem = this.comboBox1.Items[0];
             // 
             // Room_Infor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 353);
+            this.ClientSize = new System.Drawing.Size(571, 394);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.exitButton);

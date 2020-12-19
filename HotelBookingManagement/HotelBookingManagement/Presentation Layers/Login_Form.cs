@@ -26,6 +26,7 @@ namespace HotelBookingManagement
             this.loadingGif.Visible = false;
             UserTextBox.Text = string.Empty;
             PasswordTextBox.Text = string.Empty;
+            this.falseMessage.Text = string.Empty;
         }
 
 
@@ -48,9 +49,10 @@ namespace HotelBookingManagement
                 pass = this.PasswordTextBox.Text;
                 if (login(user, pass))
                 {
-                    timerToLogin.Start();
+                   
                     this.currentUser = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);
                     this.loadingGif.Visible = true;
+                    timerToLogin.Start();
                 }
                 else throw new Exception("The username or password is incorrect...");
             }
@@ -70,10 +72,6 @@ namespace HotelBookingManagement
             switch (this.currentUser.PhanQuyen.Replace(" ", string.Empty))
             {
                 case "admin":
-                    Frm.currentUser = this.currentUser;
-                    Frm.Show();
-                    this.Close();
-                    break;
                 case "user":
                     Frm.currentUser = this.currentUser;
                     Frm.Show();

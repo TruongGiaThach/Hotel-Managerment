@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelBookingManagement
 {
-    class DangKi
+    public class DangKi
     {
         private string iD;
         private string maKH;
@@ -17,9 +17,10 @@ namespace HotelBookingManagement
         private string trangThaiDon;
         private int tgChoPhong;
         private string ghiChu;
+        private string maHD;
         public DangKi(DataRow item)
         {
-            this.iD = item["ID"].ToString();
+            this.ID = item["ID"].ToString();
             this.maKH = item["MAKH"].ToString();
             this.maPhong = item["MAPHONG"].ToString();
             this.NgayNhanPhong = DateTime.Parse(item["NGNHANPHONG"].ToString());
@@ -27,6 +28,7 @@ namespace HotelBookingManagement
             this.trangThaiDon = item["TRANGTHAIDON"].ToString();
             this.tgChoPhong = Int32.Parse(item["TGDOIPHONG"].ToString());
             this.ghiChu = item["GHICHU"].ToString();
+            this.maHD = item["MAHD"].ToString();
 
         }
         public string MaKH { get => maKH; set => maKH = value; }
@@ -36,5 +38,7 @@ namespace HotelBookingManagement
         public string TrangThaiDon { get => trangThaiDon; set => trangThaiDon = value; }
         public int TgChoPhong { get => tgChoPhong; set => tgChoPhong = value; }
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
+        public string ID { get => iD; set => iD = value; }
+        public string MaHD { get => maHD; set => maHD = value; }
     }
 }

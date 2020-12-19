@@ -53,14 +53,14 @@ namespace HotelBookingManagement.Data_Access_Layers
             List<NhanVien> lists = new List<NhanVien>();
             string sqlQuery = "select * from NHANVIEN where CMND = @cmnd ";
             DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
-            if (data.Rows.Count == 0)
-                throw new Exception("Không tìm thấy cmnd...");
             foreach (DataRow i in data.Rows)
             {
                 NhanVien item = new NhanVien(i);
                 lists.Add(item);
             }
-            return lists[0];
+            if (lists.Count != 0)
+                return lists[0];
+            else return null;
         }
         public NhanVien getByPhoneNumber(string phonennum)
         {
@@ -88,29 +88,32 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themNhanVien(string name, string cmnd, string phoneNum, string gender , string begin, string last)
+        public bool themNhanVien(string name, string cmnd, string phoneNum, string gender , string begin, string last,long luong)
         {
-            string sqlQuery = "select * from NHANVIEN where CMND = @cmnd ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
-            if (data.Rows.Count > 0)
-                throw new Exception("CMND đã được sử dụng!!");
+            NhanVien nhanVien = NhanVien_DAL.Instance.getByCMND(cmnd);
+            if (nhanVien != null)
+                throw new Exception("Cmnd đã được sử dụng");
             //-----------
-
-            NhanVien tk = getByCMND("root");
-            int i = Int32.Parse((tk.SoDT));
+            string sqlQuery = "select * from MARKER where MARK_TABLE = 'NHANVIEN'";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                dataRow = data.Rows[0];
+            else throw new Exception("Không thể thêm nhân viên");
+            int i = Int32.Parse(dataRow["NUMBER"].ToString());
             i++;
             string id = "NV" + i.ToString();
-
             //--------------
-            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SDT, GIOITINH, NGBD, TGHOPDONG) " +
-                                "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last  )";
+            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SDT, GIOITINH, NGBD, TGHOPDONG , LUONG) " +
+                                "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last , @luong )";
             string[] parameter = new string[]
-                { id, name , cmnd , phoneNum, gender , begin, last };
+                { id, name , cmnd , phoneNum, gender , begin, last , luong.ToString() };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            
-            if (result == 1)
+
+            if (result > 0)
             {
-                updatePhoneNumber("root", i.ToString());
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='NHANVIEN'";
+                DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
                 return true;
             }
             return false;
