@@ -5,7 +5,7 @@ create table TAIKHOAN
 	ID varchar(5) NOT NULL PRIMARY KEY,
 	TENDN varchar(40)NOT NULL default 'tk_khach',
 	MATKHAU varchar(40) NOT NULL default 'thach',
-	MAKH varchar(5),
+	MANV varchar(5),
 	PHANQUYEN varchar(20) NOT NULL,
 )
 		-----------------------------
