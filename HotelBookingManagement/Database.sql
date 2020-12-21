@@ -157,7 +157,9 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 	T_LUONGNV Money,
 	T_BAOTRI Money,
 	T_KHAC Money,
-	NG_THONGKE smalldatetime NOT NULL primary key
+	NG_THONGKE_THANG int,
+	NG_THongKE_NAM int
+	CONSTRAINT ChiTieu_pk PRIMARY KEY(NG_THONGKE_THANG, NG_THongKE_NAM)
  )
 
  create table THUCHI
@@ -165,10 +167,10 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 	T_THU Money,
 	T_CHI Money,
 	T_LOINHUAN Money,
-	NG_THONGKE smalldatetime NOT NULL primary key
+	NG_THONGKE_THANG int,
+	NG_THongKE_NAM int
+	CONSTRAINT ThuChi_pk PRIMARY KEY(NG_THONGKE_THANG, NG_THongKE_NAM)
  )
-
- alter table THUCHI add Constraint NG_ThongKe foreign key (NG_THONGKE) references CHITIEU(NG_THONGKE)
 
 
 
