@@ -191,6 +191,7 @@ namespace HotelBookingManagement
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1245, 583);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Form_Common
             // 

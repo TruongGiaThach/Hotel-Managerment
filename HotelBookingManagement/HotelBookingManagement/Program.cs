@@ -1,4 +1,4 @@
-﻿using HotelBookingManagement.Table_Component;
+﻿using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace HotelBookingManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Manager_Form());
+            Application.Run(new Manager_Form()) ;
         }
     }
 }

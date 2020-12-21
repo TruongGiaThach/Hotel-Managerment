@@ -1,4 +1,6 @@
-﻿namespace HotelBookingManagement
+﻿using HotelBookingManagement.Presentation_Layers;
+
+namespace HotelBookingManagement
 {
     partial class Add_Receptionist
     {
@@ -39,8 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox_Luong = new System.Windows.Forms.TextBox();
-            this.CaTruc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.ChucVuNhanVien = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label_Lương = new System.Windows.Forms.Label();
@@ -134,7 +134,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cấp tài khoản";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox_NhapLai
             // 
@@ -201,8 +200,6 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox_Luong);
-            this.groupBox3.Controls.Add(this.CaTruc);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.ChucVuNhanVien);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label_Lương);
@@ -220,32 +217,11 @@
             // textBox_Luong
             // 
             this.textBox_Luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Luong.Location = new System.Drawing.Point(236, 146);
+            this.textBox_Luong.Location = new System.Drawing.Point(236, 141);
             this.textBox_Luong.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Luong.Name = "textBox_Luong";
             this.textBox_Luong.Size = new System.Drawing.Size(237, 30);
             this.textBox_Luong.TabIndex = 5;
-            // 
-            // CaTruc
-            // 
-            this.CaTruc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaTruc.Location = new System.Drawing.Point(236, 100);
-            this.CaTruc.Margin = new System.Windows.Forms.Padding(4);
-            this.CaTruc.Name = "CaTruc";
-            this.CaTruc.Size = new System.Drawing.Size(237, 30);
-            this.CaTruc.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 103);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Ca:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // ChucVuNhanVien
             // 
@@ -253,10 +229,6 @@
             this.ChucVuNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChucVuNhanVien.FormattingEnabled = true;
             this.ChucVuNhanVien.Items.AddRange(new object[] {
-            "Bảo vệ",
-            "Nhân viên vệ sinh",
-            "Quản lí",
-            "Tiếp tân",
             "Lễ tân"});
             this.ChucVuNhanVien.Location = new System.Drawing.Point(236, 52);
             this.ChucVuNhanVien.Margin = new System.Windows.Forms.Padding(4);
@@ -279,12 +251,12 @@
             // 
             this.label_Lương.AutoSize = true;
             this.label_Lương.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Lương.Location = new System.Drawing.Point(62, 152);
+            this.label_Lương.Location = new System.Drawing.Point(59, 146);
             this.label_Lương.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Lương.Name = "label_Lương";
-            this.label_Lương.Size = new System.Drawing.Size(141, 25);
+            this.label_Lương.Size = new System.Drawing.Size(72, 25);
             this.label_Lương.TabIndex = 7;
-            this.label_Lương.Text = "Lương theo giờ";
+            this.label_Lương.Text = "Lương ";
             // 
             // groupBox1
             // 
@@ -329,10 +301,10 @@
             // ButtonHuy
             // 
             this.ButtonHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonHuy.Location = new System.Drawing.Point(930, 229);
+            this.ButtonHuy.Location = new System.Drawing.Point(930, 293);
             this.ButtonHuy.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonHuy.Name = "ButtonHuy";
-            this.ButtonHuy.Size = new System.Drawing.Size(139, 34);
+            this.ButtonHuy.Size = new System.Drawing.Size(151, 57);
             this.ButtonHuy.TabIndex = 16;
             this.ButtonHuy.Text = "Hủy";
             this.ButtonHuy.UseVisualStyleBackColor = true;
@@ -341,10 +313,10 @@
             // ButtonThemNhanVien
             // 
             this.ButtonThemNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonThemNhanVien.Location = new System.Drawing.Point(930, 129);
+            this.ButtonThemNhanVien.Location = new System.Drawing.Point(930, 152);
             this.ButtonThemNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonThemNhanVien.Name = "ButtonThemNhanVien";
-            this.ButtonThemNhanVien.Size = new System.Drawing.Size(139, 37);
+            this.ButtonThemNhanVien.Size = new System.Drawing.Size(151, 69);
             this.ButtonThemNhanVien.TabIndex = 15;
             this.ButtonThemNhanVien.Text = "Thêm";
             this.ButtonThemNhanVien.UseVisualStyleBackColor = true;
@@ -367,7 +339,6 @@
             this.AddressNhanVien.Name = "AddressNhanVien";
             this.AddressNhanVien.Size = new System.Drawing.Size(617, 30);
             this.AddressNhanVien.TabIndex = 13;
-            this.AddressNhanVien.Text = "Số nhà, phường, quận,...";
             // 
             // comboBox2
             // 
@@ -383,6 +354,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(214, 33);
             this.comboBox2.TabIndex = 12;
+            this.comboBox2.SelectedItem = this.comboBox2.Items[0];
             // 
             // phoneNhanVien
             // 
@@ -392,7 +364,6 @@
             this.phoneNhanVien.Name = "phoneNhanVien";
             this.phoneNhanVien.Size = new System.Drawing.Size(214, 30);
             this.phoneNhanVien.TabIndex = 11;
-            this.phoneNhanVien.TextChanged += new System.EventHandler(this.phoneNhanVien_TextChanged);
             // 
             // CMTNhanVien
             // 
@@ -402,7 +373,6 @@
             this.CMTNhanVien.Name = "CMTNhanVien";
             this.CMTNhanVien.Size = new System.Drawing.Size(617, 30);
             this.CMTNhanVien.TabIndex = 9;
-            this.CMTNhanVien.TextChanged += new System.EventHandler(this.CMTNhanVien_TextChanged);
             // 
             // TenNhanVien
             // 
@@ -456,7 +426,6 @@
             this.label8.Size = new System.Drawing.Size(152, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Số CMT/CCCD";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -499,7 +468,8 @@
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_Receptionist";
-            this.Text = "ThemNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Thêm nhân viên";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -531,8 +501,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox ChucVuNhanVien;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox CaTruc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox phoneNhanVien;
         private System.Windows.Forms.TextBox CMTNhanVien;

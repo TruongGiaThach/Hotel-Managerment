@@ -17,23 +17,6 @@ namespace HotelBookingManagement
         public Add_Receptionist()
         {
             InitializeComponent();
-            DoubleBuffered = true;
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void ButtonThemNhanVien_Click(object sender, EventArgs e)
@@ -41,17 +24,20 @@ namespace HotelBookingManagement
             string ten = this.TenNhanVien.Text;
             string cmnd = this.CMTNhanVien.Text;
             string sdt = this.phoneNhanVien.Text;
+            string luong = this.textBox_Luong.Text;
             string gt = this.comboBox2.SelectedItem.ToString();
             bool check_addStaff= false;
             try
             {
-                
-                check_addStaff =  addStaff_Controller_.addStaff_Controller(ten, cmnd, sdt, gt);              
-                //
+                if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
+                    throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
+                check_addStaff =  addStaff_Controller._run(ten, cmnd, sdt, gt,luong);              
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
                 string pass1 = this.textBox_NhapLai.Text;
                 string staffID = NhanVien_DAL.Instance.getByCMND(cmnd).ID;
+                if (user.Length == 0 || pass.Length == 0 || pass1.Length == 0)
+                    throw new Exception("Hãy nhập đủ các trường thông tin tài khoản");
                 SingUp_Controller.signUp(user, pass, pass1,staffID);
                 MessageBox.Show("Thêm nhân viên thành công✌(◕‿-)✌");
                 this.Close();
@@ -60,28 +46,11 @@ namespace HotelBookingManagement
             {
                 if (check_addStaff)
                     NhanVien_DAL.Instance.xoaTheoId(NhanVien_DAL.Instance.getByCMND(cmnd).ID);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
-        private void phoneNhanVien_TextChanged(object sender, EventArgs e)
-        {
-            
-                if (System.Text.RegularExpressions.Regex.IsMatch(phoneNhanVien.Text, "[^0-9]"))
-                {
-                    phoneNhanVien.Text = phoneNhanVien.Text.Remove(phoneNhanVien.Text.Length - 1);
-                }
-            
-        }
-
-        private void CMTNhanVien_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(phoneNhanVien.Text, "[^0-9]"))
-            {
-                 CMTNhanVien.Text = CMTNhanVien.Text.Remove(CMTNhanVien.Text.Length - 1);
-            }
-        }
-
+        
         private void ButtonHuy_Click(object sender, EventArgs e)
         {
             this.Close();

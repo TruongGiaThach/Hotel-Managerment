@@ -56,6 +56,20 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists[0];
         }
+        public KhachHang getByID(string id)
+        {
+            List<KhachHang> lists = new List<KhachHang>();
+            string sqlQuery = "select * from KHACHHANG where ID = @id ";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { id });
+            foreach (DataRow i in data.Rows)
+            {
+                KhachHang item = new KhachHang(i);
+                lists.Add(item);
+            }
+            if (lists.Count != 0)
+                return lists[0];
+            else return null;
+        }
         public KhachHang getByCMND(string cmnd)
         {
             List<KhachHang> lists = new List<KhachHang>();
@@ -84,26 +98,29 @@ namespace HotelBookingManagement.Data_Access_Layers
         }
         public bool themKhachHang(string name, string email, string phoneNum, string address,string cmnd)
         {
-            string sqlQuery = "select * from KHACHHANG where CMND = @cmnd ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { cmnd });
-            if (data.Rows.Count > 0)
+            KhachHang khachHang = KhachHang_DAL.Instance.getByCMND(cmnd);
+            if (khachHang != null)
                 throw new Exception("CMND đã được sử dụng!!");
             //-----------
-
-            KhachHang tk = getByEmail("root@gmail.com");
-            int i = Int32.Parse((tk.SoDT));
+            string sqlQuery = "select * from MARKER where MARK_TABLE = 'KHACHHANG'";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                dataRow = data.Rows[0];
+            else throw new Exception("Không thể thêm khách hàng");
+            int i = Int32.Parse(dataRow["NUMBER"].ToString());
             i++;
             string id = "KH" + i.ToString();
-
             //--------------
             sqlQuery = "insert into KhachHang(ID, HOTEN, EMAIL, SODT, DIACHI, CMND) " +
                                 "values( @id , @tendn , @email , @phoneNum , @address , @cmnd  )";
             string[] parameter = new string[]
                 { id, name , email , phoneNum, address , cmnd };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result == 1)
+            if (result > 0)
             {
-                updatePhoneNumber("root@gmail.com", i.ToString());
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='KHACHHANG'";
+                DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
                 return true;
             }
             return false;

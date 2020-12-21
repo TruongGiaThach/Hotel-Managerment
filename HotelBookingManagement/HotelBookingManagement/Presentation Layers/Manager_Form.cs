@@ -23,6 +23,7 @@ namespace HotelBookingManagement
             InitializeComponent();
             this.Hide();
             Login_Form Login = new Login_Form(this);
+            this.loginForm = Login;
             Login.ShowDialog();
         }
         private void Manager_Form_Load(object sender, EventArgs e)
@@ -35,11 +36,18 @@ namespace HotelBookingManagement
             {
                 Application.Exit();
             }
-            this.DS_Phong = Phong_Data.GetDsPhong();
+            this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
             if (this.currentUser != null)
                 this.label1.Text = (this.currentUser.PhanQuyen.Contains("user")) ? "NHÂN VIÊN" : "QUẢN LÍ";
+            this.tabControl_Menu.SelectedIndex = 0;
         }
-
+        public void logout(object sender,EventArgs e)
+        {
+            this.currentUser = null;
+            this.Hide();
+            this.loginForm.ShowDialog();
+            this.Manager_Form_Load(sender, e);
+        }
         private void Mouse_enter(object sender, EventArgs e)
         {
 
@@ -70,7 +78,8 @@ namespace HotelBookingManagement
                     break;
                 case 1:
                     Data_path = "room";
-                    MdiChild = new Room_Show(ref DS_Phong)
+                    this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
+                    MdiChild = new Room_Show(ref DS_Phong,this.currentUser)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
@@ -108,7 +117,7 @@ namespace HotelBookingManagement
                     };
                     break;
                 case 7:
-                    MdiChild = new Setting()
+                    MdiChild = new Setting(this,this.loginForm)
                     {
                         MdiParent = this,
                         Parent = tabControl_Menu.TabPages[tabControl_Menu.SelectedIndex]
