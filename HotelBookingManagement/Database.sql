@@ -148,4 +148,62 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 
  insert into NHANVIEN values ('NV0','Admin','Admin','Admin','Admin','1-1-2020',9999,0)
  insert into TAIKHOAN values ('0', 'Admin', '21232F297A57A5A743894A0E4A801FC3', 'NV0', 'admin')
+ ---------------
+
+ create table CHITIEU
+ (
+	T_DIEN Money,
+	T_NUOC Money,
+	T_LUONGNV Money,
+	T_BAOTRI Money,
+	T_KHAC Money,
+	TONGCHI Money,
+	THANG int,
+	NAM int
+	CONSTRAINT ChiTieu_pk PRIMARY KEY(THANG, NAM)
+ )
+
+ create table THUCHI
+ (
+	T_THU Money,
+	T_CHI Money,
+	T_LOINHUAN Money,
+	THANG int,
+	NAM int
+	CONSTRAINT ThuChi_pk PRIMARY KEY(THANG, NAM)
+ )
+
+ create trigger cap_nhat_thu on HOADON
+for insert,delete,update
+as
+Begin
+		Update THUCHI
+			set T_THU = 
+				(select sum(DATHANHTOAN) 
+	 			from HOADON h
+         			where month(h.NGHD) = THUCHI.THANG and year(h.NGHD) = THUCHI.NAM        
+				)
+
+End
+
+create trigger cap_nhat_chi on CHITIEU
+for insert,delete,update
+as
+Begin
+	update THUCHI
+	set T_CHI = 
+		(select sum(TONGCHI) 
+		from CHITIEU c
+		where (c.THANG = THUCHI.THANG) and (c.NAM = THUCHI.NAM)
+		)
+End
+create trigger cap_nhat_loi_nhuan on THUCHI
+for insert,delete,update
+as
+Begin
+	update THUCHI
+	set T_LOINHUAN = inserted.T_THU - inserted.T_CHI
+	FROM inserted
+	where (THUCHI.NAM = inserted.NAM) and (THUCHI.THANG = inserted.THANG)
+End
 
