@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,10 +12,7 @@ namespace HotelBookingManagement
 
     public class DataHelper
     {
-        private string connectionSTR = @"Server=DESKTOP-7RNKS49;Database=PROJECT;
-                                    User Id=sa;Password=27894869;";
-        //DESKTOP-7RNKS49
-        //DESKTOP-D36TE7P
+        private string connectionSTR = ConfigurationManager.ConnectionStrings["con"].ToString();
         private static DataHelper instance;
 
         public static DataHelper Instance
