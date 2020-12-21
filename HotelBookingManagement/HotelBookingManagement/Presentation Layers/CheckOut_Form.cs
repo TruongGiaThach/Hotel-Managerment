@@ -142,7 +142,10 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(this.textBox7.Text) < 0)
+            int tienThanhToan = -1;
+            try { tienThanhToan = Int32.Parse(this.textBox7.Text); }
+            catch (Exception) { };
+            if (tienThanhToan < 0)
             {
                 MessageBox.Show("Tiền thanh toán chưa đủ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
