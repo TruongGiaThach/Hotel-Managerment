@@ -114,7 +114,11 @@ alter table HOADON
 	add constraint fk_HD_KH foreign key (MAKH) references KHACHHANG(ID)
 alter table HOADON
 	add constraint fk_HF_NV foreign key (MANV) references NHANVIEN(ID)
-
+	-----------------
+create table THUCHI
+(
+	
+)
 	-----------------
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
