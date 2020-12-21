@@ -46,10 +46,13 @@ namespace HotelBookingManagement.Table_Component
                     this.chart_Budget.Series[0].YValueMembers = "Tien_thu";
                     this.chart_Budget.Series[1].XValueMember = "Thang";
                     this.chart_Budget.Series[1].YValueMembers = "Tien_Chi";
-                    //this.chart_Budget.Series[2].XValueMember = "Thang";
-                    //for (int i = 0; i < this.chart_Budget.Series[0].Points.Count(); ++i) this.chart_Budget.Series[2].Points.AddXY(i+1 ,this.chart_Budget.Series[0].Points[i].YValues[0] - this.chart_Budget.Series[1].Points[i].YValues[0]);
-                    //this.chart_Budget.ChartAreas[0].AxisX.Maximum = 12;
-                    //this.chart_Budget.ChartAreas[0].AxisX.Minimum = 1;
+                    this.chart_Budget.Series[2].XValueMember = "thang";
+                    this.chart_Budget.Series[2].YValueMembers = "Loi_Nhuan";
+                    //secondary Axis
+                    this.chart_Budget.ChartAreas[0].AxisY2.MajorGrid.Enabled = false;
+                    this.chart_Budget.ChartAreas[0].AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+                    this.chart_Budget.ChartAreas[0].AxisY2.IsStartedFromZero = this.chart_Budget.ChartAreas[0].AxisY.IsStartedFromZero;
+                    this.chart_Budget.Series[2].YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
                     //set title
                     this.chart_Budget.ChartAreas[0].AxisX.Title = "Tháng";
                     this.chart_Budget.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
@@ -57,6 +60,9 @@ namespace HotelBookingManagement.Table_Component
                     this.chart_Budget.ChartAreas[0].AxisY.Title = "Thu Chi";
                     this.chart_Budget.ChartAreas[0].AxisY.TitleAlignment = System.Drawing.StringAlignment.Center;
                     this.chart_Budget.ChartAreas[0].AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    this.chart_Budget.ChartAreas[0].AxisY2.Title = "Lợi Nhuận";
+                    this.chart_Budget.ChartAreas[0].AxisY2.TitleAlignment = System.Drawing.StringAlignment.Center;
+                    this.chart_Budget.ChartAreas[0].AxisY2.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     break;
                 case "Years":
 

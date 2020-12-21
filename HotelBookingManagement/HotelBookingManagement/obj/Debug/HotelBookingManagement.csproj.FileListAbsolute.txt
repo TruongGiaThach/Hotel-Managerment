@@ -83,3 +83,13 @@ C:\Users\Admin\Documents\GitHub\HotelBookingManagement\HotelBookingManagement\ob
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Setting.resources
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Budget_Table.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Control.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Design.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Docking.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Renderer.dll
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Control.pdb
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Renderer.pdb
