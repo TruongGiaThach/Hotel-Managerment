@@ -148,4 +148,27 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
 
  insert into NHANVIEN values ('NV0','Admin','Admin','Admin','Admin','1-1-2020',9999,0)
  insert into TAIKHOAN values ('0', 'Admin', '21232F297A57A5A743894A0E4A801FC3', 'NV0', 'admin')
+ ---------------
+
+ create table CHITIEU
+ (
+	T_DIEN Money,
+	T_NUOC Money,
+	T_LUONGNV Money,
+	T_BAOTRI Money,
+	T_KHAC Money,
+	NG_THONGKE smalldatetime NOT NULL primary key
+ )
+
+ create table THUCHI
+ (
+	T_THU Money,
+	T_CHI Money,
+	T_LOINHUAN Money,
+	NG_THONGKE smalldatetime NOT NULL primary key
+ )
+
+ alter table THUCHI add Constraint NG_ThongKe foreign key (NG_THONGKE) references CHITIEU(NG_THONGKE)
+
+
 
