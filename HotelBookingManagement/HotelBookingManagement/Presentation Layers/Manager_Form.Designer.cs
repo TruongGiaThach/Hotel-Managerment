@@ -42,6 +42,12 @@ namespace HotelBookingManagement
             this.tabPage_TrangChu = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Button_CaiDat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Button_TaiKhoan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Button_NhanVien = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Button_DangKi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Button_ThongKe = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Button_KhachHang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Button_Phong = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage_Phong = new System.Windows.Forms.TabPage();
@@ -55,15 +61,9 @@ namespace HotelBookingManagement
             this.button_Back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.time_Control1 = new HotelBookingManagement.Presentation_Layers.Time_Control();
             this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ToolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.Button_DangKi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Button_KhachHang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Button_ThongKe = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Button_CaiDat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.time_Control1 = new HotelBookingManagement.Presentation_Layers.Time_Control();
             this.tabControl_Menu.SuspendLayout();
             this.tabPage_TrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -136,19 +136,257 @@ namespace HotelBookingManagement
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.Button_CaiDat);
-            this.panel2.Controls.Add(this.kryptonButton5);
-            this.panel2.Controls.Add(this.kryptonButton3);
-            this.panel2.Controls.Add(this.Button_DangKi);
-            this.panel2.Controls.Add(this.Button_ThongKe);
-            this.panel2.Controls.Add(this.Button_KhachHang);
-            this.panel2.Controls.Add(this.Button_Phong);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(734, 673);
             this.panel2.TabIndex = 2;
+            // 
+            // Button_CaiDat
+            // 
+            this.Button_CaiDat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_CaiDat.Location = new System.Drawing.Point(231, 460);
+            this.Button_CaiDat.Name = "Button_CaiDat";
+            this.Button_CaiDat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_CaiDat.Size = new System.Drawing.Size(198, 67);
+            this.Button_CaiDat.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_CaiDat.StateCommon.Border.Rounding = 8;
+            this.Button_CaiDat.StateNormal.Border.Color1 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_CaiDat.StateNormal.Border.Rounding = 7;
+            this.Button_CaiDat.StateNormal.Border.Width = 1;
+            this.Button_CaiDat.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_CaiDat.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_CaiDat.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_CaiDat.StatePressed.Border.Color1 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StatePressed.Border.Color2 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_CaiDat.StatePressed.Border.Rounding = 7;
+            this.Button_CaiDat.StatePressed.Border.Width = 1;
+            this.Button_CaiDat.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_CaiDat.StateTracking.Back.Color1 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StateTracking.Back.Color2 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StateTracking.Border.Color1 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
+            this.Button_CaiDat.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_CaiDat.StateTracking.Border.Rounding = 7;
+            this.Button_CaiDat.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_CaiDat.TabIndex = 8;
+            this.Button_CaiDat.Values.Text = "Cài Đặt";
+            this.Button_CaiDat.Click += new System.EventHandler(this.button_CaiDat_Click);
+            // 
+            // Button_TaiKhoan
+            // 
+            this.Button_TaiKhoan.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_TaiKhoan.Location = new System.Drawing.Point(365, 374);
+            this.Button_TaiKhoan.Name = "Button_TaiKhoan";
+            this.Button_TaiKhoan.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_TaiKhoan.Size = new System.Drawing.Size(198, 67);
+            this.Button_TaiKhoan.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_TaiKhoan.StateCommon.Border.Rounding = 8;
+            this.Button_TaiKhoan.StateNormal.Border.Color1 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_TaiKhoan.StateNormal.Border.Rounding = 7;
+            this.Button_TaiKhoan.StateNormal.Border.Width = 1;
+            this.Button_TaiKhoan.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_TaiKhoan.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_TaiKhoan.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_TaiKhoan.StatePressed.Border.Color1 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StatePressed.Border.Color2 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_TaiKhoan.StatePressed.Border.Rounding = 7;
+            this.Button_TaiKhoan.StatePressed.Border.Width = 1;
+            this.Button_TaiKhoan.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_TaiKhoan.StateTracking.Back.Color1 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StateTracking.Back.Color2 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StateTracking.Border.Color1 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StateTracking.Border.Color2 = System.Drawing.Color.Blue;
+            this.Button_TaiKhoan.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_TaiKhoan.StateTracking.Border.Rounding = 7;
+            this.Button_TaiKhoan.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_TaiKhoan.TabIndex = 8;
+            this.Button_TaiKhoan.Values.Text = "Tài Khoản";
+            this.Button_TaiKhoan.Click += new System.EventHandler(this.button_TaiKhoan_Click);
+            // 
+            // Button_NhanVien
+            // 
+            this.Button_NhanVien.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_NhanVien.Location = new System.Drawing.Point(365, 270);
+            this.Button_NhanVien.Name = "Button_NhanVien";
+            this.Button_NhanVien.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_NhanVien.Size = new System.Drawing.Size(198, 67);
+            this.Button_NhanVien.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_NhanVien.StateCommon.Border.Rounding = 8;
+            this.Button_NhanVien.StateNormal.Border.Color1 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_NhanVien.StateNormal.Border.Rounding = 7;
+            this.Button_NhanVien.StateNormal.Border.Width = 1;
+            this.Button_NhanVien.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_NhanVien.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Button_NhanVien.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Button_NhanVien.StatePressed.Border.Color1 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StatePressed.Border.Color2 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_NhanVien.StatePressed.Border.Rounding = 7;
+            this.Button_NhanVien.StatePressed.Border.Width = 1;
+            this.Button_NhanVien.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_NhanVien.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
+            this.Button_NhanVien.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_NhanVien.StateTracking.Border.Rounding = 7;
+            this.Button_NhanVien.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_NhanVien.TabIndex = 8;
+            this.Button_NhanVien.Values.Text = "Nhân Viên";
+            this.Button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
+            // 
+            // Button_DangKi
+            // 
+            this.Button_DangKi.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_DangKi.Location = new System.Drawing.Point(365, 168);
+            this.Button_DangKi.Name = "Button_DangKi";
+            this.Button_DangKi.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_DangKi.Size = new System.Drawing.Size(198, 67);
+            this.Button_DangKi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_DangKi.StateCommon.Border.Rounding = 8;
+            this.Button_DangKi.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_DangKi.StateNormal.Border.Rounding = 7;
+            this.Button_DangKi.StateNormal.Border.Width = 1;
+            this.Button_DangKi.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_DangKi.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_DangKi.StatePressed.Border.Rounding = 7;
+            this.Button_DangKi.StatePressed.Border.Width = 1;
+            this.Button_DangKi.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_DangKi.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Button_DangKi.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_DangKi.StateTracking.Border.Rounding = 7;
+            this.Button_DangKi.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_DangKi.TabIndex = 8;
+            this.Button_DangKi.Values.Text = "Đăng Kí";
+            this.Button_DangKi.Click += new System.EventHandler(this.button_HoaDon_Click);
+            // 
+            // Button_ThongKe
+            // 
+            this.Button_ThongKe.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_ThongKe.Location = new System.Drawing.Point(102, 374);
+            this.Button_ThongKe.Name = "Button_ThongKe";
+            this.Button_ThongKe.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_ThongKe.Size = new System.Drawing.Size(198, 67);
+            this.Button_ThongKe.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_ThongKe.StateCommon.Border.Rounding = 8;
+            this.Button_ThongKe.StateNormal.Border.Color1 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_ThongKe.StateNormal.Border.Rounding = 7;
+            this.Button_ThongKe.StateNormal.Border.Width = 1;
+            this.Button_ThongKe.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ThongKe.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Button_ThongKe.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Button_ThongKe.StatePressed.Border.Color1 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StatePressed.Border.Color2 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_ThongKe.StatePressed.Border.Rounding = 7;
+            this.Button_ThongKe.StatePressed.Border.Width = 1;
+            this.Button_ThongKe.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ThongKe.StateTracking.Back.Color1 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StateTracking.Back.Color2 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StateTracking.Border.Color1 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StateTracking.Border.Color2 = System.Drawing.Color.Cyan;
+            this.Button_ThongKe.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_ThongKe.StateTracking.Border.Rounding = 7;
+            this.Button_ThongKe.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ThongKe.TabIndex = 8;
+            this.Button_ThongKe.Values.Text = "Thống Kê";
+            this.Button_ThongKe.Click += new System.EventHandler(this.button_HeThong_Click);
+            // 
+            // Button_KhachHang
+            // 
+            this.Button_KhachHang.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.Button_KhachHang.Location = new System.Drawing.Point(102, 270);
+            this.Button_KhachHang.Name = "Button_KhachHang";
+            this.Button_KhachHang.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Button_KhachHang.Size = new System.Drawing.Size(198, 67);
+            this.Button_KhachHang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_KhachHang.StateCommon.Border.Rounding = 8;
+            this.Button_KhachHang.StateNormal.Border.Color1 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_KhachHang.StateNormal.Border.Rounding = 7;
+            this.Button_KhachHang.StateNormal.Border.Width = 1;
+            this.Button_KhachHang.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_KhachHang.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Button_KhachHang.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Button_KhachHang.StatePressed.Border.Color1 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StatePressed.Border.Color2 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_KhachHang.StatePressed.Border.Rounding = 7;
+            this.Button_KhachHang.StatePressed.Border.Width = 1;
+            this.Button_KhachHang.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_KhachHang.StateTracking.Back.Color1 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StateTracking.Back.Color2 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StateTracking.Border.Color1 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StateTracking.Border.Color2 = System.Drawing.Color.Yellow;
+            this.Button_KhachHang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Button_KhachHang.StateTracking.Border.Rounding = 7;
+            this.Button_KhachHang.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_KhachHang.TabIndex = 8;
+            this.Button_KhachHang.Values.Text = "Khách Hàng";
+            this.Button_KhachHang.Click += new System.EventHandler(this.button_KhachHang_Click);
             // 
             // Button_Phong
             // 
@@ -336,252 +574,6 @@ namespace HotelBookingManagement
             this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 1;
             // 
-            // Button_DangKi
-            // 
-            this.Button_DangKi.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.Button_DangKi.Location = new System.Drawing.Point(365, 168);
-            this.Button_DangKi.Name = "Button_DangKi";
-            this.Button_DangKi.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Button_DangKi.Size = new System.Drawing.Size(198, 67);
-            this.Button_DangKi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_DangKi.StateCommon.Border.Rounding = 8;
-            this.Button_DangKi.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_DangKi.StateNormal.Border.Rounding = 7;
-            this.Button_DangKi.StateNormal.Border.Width = 1;
-            this.Button_DangKi.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_DangKi.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_DangKi.StatePressed.Border.Rounding = 7;
-            this.Button_DangKi.StatePressed.Border.Width = 1;
-            this.Button_DangKi.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_DangKi.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Button_DangKi.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_DangKi.StateTracking.Border.Rounding = 7;
-            this.Button_DangKi.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_DangKi.TabIndex = 8;
-            this.Button_DangKi.Values.Text = "Đăng Kí";
-            this.Button_DangKi.Click += new System.EventHandler(this.button_HoaDon_Click);
-            // 
-            // Button_KhachHang
-            // 
-            this.Button_KhachHang.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.Button_KhachHang.Location = new System.Drawing.Point(102, 270);
-            this.Button_KhachHang.Name = "Button_KhachHang";
-            this.Button_KhachHang.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Button_KhachHang.Size = new System.Drawing.Size(198, 67);
-            this.Button_KhachHang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_KhachHang.StateCommon.Border.Rounding = 8;
-            this.Button_KhachHang.StateNormal.Border.Color1 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_KhachHang.StateNormal.Border.Rounding = 7;
-            this.Button_KhachHang.StateNormal.Border.Width = 1;
-            this.Button_KhachHang.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_KhachHang.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Button_KhachHang.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Button_KhachHang.StatePressed.Border.Color1 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StatePressed.Border.Color2 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_KhachHang.StatePressed.Border.Rounding = 7;
-            this.Button_KhachHang.StatePressed.Border.Width = 1;
-            this.Button_KhachHang.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_KhachHang.StateTracking.Back.Color1 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StateTracking.Back.Color2 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StateTracking.Border.Color1 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StateTracking.Border.Color2 = System.Drawing.Color.Yellow;
-            this.Button_KhachHang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_KhachHang.StateTracking.Border.Rounding = 7;
-            this.Button_KhachHang.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_KhachHang.TabIndex = 8;
-            this.Button_KhachHang.Values.Text = "Khách Hàng";
-            this.Button_KhachHang.Click += new System.EventHandler(this.button_KhachHang_Click);
-            // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.kryptonButton3.Location = new System.Drawing.Point(365, 270);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton3.Size = new System.Drawing.Size(198, 67);
-            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateCommon.Border.Rounding = 8;
-            this.kryptonButton3.StateNormal.Border.Color1 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateNormal.Border.Rounding = 7;
-            this.kryptonButton3.StateNormal.Border.Width = 1;
-            this.kryptonButton3.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton3.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton3.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton3.StatePressed.Border.Color1 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StatePressed.Border.Color2 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StatePressed.Border.Rounding = 7;
-            this.kryptonButton3.StatePressed.Border.Width = 1;
-            this.kryptonButton3.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton3.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
-            this.kryptonButton3.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateTracking.Border.Rounding = 7;
-            this.kryptonButton3.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton3.TabIndex = 8;
-            this.kryptonButton3.Values.Text = "Nhân Viên";
-            this.kryptonButton3.Click += new System.EventHandler(this.button_NhanVien_Click);
-            // 
-            // Button_ThongKe
-            // 
-            this.Button_ThongKe.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.Button_ThongKe.Location = new System.Drawing.Point(102, 374);
-            this.Button_ThongKe.Name = "Button_ThongKe";
-            this.Button_ThongKe.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Button_ThongKe.Size = new System.Drawing.Size(198, 67);
-            this.Button_ThongKe.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_ThongKe.StateCommon.Border.Rounding = 8;
-            this.Button_ThongKe.StateNormal.Border.Color1 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_ThongKe.StateNormal.Border.Rounding = 7;
-            this.Button_ThongKe.StateNormal.Border.Width = 1;
-            this.Button_ThongKe.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ThongKe.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Button_ThongKe.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Button_ThongKe.StatePressed.Border.Color1 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StatePressed.Border.Color2 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_ThongKe.StatePressed.Border.Rounding = 7;
-            this.Button_ThongKe.StatePressed.Border.Width = 1;
-            this.Button_ThongKe.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ThongKe.StateTracking.Back.Color1 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StateTracking.Back.Color2 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StateTracking.Border.Color1 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StateTracking.Border.Color2 = System.Drawing.Color.Cyan;
-            this.Button_ThongKe.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_ThongKe.StateTracking.Border.Rounding = 7;
-            this.Button_ThongKe.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ThongKe.TabIndex = 8;
-            this.Button_ThongKe.Values.Text = "Thống Kê";
-            this.Button_ThongKe.Click += new System.EventHandler(this.button_HeThong_Click);
-            // 
-            // kryptonButton5
-            // 
-            this.kryptonButton5.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.kryptonButton5.Location = new System.Drawing.Point(365, 374);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton5.Size = new System.Drawing.Size(198, 67);
-            this.kryptonButton5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateCommon.Border.Rounding = 8;
-            this.kryptonButton5.StateNormal.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateNormal.Border.Rounding = 7;
-            this.kryptonButton5.StateNormal.Border.Width = 1;
-            this.kryptonButton5.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonButton5.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonButton5.StatePressed.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StatePressed.Border.Color2 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StatePressed.Border.Rounding = 7;
-            this.kryptonButton5.StatePressed.Border.Width = 1;
-            this.kryptonButton5.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.Blue;
-            this.kryptonButton5.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateTracking.Border.Rounding = 7;
-            this.kryptonButton5.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.TabIndex = 8;
-            this.kryptonButton5.Values.Text = "Tài Khoản";
-            this.kryptonButton5.Click += new System.EventHandler(this.button_TaiKhoan_Click);
-            // 
-            // Button_CaiDat
-            // 
-            this.Button_CaiDat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.Button_CaiDat.Location = new System.Drawing.Point(231, 460);
-            this.Button_CaiDat.Name = "Button_CaiDat";
-            this.Button_CaiDat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Button_CaiDat.Size = new System.Drawing.Size(198, 67);
-            this.Button_CaiDat.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_CaiDat.StateCommon.Border.Rounding = 8;
-            this.Button_CaiDat.StateNormal.Border.Color1 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_CaiDat.StateNormal.Border.Rounding = 7;
-            this.Button_CaiDat.StateNormal.Border.Width = 1;
-            this.Button_CaiDat.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_CaiDat.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Button_CaiDat.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Button_CaiDat.StatePressed.Border.Color1 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StatePressed.Border.Color2 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_CaiDat.StatePressed.Border.Rounding = 7;
-            this.Button_CaiDat.StatePressed.Border.Width = 1;
-            this.Button_CaiDat.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_CaiDat.StateTracking.Back.Color1 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StateTracking.Back.Color2 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StateTracking.Border.Color1 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
-            this.Button_CaiDat.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Button_CaiDat.StateTracking.Border.Rounding = 7;
-            this.Button_CaiDat.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_CaiDat.TabIndex = 8;
-            this.Button_CaiDat.Values.Text = "Cài Đặt";
-            this.Button_CaiDat.Click += new System.EventHandler(this.button_CaiDat_Click);
-            // 
             // time_Control1
             // 
             this.time_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -593,7 +585,6 @@ namespace HotelBookingManagement
             // 
             // Manager_Form
             // 
-           
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -622,6 +613,62 @@ namespace HotelBookingManagement
         }
 
         #endregion
+
+        #region add tabpage
+
+        public void InitTabPage(string UserPiot)
+        {
+            this.tabControl_Menu.TabPages.Clear();
+            switch (UserPiot)
+            {
+                case "user":
+                    this.tabControl_Menu.Controls.Add(this.tabPage_TrangChu);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Phong);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Oder_Room);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Customer);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Settings);
+                    break;
+                case "admin":
+                    this.tabControl_Menu.Controls.Add(this.tabPage_TrangChu);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Phong);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Oder_Room);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Customer);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_NhanVien);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_ThongKe);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_TaiKhoan);
+                    this.tabControl_Menu.Controls.Add(this.tabPage_Settings);
+                    break;
+            }
+        }
+
+        public void InitTabButton(string UserPiot)
+        {
+            this.panel2.Controls.Clear();
+            switch (UserPiot)
+            {
+                case "user":
+                    this.panel2.Controls.Add(this.pictureBox1);
+                    this.panel2.Controls.Add(this.Button_Phong);
+                    this.panel2.Controls.Add(this.Button_KhachHang);
+                    this.panel2.Controls.Add(this.Button_DangKi);
+                    this.panel2.Controls.Add(this.Button_CaiDat);
+                    this.Button_CaiDat.Location = new System.Drawing.Point(365, 270);
+                    break;
+                case "admin":
+                    this.panel2.Controls.Add(this.pictureBox1);
+                    this.panel2.Controls.Add(this.Button_Phong);
+                    this.panel2.Controls.Add(this.Button_KhachHang);
+                    this.panel2.Controls.Add(this.Button_ThongKe);
+                    this.panel2.Controls.Add(this.Button_DangKi);
+                    this.panel2.Controls.Add(this.Button_TaiKhoan);
+                    this.panel2.Controls.Add(this.Button_NhanVien);
+                    this.panel2.Controls.Add(this.Button_CaiDat);
+                    this.Button_CaiDat.Location = new System.Drawing.Point(231, 460);
+                    break;
+            }
+        }
+
+        #endregion
         private ImageList imageList_Menu_Icon;
         private TabControl tabControl_Menu;
         private TabPage tabPage_TrangChu;
@@ -643,8 +690,8 @@ namespace HotelBookingManagement
         private ToolTip ToolTip1;
         private ToolTip ToolTip2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Button_Phong;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Button_TaiKhoan;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Button_NhanVien;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Button_DangKi;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Button_ThongKe;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Button_KhachHang;
