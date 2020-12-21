@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,10 @@ namespace HotelBookingManagement
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
+            //GraphicsPath gp = new GraphicsPath();
+            //gp.AddEllipse(1, 1, button_Phong.Width - 4, button_Phong.Height - 4);
+            //button_Phong.Region = new Region(gp);
+            //gp.Dispose();
             if (this.currentUser == null)
             {
                 Application.Exit();

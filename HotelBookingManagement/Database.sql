@@ -5,7 +5,7 @@ create table TAIKHOAN
 	ID varchar(5) NOT NULL PRIMARY KEY,
 	TENDN varchar(40)NOT NULL default 'tk_khach',
 	MATKHAU varchar(40) NOT NULL default 'thach',
-	MAKH varchar(5),
+	MANV varchar(5),
 	PHANQUYEN varchar(20) NOT NULL,
 )
 		-----------------------------
@@ -112,13 +112,6 @@ alter table HOADON
 	add constraint df_gt2 default '0' for DATHANHTOAN
 alter table HOADON
 	add constraint fk_HD_KH foreign key (MAKH) references KHACHHANG(ID)
-alter table HOADON
-	add constraint fk_HF_NV foreign key (MANV) references NHANVIEN(ID)
-	-----------------
-create table THUCHI
-(
-	
-)
 	-----------------
 create procedure us_Login
 (@user varchar(40), @pass varchar(40))
@@ -152,4 +145,7 @@ update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
  insert into MARKER values ('KHACHHANG','0')
  insert into MARKER values ('NHANVIEN','0')
  insert into MARKER values ('TAIKHOAN','0')
+
+ insert into NHANVIEN values ('NV0','Admin','Admin','Admin','Admin','1-1-2020',9999,0)
+ insert into TAIKHOAN values ('0', 'Admin', '21232F297A57A5A743894A0E4A801FC3', 'NV0', 'admin')
 

@@ -82,8 +82,8 @@ namespace HotelBookingManagement.Data_Access_Layers
         }
         public bool updatePrice(string id, string gia)
         {
-            string sqlQuery = "exec room_Update @id , @gia ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id, gia });
+            string sqlQuery = "update PHONG set GIAPHONG = @status where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {gia,id });
             return result > 0;
         }
         public bool updateStatus(string id, string status)
