@@ -35,7 +35,6 @@ D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\b
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.pdb
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Time_Control.resources
-D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Staff_Information.resources
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csproj.CopyComplete
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.exe
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\HotelBookingManagement.exe.config
@@ -84,3 +83,6 @@ C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\Hotel
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.CheckOut_Form.resources
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Room_Information.resources
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.PrintBill.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.CheckOut_Form.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.PrintBill.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.Room_Information.resources
