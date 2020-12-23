@@ -37,6 +37,7 @@ namespace HotelBookingManagement
                 Application.Exit();
             }
             this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
+            if (this.currentUser != null)
             switch((this.currentUser.PhanQuyen))
             {
                 case "user":
