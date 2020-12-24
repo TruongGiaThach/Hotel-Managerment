@@ -97,3 +97,4 @@ D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\b
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Control.pdb
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Renderer.pdb
 D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Budget_Table.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Chart_Budget.resources

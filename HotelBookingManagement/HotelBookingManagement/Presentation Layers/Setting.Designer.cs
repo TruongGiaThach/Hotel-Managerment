@@ -131,7 +131,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 45);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Đăng xuất";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -172,6 +172,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(196, 35);
             this.textBox5.TabIndex = 7;
+            this.textBox5.TabStop = false;
             // 
             // label6
             // 
@@ -191,6 +192,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(196, 35);
             this.textBox4.TabIndex = 6;
+            this.textBox4.TabStop = false;
             // 
             // label5
             // 
@@ -238,6 +240,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(196, 35);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TabStop = false;
             // 
             // textBox3
             // 
@@ -247,6 +250,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(196, 35);
             this.textBox3.TabIndex = 5;
+            this.textBox3.TabStop = false;
             // 
             // textBox1
             // 
@@ -256,6 +260,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(196, 35);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TabStop = false;
             // 
             // label3
             // 

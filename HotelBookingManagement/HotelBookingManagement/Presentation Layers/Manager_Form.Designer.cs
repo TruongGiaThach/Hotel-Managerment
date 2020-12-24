@@ -42,6 +42,13 @@ namespace HotelBookingManagement
             this.tabPage_TrangChu = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tabPage_Phong = new System.Windows.Forms.TabPage();
+            this.tabPage_Oder_Room = new System.Windows.Forms.TabPage();
+            this.tabPage_Customer = new System.Windows.Forms.TabPage();
+            this.tabPage_NhanVien = new System.Windows.Forms.TabPage();
+            this.tabPage_ThongKe = new System.Windows.Forms.TabPage();
+            this.tabPage_TaiKhoan = new System.Windows.Forms.TabPage();
+            this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.Button_CaiDat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Button_TaiKhoan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Button_NhanVien = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -50,13 +57,6 @@ namespace HotelBookingManagement
             this.Button_KhachHang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Button_Phong = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage_Phong = new System.Windows.Forms.TabPage();
-            this.tabPage_Oder_Room = new System.Windows.Forms.TabPage();
-            this.tabPage_Customer = new System.Windows.Forms.TabPage();
-            this.tabPage_NhanVien = new System.Windows.Forms.TabPage();
-            this.tabPage_ThongKe = new System.Windows.Forms.TabPage();
-            this.tabPage_TaiKhoan = new System.Windows.Forms.TabPage();
-            this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.button_Refesh = new System.Windows.Forms.Button();
             this.button_Back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,7 +67,6 @@ namespace HotelBookingManagement
             this.tabControl_Menu.SuspendLayout();
             this.tabPage_TrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +141,91 @@ namespace HotelBookingManagement
             this.panel2.Size = new System.Drawing.Size(734, 673);
             this.panel2.TabIndex = 2;
             // 
+            // tabPage_Phong
+            // 
+            this.tabPage_Phong.AutoScroll = true;
+            this.tabPage_Phong.ImageIndex = 1;
+            this.tabPage_Phong.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_Phong.Name = "tabPage_Phong";
+            this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_Phong.TabIndex = 1;
+            this.tabPage_Phong.Text = "Phòng";
+            this.tabPage_Phong.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Oder_Room
+            // 
+            this.tabPage_Oder_Room.AutoScroll = true;
+            this.tabPage_Oder_Room.ImageIndex = 2;
+            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
+            this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_Oder_Room.TabIndex = 9;
+            this.tabPage_Oder_Room.Text = "Đăng kí";
+            this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Customer
+            // 
+            this.tabPage_Customer.AutoScroll = true;
+            this.tabPage_Customer.ImageIndex = 3;
+            this.tabPage_Customer.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_Customer.Name = "tabPage_Customer";
+            this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_Customer.TabIndex = 10;
+            this.tabPage_Customer.Text = "Khách Hàng";
+            this.tabPage_Customer.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_NhanVien
+            // 
+            this.tabPage_NhanVien.AutoScroll = true;
+            this.tabPage_NhanVien.ImageIndex = 4;
+            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_NhanVien.Name = "tabPage_NhanVien";
+            this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_NhanVien.TabIndex = 11;
+            this.tabPage_NhanVien.Text = "Nhân Viên";
+            this.tabPage_NhanVien.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_ThongKe
+            // 
+            this.tabPage_ThongKe.AutoScroll = true;
+            this.tabPage_ThongKe.ImageIndex = 5;
+            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_ThongKe.Name = "tabPage_ThongKe";
+            this.tabPage_ThongKe.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_ThongKe.TabIndex = 12;
+            this.tabPage_ThongKe.Text = "Thống Kê";
+            this.tabPage_ThongKe.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_TaiKhoan
+            // 
+            this.tabPage_TaiKhoan.AutoScroll = true;
+            this.tabPage_TaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage_TaiKhoan.ImageIndex = 6;
+            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
+            this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_TaiKhoan.TabIndex = 13;
+            this.tabPage_TaiKhoan.Text = "Tài Khoản";
+            this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Settings
+            // 
+            this.tabPage_Settings.AutoScroll = true;
+            this.tabPage_Settings.ImageIndex = 7;
+            this.tabPage_Settings.Location = new System.Drawing.Point(4, 44);
+            this.tabPage_Settings.Name = "tabPage_Settings";
+            this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 673);
+            this.tabPage_Settings.TabIndex = 14;
+            this.tabPage_Settings.Text = "Settings";
+            this.tabPage_Settings.UseVisualStyleBackColor = true;
+            // 
             // Button_CaiDat
             // 
             this.Button_CaiDat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
@@ -179,7 +263,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_CaiDat.StateTracking.Border.Rounding = 7;
             this.Button_CaiDat.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_CaiDat.TabIndex = 8;
+            this.Button_CaiDat.TabIndex = 7;
             this.Button_CaiDat.Values.Text = "Cài Đặt";
             this.Button_CaiDat.Click += new System.EventHandler(this.button_CaiDat_Click);
             // 
@@ -220,7 +304,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_TaiKhoan.StateTracking.Border.Rounding = 7;
             this.Button_TaiKhoan.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_TaiKhoan.TabIndex = 8;
+            this.Button_TaiKhoan.TabIndex = 6;
             this.Button_TaiKhoan.Values.Text = "Tài Khoản";
             this.Button_TaiKhoan.Click += new System.EventHandler(this.button_TaiKhoan_Click);
             // 
@@ -261,7 +345,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_NhanVien.StateTracking.Border.Rounding = 7;
             this.Button_NhanVien.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_NhanVien.TabIndex = 8;
+            this.Button_NhanVien.TabIndex = 5;
             this.Button_NhanVien.Values.Text = "Nhân Viên";
             this.Button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
@@ -302,7 +386,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_DangKi.StateTracking.Border.Rounding = 7;
             this.Button_DangKi.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_DangKi.TabIndex = 8;
+            this.Button_DangKi.TabIndex = 4;
             this.Button_DangKi.Values.Text = "Đăng Kí";
             this.Button_DangKi.Click += new System.EventHandler(this.button_HoaDon_Click);
             // 
@@ -343,7 +427,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_ThongKe.StateTracking.Border.Rounding = 7;
             this.Button_ThongKe.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ThongKe.TabIndex = 8;
+            this.Button_ThongKe.TabIndex = 3;
             this.Button_ThongKe.Values.Text = "Thống Kê";
             this.Button_ThongKe.Click += new System.EventHandler(this.button_HeThong_Click);
             // 
@@ -384,7 +468,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_KhachHang.StateTracking.Border.Rounding = 7;
             this.Button_KhachHang.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_KhachHang.TabIndex = 8;
+            this.Button_KhachHang.TabIndex = 2;
             this.Button_KhachHang.Values.Text = "Khách Hàng";
             this.Button_KhachHang.Click += new System.EventHandler(this.button_KhachHang_Click);
             // 
@@ -425,7 +509,7 @@ namespace HotelBookingManagement
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Button_Phong.StateTracking.Border.Rounding = 7;
             this.Button_Phong.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Phong.TabIndex = 8;
+            this.Button_Phong.TabIndex = 1;
             this.Button_Phong.Values.Text = "Phòng";
             this.Button_Phong.Click += new System.EventHandler(this.button_Phong_Click);
             // 
@@ -437,93 +521,8 @@ namespace HotelBookingManagement
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // tabPage_Phong
-            // 
-            this.tabPage_Phong.AutoScroll = true;
-            this.tabPage_Phong.ImageIndex = 1;
-            this.tabPage_Phong.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_Phong.Name = "tabPage_Phong";
-            this.tabPage_Phong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Phong.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_Phong.TabIndex = 1;
-            this.tabPage_Phong.Text = "Phòng";
-            this.tabPage_Phong.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Oder_Room
-            // 
-            this.tabPage_Oder_Room.AutoScroll = true;
-            this.tabPage_Oder_Room.ImageIndex = 2;
-            this.tabPage_Oder_Room.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_Oder_Room.Name = "tabPage_Oder_Room";
-            this.tabPage_Oder_Room.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Oder_Room.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_Oder_Room.TabIndex = 2;
-            this.tabPage_Oder_Room.Text = "Đăng kí";
-            this.tabPage_Oder_Room.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Customer
-            // 
-            this.tabPage_Customer.AutoScroll = true;
-            this.tabPage_Customer.ImageIndex = 3;
-            this.tabPage_Customer.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_Customer.Name = "tabPage_Customer";
-            this.tabPage_Customer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Customer.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_Customer.TabIndex = 3;
-            this.tabPage_Customer.Text = "Khách Hàng";
-            this.tabPage_Customer.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_NhanVien
-            // 
-            this.tabPage_NhanVien.AutoScroll = true;
-            this.tabPage_NhanVien.ImageIndex = 4;
-            this.tabPage_NhanVien.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_NhanVien.Name = "tabPage_NhanVien";
-            this.tabPage_NhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_NhanVien.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_NhanVien.TabIndex = 4;
-            this.tabPage_NhanVien.Text = "Nhân Viên";
-            this.tabPage_NhanVien.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_ThongKe
-            // 
-            this.tabPage_ThongKe.AutoScroll = true;
-            this.tabPage_ThongKe.ImageIndex = 5;
-            this.tabPage_ThongKe.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_ThongKe.Name = "tabPage_ThongKe";
-            this.tabPage_ThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThongKe.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_ThongKe.TabIndex = 5;
-            this.tabPage_ThongKe.Text = "Thống Kê";
-            this.tabPage_ThongKe.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_TaiKhoan
-            // 
-            this.tabPage_TaiKhoan.AutoScroll = true;
-            this.tabPage_TaiKhoan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage_TaiKhoan.ImageIndex = 6;
-            this.tabPage_TaiKhoan.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_TaiKhoan.Name = "tabPage_TaiKhoan";
-            this.tabPage_TaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TaiKhoan.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_TaiKhoan.TabIndex = 6;
-            this.tabPage_TaiKhoan.Text = "Tài Khoản";
-            this.tabPage_TaiKhoan.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Settings
-            // 
-            this.tabPage_Settings.AutoScroll = true;
-            this.tabPage_Settings.ImageIndex = 7;
-            this.tabPage_Settings.Location = new System.Drawing.Point(4, 44);
-            this.tabPage_Settings.Name = "tabPage_Settings";
-            this.tabPage_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Settings.Size = new System.Drawing.Size(1372, 673);
-            this.tabPage_Settings.TabIndex = 6;
-            this.tabPage_Settings.Text = "Settings";
-            this.tabPage_Settings.UseVisualStyleBackColor = true;
             // 
             // button_Refesh
             // 
@@ -534,7 +533,7 @@ namespace HotelBookingManagement
             this.button_Refesh.Location = new System.Drawing.Point(63, 2);
             this.button_Refesh.Name = "button_Refesh";
             this.button_Refesh.Size = new System.Drawing.Size(51, 49);
-            this.button_Refesh.TabIndex = 0;
+            this.button_Refesh.TabIndex = 20;
             this.ToolTip1.SetToolTip(this.button_Refesh, "Tải lại trang này");
             this.button_Refesh.UseVisualStyleBackColor = true;
             this.button_Refesh.Click += new System.EventHandler(this.Button_Refesh_Click);
@@ -548,7 +547,7 @@ namespace HotelBookingManagement
             this.button_Back.Location = new System.Drawing.Point(4, 3);
             this.button_Back.Name = "button_Back";
             this.button_Back.Size = new System.Drawing.Size(53, 49);
-            this.button_Back.TabIndex = 0;
+            this.button_Back.TabIndex = 21;
             this.ToolTip1.SetToolTip(this.button_Back, "Về trang chủ");
             this.button_Back.UseVisualStyleBackColor = true;
             this.button_Back.Click += new System.EventHandler(this.Button_Back_Click);
@@ -563,7 +562,7 @@ namespace HotelBookingManagement
             this.panel1.Location = new System.Drawing.Point(0, 721);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1380, 55);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -572,7 +571,7 @@ namespace HotelBookingManagement
             this.label1.Location = new System.Drawing.Point(641, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 29);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             // 
             // time_Control1
             // 
@@ -604,7 +603,6 @@ namespace HotelBookingManagement
             this.tabControl_Menu.ResumeLayout(false);
             this.tabPage_TrangChu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

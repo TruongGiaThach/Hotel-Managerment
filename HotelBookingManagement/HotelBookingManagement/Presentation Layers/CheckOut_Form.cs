@@ -150,8 +150,11 @@ namespace HotelBookingManagement.Presentation_Layers
             if (CheckOut_Controller._Execute(this.dsPhong, this.dsDangki, this.textBox5.Text, this.hd, this.tk.MaNV))
             {
                 MessageBox.Show("Thanh toán thành công", "Status");
-                PrintBill printBill = new PrintBill(this.dsPhong, this.dsDangki, this.textBox5.Text, this.hd,richTextBox1.Text,textBox1.Text);
-                printBill.ShowDialog();
+                if (MessageBox.Show("Bạn có muốn in hóa đơn?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    PrintBill printBill = new PrintBill(this.dsPhong, this.dsDangki, this.textBox5.Text, this.hd, richTextBox1.Text, textBox1.Text);
+                    printBill.ShowDialog();
+                }
             }
             else MessageBox.Show("Thanh toán không thành công", "Status");
             this.Close();

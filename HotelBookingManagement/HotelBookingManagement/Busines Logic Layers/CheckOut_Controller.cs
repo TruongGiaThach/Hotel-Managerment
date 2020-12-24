@@ -40,11 +40,14 @@ namespace HotelBookingManagement.Busines_Logic_Layers
                 {
                     Phong_DAL.Instance.updateStatus(phong.ID, "trong");
                     Phong_DAL.Instance.updateDeposit(phong.ID, "0");
+                    phong.TrangThai = "trong";
+                    phong.TienCoc = 0;
                 }
                 foreach(DangKi dangKi in dangKis)
                 {
                     DatPhong_DAL.Instance.updateStatus(dangKi.ID, "da thanh toan");
                 }
+                ThuChi_DAL.Instance.CheckNgayThongKe(DateTime.Now.Month.ToString(), DateTime.Now.Year.ToString());
                 HoaDon_DAL.Instance.updatePaid(hoaDon.ID, tongTien);
                 HoaDon_DAL.Instance.updateStaffID(hoaDon.ID, maNV);
                 HoaDon_DAL.Instance.updateInvoiceDate(hoaDon.ID, DateTime.Now.ToString());
