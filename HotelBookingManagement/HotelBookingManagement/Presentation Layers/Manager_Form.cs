@@ -36,22 +36,24 @@ namespace HotelBookingManagement
             {
                 Application.Exit();
             }
-            this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
-            if (this.currentUser != null)
-            switch((this.currentUser.PhanQuyen))
+            else
             {
-                case "user":
-                    this.label1.Text = "NHÂN VIÊN";
-                    this.InitTabPage("user");
-                    this.InitTabButton("user");
-                    break;
-                case "admin":
-                    this.label1.Text = "QUẢN LÍ";
-                    this.InitTabPage("admin");
-                    this.InitTabButton("admin");
-                    break;
+                this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
+                switch ((this.currentUser.PhanQuyen))
+                {
+                    case "user":
+                        this.label1.Text = "NHÂN VIÊN";
+                        this.InitTabPage("user");
+                        this.InitTabButton("user");
+                        break;
+                    case "admin":
+                        this.label1.Text = "QUẢN LÍ";
+                        this.InitTabPage("admin");
+                        this.InitTabButton("admin");
+                        break;
+                }
+                this.tabControl_Menu.SelectedIndex = 0;
             }
-            this.tabControl_Menu.SelectedIndex = 0;
         }
         public void logout(object sender,EventArgs e)
         {
@@ -202,5 +204,6 @@ namespace HotelBookingManagement
         {
 
         }
+
     }
 }

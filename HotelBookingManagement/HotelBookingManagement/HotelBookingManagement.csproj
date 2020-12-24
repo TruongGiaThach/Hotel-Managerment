@@ -77,8 +77,10 @@
     <Compile Include="Busines Logic Layers\CancelReservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\CheckOut_Controller.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\HoaDon.cs" />
+    <Compile Include="Busines Logic Layers\ProfitStatistics_Controller.cs" />
     <Compile Include="Busines Logic Layers\Reservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\SingUp_Controller.cs" />
+    <Compile Include="Data Access Layers\ChiTieu_DAL.cs" />
     <Compile Include="Data Access Layers\DataHelper.cs" />
     <Compile Include="Data Access Layers\DatPhong_DAL.cs" />
     <Compile Include="Data Access Layers\HoaDon_DAL.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Busines Logic Layers\Data Transfer Objects\NhanVien.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\Phong.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\TaiKhoan.cs" />
+    <Compile Include="Data Access Layers\ThuChi_DAL.cs" />
     <Compile Include="Presentation Layers\Add_Receptionist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +187,12 @@
     <Compile Include="Table Component\Budget_Table.Designer.cs">
       <DependentUpon>Budget_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Table Component\Chart_Budget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Table Component\Chart_Budget.Designer.cs">
+      <DependentUpon>Chart_Budget.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Presentation Layers\Add_Receptionist.resx">
       <DependentUpon>Add_Receptionist.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Table Component\Budget_Table.resx">
       <DependentUpon>Budget_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table Component\Chart_Budget.resx">
+      <DependentUpon>Chart_Budget.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

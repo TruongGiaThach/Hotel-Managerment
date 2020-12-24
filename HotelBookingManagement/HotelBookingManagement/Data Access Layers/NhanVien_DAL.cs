@@ -137,5 +137,12 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
         }
+        public int LayTongLuongNV(DateTime dateTime)
+        {
+            string sqlQuery = string.Format("select sum(LUONG) from NHANVIEN where datediff(day,NGBD, @date ) > 29");
+            DataTable result = DataHelper.Instance.getDataTable(sqlQuery, new string[] { dateTime.ToString("MM-dd-yyyy") }); 
+            int a = int.Parse(result.Rows[0].ItemArray[0].ToString());
+            return a;
+        }
     }
 }

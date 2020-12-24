@@ -89,7 +89,7 @@ create table NHANVIEN
 	GIOITINH nvarchar(10),
 	NGBD smalldatetime,
 	TGHOPDONG int,
-	LUONG varchar(20)
+	LUONG int
 )
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
@@ -206,4 +206,8 @@ Begin
 	FROM inserted
 	where (THUCHI.NAM = inserted.NAM) and (THUCHI.THANG = inserted.THANG)
 End
+
+select count 
+
+select sum(LUONG) from NHANVIEN
 

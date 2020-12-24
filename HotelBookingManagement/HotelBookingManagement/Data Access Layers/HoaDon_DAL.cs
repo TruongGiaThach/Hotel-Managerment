@@ -110,5 +110,6 @@ namespace HotelBookingManagement.Data_Access_Layers
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { day, id });
             return result > 0;
         }
+
     }
 }
