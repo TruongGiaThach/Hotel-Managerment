@@ -49,9 +49,8 @@ namespace HotelBookingManagement
                 pass = this.PasswordTextBox.Text;
                 if (login(user, pass))
                 {
-                   
-                    this.currentUser = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);
                     this.loadingGif.Visible = true;
+                    this.currentUser = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);               
                     timerToLogin.Start();
                 }
                 else throw new Exception("The username or password is incorrect...");
@@ -88,6 +87,16 @@ namespace HotelBookingManagement
         private void button_Thoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadingGif_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
