@@ -25,6 +25,7 @@ namespace HotelBookingManagement
             Login_Form Login = new Login_Form(this);
             this.loginForm = Login;
             Login.ShowDialog();
+            Application.ApplicationExit += exitApp;
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
@@ -54,9 +55,21 @@ namespace HotelBookingManagement
                 }
                 this.tabControl_Menu.SelectedIndex = 0;
             }
+            
+        }
+        private void exitApp(object sender, EventArgs e)
+        {
+            if (this.currentUser != null)
+            {
+                TaiKhoan_DAL.Instance.updateStatus(this.currentUser.tenDN, false);
+            }
         }
         public void logout(object sender,EventArgs e)
         {
+            if (this.currentUser != null)
+            {
+                TaiKhoan_DAL.Instance.updateStatus(this.currentUser.tenDN, false);
+            }
             this.currentUser = null;
             this.Hide();
             this.loginForm.ShowDialog();
