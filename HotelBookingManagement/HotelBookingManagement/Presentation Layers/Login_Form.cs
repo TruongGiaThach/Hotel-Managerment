@@ -60,7 +60,7 @@ namespace HotelBookingManagement
             }
             catch (Exception ex)
             {
-                this.falseMessage.Location = new Point(this.ClientSize.Width - 5*ex.Message.Length, this.falseMessage.Location.Y);
+                this.falseMessage.Location = new Point(this.ClientSize.Width - 6*ex.Message.Length, this.falseMessage.Location.Y);
                 this.falseMessage.Text = ex.Message;
                 UserTextBox.Text = string.Empty;
                 PasswordTextBox.Text = string.Empty;

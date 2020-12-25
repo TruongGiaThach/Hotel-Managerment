@@ -66,6 +66,10 @@ namespace HotelBookingManagement
         }
         public void logout(object sender,EventArgs e)
         {
+            if (this.currentUser != null)
+            {
+                TaiKhoan_DAL.Instance.updateStatus(this.currentUser.tenDN, false);
+            }
             this.currentUser = null;
             this.Hide();
             this.loginForm.ShowDialog();
