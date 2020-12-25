@@ -54,6 +54,14 @@ namespace HotelBookingManagement
                 }
                 this.tabControl_Menu.SelectedIndex = 0;
             }
+            Application.ApplicationExit += exitApp;
+        }
+        private void exitApp(object sender, EventArgs e)
+        {
+            if (this.currentUser != null)
+            {
+                TaiKhoan_DAL.Instance.updateStatus(this.currentUser.tenDN, false);
+            }
         }
         public void logout(object sender,EventArgs e)
         {

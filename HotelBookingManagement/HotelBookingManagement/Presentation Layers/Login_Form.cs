@@ -49,6 +49,9 @@ namespace HotelBookingManagement
                 pass = this.PasswordTextBox.Text;
                 if (login(user, pass))
                 {
+                    if (TaiKhoan_DAL.Instance.isOnline(user) == true)
+                        throw new Exception("Tài khoản đã đăng nhập ở nơi khác.");
+                    TaiKhoan_DAL.Instance.updateStatus(user, true);
                     this.loadingGif.Visible = true;
                     this.currentUser = TaiKhoan_DAL.Instance.getTaiKhoanbyName(user);               
                     timerToLogin.Start();

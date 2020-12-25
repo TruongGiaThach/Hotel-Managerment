@@ -77,8 +77,22 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return false;
         }
+        public bool isOnline(string user)
+        {
+            TaiKhoan tk = getTaiKhoanbyName(user);
+            if (tk != null)
+                if (tk.TrangThai) 
+                    return true;
+            return false;
+        }
+        public bool updateStatus(string user,bool status)
+        {
+            string sqlQuery = "Update TAIKHOAN set TRANGTHAI = @status where TENDN = @user ";
+            return DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { status.ToString(), user }) > 0;
+        }
         public bool dangNhap(string user, string pass)
         {
+         
             string sqlQuery = "execute us_Login @user , @matkhau ";
             string[] parameter = new string[] { user, pass };
             DataTable result = DataHelper.Instance.getDataTable(sqlQuery, parameter);

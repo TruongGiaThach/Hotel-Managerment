@@ -16,6 +16,7 @@ namespace HotelBookingManagement
         private string matKhau;
         private string maNV;
         private string phanQuyen;
+        private bool trangThai;
         public TaiKhoan()
         {
             this.ten_DN = "khach";
@@ -29,14 +30,19 @@ namespace HotelBookingManagement
             this.matKhau = item["MATKHAU"].ToString();
             this.maNV = item["MANV"].ToString();
             this.phanQuyen = item["PHANQUYEN"].ToString();
+            string tmp = item["TRANGTHAI"].ToString();
+            if (tmp.Contains("False"))
+                this.trangThai = false;
+            else this.trangThai = true;
         }
-        public TaiKhoan(string id, string tendn, string matkhau, string makh, string phanquyen)
+        public TaiKhoan(string id, string tendn, string matkhau, string makh, string phanquyen,bool trangThai)
         {
             this.iD = id;
             this.tenDN = tendn;
             this.matKhau = matkhau;
             this.maNV = makh;
             this.phanQuyen = phanquyen;
+            this.trangThai = trangThai;
         }
         public string PhanQuyen
         {
@@ -60,6 +66,7 @@ namespace HotelBookingManagement
         }
 
         public string MaNV { get => maNV; set => maNV = value; }
+        public bool TrangThai { get => trangThai; set => trangThai = value; }
 
         public static string encode(string chuoi)
         {
