@@ -81,8 +81,7 @@ namespace HotelBookingManagement.Data_Access_Layers
         {
             TaiKhoan tk = getTaiKhoanbyName(user);
             if (tk != null)
-                if (tk.TrangThai) 
-                    return true;
+                return tk.TrangThai;
             return false;
         }
         public bool updateStatus(string user,bool status)

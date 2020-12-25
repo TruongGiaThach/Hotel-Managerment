@@ -25,6 +25,7 @@ namespace HotelBookingManagement
             Login_Form Login = new Login_Form(this);
             this.loginForm = Login;
             Login.ShowDialog();
+            Application.ApplicationExit += exitApp;
         }
         private void Manager_Form_Load(object sender, EventArgs e)
         {
@@ -54,7 +55,7 @@ namespace HotelBookingManagement
                 }
                 this.tabControl_Menu.SelectedIndex = 0;
             }
-            Application.ApplicationExit += exitApp;
+            
         }
         private void exitApp(object sender, EventArgs e)
         {
