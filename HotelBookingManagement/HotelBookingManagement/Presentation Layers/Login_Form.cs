@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -42,7 +41,6 @@ namespace HotelBookingManagement
         }
         private void Button_DangNhap_Click(object sender, EventArgs e) // dang nhap
         {
-            MessageBox.Show(ConfigurationManager.ConnectionStrings["con"].ToString());
             string user;
             string pass;
             try
