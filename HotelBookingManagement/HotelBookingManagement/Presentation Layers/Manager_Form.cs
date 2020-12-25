@@ -40,7 +40,7 @@ namespace HotelBookingManagement
             else
             {
                 this.DS_Phong = Phong_DAL.Instance.GetDsPhong();
-                switch ((this.currentUser.PhanQuyen))
+                switch ((this.currentUser.PhanQuyen.Replace(" ",string.Empty)))
                 {
                     case "user":
                         this.label1.Text = "NHÂN VIÊN";
