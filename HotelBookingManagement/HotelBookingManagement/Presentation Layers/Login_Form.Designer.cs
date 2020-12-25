@@ -142,7 +142,9 @@ namespace HotelBookingManagement
             this.button_Thoat.Location = new System.Drawing.Point(431, 392);
             this.button_Thoat.Name = "button_Thoat";
             this.button_Thoat.Size = new System.Drawing.Size(140, 51);
+            this.button_Thoat.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.button_Thoat.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Thoat.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.button_Thoat.TabIndex = 4;
             this.button_Thoat.Values.Text = "Thoát";
             this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
@@ -152,8 +154,11 @@ namespace HotelBookingManagement
             this.button_DangNhap.Location = new System.Drawing.Point(621, 392);
             this.button_DangNhap.Name = "button_DangNhap";
             this.button_DangNhap.Size = new System.Drawing.Size(140, 51);
+            this.button_DangNhap.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.button_DangNhap.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_DangNhap.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DangNhap.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.button_DangNhap.StatePressed.Back.Color1 = System.Drawing.Color.DarkGray;
             this.button_DangNhap.TabIndex = 3;
             this.button_DangNhap.Values.Text = "Đăng nhập";
             this.button_DangNhap.Click += new System.EventHandler(this.Button_DangNhap_Click);
