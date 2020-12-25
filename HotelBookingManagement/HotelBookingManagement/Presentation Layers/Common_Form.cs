@@ -40,7 +40,7 @@ namespace HotelBookingManagement
             {
                 case "account":
                     sqlQuery = "select TAIKHOAN.ID as [ID], TAIKHOAN.TENDN as [Tên đăng nhập] ," +
-                        " NHANVIEN.HOTEN as [Tên nhân viên], TAIKHOAN.PHANQUYEN as [Phân Quyền] " +
+                        " NHANVIEN.HOTEN as [Tên nhân viên], TAIKHOAN.PHANQUYEN as [Phân Quyền] , TAIKHOAN.TRANGTHAI as [Trạng thái] " +
                         "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " ;
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = false;
