@@ -87,10 +87,10 @@ namespace HotelBookingManagement
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(435, 286);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(489, 358);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đặt phòng";
@@ -98,55 +98,54 @@ namespace HotelBookingManagement
             // LoaiPhong
             // 
             this.LoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiPhong.Location = new System.Drawing.Point(160, 50);
-            this.LoaiPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.LoaiPhong.Location = new System.Drawing.Point(180, 62);
+            this.LoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoaiPhong.Name = "LoaiPhong";
             this.LoaiPhong.ReadOnly = true;
-            this.LoaiPhong.Size = new System.Drawing.Size(199, 27);
-            this.LoaiPhong.TabIndex = 16;
+            this.LoaiPhong.Size = new System.Drawing.Size(223, 31);
+            this.LoaiPhong.TabIndex = 9;
             // 
             // NgayDi
             // 
             this.NgayDi.CustomFormat = "dd-MM-yyyy";
             this.NgayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayDi.Location = new System.Drawing.Point(160, 140);
-            this.NgayDi.Margin = new System.Windows.Forms.Padding(4);
+            this.NgayDi.Location = new System.Drawing.Point(180, 175);
+            this.NgayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayDi.Name = "NgayDi";
-            this.NgayDi.Size = new System.Drawing.Size(199, 27);
-            this.NgayDi.TabIndex = 15;
-            this.NgayDi.Value = DateTime.Now.AddDays(1);
+            this.NgayDi.Size = new System.Drawing.Size(223, 31);
+            this.NgayDi.TabIndex = 11;
+            this.NgayDi.Value = new System.DateTime(2020, 12, 25, 20, 21, 24, 129);
             // 
             // NgayDen
             // 
             this.NgayDen.CustomFormat = "dd-MM-yyyy";
             this.NgayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayDen.Location = new System.Drawing.Point(160, 94);
-            this.NgayDen.Margin = new System.Windows.Forms.Padding(4);
+            this.NgayDen.Location = new System.Drawing.Point(180, 118);
+            this.NgayDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayDen.Name = "NgayDen";
-            this.NgayDen.Value = DateTime.Now;
-            this.NgayDen.Size = new System.Drawing.Size(199, 27);
-            this.NgayDen.TabIndex = 14;
+            this.NgayDen.Size = new System.Drawing.Size(223, 31);
+            this.NgayDen.TabIndex = 10;
+            this.NgayDen.Value = new System.DateTime(2020, 12, 24, 20, 21, 24, 131);
             // 
             // TienCoc
             // 
             this.TienCoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TienCoc.Location = new System.Drawing.Point(160, 188);
-            this.TienCoc.Margin = new System.Windows.Forms.Padding(4);
+            this.TienCoc.Location = new System.Drawing.Point(180, 235);
+            this.TienCoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TienCoc.Name = "TienCoc";
-            this.TienCoc.Size = new System.Drawing.Size(199, 27);
-            this.TienCoc.TabIndex = 9;
-            this.TienCoc.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.TienCoc.Size = new System.Drawing.Size(223, 31);
+            this.TienCoc.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 188);
+            this.label7.Location = new System.Drawing.Point(18, 235);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
+            this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "Tiền cọc";
             // 
@@ -154,10 +153,10 @@ namespace HotelBookingManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 137);
+            this.label3.Location = new System.Drawing.Point(18, 171);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ngày đi:";
             // 
@@ -165,10 +164,10 @@ namespace HotelBookingManagement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 98);
+            this.label2.Location = new System.Drawing.Point(18, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.Size = new System.Drawing.Size(116, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày đến: ";
             // 
@@ -176,10 +175,10 @@ namespace HotelBookingManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 50);
+            this.label1.Location = new System.Drawing.Point(18, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại phòng";
             // 
@@ -187,10 +186,10 @@ namespace HotelBookingManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 101);
+            this.label4.Location = new System.Drawing.Point(45, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Giới tính:";
             // 
@@ -198,10 +197,10 @@ namespace HotelBookingManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 54);
+            this.label5.Location = new System.Drawing.Point(0, 68);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.Size = new System.Drawing.Size(173, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tên khách hàng:";
             // 
@@ -209,10 +208,10 @@ namespace HotelBookingManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(325, 94);
+            this.label6.Location = new System.Drawing.Point(366, 118);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 20);
+            this.label6.Size = new System.Drawing.Size(114, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Ngày sinh:";
             // 
@@ -220,41 +219,39 @@ namespace HotelBookingManagement
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 142);
+            this.label8.Location = new System.Drawing.Point(44, 172);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
+            this.label8.Size = new System.Drawing.Size(115, 25);
             this.label8.TabIndex = 7;
             this.label8.Text = "Điện thoại:";
             // 
             // Phone
             // 
             this.Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(151, 133);
-            this.Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.Phone.Location = new System.Drawing.Point(170, 166);
+            this.Phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(166, 27);
-            this.Phone.TabIndex = 10;
-            this.Phone.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.Phone.Size = new System.Drawing.Size(186, 31);
+            this.Phone.TabIndex = 4;
             // 
             // TenKhachHang
             // 
             this.TenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKhachHang.Location = new System.Drawing.Point(151, 50);
-            this.TenKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.TenKhachHang.Location = new System.Drawing.Point(170, 62);
+            this.TenKhachHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.Size = new System.Drawing.Size(465, 27);
-            this.TenKhachHang.TabIndex = 11;
-            this.TenKhachHang.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
+            this.TenKhachHang.Size = new System.Drawing.Size(523, 31);
+            this.TenKhachHang.TabIndex = 1;
             // 
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(437, 134);
-            this.Email.Margin = new System.Windows.Forms.Padding(4);
+            this.Email.Location = new System.Drawing.Point(492, 168);
+            this.Email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(178, 27);
-            this.Email.TabIndex = 12;
+            this.Email.Size = new System.Drawing.Size(200, 31);
+            this.Email.TabIndex = 5;
             // 
             // groupBox2
             // 
@@ -282,11 +279,11 @@ namespace HotelBookingManagement
             this.groupBox2.Controls.Add(this.TenKhachHang);
             this.groupBox2.Controls.Add(this.Phone);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(443, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(498, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(660, 645);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(742, 806);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
@@ -294,11 +291,11 @@ namespace HotelBookingManagement
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(138, 551);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(155, 689);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 56);
-            this.button1.TabIndex = 30;
+            this.button1.Size = new System.Drawing.Size(147, 70);
+            this.button1.TabIndex = 14;
             this.button1.Text = "Đặt phòng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -308,31 +305,31 @@ namespace HotelBookingManagement
             this.NgayCapCMT.CustomFormat = "dd-MM-yyyy";
             this.NgayCapCMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayCapCMT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayCapCMT.Location = new System.Drawing.Point(437, 174);
-            this.NgayCapCMT.Margin = new System.Windows.Forms.Padding(4);
+            this.NgayCapCMT.Location = new System.Drawing.Point(492, 218);
+            this.NgayCapCMT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgayCapCMT.Name = "NgayCapCMT";
-            this.NgayCapCMT.Size = new System.Drawing.Size(178, 27);
-            this.NgayCapCMT.TabIndex = 29;
+            this.NgayCapCMT.Size = new System.Drawing.Size(200, 31);
+            this.NgayCapCMT.TabIndex = 7;
             // 
             // NgaySinh
             // 
             this.NgaySinh.CustomFormat = "dd-MM-yyyy";
             this.NgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgaySinh.Location = new System.Drawing.Point(437, 94);
-            this.NgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.NgaySinh.Location = new System.Drawing.Point(492, 118);
+            this.NgaySinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Size = new System.Drawing.Size(178, 27);
-            this.NgaySinh.TabIndex = 28;
+            this.NgaySinh.Size = new System.Drawing.Size(200, 31);
+            this.NgaySinh.TabIndex = 3;
             // 
             // HuyDatPhong
             // 
             this.HuyDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HuyDatPhong.Location = new System.Drawing.Point(463, 551);
-            this.HuyDatPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.HuyDatPhong.Location = new System.Drawing.Point(521, 689);
+            this.HuyDatPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HuyDatPhong.Name = "HuyDatPhong";
-            this.HuyDatPhong.Size = new System.Drawing.Size(127, 56);
-            this.HuyDatPhong.TabIndex = 27;
+            this.HuyDatPhong.Size = new System.Drawing.Size(143, 70);
+            this.HuyDatPhong.TabIndex = 16;
             this.HuyDatPhong.Text = "Hủy";
             this.HuyDatPhong.UseVisualStyleBackColor = true;
             this.HuyDatPhong.Click += new System.EventHandler(this.HuyDatPhong_Click);
@@ -340,11 +337,11 @@ namespace HotelBookingManagement
             // SaveDatPhong
             // 
             this.SaveDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveDatPhong.Location = new System.Drawing.Point(294, 551);
-            this.SaveDatPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.SaveDatPhong.Location = new System.Drawing.Point(331, 689);
+            this.SaveDatPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveDatPhong.Name = "SaveDatPhong";
-            this.SaveDatPhong.Size = new System.Drawing.Size(149, 56);
-            this.SaveDatPhong.TabIndex = 26;
+            this.SaveDatPhong.Size = new System.Drawing.Size(168, 70);
+            this.SaveDatPhong.TabIndex = 15;
             this.SaveDatPhong.Text = "Nhận phòng";
             this.SaveDatPhong.UseVisualStyleBackColor = true;
             this.SaveDatPhong.Click += new System.EventHandler(this.SaveDatPhong_Click);
@@ -352,51 +349,49 @@ namespace HotelBookingManagement
             // GhiChu
             // 
             this.GhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GhiChu.Location = new System.Drawing.Point(151, 334);
-            this.GhiChu.Margin = new System.Windows.Forms.Padding(4);
+            this.GhiChu.Location = new System.Drawing.Point(170, 418);
+            this.GhiChu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GhiChu.Multiline = true;
             this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Size = new System.Drawing.Size(465, 86);
-            this.GhiChu.TabIndex = 25;
+            this.GhiChu.Size = new System.Drawing.Size(523, 106);
+            this.GhiChu.TabIndex = 13;
             // 
             // QuocTich
             // 
             this.QuocTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuocTich.Location = new System.Drawing.Point(151, 283);
-            this.QuocTich.Margin = new System.Windows.Forms.Padding(4);
+            this.QuocTich.Location = new System.Drawing.Point(170, 354);
+            this.QuocTich.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.QuocTich.Name = "QuocTich";
-            this.QuocTich.Size = new System.Drawing.Size(465, 27);
+            this.QuocTich.Size = new System.Drawing.Size(523, 31);
             this.QuocTich.TabIndex = 24;
-            this.QuocTich.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
             // 
             // DiaChiNg
             // 
             this.DiaChiNg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiaChiNg.Location = new System.Drawing.Point(152, 230);
-            this.DiaChiNg.Margin = new System.Windows.Forms.Padding(4);
+            this.DiaChiNg.Location = new System.Drawing.Point(171, 288);
+            this.DiaChiNg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DiaChiNg.Name = "DiaChiNg";
-            this.DiaChiNg.Size = new System.Drawing.Size(464, 27);
-            this.DiaChiNg.TabIndex = 23;
+            this.DiaChiNg.Size = new System.Drawing.Size(522, 31);
+            this.DiaChiNg.TabIndex = 8;
             // 
             // CMT
             // 
             this.CMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CMT.Location = new System.Drawing.Point(152, 176);
-            this.CMT.Margin = new System.Windows.Forms.Padding(4);
+            this.CMT.Location = new System.Drawing.Point(171, 220);
+            this.CMT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CMT.Name = "CMT";
-            this.CMT.Size = new System.Drawing.Size(166, 27);
-            this.CMT.TabIndex = 21;
+            this.CMT.Size = new System.Drawing.Size(186, 31);
+            this.CMT.TabIndex = 6;
             this.CMT.TextChanged += new System.EventHandler(this.CMT_TextChanged);
-            this.CMT.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(44, 342);
+            this.label14.Location = new System.Drawing.Point(50, 428);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 20);
+            this.label14.Size = new System.Drawing.Size(92, 25);
             this.label14.TabIndex = 20;
             this.label14.Text = "Ghi chú:";
             // 
@@ -404,10 +399,10 @@ namespace HotelBookingManagement
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(39, 286);
+            this.label13.Location = new System.Drawing.Point(44, 358);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 20);
+            this.label13.Size = new System.Drawing.Size(109, 25);
             this.label13.TabIndex = 19;
             this.label13.Text = "Quốc tịch:";
             // 
@@ -415,10 +410,10 @@ namespace HotelBookingManagement
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(44, 235);
+            this.label12.Location = new System.Drawing.Point(50, 294);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 20);
+            this.label12.Size = new System.Drawing.Size(84, 25);
             this.label12.TabIndex = 18;
             this.label12.Text = "Địa chỉ:";
             // 
@@ -426,10 +421,10 @@ namespace HotelBookingManagement
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(327, 180);
+            this.label11.Location = new System.Drawing.Point(368, 225);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 20);
+            this.label11.Size = new System.Drawing.Size(109, 25);
             this.label11.TabIndex = 17;
             this.label11.Text = "Ngày cấp:";
             // 
@@ -437,10 +432,10 @@ namespace HotelBookingManagement
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 181);
+            this.label10.Location = new System.Drawing.Point(10, 226);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 20);
+            this.label10.Size = new System.Drawing.Size(162, 25);
             this.label10.TabIndex = 16;
             this.label10.Text = "Số CMT/CCCD:";
             // 
@@ -448,10 +443,10 @@ namespace HotelBookingManagement
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(349, 137);
+            this.label9.Location = new System.Drawing.Point(393, 171);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 20);
+            this.label9.Size = new System.Drawing.Size(69, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "email:";
             // 
@@ -463,12 +458,11 @@ namespace HotelBookingManagement
             this.GioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.GioiTinh.Location = new System.Drawing.Point(151, 89);
-            this.GioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.GioiTinh.Location = new System.Drawing.Point(170, 111);
+            this.GioiTinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Size = new System.Drawing.Size(166, 28);
-            this.GioiTinh.TabIndex = 13;
-            this.GioiTinh.SelectedItem = this.GioiTinh.Items[0];
+            this.GioiTinh.Size = new System.Drawing.Size(186, 33);
+            this.GioiTinh.TabIndex = 2;
             // 
             // groupBox3
             // 
@@ -476,11 +470,11 @@ namespace HotelBookingManagement
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.panel_Find_Room);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 291);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(0, 364);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(435, 354);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(489, 442);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm phòng còn trống";
@@ -489,25 +483,25 @@ namespace HotelBookingManagement
             // 
             this.panel_Find_Room.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel_Find_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_Find_Room.Location = new System.Drawing.Point(29, 98);
+            this.panel_Find_Room.Location = new System.Drawing.Point(33, 122);
             this.panel_Find_Room.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Find_Room.Name = "panel_Find_Room";
-            this.panel_Find_Room.Size = new System.Drawing.Size(378, 230);
+            this.panel_Find_Room.Size = new System.Drawing.Size(425, 288);
             this.panel_Find_Room.TabIndex = 1;
             // 
             // Reservation_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 652);
+            this.ClientSize = new System.Drawing.Size(1240, 804);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1124, 699);
-            this.MinimumSize = new System.Drawing.Size(1124, 699);
+            this.MaximumSize = new System.Drawing.Size(1262, 860);
+            this.MinimumSize = new System.Drawing.Size(1262, 860);
             this.Name = "Reservation_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt Phòng";

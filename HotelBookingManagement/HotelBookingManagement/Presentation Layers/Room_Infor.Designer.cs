@@ -45,38 +45,39 @@ namespace HotelBookingManagement
             // idTextbox
             // 
             this.idTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextbox.Location = new System.Drawing.Point(200, 99);
+            this.idTextbox.Location = new System.Drawing.Point(225, 124);
+            this.idTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idTextbox.Name = "idTextbox";
-            this.idTextbox.Size = new System.Drawing.Size(268, 30);
-            this.idTextbox.TabIndex = 0;
-            this.idTextbox.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.idTextbox.Size = new System.Drawing.Size(301, 35);
+            this.idTextbox.TabIndex = 1;
             // 
             // priceTextbox
             // 
             this.priceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextbox.Location = new System.Drawing.Point(200, 239);
+            this.priceTextbox.Location = new System.Drawing.Point(225, 299);
+            this.priceTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.priceTextbox.Name = "priceTextbox";
-            this.priceTextbox.Size = new System.Drawing.Size(268, 30);
-            this.priceTextbox.TabIndex = 1;
-            this.priceTextbox.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.priceTextbox.Size = new System.Drawing.Size(301, 35);
+            this.priceTextbox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 242);
+            this.label3.Location = new System.Drawing.Point(48, 302);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 25);
+            this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Giá phòng";
             // 
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(313, 320);
+            this.addButton.Location = new System.Drawing.Point(352, 400);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(144, 49);
-            this.addButton.TabIndex = 6;
+            this.addButton.Size = new System.Drawing.Size(162, 61);
+            this.addButton.TabIndex = 4;
             this.addButton.Text = "Thêm phòng";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -84,10 +85,11 @@ namespace HotelBookingManagement
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(83, 320);
+            this.exitButton.Location = new System.Drawing.Point(93, 400);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(111, 49);
-            this.exitButton.TabIndex = 7;
+            this.exitButton.Size = new System.Drawing.Size(125, 61);
+            this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Thoát";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -96,9 +98,9 @@ namespace HotelBookingManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(135, 21);
+            this.label4.Location = new System.Drawing.Point(152, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 42);
+            this.label4.Size = new System.Drawing.Size(241, 51);
             this.label4.TabIndex = 8;
             this.label4.Text = "Thêm Phòng";
             // 
@@ -106,9 +108,9 @@ namespace HotelBookingManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 94);
+            this.label5.Location = new System.Drawing.Point(48, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.Size = new System.Drawing.Size(110, 29);
             this.label5.TabIndex = 3;
             this.label5.Text = "ID phòng";
             // 
@@ -116,9 +118,9 @@ namespace HotelBookingManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 166);
+            this.label6.Location = new System.Drawing.Point(48, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 25);
+            this.label6.Size = new System.Drawing.Size(133, 29);
             this.label6.TabIndex = 4;
             this.label6.Text = "Loại phòng";
             // 
@@ -132,17 +134,17 @@ namespace HotelBookingManagement
             "Nomal2",
             "Vip1",
             "Vip2"});
-            this.comboBox1.Location = new System.Drawing.Point(200, 163);
+            this.comboBox1.Location = new System.Drawing.Point(225, 204);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(268, 33);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedItem = this.comboBox1.Items[0];
+            this.comboBox1.Size = new System.Drawing.Size(301, 37);
+            this.comboBox1.TabIndex = 2;
             // 
             // Room_Infor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 394);
+            this.ClientSize = new System.Drawing.Size(642, 492);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.exitButton);
@@ -152,6 +154,7 @@ namespace HotelBookingManagement
             this.Controls.Add(this.label5);
             this.Controls.Add(this.priceTextbox);
             this.Controls.Add(this.idTextbox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Room_Infor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
