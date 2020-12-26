@@ -23,7 +23,11 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void Budget_Form_Load(object sender, EventArgs e)
         {
-
+            this.textBox_TienDien.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.textBox_TienNuoc.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.textBox_TienBaoTri.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.textBox_ChiPhiKhac.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.textBox_NhapNam.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
         }
         private void TinhTong(object sender, EventArgs e)
         {
