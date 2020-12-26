@@ -213,11 +213,6 @@ Begin
 	where (THUCHI.NAM = inserted.NAM) and (THUCHI.THANG = inserted.THANG)
 End
 
-<<<<<<< HEAD
 update TAIKHOAN set TRANGTHAI = '0' where ID = '0'
-=======
-select count 
-
->>>>>>> parent of ec4efca... .
 select sum(LUONG) from NHANVIEN
 
