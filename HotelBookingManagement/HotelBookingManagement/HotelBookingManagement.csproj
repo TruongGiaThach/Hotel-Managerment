@@ -77,6 +77,7 @@
     <Compile Include="Busines Logic Layers\CancelReservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\CheckOut_Controller.cs" />
     <Compile Include="Busines Logic Layers\Data Transfer Objects\HoaDon.cs" />
+    <Compile Include="Busines Logic Layers\Data Transfer Objects\LoaiPhong.cs" />
     <Compile Include="Busines Logic Layers\ProfitStatistics_Controller.cs" />
     <Compile Include="Busines Logic Layers\Reservation_Controller.cs" />
     <Compile Include="Busines Logic Layers\SingUp_Controller.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Data Access Layers\DatPhong_DAL.cs" />
     <Compile Include="Data Access Layers\HoaDon_DAL.cs" />
     <Compile Include="Data Access Layers\KhachHang_DAL.cs" />
+    <Compile Include="Data Access Layers\LoaiPhong_DAL.cs" />
     <Compile Include="Data Access Layers\NhanVien_DAL.cs" />
     <Compile Include="Data Access Layers\Phong_DAL.cs" />
     <Compile Include="Data Access Layers\TaiKhoan_DAL.cs" />
