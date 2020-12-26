@@ -56,10 +56,11 @@
             // 
             this.textBox_MkMoiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MkMoiLai.Location = new System.Drawing.Point(274, 206);
-            this.textBox_MkMoiLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_MkMoiLai.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MkMoiLai.Name = "textBox_MkMoiLai";
             this.textBox_MkMoiLai.Size = new System.Drawing.Size(230, 30);
             this.textBox_MkMoiLai.TabIndex = 3;
+            this.textBox_MkMoiLai.UseSystemPasswordChar = true;
             // 
             // label_MkMoi
             // 
@@ -76,10 +77,11 @@
             // 
             this.textBox_MkMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MkMoi.Location = new System.Drawing.Point(274, 154);
-            this.textBox_MkMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_MkMoi.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MkMoi.Name = "textBox_MkMoi";
             this.textBox_MkMoi.Size = new System.Drawing.Size(230, 30);
             this.textBox_MkMoi.TabIndex = 2;
+            this.textBox_MkMoi.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -96,10 +98,11 @@
             // 
             this.textBox_MkCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MkCu.Location = new System.Drawing.Point(274, 103);
-            this.textBox_MkCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_MkCu.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MkCu.Name = "textBox_MkCu";
             this.textBox_MkCu.Size = new System.Drawing.Size(230, 30);
             this.textBox_MkCu.TabIndex = 1;
+            this.textBox_MkCu.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -150,7 +153,7 @@
             this.Controls.Add(this.textBox_MkMoiLai);
             this.Controls.Add(this.label_MkMoi);
             this.Controls.Add(this.textBox_MkMoi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Reset_Pass_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi Mật Khẩu";

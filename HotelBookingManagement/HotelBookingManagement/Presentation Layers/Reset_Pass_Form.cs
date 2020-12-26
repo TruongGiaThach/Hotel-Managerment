@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 ﻿using HotelBookingManagement.Data_Access_Layers;
 using HotelBookingManagement.Presentation_Layers;
 using System;
-=======
-﻿using System;
->>>>>>> parent of 8d93693... Merge branch 'NguyenTanTien_Preservation_Form' of https://github.com/TruongGiaThach/Hotel-Managerment into NguyenTanTien_Preservation_Form
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +15,9 @@ namespace HotelBookingManagement
 {
     public partial class Reset_Pass_Form : Form
     {
-        public Reset_Pass_Form()
+        public Reset_Pass_Form(Manager_Form m,TaiKhoan user)
         {
             InitializeComponent();
-<<<<<<< HEAD
             this.main = m;
             this.user = user;
         }
@@ -74,8 +70,7 @@ namespace HotelBookingManagement
         {
             if (MessageBox.Show("Bạn có chắc muốn hủy thay đổi mật khẩu", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
-=======
->>>>>>> parent of 8d93693... Merge branch 'NguyenTanTien_Preservation_Form' of https://github.com/TruongGiaThach/Hotel-Managerment into NguyenTanTien_Preservation_Form
+
         }
 
         private void Reset_Pass_Form_Load(object sender, EventArgs e)

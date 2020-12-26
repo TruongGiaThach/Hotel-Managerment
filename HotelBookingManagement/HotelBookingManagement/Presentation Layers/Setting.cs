@@ -85,5 +85,11 @@ namespace HotelBookingManagement
             this.textBox4.Text = manager_Form.currentUser.tenDN;
             this.textBox5.Text = manager_Form.currentUser.PhanQuyen;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reset_Pass_Form reset_Pass_Form = new Reset_Pass_Form(this.manager_Form, this.manager_Form.currentUser);
+            reset_Pass_Form.ShowDialog();
+        }
     }
 }

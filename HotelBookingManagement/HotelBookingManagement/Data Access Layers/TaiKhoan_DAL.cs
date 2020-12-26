@@ -97,15 +97,10 @@ namespace HotelBookingManagement.Data_Access_Layers
             DataTable result = DataHelper.Instance.getDataTable(sqlQuery, parameter);
             return result.Rows.Count > 0;
         }
-        public bool updateTaiKhoan(string user, string pass, string newpass)
+        public bool updateTaiKhoan(string user, string newpass)
         {
-<<<<<<< HEAD
             string sqlQuery = "Update TAIKHOAN set MATKHAU = @MatKhau where TENDN = @user ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {  newpass,user });
-=======
-            string sqlQuery = "exec us_UpdateTaiKhoan @user , @pass , @newpass ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user, pass, newpass });
->>>>>>> parent of 8d93693... Merge branch 'NguyenTanTien_Preservation_Form' of https://github.com/TruongGiaThach/Hotel-Managerment into NguyenTanTien_Preservation_Form
             return result > 0;
         }
         public bool updatePhanQuyen(string user, string phanquyen)
