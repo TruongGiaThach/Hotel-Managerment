@@ -101,11 +101,15 @@ namespace HotelBookingManagement.Data_Access_Layers
         {
 <<<<<<< HEAD
             string sqlQuery = "Update TAIKHOAN set MATKHAU = @MatKhau where TENDN = @user ";
+<<<<<<< HEAD
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {  newpass,user });
 =======
             string sqlQuery = "exec us_UpdateTaiKhoan @user , @pass , @newpass ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user, pass, newpass });
 >>>>>>> parent of 8d93693... Merge branch 'NguyenTanTien_Preservation_Form' of https://github.com/TruongGiaThach/Hotel-Managerment into NguyenTanTien_Preservation_Form
+=======
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user, newpass });
+>>>>>>> parent of ec4efca... .
             return result > 0;
         }
         public bool updatePhanQuyen(string user, string phanquyen)
@@ -120,6 +124,16 @@ namespace HotelBookingManagement.Data_Access_Layers
             string sqlQuery = "delete from TAIKHOAN where ID = @id ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
+        }
+        public bool CheckMatKhau(string user, string MK)
+        {
+            if (MK != null)
+            {
+                string sqlQuery = string.Format("select MATKHAU from TAIKHOAN where TENDN = @user");
+                DataTable result = DataHelper.Instance.getDataTable(sqlQuery, new string[] { user });
+                if (result.Rows[0].ToString() == MK) return true;
+            }
+            return false;
         }
     }
 }
