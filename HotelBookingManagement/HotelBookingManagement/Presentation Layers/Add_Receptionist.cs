@@ -32,6 +32,8 @@ namespace HotelBookingManagement
             {
                 if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
                     throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
+                if (luong.Length > 12)
+                    throw new Exception("Lương quá lớn");
                 check_addStaff =  addStaff_Controller._run(ten, cmnd, sdt, gt,luong,diaChi);              
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
