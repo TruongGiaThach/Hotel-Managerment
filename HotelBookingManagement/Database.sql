@@ -72,15 +72,24 @@ end
 create table PHONG
 (
 	ID varchar(5) NOT NULL PRIMARY KEY,
-	LOAI	varchar(20),
+	LOAI	nvarchar(20),
 	TRANGTHAI nvarchar(20),
 	GIAPHONG money,
 	TIENCOC money
 )
 alter table PHONG 
 	add constraint gt_trang_thai_phong check (TRANGTHAI = 'trong' or TRANGTHAI = 'dang cho' or TRANGTHAI = 'da nhan')
-alter table PHONG 
-	add constraint gt_loai_phong check (LOAI = 'Nomal1' or LOAI = 'Nomal2' or LOAI = 'Vip1' or LOAI = 'Vip2' )
+alter table PHONG
+	add constraint fk_phong_loaiphong foreign key (LOAI) references LOAIPHONG(TENLP)
+		------------------------------
+create table LOAIPHONG
+(
+	ID varchar(5) not null primary key,
+	TENLP nvarchar(20),
+	GIA money
+)
+alter table LOAIPHONG
+	add constraint gt_lp unique(TENLP)
 		------------------------------
 create table NHANVIEN
 (
@@ -204,7 +213,6 @@ Begin
 	where (THUCHI.NAM = inserted.NAM) and (THUCHI.THANG = inserted.THANG)
 End
 
-select count 
-
+update TAIKHOAN set TRANGTHAI = '0' where ID = '0'
 select sum(LUONG) from NHANVIEN
 
