@@ -66,6 +66,7 @@ namespace HotelBookingManagement
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1245, 45);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // panel_Search_Bar
             // 
@@ -105,6 +106,7 @@ namespace HotelBookingManagement
             // button_Change
             // 
             this.button_Change.BackColor = System.Drawing.SystemColors.Control;
+            this.button_Change.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Change.BackgroundImage")));
             this.button_Change.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Change.Location = new System.Drawing.Point(105, 2);
             this.button_Change.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -191,7 +193,7 @@ namespace HotelBookingManagement
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1245, 583);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellClick += dataGridView1_CellClick;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Form_Common
             // 

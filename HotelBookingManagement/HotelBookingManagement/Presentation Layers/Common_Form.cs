@@ -19,7 +19,7 @@ namespace HotelBookingManagement
         private TaiKhoan currentUser;
         private string infor;
         private string valOfSelectedCell;
-        private int indexOfSeclectedCell;
+        private Point indexOfSeclectedCell;
 
         public Form_Common(string infor, int tabPage, TaiKhoan tk)
         {
@@ -29,13 +29,13 @@ namespace HotelBookingManagement
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
             valOfSelectedCell = "";
-            indexOfSeclectedCell = 0;
+           
         }
         public void FormCommon_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
             string sqlQuery = "";
-           
+            indexOfSeclectedCell = new Point(0, 0);
             switch (infor)
             {
                 case "account":
@@ -44,7 +44,7 @@ namespace HotelBookingManagement
                         "from TAIKHOAN left join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.ID " ;
                     this.button_Add.Visible = false;
                     this.button_Delete_staff.Visible = false;
-                    this.button_Change.Visible = false;
+                    this.button_Change.Visible = true;
                     this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
                     break;
                 case "customer":
@@ -109,7 +109,8 @@ namespace HotelBookingManagement
             {
                 if (e.ColumnIndex == 0)
                      this.valOfSelectedCell = this.dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-                this.indexOfSeclectedCell = e.ColumnIndex;
+                this.indexOfSeclectedCell.X = e.ColumnIndex;
+                this.indexOfSeclectedCell.Y = e.RowIndex;
             }
         }
         private void button_Delete_Click(object sender, EventArgs e)
@@ -159,7 +160,7 @@ namespace HotelBookingManagement
             this.FormCommon_Load(sender, e);
             if (textBox1.Text == "")
                 return;
-            List<DataGridViewCell> cells = GetCellWhereTextExistsInGridView(textBox1.Text, this.dataGridView1, indexOfSeclectedCell);
+            List<DataGridViewCell> cells = GetCellWhereTextExistsInGridView(textBox1.Text, this.dataGridView1, indexOfSeclectedCell.X);
             if (cells != null)
             {
                 // Value exists in the grid
@@ -180,7 +181,23 @@ namespace HotelBookingManagement
 
         private void button_Change_Click(object sender, EventArgs e)
         {
-
+         
+            if (indexOfSeclectedCell == null)
+                return;
+            string id = dataGridView1.Rows[indexOfSeclectedCell.Y].Cells[1].Value.ToString();
+            id = id.Trim();
+            if (MessageBox.Show("Bạn có chắc chắc reset tài khoản "+ id+" ?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    if (TaiKhoan_DAL.Instance.updateTaiKhoan(id, TaiKhoan.encode("1")))
+                        MessageBox.Show("Reset mật khẩu thành công", "Status");
+                    else MessageBox.Show("Reset mật khẩu không thành công", "Status",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                { MessageBox.Show(ex.Message, "Warning"); }
+            }
+            
         }
 
         private void button_Add_Click_1(object sender, EventArgs e)
@@ -189,6 +206,11 @@ namespace HotelBookingManagement
             Add_Receptionist add_Receptionist = new Add_Receptionist();
             add_Receptionist.ShowDialog();
             this.FormCommon_Load(sender, e);
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
