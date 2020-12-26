@@ -471,7 +471,7 @@ namespace HotelBookingManagement
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.panel_Find_Room);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 368);
+            this.groupBox3.Location = new System.Drawing.Point(0, 370);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);

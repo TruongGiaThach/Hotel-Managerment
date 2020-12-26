@@ -16,18 +16,21 @@ namespace HotelBookingManagement.Data_Access_Layers
             private set => instance = value;
         }
         public ThuChi_DAL() { }
-        public void CheckNgayThongKe(string Thang, string Nam)
+        public void CheckNgayThongKe(string Nam)
         {
-            string sqlQuery = "select * from THUCHI where THANG = @thang and NAM = @nam";
-            var result = DataHelper.Instance.getDataTable(sqlQuery, new string[] { Thang, Nam });
+            string sqlQuery = "select * from THUCHI where NAM = @nam";
+            var result = DataHelper.Instance.getDataTable(sqlQuery, new string[] { Nam });
             if (result != null)
             {
                 if (result.Rows.Count == 0)
                 {
-                    sqlQuery = "insert into THUCHI(T_Thu, T_Chi, T_LOINHUAN, THANG, NAM) " + "values( @Thu , @Chi , @LoiNhuan , @Thang , @Nam )";
-                    string[] parameter = new string[]
-                    { "0", "0", "0" ,Thang, Nam};
-                    DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+                    for (int i = 1; i <= 12; ++i)
+                    {
+                        sqlQuery = "insert into THUCHI(T_Thu, T_Chi, T_LOINHUAN, THANG, NAM) " + "values( @Thu , @Chi , @LoiNhuan , @Thang , @Nam )";
+                        string[] parameter = new string[]
+                        { "0", "0", "0" , i.ToString(), Nam};
+                        DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
+                    }
                 }
             }
         }
