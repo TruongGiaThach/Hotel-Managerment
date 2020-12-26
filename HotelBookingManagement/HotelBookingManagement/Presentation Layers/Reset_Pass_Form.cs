@@ -18,6 +18,9 @@ namespace HotelBookingManagement
         public Reset_Pass_Form(Manager_Form m,TaiKhoan user)
         {
             InitializeComponent();
+            this.textBox_MkCu.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.textBox_MkMoi.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.textBox_MkMoiLai.KeyPress += Normalisation.TextboxID_KeyPress;
             this.main = m;
             this.user = user;
         }

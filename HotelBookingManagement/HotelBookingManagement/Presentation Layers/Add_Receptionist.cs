@@ -1,5 +1,6 @@
 ﻿using HotelBookingManagement.Busines_Logic_Layers;
 using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,6 +63,19 @@ namespace HotelBookingManagement
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Add_Receptionist_Load(object sender, EventArgs e)
+        {
+            this.TaiKhoanNhanVien.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.mkNhanVien.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.textBox_NhapLai.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.textBox_Luong.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.TenNhanVien.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
+            this.phoneNhanVien.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.CMTNhanVien.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.AddressNhanVien.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
+            this.comboBox2.SelectedItem = this.comboBox2.Items[0];
         }
     }
 }

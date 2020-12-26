@@ -1,5 +1,6 @@
 ﻿using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
 using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace HotelBookingManagement
         public Room_Infor(Form form, ref List<Phong> Data)
         {
             InitializeComponent();
+            this.idTextbox.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.priceTextbox.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             this.preForm = form;
             this.Data = Data;
             this.id = string.Empty;

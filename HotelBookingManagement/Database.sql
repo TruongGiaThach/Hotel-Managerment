@@ -100,7 +100,8 @@ create table NHANVIEN
 	GIOITINH nvarchar(10),
 	NGBD smalldatetime,
 	TGHOPDONG int,
-	LUONG int
+	LUONG int,
+	DIACHI nvarchar(200)
 )
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
