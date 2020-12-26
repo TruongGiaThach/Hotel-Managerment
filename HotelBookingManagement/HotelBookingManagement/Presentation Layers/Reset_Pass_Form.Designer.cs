@@ -6,8 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private TaiKhoan user;
-        private Manager_Form main;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -30,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_MkMoiLai = new System.Windows.Forms.Label();
-            this.textBox_MkMoiLai = new System.Windows.Forms.TextBox();
-            this.label_MkMoi = new System.Windows.Forms.Label();
-            this.textBox_MkMoi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_MkCu = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button_XacNhan = new System.Windows.Forms.Button();
-            this.button_Huy = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reset_Pass_Form));
+            //
+            // ResetPassword
             // 
+<<<<<<< HEAD
             // label_MkMoiLai
             // 
             this.label_MkMoiLai.AutoSize = true;
@@ -151,25 +143,20 @@
             this.Controls.Add(this.label_MkMoi);
             this.Controls.Add(this.textBox_MkMoi);
             this.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(832, 454);
+>>>>>>> parent of 8d93693... Merge branch 'NguyenTanTien_Preservation_Form' of https://github.com/TruongGiaThach/Hotel-Managerment into NguyenTanTien_Preservation_Form
             this.Name = "Reset_Pass_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.Reset_Pass_Form_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label_MkMoiLai;
-        private System.Windows.Forms.TextBox textBox_MkMoiLai;
-        private System.Windows.Forms.Label label_MkMoi;
-        private System.Windows.Forms.TextBox textBox_MkMoi;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_MkCu;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_XacNhan;
-        private System.Windows.Forms.Button button_Huy;
     }
 }
