@@ -23,7 +23,6 @@ namespace HotelBookingManagement
         public Room_Show(ref List<Phong> phongs,TaiKhoan tk)
         {
             InitializeComponent();
-            //this.Data = phongs;
             this.tk = tk;
             RoomShow_Load(new object { }, new EventArgs { });
         }
