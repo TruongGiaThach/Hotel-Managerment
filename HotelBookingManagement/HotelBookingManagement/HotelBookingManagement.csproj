@@ -139,6 +139,12 @@
     <Compile Include="Presentation Layers\Reset_Pass_Form.Designer.cs">
       <DependentUpon>Reset_Pass_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layers\RoomType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layers\RoomType.Designer.cs">
+      <DependentUpon>RoomType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layers\Room_Infor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Reset_Pass_Form.resx">
       <DependentUpon>Reset_Pass_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layers\RoomType.resx">
+      <DependentUpon>RoomType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layers\Room_Infor.resx">
       <DependentUpon>Room_Infor.cs</DependentUpon>
