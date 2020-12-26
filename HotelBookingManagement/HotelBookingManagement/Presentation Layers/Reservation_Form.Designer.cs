@@ -137,6 +137,7 @@ namespace HotelBookingManagement
             this.TienCoc.Name = "TienCoc";
             this.TienCoc.Size = new System.Drawing.Size(223, 31);
             this.TienCoc.TabIndex = 12;
+            this.TienCoc.Text = "0";
             // 
             // label7
             // 
@@ -470,7 +471,7 @@ namespace HotelBookingManagement
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.panel_Find_Room);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 364);
+            this.groupBox3.Location = new System.Drawing.Point(0, 368);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -481,6 +482,7 @@ namespace HotelBookingManagement
             // 
             // panel_Find_Room
             // 
+            this.panel_Find_Room.AutoScroll = true;
             this.panel_Find_Room.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel_Find_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Find_Room.Location = new System.Drawing.Point(33, 122);
@@ -493,6 +495,8 @@ namespace HotelBookingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1240, 804);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
