@@ -7,7 +7,9 @@ create table TAIKHOAN
 	MATKHAU varchar(40) NOT NULL default 'thach',
 	MANV varchar(5),
 	PHANQUYEN varchar(20) NOT NULL,
+	TRANGTHAI bit
 )
+alter table TAIKHOAN add constraint df_status default 'false' for TRANGTHAI
 		-----------------------------
 create table KHACHHANG
 (
@@ -128,11 +130,6 @@ select * from TAIKHOAN
 select *from HOADON
 select * from MARKER
 ------------<<<<<<< Updated upstream
-update TAIKHOAN set MATKHAU = '21232F297A57A5A743894A0E4A801FC3'
-	where ID = '0'
-
-update TAIKHOAN set MATKHAU = 'C4CA4238A0B923820DCC509A6F75849B'
-	where ID = '0'
 ------------>>>>>>> Stashed changes
 
  create table MARKER
