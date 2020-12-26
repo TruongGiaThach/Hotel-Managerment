@@ -55,6 +55,7 @@ namespace HotelBookingManagement
                 string gioitinh = this.GioiTinh.SelectedItem.ToString();
                 string sdt = (this.Phone.Text);
                 string email = this.Email.Text;
+                string diachi = this.DiaChiNg.Text;
                 cmnd =(this.CMT.Text);
                 string dps = this.TienCoc.Text;
                 if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
@@ -69,7 +70,7 @@ namespace HotelBookingManagement
                 string RoomID = CheckButton.Text;
                 string node = string.Format(this.GhiChu.Text);
                 //----------
-                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps,node);
+                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps,node,diachi);
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);

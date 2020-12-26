@@ -26,12 +26,15 @@ namespace HotelBookingManagement
             string sdt = this.phoneNhanVien.Text;
             string luong = this.textBox_Luong.Text;
             string gt = this.comboBox2.SelectedItem.ToString();
+            string diaChi = this.AddressNhanVien.Text;
             bool check_addStaff= false;
             try
             {
                 if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
                     throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
-                check_addStaff =  addStaff_Controller._run(ten, cmnd, sdt, gt,luong);              
+                if (luong.Length > 12)
+                    throw new Exception("Lương quá lớn");
+                check_addStaff =  addStaff_Controller._run(ten, cmnd, sdt, gt,luong,diaChi);              
                 string user = this.TaiKhoanNhanVien.Text;
                 string pass = this.mkNhanVien.Text;
                 string pass1 = this.textBox_NhapLai.Text;

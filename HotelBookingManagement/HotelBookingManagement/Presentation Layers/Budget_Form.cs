@@ -23,11 +23,7 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void Budget_Form_Load(object sender, EventArgs e)
         {
-            //this.Table = new Table_Component.Budget_Table()
-            //{
-            //    //MdiParent = this,
-            //    Parent = tabControl1.TabPages[0]
-            //};
+
         }
         private void TinhTong(object sender, EventArgs e)
         {
