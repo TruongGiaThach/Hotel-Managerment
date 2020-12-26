@@ -105,3 +105,4 @@ C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\Hotel
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Budget_Table.resources
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.csprojAssemblyReference.cache
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Chart_Budget.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Table_Component.Chart_Budget.resources
