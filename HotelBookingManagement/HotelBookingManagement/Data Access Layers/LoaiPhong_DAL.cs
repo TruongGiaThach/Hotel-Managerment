@@ -30,10 +30,20 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themLoaiPhong(string id, string ten, int gia)
+        public bool themLoaiPhong( string ten, int gia)
         {
-            string sqlQuery = "select * from LOAIPHONG where TENLP = @ten ";
-            DataTable data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { ten });
+            string sqlQuery = "select * from MARKER where MARK_TABLE = 'LOAIPHONG'";
+            DataTable data = DataHelper.Instance.getDataTable(sqlQuery);
+            DataRow dataRow;
+            if (data.Rows.Count > 0)
+                    dataRow = data.Rows[0];
+                else throw new Exception("Không thể thêm loại phòng");
+            int i = Int32.Parse(dataRow["NUMBER"].ToString());
+            i++;
+            string id = i.ToString();
+        //--------------------
+            sqlQuery = "select * from LOAIPHONG where TENLP = @ten ";
+            data = DataHelper.Instance.getDataTable(sqlQuery, new string[] { ten });
             if (data.Rows.Count > 0)
             {
                 throw new existenceRoom("Đã có loại phòng này...");
@@ -44,14 +54,25 @@ namespace HotelBookingManagement.Data_Access_Layers
             string[] parameter = new string[]
                 { id, ten , gia.ToString()};
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
-            if (result > 0) return true;
+            if (result > 0)
+            {
+                sqlQuery = "update MARKER set NUMBER = @i where MARK_TABLE ='LOAIPHONG'";
+                DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { i });
+                return true;
+            }
             return false;
         }
         public bool xoaLoaiPhong(string ten)
         {
 
-            string sqlQuery = "delete from LOAIPHONG where ten = @ten ";
+            string sqlQuery = "delete from LOAIPHONG where TENLP = @ten ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { ten });
+            return result > 0;
+        }
+        public bool updateRoomType(string ten,string gia)
+        {
+            string sqlQuery = "update LOAIPHONG set GIA = @gia where TENLP = @ten ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new object[] { gia, ten });
             return result > 0;
         }
     }
