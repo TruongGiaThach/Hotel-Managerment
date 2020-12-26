@@ -16,8 +16,8 @@ create table KHACHHANG
 	ID varchar(5) NOT NULL PRIMARY KEY,	
 	HOTEN nvarchar(40),
 	SODT varchar(20),
-	EMAIL varchar(30),
-	DIACHI varchar(50),
+	EMAIL nvarchar(50),
+	DIACHI nvarchar(200),
 	CMND varchar(20)
 )
 		-----------------------------
