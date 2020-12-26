@@ -1,4 +1,5 @@
 ﻿using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,8 @@ namespace HotelBookingManagement
         }
         private void RoomInfor_Load(object sender, EventArgs e)
         {
+            this.idTextbox.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.priceTextbox.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             if (this.type == "sua")
             {
                 this.idTextbox.Text = this.id;
