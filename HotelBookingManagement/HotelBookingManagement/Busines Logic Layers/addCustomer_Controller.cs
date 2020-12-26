@@ -10,7 +10,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects
 {
     public class addCustomer_Controller
     {
-        public static bool run(string ten,string gioitinh,string sdt, string email,string cmnd, string diachi)
+        public static bool run(string ten,string gioitinh,string sdt, string email,string cmnd,string diachi)
         {
             try
             {

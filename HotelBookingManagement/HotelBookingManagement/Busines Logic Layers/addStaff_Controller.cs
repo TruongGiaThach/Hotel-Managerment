@@ -9,7 +9,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
 {
     public class addStaff_Controller
     {
-        public static bool _run(string name,string cmnd,string phoneNum,string gender,string luong,string diaChi)
+        public static bool _run(string name,string cmnd,string phoneNum,string gender,string luong)
         {
             string begin = DateTime.Now.ToString();
             string last = "0";
@@ -21,7 +21,7 @@ namespace HotelBookingManagement.Busines_Logic_Layers
             catch (Exception) { };
             try
             {
-                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last,l,diaChi);                  
+                return NhanVien_DAL.Instance.themNhanVien(name, cmnd, phoneNum, gender, begin, last,l);                  
             }
             catch(Exception ex)
             {

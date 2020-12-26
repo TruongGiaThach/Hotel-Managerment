@@ -88,7 +88,7 @@ namespace HotelBookingManagement.Data_Access_Layers
             }
             return lists;
         }
-        public bool themNhanVien(string name, string cmnd, string phoneNum, string gender , string begin, string last,long luong,string diaChi)
+        public bool themNhanVien(string name, string cmnd, string phoneNum, string gender , string begin, string last,long luong)
         {
             NhanVien nhanVien = NhanVien_DAL.Instance.getByCMND(cmnd);
             if (nhanVien != null)
@@ -104,10 +104,10 @@ namespace HotelBookingManagement.Data_Access_Layers
             i++;
             string id = "NV" + i.ToString();
             //--------------
-            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SDT, GIOITINH, NGBD, TGHOPDONG , LUONG , DIACHI) " +
-                                "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last , @luong , @diachi )";
+            sqlQuery = "insert into NHANVIEN(ID, HOTEN, CMND, SDT, GIOITINH, NGBD, TGHOPDONG , LUONG) " +
+                                "values( @id , @tendn , @cmnd , @phoneNum , @gender , @begin , @last , @luong )";
             string[] parameter = new string[]
-                { id, name , cmnd , phoneNum, gender , begin, last , luong.ToString(), diaChi };
+                { id, name , cmnd , phoneNum, gender , begin, last , luong.ToString() };
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, parameter);
 
             if (result > 0)

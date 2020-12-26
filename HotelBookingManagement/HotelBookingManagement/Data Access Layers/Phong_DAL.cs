@@ -80,10 +80,10 @@ namespace HotelBookingManagement.Data_Access_Layers
             if (result > 0) return true;
             return false;
         }
-        public bool updatePrice(string id, string gia)
+        public bool updateRoom(string id,string loai, string gia)
         {
-            string sqlQuery = "update PHONG set GIAPHONG = @status where ID = @id ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {gia,id });
+            string sqlQuery = "update PHONG set LOAI = @loai ,GIAPHONG = @status where ID = @id ";
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {loai,gia,id });
             return result > 0;
         }
         public bool updateStatus(string id, string status)

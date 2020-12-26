@@ -10,14 +10,14 @@ namespace HotelBookingManagement.Busines_Logic_Layers
 {
     class Reservation_Controller
     {
-        public static bool execute(string ten,string gioitinh,string sdt,string email, string cmnd, string diachi, bool isHasCustomer,
-            DateTime ngbd, DateTime ngkt, string RoomID,string dps,string node)
+        public static bool execute(string ten,string gioitinh,string sdt,string email, string cmnd, bool isHasCustomer,
+            DateTime ngbd, DateTime ngkt, string RoomID,string dps,string node,string diachi)
         {
             bool check_addCus = false;
             bool check_addOrder = false;
             if (isHasCustomer)
                 check_addCus = true;
-            else check_addCus = addCustomer_Controller.run(ten, gioitinh, sdt, email, cmnd, diachi);
+            else check_addCus = addCustomer_Controller.run(ten, gioitinh, sdt, email, cmnd,diachi);
             KhachHang khachHang = KhachHang_DAL.Instance.getByCMND(cmnd);
             node = (node.Length == 0) ? "Nothing" : node;
             //
