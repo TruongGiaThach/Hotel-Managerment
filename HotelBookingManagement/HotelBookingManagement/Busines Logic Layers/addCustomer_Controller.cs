@@ -10,11 +10,11 @@ namespace HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects
 {
     public class addCustomer_Controller
     {
-        public static bool run(string ten,string gioitinh,string sdt, string email,string cmnd)
+        public static bool run(string ten,string gioitinh,string sdt, string email,string cmnd, string diachi)
         {
             try
             {
-                return KhachHang_DAL.Instance.themKhachHang(ten, email, sdt, "", cmnd);
+                return KhachHang_DAL.Instance.themKhachHang(ten, email, sdt, diachi, cmnd);
             }
             catch(Exception ex)
             {

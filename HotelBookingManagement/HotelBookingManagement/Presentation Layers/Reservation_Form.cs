@@ -56,6 +56,7 @@ namespace HotelBookingManagement
                 string sdt = (this.Phone.Text);
                 string email = this.Email.Text;
                 cmnd =(this.CMT.Text);
+                string diachi = (this.DiaChiNg.Text);
                 string dps = this.TienCoc.Text;
                 if (ten.Length == 0 || sdt.Length == 0 || cmnd.Length == 0)
                     throw new Exception("Tên, số điện thoại, cmnd là bắt buộc");
@@ -69,7 +70,7 @@ namespace HotelBookingManagement
                 string RoomID = CheckButton.Text;
                 string node = string.Format(this.GhiChu.Text);
                 //----------
-                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, isHasCustomer, ngbd, ngkt, RoomID,dps,node);
+                return Reservation_Controller.execute(ten, gioitinh, sdt, email, cmnd, diachi, isHasCustomer, ngbd, ngkt, RoomID,dps,node);
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
