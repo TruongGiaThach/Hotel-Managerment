@@ -100,7 +100,7 @@ namespace HotelBookingManagement.Data_Access_Layers
         public bool updateTaiKhoan(string user, string newpass)
         {
             string sqlQuery = "Update TAIKHOAN set MATKHAU = @MatKhau where TENDN = @user ";
-            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { user, newpass });
+            int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] {  newpass,user });
             return result > 0;
         }
         public bool updatePhanQuyen(string user, string phanquyen)
@@ -115,16 +115,6 @@ namespace HotelBookingManagement.Data_Access_Layers
             string sqlQuery = "delete from TAIKHOAN where ID = @id ";
             int result = DataHelper.Instance.ExecuteNonQuery(sqlQuery, new string[] { id });
             return result > 0;
-        }
-        public bool CheckMatKhau(string user, string MK)
-        {
-            if (MK != null)
-            {
-                string sqlQuery = string.Format("select MATKHAU from TAIKHOAN where TENDN = @user");
-                DataTable result = DataHelper.Instance.getDataTable(sqlQuery, new string[] { user });
-                if (result.Rows[0].ToString() == MK) return true;
-            }
-            return false;
         }
     }
 }
