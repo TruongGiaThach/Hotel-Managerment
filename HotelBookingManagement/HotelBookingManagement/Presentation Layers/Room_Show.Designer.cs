@@ -278,8 +278,6 @@ namespace HotelBookingManagement
                 this.Rooms[i].TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
                 this.Rooms[i].Location = new System.Drawing.Point(drawPointX, drawPointY);
                 this.Rooms[i].Click += new EventHandler(RoomSelect); // set Click event for Button
-                this.Rooms[i].KeyDown += new KeyEventHandler(Ctrl_KeyDown); //set Key Down event for Button
-                this.Rooms[i].KeyUp += new KeyEventHandler(Ctrl_KeyUp); //set Key Up event for Button
                 this.panel_RoomShow.Controls.Add(Rooms[i]);
             }
         }

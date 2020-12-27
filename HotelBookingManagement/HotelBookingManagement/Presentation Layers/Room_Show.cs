@@ -185,15 +185,5 @@ namespace HotelBookingManagement
             roomType.ShowDialog();
             this.RoomShow_Load(sender, e);
         }
-
-        private void Ctrl_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Control) isCtrl = true;
-        }
-
-        private void Ctrl_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Control) isCtrl = false;
-        }
     }
 }
