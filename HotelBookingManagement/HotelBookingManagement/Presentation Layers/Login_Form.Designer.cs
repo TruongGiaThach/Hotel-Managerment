@@ -105,7 +105,6 @@ namespace HotelBookingManagement
             this.UserTextBox.Name = "UserTextBox";
             this.UserTextBox.Size = new System.Drawing.Size(214, 30);
             this.UserTextBox.TabIndex = 1;
-            this.UserTextBox.UseSystemPasswordChar = true;
             // 
             // PasswordTextBox
             // 
