@@ -143,8 +143,7 @@ namespace HotelBookingManagement
             // 
             this.buttonXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoaPhong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonXoaPhong.ImageIndex = 1;
-            this.buttonXoaPhong.ImageList = this.imageList_RoomShow;
+            this.buttonXoaPhong.Image = ((System.Drawing.Image)(resources.GetObject("buttonXoaPhong.Image")));
             this.buttonXoaPhong.Location = new System.Drawing.Point(87, 10);
             this.buttonXoaPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXoaPhong.Name = "buttonXoaPhong";
@@ -159,8 +158,7 @@ namespace HotelBookingManagement
             // buttonThemPhong
             // 
             this.buttonThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemPhong.ImageIndex = 0;
-            this.buttonThemPhong.ImageList = this.imageList_RoomShow;
+            this.buttonThemPhong.Image = ((System.Drawing.Image)(resources.GetObject("buttonThemPhong.Image")));
             this.buttonThemPhong.Location = new System.Drawing.Point(11, 10);
             this.buttonThemPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonThemPhong.Name = "buttonThemPhong";
