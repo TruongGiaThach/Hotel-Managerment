@@ -46,13 +46,13 @@ namespace HotelBookingManagement
             this.panel_RoomShow = new System.Windows.Forms.Panel();
             this.imageList_RoomShow = new System.Windows.Forms.ImageList(this.components);
             this.panel_MenuBar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_NhanPhong = new System.Windows.Forms.Button();
             this.cancelReservationButton = new System.Windows.Forms.Button();
             this.buttonXoaPhong = new System.Windows.Forms.Button();
             this.buttonThemPhong = new System.Windows.Forms.Button();
             this.button_ThuePhong = new System.Windows.Forms.Button();
             this.button_TraPhong = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel_MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,21 @@ namespace HotelBookingManagement
             this.panel_MenuBar.Size = new System.Drawing.Size(1456, 78);
             this.panel_MenuBar.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(164, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 64);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Loại phòng";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button_NhanPhong
             // 
             this.button_NhanPhong.ImageIndex = 4;
@@ -112,8 +127,7 @@ namespace HotelBookingManagement
             // 
             // cancelReservationButton
             // 
-            this.cancelReservationButton.ImageIndex = 4;
-            this.cancelReservationButton.ImageList = this.imageList_RoomShow;
+            this.cancelReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelReservationButton.Image")));
             this.cancelReservationButton.Location = new System.Drawing.Point(548, 10);
             this.cancelReservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelReservationButton.Name = "cancelReservationButton";
@@ -160,8 +174,7 @@ namespace HotelBookingManagement
             // 
             // button_ThuePhong
             // 
-            this.button_ThuePhong.ImageIndex = 5;
-            this.button_ThuePhong.ImageList = this.imageList_RoomShow;
+            this.button_ThuePhong.Image = ((System.Drawing.Image)(resources.GetObject("button_ThuePhong.Image")));
             this.button_ThuePhong.Location = new System.Drawing.Point(452, 10);
             this.button_ThuePhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ThuePhong.Name = "button_ThuePhong";
@@ -175,8 +188,7 @@ namespace HotelBookingManagement
             // 
             // button_TraPhong
             // 
-            this.button_TraPhong.ImageIndex = 4;
-            this.button_TraPhong.ImageList = this.imageList_RoomShow;
+            this.button_TraPhong.Image = ((System.Drawing.Image)(resources.GetObject("button_TraPhong.Image")));
             this.button_TraPhong.Location = new System.Drawing.Point(639, 10);
             this.button_TraPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_TraPhong.Name = "button_TraPhong";
@@ -187,21 +199,6 @@ namespace HotelBookingManagement
             this.button_TraPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_TraPhong.UseVisualStyleBackColor = true;
             this.button_TraPhong.Click += new System.EventHandler(this.button_TraPhong_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(164, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 64);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Loại phòng";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Room_Show
             // 

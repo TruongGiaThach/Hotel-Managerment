@@ -115,16 +115,18 @@ namespace HotelBookingManagement
         }
         private void button_Delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa thông tin này", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            string id = this.dataGridView1[0, indexOfSeclectedCell.Y].Value.ToString();
+            if (MessageBox.Show("Bạn có muốn xóa nhân viên "+ this.dataGridView1[1, indexOfSeclectedCell.Y].Value.ToString() + " ?"
+                , "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
            
                 switch (this.infor)
                 {
                     case "staff":
-                        NhanVien_DAL.Instance.xoaTheoId(valOfSelectedCell);
+                        NhanVien_DAL.Instance.xoaTheoId(id);
                         break;
                     case "account":
-                        TaiKhoan_DAL.Instance.xoaTaiKhoanID(valOfSelectedCell);
+                        TaiKhoan_DAL.Instance.xoaTaiKhoanID(id);
                         break;
                 }
                     
