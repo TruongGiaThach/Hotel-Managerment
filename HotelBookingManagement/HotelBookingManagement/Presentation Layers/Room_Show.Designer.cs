@@ -254,13 +254,13 @@ namespace HotelBookingManagement
                 else if (Data[i].TrangThai.Contains("dang cho"))
                 {
                     this.Rooms[i].ImageIndex = 3;
-                    this.Rooms[i].BackColor = Color.Silver;
+                    this.Rooms[i].BackColor = Color.LightYellow;
                     status = "Phòng đã đặt";
                 }
                 else
                 {
                     this.Rooms[i].ImageIndex = 3;
-                    this.Rooms[i].BackColor = Color.Silver;
+                    this.Rooms[i].BackColor = Color.PaleGoldenrod;
                     status = "Phòng đang thuê";
                 }
                 this.Rooms[i].Name = i.ToString();
@@ -275,7 +275,6 @@ namespace HotelBookingManagement
                 this.Rooms[i].TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
                 this.Rooms[i].Location = new System.Drawing.Point(drawPointX, drawPointY);
                 this.Rooms[i].Click += new EventHandler(RoomSelect); // set Click event for Button
-                //this.Rooms[i].ContextMenuStrip;   // set ContexMenuStrip for Button
                 this.panel_RoomShow.Controls.Add(Rooms[i]);
             }
         }
