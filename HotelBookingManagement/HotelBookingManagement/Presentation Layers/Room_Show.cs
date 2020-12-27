@@ -83,37 +83,55 @@ namespace HotelBookingManagement
         {
             Button selected = sender as Button;
             Phong p = selected.Tag as Phong;
-            if (p.IsSelect == false)
+            if (ModifierKeys == Keys.Control)
             {
-                if (ModifierKeys != Keys.Control)
+                if (p.IsSelect == false)
                 {
-                    //for (int i = 0; i < SelectedButton.Count; ++i)
-                    //{
-                    //    if (SelectedButton[i] == selected)
-                    //    {
-                    //        selected.ForeColor = SystemColors.ControlText;
-                    //        p.IsSelect = false;
-                    //        SelectedButton.RemoveAt(i);
-                    //    }
-                    //}
+                    SelectedButton.Add(selected);
+                    selected.ForeColor = Color.MediumBlue;
+                    p.IsSelect = true;
+                    return;
+                }
+                else
+                {
+                    for (int i = 0; i < SelectedButton.Count; ++i)
+                    {
+                        if (SelectedButton[i] == selected)
+                        {
+                            selected.ForeColor = SystemColors.ControlText;
+                            p.IsSelect = false;
+                            SelectedButton.RemoveAt(i);
+                        }
+                    }
+                    return;
+                }
+            }
+            else 
+            {
+                if (p.IsSelect == false)
+                {
                     foreach (var b in SelectedButton)
                     {
                         b.ForeColor = SystemColors.ControlText;
                         (b.Tag as Phong).IsSelect = false;
                     }
                     SelectedButton.Clear();
+                    SelectedButton.Add(selected);
+                    selected.ForeColor = Color.MediumBlue;
+                    p.IsSelect = true;
+                    time = DateTime.Now;
+                    return;
                 }
-                SelectedButton.Add(selected);
-                selected.ForeColor = Color.MediumBlue;
-                p.IsSelect = true;
-                time = DateTime.Now;
-                return;
+                else
+                {
+                    TimeSpan dist = DateTime.Now - time;
+                    if (dist.TotalMilliseconds <= 300)
+                        viewRoomInfor(ref p);
+                    time = DateTime.Now;
+                    return;
+                }
             }
-            TimeSpan dist = DateTime.Now - time;
-            if (dist.TotalMilliseconds <= 300)
-                viewRoomInfor(ref p);
-
-
+        
         }
 
         private void button_ThuePhong_Click(object sender, EventArgs e)
