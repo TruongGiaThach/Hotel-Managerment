@@ -35,6 +35,7 @@ namespace HotelBookingManagement.Presentation_Layers
                 this.button2.Enabled = false;
                 this.button3.Enabled = false;
             }
+            dataGridView1_CellClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

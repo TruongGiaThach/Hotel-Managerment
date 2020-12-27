@@ -23,7 +23,7 @@ namespace HotelBookingManagement
             InitializeComponent();
             this.TienCoc.KeyPress+= Normalisation.TextboxOnlyDigit_KeyPress;
             this.TenKhachHang.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
-            this.DiaChiNg.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
+            //this.DiaChiNg.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
             this.Phone.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             this.CMT.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             this.QuocTich.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;

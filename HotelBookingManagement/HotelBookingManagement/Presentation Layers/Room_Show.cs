@@ -141,7 +141,7 @@ namespace HotelBookingManagement
                 if (Data[i].TrangThai.Contains("trong"))
                     dem++;
             if (dem <= 0)
-                MessageBox.Show("Đã hết phòng (▀̿Ĺ̯▀̿ ̿)");
+                MessageBox.Show("Đã hết phòng (▀̿Ĺ̯▀̿ ̿)","Thông tin",MessageBoxButtons.OK,MessageBoxIcon.Information);
             else
             {
                 Reservation_Form ThuePhong = new Reservation_Form(ref Data);
@@ -170,7 +170,7 @@ namespace HotelBookingManagement
                 if (Data[i].TrangThai.Contains("dang cho"))
                     dem++;
             if (dem <= 0)
-                MessageBox.Show("Chưa có phòng nào được đặt");
+                MessageBox.Show("Chưa có phòng nào được đặt", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 try
