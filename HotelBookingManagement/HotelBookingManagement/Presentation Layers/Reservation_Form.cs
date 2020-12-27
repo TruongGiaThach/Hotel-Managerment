@@ -2,6 +2,7 @@
 using HotelBookingManagement.Busines_Logic_Layers.Data_Transfer_Objects;
 using HotelBookingManagement.Data_Access_Layers;
 using HotelBookingManagement.Object;
+using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,13 @@ namespace HotelBookingManagement
         public Reservation_Form(ref List<Phong> Rooms)
         {
             InitializeComponent();
+            this.TienCoc.KeyPress+= Normalisation.TextboxOnlyDigit_KeyPress;
+            this.TenKhachHang.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
+            this.DiaChiNg.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
+            this.Phone.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.CMT.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.QuocTich.KeyPress += Normalisation.TextboxOnlyLetter_KeyPress;
+            this.GhiChu.KeyPress += Normalisation.TextboxLetterAndDigitSpace_KeyPress;
             this.Data = Rooms;
             Reservation_Form_Load(new object { }, new EventArgs { });
         }

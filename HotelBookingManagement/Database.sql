@@ -100,7 +100,8 @@ create table NHANVIEN
 	GIOITINH nvarchar(10),
 	NGBD smalldatetime,
 	TGHOPDONG int,
-	LUONG int
+	LUONG int,
+	DIACHI nvarchar(200)
 )
 alter table NHANVIEN	
 	add constraint unique_cmnd unique(CMND)
@@ -213,11 +214,6 @@ Begin
 	where (THUCHI.NAM = inserted.NAM) and (THUCHI.THANG = inserted.THANG)
 End
 
-<<<<<<< HEAD
 update TAIKHOAN set TRANGTHAI = '0' where ID = '0'
-=======
-select count 
-
->>>>>>> parent of ec4efca... .
 select sum(LUONG) from NHANVIEN
 

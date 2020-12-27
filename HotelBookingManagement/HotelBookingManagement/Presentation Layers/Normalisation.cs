@@ -28,7 +28,7 @@ namespace HotelBookingManagement.Presentation_Layers
             }
             e.Handled = true;
         }
-        public static void  TextboxOnlyLetter_KeyPress(object sender, KeyPressEventArgs e)
+        public static void  TextboxOnlyLetter_KeyPress(object sender, KeyPressEventArgs e) // tên
         {
             if (char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || e.KeyChar == (char)Keys.Space)
             {

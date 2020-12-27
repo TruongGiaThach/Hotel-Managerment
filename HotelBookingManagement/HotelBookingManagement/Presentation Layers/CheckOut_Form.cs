@@ -30,6 +30,8 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void CheckOut_Form_Load(object sender, EventArgs e)
         {
+            this.textBox1.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
+            this.textBox6.KeyPress += Normalisation.TextboxOnlyDigit_KeyPress;
             List<DangKi> lists = DatPhong_DAL.Instance.getByRoomAndStatus(this.p.ID, "da nhan");
             DangKi tmp = null;
             if (lists.Count == 1)

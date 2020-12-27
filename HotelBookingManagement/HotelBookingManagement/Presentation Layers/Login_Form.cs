@@ -1,4 +1,5 @@
 ﻿using HotelBookingManagement.Data_Access_Layers;
+using HotelBookingManagement.Presentation_Layers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace HotelBookingManagement
         public Login_Form(Manager_Form Frm)
         {
             InitializeComponent();
+            this.UserTextBox.KeyPress += Normalisation.TextboxID_KeyPress;
+            this.PasswordTextBox.KeyPress += Normalisation.TextboxID_KeyPress;
             this.Frm = Frm;
         }
 

@@ -99,13 +99,13 @@ namespace HotelBookingManagement
             // 
             // UserTextBox
             // 
-            this.UserTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserTextBox.Location = new System.Drawing.Point(567, 257);
             this.UserTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserTextBox.Name = "UserTextBox";
             this.UserTextBox.Size = new System.Drawing.Size(214, 30);
             this.UserTextBox.TabIndex = 1;
+            this.UserTextBox.UseSystemPasswordChar = true;
             // 
             // PasswordTextBox
             // 
@@ -116,6 +116,7 @@ namespace HotelBookingManagement
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(214, 30);
             this.PasswordTextBox.TabIndex = 2;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // falseMessage
             // 

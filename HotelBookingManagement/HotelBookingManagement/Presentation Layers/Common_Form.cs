@@ -29,13 +29,13 @@ namespace HotelBookingManagement
             this.infor = infor;
             FormCommon_Load(new object { }, new EventArgs { });
             valOfSelectedCell = "";
-           
+            indexOfSeclectedCell = new Point(0, 0);
         }
         public void FormCommon_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
             string sqlQuery = "";
-            indexOfSeclectedCell = new Point(0, 0);
+
             switch (infor)
             {
                 case "account":
@@ -57,7 +57,7 @@ namespace HotelBookingManagement
                     break;
                 case "staff":
                     sqlQuery = "select ID as [Mã nhân viên], HOTEN as [Họ tên], CMND as [Số CMND], SDT as [Số điện thoại]," +
-                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], TGHOPDONG as [Thời gian hợp đồng] , LUONG as [Lương] from NHANVIEN ";
+                        "GIOITINH as [Giới tính], NGBD as [Ngày vào làm], DIACHI as [Địa chỉ] , LUONG as [Lương] from NHANVIEN ";
                     this.button_Add.Visible = true;
                     this.button_Delete_staff.Visible = true;
                     this.button_Change.Visible = false;
@@ -191,7 +191,7 @@ namespace HotelBookingManagement
                 try
                 {
                     if (TaiKhoan_DAL.Instance.updateTaiKhoan(id, TaiKhoan.encode("1")))
-                        MessageBox.Show("Reset mật khẩu thành công", "Status");
+                        MessageBox.Show("Reset mật khẩu thành công. \n Mật khẩu đã được đặt về '1'", "Status");
                     else MessageBox.Show("Reset mật khẩu không thành công", "Status",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -209,6 +209,11 @@ namespace HotelBookingManagement
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
