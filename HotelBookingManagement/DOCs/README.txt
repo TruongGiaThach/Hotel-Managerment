@@ -23,7 +23,7 @@ Phần mềm quản lí Khách sạn
  Bước 4: ấn Next ở trang thứ ba để tiến hành cài đặt, đợi trình cài đặt chạy xong rồi ấn close
  Bước 5: Chúc mừng! bạn đã cài đặt thành công phần mềm quản lí khách sạn
  Bước 6: Xem file HuongDanSetUpCSDL.docx để cài đặt server.
- Bước 7: Đăng nhập ứng dụng với tài khoản admin, mật khẩu 1.
+ Bước 7: Đăng nhập ứng dụng với tài khoản admin, mật khẩu admin.
 4. Nhóm phát triển
  Leader: Trương Gia Thạch
  Designer: Nguyễn Tấn Tiến
