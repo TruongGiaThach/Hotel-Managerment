@@ -114,7 +114,7 @@ namespace HotelBookingManagement
             // 
             this.button_NhanPhong.ImageIndex = 4;
             this.button_NhanPhong.ImageList = this.imageList_RoomShow;
-            this.button_NhanPhong.Location = new System.Drawing.Point(418, 16);
+            this.button_NhanPhong.Location = new System.Drawing.Point(418, 12);
             this.button_NhanPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_NhanPhong.Name = "button_NhanPhong";
             this.button_NhanPhong.Size = new System.Drawing.Size(84, 80);
@@ -128,7 +128,7 @@ namespace HotelBookingManagement
             // cancelReservationButton
             // 
             this.cancelReservationButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelReservationButton.Image")));
-            this.cancelReservationButton.Location = new System.Drawing.Point(616, 12);
+            this.cancelReservationButton.Location = new System.Drawing.Point(619, 11);
             this.cancelReservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelReservationButton.Name = "cancelReservationButton";
             this.cancelReservationButton.Size = new System.Drawing.Size(84, 80);
@@ -173,7 +173,7 @@ namespace HotelBookingManagement
             // button_ThuePhong
             // 
             this.button_ThuePhong.Image = ((System.Drawing.Image)(resources.GetObject("button_ThuePhong.Image")));
-            this.button_ThuePhong.Location = new System.Drawing.Point(508, 12);
+            this.button_ThuePhong.Location = new System.Drawing.Point(519, 12);
             this.button_ThuePhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ThuePhong.Name = "button_ThuePhong";
             this.button_ThuePhong.Size = new System.Drawing.Size(84, 80);

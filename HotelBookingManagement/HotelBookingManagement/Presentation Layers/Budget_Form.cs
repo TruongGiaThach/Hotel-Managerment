@@ -58,16 +58,23 @@ namespace HotelBookingManagement.Presentation_Layers
 
         private void button_XacNhan_Click(object sender, EventArgs e)
         {
-            try
+            if (this.textBox_TienDien.Text != "" && this.textBox_TienNuoc.Text != "" && this.textBox_TienBaoTri.Text != "" && this.textBox_ChiPhiKhac.Text != "")
             {
-                if (MessageBox.Show("Xác nhận thống kê chi tiêu", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                try
                 {
-                    ProfitStatistics_Controller.ThemChiTieu(textBox_TienDien.Text, textBox_TienNuoc.Text, textBox_TongTien.Text, textBox_TienBaoTri.Text, textBox_ChiPhiKhac.Text, dateTimePicker_NgayThongKe.Value);
+                    if (MessageBox.Show("Xác nhận thống kê chi tiêu", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        ProfitStatistics_Controller.ThemChiTieu(textBox_TienDien.Text, textBox_TienNuoc.Text, textBox_TongTien.Text, textBox_TienBaoTri.Text, textBox_ChiPhiKhac.Text, dateTimePicker_NgayThongKe.Value);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
                 }
             }
-            catch(Exception Ex)
+            else
             {
-                MessageBox.Show(Ex.Message);
+                MessageBox.Show("vui lòng nhập đủ chi phí");
             }
         }
 
@@ -97,7 +104,7 @@ namespace HotelBookingManagement.Presentation_Layers
                         this.Char_Fill("Months", ThuChi_DAL.Instance.getChartData(this.textBox_NhapNam.Text));
                         break;
                     case "radioButton_TheoNam":
-                        this.Char_Fill("Months", ThuChi_DAL.Instance.getChartData());
+                        this.Char_Fill("Years", ThuChi_DAL.Instance.getChartData());
                         break;
                 }
 
@@ -140,7 +147,28 @@ namespace HotelBookingManagement.Presentation_Layers
                     this.chart_Budget.ChartAreas[0].AxisY2.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     break;
                 case "Years":
-
+                    //set data
+                    this.chart_Budget.Series[0].XValueMember = "Nam";
+                    this.chart_Budget.Series[0].YValueMembers = "Tien_thu";
+                    this.chart_Budget.Series[1].XValueMember = "Nam";
+                    this.chart_Budget.Series[1].YValueMembers = "Tien_Chi";
+                    this.chart_Budget.Series[2].XValueMember = "Nam";
+                    this.chart_Budget.Series[2].YValueMembers = "Loi_Nhuan";
+                    //secondary Axis
+                    this.chart_Budget.ChartAreas[0].AxisY2.MajorGrid.Enabled = false;
+                    this.chart_Budget.ChartAreas[0].AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+                    this.chart_Budget.ChartAreas[0].AxisY2.IsStartedFromZero = this.chart_Budget.ChartAreas[0].AxisY.IsStartedFromZero;
+                    this.chart_Budget.Series[2].YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+                    //set title
+                    this.chart_Budget.ChartAreas[0].AxisX.Title = "Năm";
+                    this.chart_Budget.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+                    this.chart_Budget.ChartAreas[0].AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    this.chart_Budget.ChartAreas[0].AxisY.Title = "Thu Chi";
+                    this.chart_Budget.ChartAreas[0].AxisY.TitleAlignment = System.Drawing.StringAlignment.Center;
+                    this.chart_Budget.ChartAreas[0].AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    this.chart_Budget.ChartAreas[0].AxisY2.Title = "Lợi Nhuận";
+                    this.chart_Budget.ChartAreas[0].AxisY2.TitleAlignment = System.Drawing.StringAlignment.Center;
+                    this.chart_Budget.ChartAreas[0].AxisY2.TitleFont = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     break;
             }
         }

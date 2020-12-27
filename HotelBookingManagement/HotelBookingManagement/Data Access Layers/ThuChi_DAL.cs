@@ -40,8 +40,8 @@ namespace HotelBookingManagement.Data_Access_Layers
             {
                 //Xuat Theo Nam
                 string sqlQuery = "select NAM as Nam, sum(T_THU) as Tien_Thu, sum(T_CHI) as Tien_Chi, sum(T_LOINHUAN) as Loi_Nhuan " + " from THUCHI " + " group by NAM " + " order by NAM asc ";
-                DataTable result = DataHelper.Instance.getDataTable(sqlQuery, new string[] {});
-                return result.DataSet;
+                var result = DataHelper.Instance.getBudgetDataTable(sqlQuery, new string[] {});
+                return result;
             }
             else
             {
