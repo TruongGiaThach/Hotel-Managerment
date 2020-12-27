@@ -85,8 +85,26 @@ namespace HotelBookingManagement
             Phong p = selected.Tag as Phong;
             if (p.IsSelect == false)
             {
+                if (ModifierKeys != Keys.Control)
+                {
+                    //for (int i = 0; i < SelectedButton.Count; ++i)
+                    //{
+                    //    if (SelectedButton[i] == selected)
+                    //    {
+                    //        selected.ForeColor = SystemColors.ControlText;
+                    //        p.IsSelect = false;
+                    //        SelectedButton.RemoveAt(i);
+                    //    }
+                    //}
+                    foreach (var b in SelectedButton)
+                    {
+                        b.ForeColor = SystemColors.ControlText;
+                        (b.Tag as Phong).IsSelect = false;
+                    }
+                    SelectedButton.Clear();
+                }
                 SelectedButton.Add(selected);
-                selected.ForeColor = Color.BlueViolet;
+                selected.ForeColor = Color.MediumBlue;
                 p.IsSelect = true;
                 time = DateTime.Now;
                 return;
@@ -94,16 +112,7 @@ namespace HotelBookingManagement
             TimeSpan dist = DateTime.Now - time;
             if (dist.TotalMilliseconds <= 300)
                 viewRoomInfor(ref p);
-            for (int i = 0; i < SelectedButton.Count; ++i)
-            {
-                if (SelectedButton[i] == selected)
-                {
-                    selected.ForeColor = SystemColors.ControlText;
-                    p.IsSelect = false;
-                    SelectedButton.RemoveAt(i);
-                    return;
-                }
-            }
+
 
         }
 
