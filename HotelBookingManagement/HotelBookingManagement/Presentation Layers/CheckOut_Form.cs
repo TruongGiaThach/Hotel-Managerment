@@ -110,7 +110,7 @@ namespace HotelBookingManagement.Presentation_Layers
             try
             {
                 num = Int32.Parse(this.textBox1.Text);
-                this.textBox5.Text = (num + Int32.Parse(textBox5.Text)).ToString();
+                this.textBox5.Text = (num + Int32.Parse(textBox4.Text)).ToString();
             }
             catch (Exception) { };
         }

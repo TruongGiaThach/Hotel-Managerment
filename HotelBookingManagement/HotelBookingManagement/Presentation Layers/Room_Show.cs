@@ -63,12 +63,11 @@ namespace HotelBookingManagement
                 {
                     if (MessageBox.Show("Bạn có chắc chắn muốn xóa các phòng đã chọn", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        for (int i = 0; i < SelectedButton.Count; ++i)
+                        foreach (var b in SelectedButton)
                         {
-                            if (!(SelectedButton[i].Tag as Phong).TrangThai.Contains("trong"))
+                            if (!(b.Tag as Phong).TrangThai.Contains("trong"))
                                 throw new Exception("Chỉ có thể xóa các phòng trống");
-                            if (Phong_DAL.Instance.xoaPhong((SelectedButton[i].Tag as Phong).ID))
-                                Data.RemoveAt(int.Parse(SelectedButton[i].Name));                           
+                            Phong_DAL.Instance.xoaPhong((b.Tag as Phong).ID);
                         }
                         SelectedButton.Clear();
                         RoomShow_Load(sender, e);

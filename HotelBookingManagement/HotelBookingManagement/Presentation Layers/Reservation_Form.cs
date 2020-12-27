@@ -37,7 +37,10 @@ namespace HotelBookingManagement
             InitRoomFinder();
             var CheckButton = panel_Find_Room.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (CheckButton != null)
-                this.LoaiPhong.Text = (CheckButton.Tag as Phong).LoaiPhong; 
+                this.LoaiPhong.Text = (CheckButton.Tag as Phong).LoaiPhong;
+            this.NgayDen.Value = DateTime.Now;
+            this.NgayDi.Value = DateTime.Now.AddDays(1);
+            this.GioiTinh.SelectedIndex = 0;
         }
 
         private void radioButtons_CheckedChanged(object sender, EventArgs e)

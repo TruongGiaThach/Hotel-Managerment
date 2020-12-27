@@ -54,6 +54,7 @@ namespace HotelBookingManagement
         }
         private void RoomInfor_Load(object sender, EventArgs e)
         {
+            this.comboBox1.Items.Clear();
             if (loaiPhongs.Count > 0)
                 foreach (LoaiPhong loaiPhong in loaiPhongs)
                     this.comboBox1.Items.Add(loaiPhong.Ten);

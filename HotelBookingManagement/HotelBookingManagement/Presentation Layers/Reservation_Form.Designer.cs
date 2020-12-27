@@ -51,7 +51,6 @@ namespace HotelBookingManagement
             this.Email = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.NgayCapCMT = new System.Windows.Forms.DateTimePicker();
             this.NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.HuyDatPhong = new System.Windows.Forms.Button();
             this.SaveDatPhong = new System.Windows.Forms.Button();
@@ -62,7 +61,6 @@ namespace HotelBookingManagement
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.GioiTinh = new System.Windows.Forms.ComboBox();
@@ -257,7 +255,6 @@ namespace HotelBookingManagement
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.NgayCapCMT);
             this.groupBox2.Controls.Add(this.NgaySinh);
             this.groupBox2.Controls.Add(this.HuyDatPhong);
             this.groupBox2.Controls.Add(this.SaveDatPhong);
@@ -268,7 +265,6 @@ namespace HotelBookingManagement
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.GioiTinh);
@@ -300,17 +296,6 @@ namespace HotelBookingManagement
             this.button1.Text = "Đặt phòng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // NgayCapCMT
-            // 
-            this.NgayCapCMT.CustomFormat = "dd-MM-yyyy";
-            this.NgayCapCMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgayCapCMT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayCapCMT.Location = new System.Drawing.Point(492, 218);
-            this.NgayCapCMT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.NgayCapCMT.Name = "NgayCapCMT";
-            this.NgayCapCMT.Size = new System.Drawing.Size(200, 31);
-            this.NgayCapCMT.TabIndex = 7;
             // 
             // NgaySinh
             // 
@@ -418,17 +403,6 @@ namespace HotelBookingManagement
             this.label12.TabIndex = 18;
             this.label12.Text = "Địa chỉ:";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(368, 225);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 25);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Ngày cấp:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -471,7 +445,7 @@ namespace HotelBookingManagement
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.panel_Find_Room);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 374);
+            this.groupBox3.Location = new System.Drawing.Point(0, 376);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -596,13 +570,11 @@ namespace HotelBookingManagement
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox GioiTinh;
         private System.Windows.Forms.Button HuyDatPhong;
         private System.Windows.Forms.Button SaveDatPhong;
-        private System.Windows.Forms.DateTimePicker NgayCapCMT;
         private System.Windows.Forms.DateTimePicker NgaySinh;
         private System.Windows.Forms.Panel panel_Find_Room;
         private TextBox LoaiPhong;
