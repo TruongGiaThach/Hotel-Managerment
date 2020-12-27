@@ -30,6 +30,11 @@ namespace HotelBookingManagement.Presentation_Layers
         {
             string sqlQuery = "select TENLP as [Loại phòng], GIA as [Giá] from LOAIPHONG";
             this.dataGridView1.DataSource = DataHelper.Instance.getDataTable(sqlQuery);
+            if (this.dataGridView1.Rows.Count < 1)
+            {
+                this.button2.Enabled = false;
+                this.button3.Enabled = false;
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
