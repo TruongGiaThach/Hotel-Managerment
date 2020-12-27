@@ -186,6 +186,7 @@ namespace HotelBookingManagement
          
             if (indexOfSeclectedCell == null)
                 return;
+            if (indexOfSeclectedCell.Y > (dataGridView1.Rows.Count - 2)) return;
             string id = dataGridView1.Rows[indexOfSeclectedCell.Y].Cells[1].Value.ToString();
             id = id.Trim();
             if (MessageBox.Show("Bạn có chắc chắc reset tài khoản "+ id+" ?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)

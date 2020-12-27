@@ -110,3 +110,4 @@ C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\Hotel
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Control.pdb
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\bin\Debug\Ai.Renderer.pdb
 C:\Users\ad\Documents\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.RoomType.resources
+D:\GitHub\Hotel-Room-Booking-App\HotelBookingManagement\HotelBookingManagement\obj\Debug\HotelBookingManagement.Presentation_Layers.RoomType.resources
