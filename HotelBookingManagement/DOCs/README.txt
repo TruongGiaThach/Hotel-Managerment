@@ -38,3 +38,4 @@ Phần mềm quản lí Khách sạn
   Trương Gia Thạch 19522183@gm.uit.edu.vn
   Nguyễn Tấn Tiến 19522339@gm.uit.edu.vn
   Nguyễn Văn Dũng 19521399@gm.uit.edu.vn
+  https://tenten.vn/help/huong-dan-cai-dat-va-cau-hinh-sql-server-express-2014/
